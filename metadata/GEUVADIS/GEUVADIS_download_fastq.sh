@@ -1240,8 +1240,8 @@ wget ftp.sra.ebi.ac.uk/vol1/fastq/ERR204/ERR204976/ERR204976_1.fastq.gz
 wget ftp.sra.ebi.ac.uk/vol1/fastq/ERR204/ERR204976/ERR204976_2.fastq.gz
 wget ftp.sra.ebi.ac.uk/vol1/fastq/ERR204/ERR204977/ERR204977_1.fastq.gz
 wget ftp.sra.ebi.ac.uk/vol1/fastq/ERR204/ERR204977/ERR204977_2.fastq.gz
-wget ftp.sra.ebi.ac.uk/vol1/fastq/ERR204/ERR204978/ERR204978.fastq.gz
 wget ftp.sra.ebi.ac.uk/vol1/fastq/ERR204/ERR204978/ERR204978_1.fastq.gz
+wget ftp.sra.ebi.ac.uk/vol1/fastq/ERR204/ERR204978/ERR204978_2.fastq.gz
 wget ftp.sra.ebi.ac.uk/vol1/fastq/ERR204/ERR204979/ERR204979_1.fastq.gz
 wget ftp.sra.ebi.ac.uk/vol1/fastq/ERR204/ERR204979/ERR204979_2.fastq.gz
 wget ftp.sra.ebi.ac.uk/vol1/fastq/ERR204/ERR204980/ERR204980_1.fastq.gz
