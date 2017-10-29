@@ -11,7 +11,7 @@ star_index: /gpfs/rocket/home/a72094/annotations/GRCh38/STAR_index_v90_oh74
 
 #Salmon parameters
 annotations: ["Ensembl_87", "reviseAnnotations.grp_1_contained","reviseAnnotations.grp_1_upstream","reviseAnnotations.grp_1_downstream","reviseAnnotations.grp_2_contained","reviseAnnotations.grp_2_upstream","reviseAnnotations.grp_2_downstream"]
-libType: ISR
+libType: IU
 
 #Dictionary of sample names
 samples:
