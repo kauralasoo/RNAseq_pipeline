@@ -10,8 +10,7 @@ study: GEUVADIS
 
 #Dictionary of sample names
 samples:
-  ERR188307: [ERR188307_1.fastq.gz, ERR188307_2.fastq.gz]
-
+  ERR188307: [processed/GEUVADIS/fastq/ERR188307_1.fastq.gz, processed/GEUVADIS/fastq/ERR188307_2.fastq.gz]
 
 #Quantification
 leafcutter_root: "/nfs/users/nfs_k/ka8/software/leafcutter"
