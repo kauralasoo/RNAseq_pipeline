@@ -27,6 +27,7 @@ rule index_bams:
 		mem = 50
 	threads: 1
 	shell:
+		"module load samtools-1.4 && "
 		"samtools index {input}"
 
 #Check genotype concordance between RNA-seq and VCF
@@ -117,6 +118,7 @@ rule leafcutter_bam_to_bed:
 	resources:
 		mem = 1000
 	shell:
+		"module load samtools-1.4 && "
 		"samtools view {input} | python {config[leafcutter_root]}/scripts/filter_cs.py | {config[leafcutter_root]}/scripts/sam2bed.pl --use-RNA-strand - {output}"
 
 #Convert bed file to junctions
@@ -157,6 +159,7 @@ rule sort_bam_by_name:
 	resources:
 		mem = 8000
 	shell:
+		"module load samtools-1.4 && "
 		"samtools sort -n -m 1000M -o {output} -O BAM --threads 5 {input}"
 
 
@@ -193,11 +196,11 @@ rule count_ASE:
 #Make sure that all final output files get created
 rule make_all:
 	input:
-		expand("processed/{study}/verifyBamID/{sample}.verifyBamID.bestSM", study = config["study"], sample=config["samples"]),
+		#expand("processed/{study}/verifyBamID/{sample}.verifyBamID.bestSM", study = config["study"], sample=config["samples"]),
 		expand("processed/{study}/bigwig/{sample}.str1.bw", study = config["study"], sample=config["samples"]),
 		expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
 		expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
-		expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
+		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
 		"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
 	output:
 		"processed/{study}/out.txt"
