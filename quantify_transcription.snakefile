@@ -75,7 +75,8 @@ rule convert_gff3_to_fasta:
 		mem = 1000
 	threads: 1
 	shell:
-		"/software/team82/cufflinks/2.2.1/bin/gffread -w {output} -g {config[reference_genome]} {input}"
+		"module load cufflinks2.2 && "
+		"gffread -w {output} -g {config[reference_genome]} {input}"
 
 #Build salmon indexes for fasta files
 rule construct_salmon_index:
@@ -90,11 +91,10 @@ rule construct_salmon_index:
 		"salmon -no-version-check index -t {input} -i {output}"
 
 #Quantify gene expression using full Ensembl annotations
-rule reviseAnnotation_quant_salmon:
+rule quant_salmon:
 	input:
-		fq1 = "processed/{study}/fastq_sorted/{sample}.1.fastq.gz",
-		fq2 = "processed/{study}/fastq_sorted/{sample}.2.fastq.gz",
-		salmon_index = "processed/annotations/salmon_index/{annotation}"
+		lambda wildcards: config["samples"][wildcards.sample],
+		"processed/annotations/salmon_index/{annotation}"
 	output:
 		"processed/{study}/salmon/{annotation}/{sample}/quant.sf"
 	params:
@@ -104,7 +104,7 @@ rule reviseAnnotation_quant_salmon:
 	threads: 8	
 	shell:
 		"salmon --no-version-check quant --seqBias --gcBias --libType {config[libType]} "
-		"--index {input.salmon_index} -1 {input.fq1} -2 {input.fq2} -p {threads} "
+		"--index {input[2]} -1 {input[0]} -2 {input[1]} -p {threads} "
 		"-o {params.out_prefix}"
 
 #Convert BAMs to bed for leafcutter
@@ -207,19 +207,6 @@ rule make_all:
 	shell:
 		"echo 'Done' > {output}"
 
-
-#Make sure that all final output files get created
-rule make_macroMap:
-	input:
-		expand("processed/{study}/salmon/ensembl_87/{sample}/quant.sf", study = config["study"], sample=config["samples"]),
-		expand("processed/{study}/bigwig/{sample}.str1.bw", study = config["study"], sample=config["samples"]),
-	output:
-		"processed/macroMap/out.txt"
-	resources:
-		mem = 100
-	threads: 1
-	shell:
-		"echo 'Done' > {output}"
 
 
 
