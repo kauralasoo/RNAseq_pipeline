@@ -12,6 +12,7 @@ rule star_align:
 		mem = 42000
 	threads: 8
 	shell:
+		"module load star-2.5.2 && "
 		"STAR --runThreadN {threads} --outSAMtype BAM SortedByCoordinate --outWigType bedGraph "
 		"--outWigNorm None --outWigStrand Stranded --outSAMattrRGline {params.rg} "
 		"--readFilesCommand zcat --genomeDir {config[star_index]} --limitBAMsortRAM 32000000000 "
