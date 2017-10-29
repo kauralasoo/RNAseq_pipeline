@@ -1,8 +1,7 @@
 #Align reads to the reference genome using STAR
 rule star_align:
 	input:
-		fq1 = "processed/{study}/fastq/{sample}_1.fastq.gz",
-		fq2 = "processed/{study}/fastq/{sample}_2.fastq.gz"
+		lambda wildcards: config["samples"][wildcards.sample]
 	output:
 		bam = "processed/{study}/STAR/{sample}/{sample}.Aligned.sortedByCoord.out.bam"
 	params:
@@ -16,7 +15,7 @@ rule star_align:
 		"STAR --runThreadN {threads} --outSAMtype BAM SortedByCoordinate --outWigType bedGraph "
 		"--outWigNorm None --outWigStrand Stranded --outSAMattrRGline {params.rg} "
 		"--readFilesCommand zcat --genomeDir {config[star_index]} --limitBAMsortRAM 32000000000 "
-		"--outFileNamePrefix {params.prefix} --readFilesIn {input.fq1} {input.fq2} "
+		"--outFileNamePrefix {params.prefix} --readFilesIn {input}"
 
 #Index sorted bams
 rule index_bams:
