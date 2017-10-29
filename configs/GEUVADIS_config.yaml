@@ -6,6 +6,7 @@ vcf_file: /nfs/users/nfs_k/ka8/scratch/projects/macrophage-gxe-study/genotypes/S
 chromosome_lengths: /lustre/scratch117/cellgen/team170/ka8/annotations/GRCh38/bt2-index/chromosome_lengths.txt
 annotations: ["Ensembl_87", "reviseAnnotations.grp_1_contained","reviseAnnotations.grp_1_upstream","reviseAnnotations.grp_1_downstream","reviseAnnotations.grp_2_contained","reviseAnnotations.grp_2_upstream","reviseAnnotations.grp_2_downstream"]
 libType: ISR
+study: GEUVADIS
 
 #Dictionary of sample names
 samples:

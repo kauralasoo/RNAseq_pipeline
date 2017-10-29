@@ -1,0 +1,1 @@
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription.snakefile processed/GEUVADIS/STAR/ERR188307/ERR188307.Aligned.sortedByCoord.out.bam --jobs 1 --configfile configs/GEUVADIS_config.yaml
