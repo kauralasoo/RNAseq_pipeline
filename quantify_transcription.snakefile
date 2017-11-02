@@ -13,7 +13,7 @@ rule star_align:
 	shell:
 		"module load star-2.5.2 && "
 		"STAR --runThreadN {threads} --outSAMtype BAM SortedByCoordinate --outWigType bedGraph "
-		"--outWigNorm None --outWigStrand Stranded --outSAMattrRGline {params.rg} "
+		"--outWigNorm None --outWigStrand {config[outWigStrand]} --outSAMattrRGline {params.rg} "
 		"--readFilesCommand zcat --genomeDir {config[star_index]} --limitBAMsortRAM 32000000000 "
 		"--outFileNamePrefix {params.prefix} --readFilesIn {input}"
 
