@@ -50,10 +50,10 @@ rule sort_bedgraph:
 	input:
 		"processed/{study}/STAR/{sample}/{sample}.Aligned.sortedByCoord.out.bam"
 	output:
-		bg = temp("processed/{study}/STAR/{sample}/{sample}.Signal.Unique.sorted.bg")
+		bg = temp("processed/{study}/STAR/{sample}/{sample}.Signal.Unique.{strand}.sorted.bg")
 	params:
-		bg = "processed/{study}/STAR/{sample}/{sample}.Signal.Unique.out.bg",
-		bg_mult = "processed/{study}/STAR/{sample}/{sample}.Signal.UniqueMultiple.out.bg"
+		bg = "processed/{study}/STAR/{sample}/{sample}.Signal.Unique.{strand}.out.bg",
+		bg_mult = "processed/{study}/STAR/{sample}/{sample}.Signal.UniqueMultiple.{strand}.out.bg"
 	resources:
 		mem = 1000
 	threads: 1
@@ -65,9 +65,9 @@ rule sort_bedgraph:
 #Convert bedgraph to bigwig
 rule bedgraph_to_bigwig:
 	input:
-		bg = "processed/{study}/STAR/{sample}/{sample}.Signal.Unique.sorted.bg"
+		bg = "processed/{study}/STAR/{sample}/{sample}.Signal.Unique.{strand}.sorted.bg"
 	output:
-		bw = "processed/{study}/bigwig/{sample}.unstranded.bw",
+		bw = "processed/{study}/bigwig/{sample}.{strand}.bw",
 	resources:
 		mem = 1000
 	threads: 1
@@ -206,7 +206,7 @@ rule count_ASE:
 rule make_all:
 	input:
 		#expand("processed/{study}/verifyBamID/{sample}.verifyBamID.bestSM", study = config["study"], sample=config["samples"]),
-		#expand("processed/{study}/bigwig/{sample}.str1.bw", study = config["study"], sample=config["samples"]),
+		expand("processed/{study}/bigwig/{sample}.{strand}.bw", study = config["study"], sample=config["samples"], strand = config["bigwig_strands"]),
 		expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
 		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
