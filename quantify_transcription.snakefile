@@ -52,7 +52,7 @@ rule sort_bedgraph:
 	output:
 		bg = temp("processed/{study}/STAR/{sample}/{sample}.Signal.Unique.sorted.bg")
 	params:
-		bg = "processed/{study}/STAR/{sample}/{sample}.Signal.Unique.out.bg"
+		bg = "processed/{study}/STAR/{sample}/{sample}.Signal.Unique.out.bg",
 		bg_mult = "processed/{study}/STAR/{sample}/{sample}.Signal.UniqueMultiple.out.bg"
 	resources:
 		mem = 1000
