@@ -6,16 +6,22 @@ rule star_align:
 		bam = "processed/{study}/STAR/{sample}/{sample}.Aligned.sortedByCoord.out.bam"
 	params:
 		prefix = "processed/{study}/STAR/{sample}/{sample}.",
-		rg = 'ID:1 \"LB:1\tPL:Illumina\tSM:{sample}\tPU:1\"'
+		rg = 'ID:1 \"LB:1\tPL:Illumina\tSM:{sample}\tPU:1\"',
+		tmp_fq1 = tempfile.mkstemp(),
+		tmp_fq2 = tempfile.mkstemp(),
+		star_temp = tempfile.mkdtemp()
 	resources:
 		mem = 42000
 	threads: 8
 	shell:
 		"module load star-2.5.2 && "
+		"cp {input[0]} {params.tmp_fq1} && "
+		"cp {input[1]} {params.tmp_fq2} && "
 		"STAR --runThreadN {threads} --outSAMtype BAM SortedByCoordinate --outWigType bedGraph "
 		"--outWigNorm None --outWigStrand {config[outWigStrand]} --outSAMattrRGline {params.rg} "
 		"--readFilesCommand zcat --genomeDir {config[star_index]} --limitBAMsortRAM 32000000000 "
-		"--outSAMunmapped Within --outFileNamePrefix {params.prefix} --readFilesIn {input}"
+		"--outSAMunmapped Within --outFileNamePrefix {params.prefix} --outTmpDir {params.star_tmp} "
+		"--readFilesIn {params.tmp_fq1} {params.tmp_fq2}"
 
 #Index sorted bams
 rule index_bams:
@@ -27,7 +33,7 @@ rule index_bams:
 		mem = 50
 	threads: 1
 	shell:
-		"module load samtools-1.4 && "
+		"module load samtools-1.6 && "
 		"samtools index {input}"
 
 #Check genotype concordance between RNA-seq and VCF
@@ -168,7 +174,7 @@ rule sort_bam_by_name:
 	resources:
 		mem = 8000
 	shell:
-		"module load samtools-1.4 && "
+		"module load samtools-1.6 && "
 		"samtools sort -n -m 1000M -o {output} -O BAM --threads 5 {input}"
 
 
@@ -206,7 +212,7 @@ rule count_ASE:
 rule make_all:
 	input:
 		#expand("processed/{study}/verifyBamID/{sample}.verifyBamID.bestSM", study = config["study"], sample=config["samples"]),
-		expand("processed/{study}/bigwig/{sample}.{strand}.bw", study = config["study"], sample=config["samples"], strand = config["bigwig_strands"]),
+		expand("processed/{study}/bigwig/{sample}.{strand}.bw", study = config["study"], sample=config["samples"], strand = config["bigwig_strandsq"]),
 		expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
 		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
