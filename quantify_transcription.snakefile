@@ -1,3 +1,5 @@
+import tempfile
+
 #Align reads to the reference genome using STAR
 rule star_align:
 	input:
