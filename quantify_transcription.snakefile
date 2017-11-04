@@ -11,7 +11,7 @@ rule star_align:
 		rg = 'ID:1 \"LB:1\tPL:Illumina\tSM:{sample}\tPU:1\"',
 		tmp_fq1 = tempfile.mkstemp(),
 		tmp_fq2 = tempfile.mkstemp(),
-		star_temp = tempfile.mkdtemp()
+		star_tmp = tempfile.mkdtemp()
 	resources:
 		mem = 42000
 	threads: 8
