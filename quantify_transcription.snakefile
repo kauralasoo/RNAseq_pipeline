@@ -9,9 +9,9 @@ rule star_align:
 	params:
 		prefix = "processed/{study}/STAR/{sample}/{sample}.",
 		rg = 'ID:1 \"LB:1\tPL:Illumina\tSM:{sample}\tPU:1\"',
-		tmp_fq1 = tempfile.mkstemp(),
-		tmp_fq2 = tempfile.mkstemp(),
-		star_tmp = tempfile.mkdtemp()
+		tmp_fq1 = tempfile.mkstemp()[1],
+		tmp_fq2 = tempfile.mkstemp()[1],
+		star_tmp = tempfile.mkdtemp()[1]
 	resources:
 		mem = 42000
 	threads: 8
@@ -23,7 +23,9 @@ rule star_align:
 		"--outWigNorm None --outWigStrand {config[outWigStrand]} --outSAMattrRGline {params.rg} "
 		"--readFilesCommand zcat --genomeDir {config[star_index]} --limitBAMsortRAM 32000000000 "
 		"--outSAMunmapped Within --outFileNamePrefix {params.prefix} --outTmpDir {params.star_tmp} "
-		"--readFilesIn {params.tmp_fq1} {params.tmp_fq2}"
+		"--readFilesIn {params.tmp_fq1} {params.tmp_fq2} && "
+		"rm {params.tmp_fq1} && "
+		"rm {params.tmp_fq2}" 
 
 #Index sorted bams
 rule index_bams:
