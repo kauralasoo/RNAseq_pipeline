@@ -12,7 +12,7 @@ rule star_align:
 		rg = 'ID:1 \"LB:1\tPL:Illumina\tSM:{sample}\tPU:1\"',
 		tmp_fq1 = "/tmp/" + uuid.uuid4().hex,
 		tmp_fq2 = "/tmp/" + uuid.uuid4().hex,
-		star_tmp = "/tmp/" + uuid.uuid4().hex
+		star_tmp = "/tmp/" + uuid.uuid4().hex + "/"
 	resources:
 		mem = 42000
 	threads: 8
