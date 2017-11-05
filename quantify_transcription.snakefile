@@ -1,5 +1,5 @@
-import tempfile
 import uuid
+import os
 
 #Align reads to the reference genome using STAR
 rule star_align:
@@ -169,33 +169,28 @@ rule leafcutter_cluster_junctions:
 		"ls --color=never {params.out_prefix}/junc/*.junc | cat > {params.junc_files} && "
 		"python {config[leafcutter_root]}/clustering/leafcutter_cluster.py -j {params.junc_files} -r {params.out_prefix} -m 50 -l 500000"
 
-#Sort BAMs by name
-rule sort_bam_by_name:
+#Sort bam files by name and quantify gene expression using featureCounts
+rule quantify_featureCounts:
 	input:
-		"processed/{study}/STAR/{sample}/{sample}.Aligned.sortedByCoord.out.bam"
+		bam = "processed/{study}/STAR/{sample}/{sample}.Aligned.sortedByCoord.out.bam"
 	output:
-		temp("processed/{study}/sorted_bam/{sample}.Aligned.sortedByName.out.bam")
+		counts = "processed/{study}/featureCounts/{sample}.featureCounts.txt",
+		summary = "processed/{study}/featureCounts/{sample}.featureCounts.txt.summary"
+	params:
+		raw_bam = os.path.join("/tmp", uuid.uuid4().hex, ".bam")
+		sorted_bam = os.path.join("/tmp", uuid.uuid4().hex, ".bam")
 	threads: 6
 	resources:
 		mem = 8000
 	shell:
-		"module load samtools-1.6 && "
-		"samtools sort -n -m 1000M -o {output} -O BAM --threads 5 {input}"
-
-
-#Quantify expression using featureCounts
-rule quantify_featureCounts:
-	input:
-		bam = "processed/{study}/sorted_bam/{sample}.Aligned.sortedByName.out.bam"
-	output:
-		counts = "processed/{study}/featureCounts/{sample}.featureCounts.txt",
-		summary = temp("processed/{study}/featureCounts/{sample}.featureCounts.txt.summary")
-	threads: 1
-	resources:
-		mem = 1000
-	shell:
-		"featureCounts -p -C -D 5000 -d 50 --donotsort -a {config[ensembl_gtf]} -o {output.counts} {input.bam}"
-
+		"""
+		module load samtools-1.6
+		cp {input.bam} {params.raw_bam}
+		samtools sort -n -m 1000M -o {params.sorted_bam} -O BAM --threads 5 {params.raw_bam}
+		featureCounts -p -C -D 5000 -d 50 --donotsort -a {config[ensembl_gtf]} -o {output.counts} {params.sorted_bam}
+		rm {params.raw_bam}
+		rm {params.sorted_bam}
+		"""
 
 #Quantify allele-specific expression
 rule count_ASE:
@@ -219,7 +214,7 @@ rule make_all:
 		#expand("processed/{study}/verifyBamID/{sample}.verifyBamID.bestSM", study = config["study"], sample=config["samples"]),
 		expand("processed/{study}/bigwig/{sample}.{strand}.bw", study = config["study"], sample=config["samples"], strand = config["bigwig_strands"]),
 		expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
-		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
+		expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
 		#"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
 	output:
