@@ -146,7 +146,7 @@ rule leadcutter_bed_to_junc:
 	input:
 		"processed/{study}/leafcutter/bed/{sample}.bed"
 	output:
-		temp("processed/{study}/leafcutter/junc/{sample}.junc")
+		"processed/{study}/leafcutter/junc/{sample}.junc"
 	threads: 1
 	resources:
 		mem = 1000
@@ -177,6 +177,7 @@ rule quantify_featureCounts:
 		counts = "processed/{study}/featureCounts/{sample}.featureCounts.txt",
 		summary = "processed/{study}/featureCounts/{sample}.featureCounts.txt.summary"
 	params:
+		temp_dir = 
 		raw_bam = os.path.join("/tmp", uuid.uuid4().hex + ".bam"),
 		sorted_bam = os.path.join("/tmp", uuid.uuid4().hex + ".bam")
 	threads: 6
@@ -216,7 +217,7 @@ rule make_all:
 		expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
 		expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
-		#"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
+		"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
 	output:
 		"processed/{study}/out.txt"
 	resources:
