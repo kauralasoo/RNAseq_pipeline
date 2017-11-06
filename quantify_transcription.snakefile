@@ -177,7 +177,6 @@ rule quantify_featureCounts:
 		counts = "processed/{study}/featureCounts/{sample}.featureCounts.txt",
 		summary = "processed/{study}/featureCounts/{sample}.featureCounts.txt.summary"
 	params:
-		temp_dir = 
 		raw_bam = os.path.join("/tmp", uuid.uuid4().hex + ".bam"),
 		sorted_bam = os.path.join("/tmp", uuid.uuid4().hex + ".bam")
 	threads: 6
