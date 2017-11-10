@@ -9,12 +9,12 @@ rule make_all:
     resources:
         mem = 1000
     shell:
-        "echo 'Done! > {output}' 
+        "echo 'Done! > {output}'" 
         
 rule extract_genotypes:
     input:
-        vcf = expand("/gpfs/hpchome/a72094/rocket/datasets/1000G/GRCh38/ALL.chr{chromosome}_GRCh38.genotypes.20170504.vcf.gz", chromosome = CHROMS),
-        samples = "../../../projects/GEUVADIS/RNAseq_pipeline/metadata/GEUVADIS/GEUVADIS_genotype_list.txt"
+        vcf = "/gpfs/hpchome/a72094/rocket/datasets/1000G/GRCh38/ALL.chr{chromosome}_GRCh38.genotypes.20170504.vcf.gz",
+        samples = "../../metadata/GEUVADIS/GEUVADIS_genotype_list.txt"
     output:
         vcf = "/gpfs/hpchome/a72094/rocket/projects/GEUVADIS/genotypes/GEUVADIS_445_samples.chr{chromosome}.vcf.gz"
     threads: 1
@@ -22,3 +22,4 @@ rule extract_genotypes:
         mem = 3000
     shell:
         "bcftools view -S {input.samples}  --force-samples {input.vcf} | bcftools filter -i 'MAF[0] >= 0.05' -O z - > {output.vcf}"
+
