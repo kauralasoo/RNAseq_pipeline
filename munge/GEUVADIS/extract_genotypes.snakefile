@@ -21,5 +21,8 @@ rule extract_genotypes:
     resources:
         mem = 3000
     shell:
-        "bcftools view -S {input.samples}  --force-samples {input.vcf} | bcftools filter -i 'MAF[0] >= 0.05' -O z - > {output.vcf}"
+        """
+        module load bcftools-1.6
+        bcftools view -S {input.samples}  --force-samples {input.vcf} | bcftools filter -i 'MAF[0] >= 0.05' -O z - > {output.vcf}
+        """
 
