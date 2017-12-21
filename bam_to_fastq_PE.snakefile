@@ -11,7 +11,7 @@ rule bam_to_fastq:
 	params:
 		local_tmp = "/tmp/" + uuid.uuid4().hex + "/"
 	resources:
-		mem = 1000
+		mem = 3000
 	threads: 1
 	shell:
 		"""
