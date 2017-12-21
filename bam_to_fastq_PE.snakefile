@@ -1,3 +1,6 @@
+import uuid
+import os
+
 #Convert BAM files to fastq
 rule bam_to_fastq:
 	input:
