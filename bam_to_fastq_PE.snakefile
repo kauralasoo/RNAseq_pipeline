@@ -18,7 +18,7 @@ rule bam_to_fastq:
 		module load samtools-1.6
 		mkdir {params.local_tmp}
 		cp {input} {params.local_tmp}/{wildcards.sample}.bam
-		samtools {params.local_tmp}/{wildcards.sample}.bam {params.local_tmp}/{wildcards.sample}.collated
+		samtools collate {params.local_tmp}/{wildcards.sample}.bam {params.local_tmp}/{wildcards.sample}.collated
 		samtools fastq -F 2816 -c 6 -1 {params.local_tmp}/{wildcards.sample}_1.fastq.gz -2 {params.local_tmp}/{wildcards.sample}_2.fastq.gz {params.local_tmp}/{wildcards.sample}.collated.bam
 		cp {params.local_tmp}/{wildcards.sample}_1.fastq.gz {output.fq1}
 		cp {params.local_tmp}/{wildcards.sample}_2.fastq.gz {output.fq2}
