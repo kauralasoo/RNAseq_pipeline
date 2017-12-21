@@ -7,7 +7,7 @@ rule bam_to_fastq:
 		"processed/{dataset}/input_bam/{sample}.bam"
 	output:
 		fq1 = "processed/{dataset}/fastq/{sample}_1.fastq.gz",
-		fq2 = "processed/{dataset}/fastq/{sample}_1.fastq.gz",
+		fq2 = "processed/{dataset}/fastq/{sample}_2.fastq.gz",
 	params:
 		local_temp = "/tmp/" + uuid.uuid4().hex + "/"
 	resources:
@@ -28,7 +28,7 @@ rule bam_to_fastq:
 #Make sure that all final output files get created
 rule make_all:
 	input:
-		expand("processed/{{dataset}}/fastq/{sample}.fastq.gz", sample=config["samples"])
+		expand("processed/{{dataset}}/fastq/{sample}_1.fastq.gz", sample=config["samples"])
 	output:
 		"processed/{dataset}/out.txt"
 	resources:
