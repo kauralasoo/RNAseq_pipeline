@@ -166,6 +166,7 @@ rule leafcutter_cluster_junctions:
 	resources:
 		mem = 1000
 	shell:
+		"source activate py2.7 && "
 		"ls --color=never {params.out_prefix}/junc/*.junc | cat > {params.junc_files} && "
 		"python {config[leafcutter_root]}/clustering/leafcutter_cluster.py -j {params.junc_files} -r {params.out_prefix} -m 50 -l 500000"
 
