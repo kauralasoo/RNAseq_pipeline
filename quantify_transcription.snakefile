@@ -142,7 +142,7 @@ rule leafcutter_bam_to_bed:
 		"samtools view {input} | python {config[leafcutter_root]}/scripts/filter_cs.py | {config[leafcutter_root]}/scripts/sam2bed.pl --use-RNA-strand - {output}"
 
 #Convert bed file to junctions
-rule leadcutter_bed_to_junc:
+rule leafcutter_bed_to_junc:
 	input:
 		"processed/{study}/leafcutter/bed/{sample}.bed"
 	output:
@@ -216,7 +216,7 @@ rule make_all:
 		#expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
 		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
-		#"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
+		"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
 	output:
 		"processed/{study}/out.txt"
 	resources:
