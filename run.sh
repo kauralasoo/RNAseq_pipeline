@@ -21,3 +21,4 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s bam_to_fastq_PE.snakef
 #Run the alignment pipeline
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription.snakefile processed/TwinsUK/out.txt --jobs 100 --configfile configs/TwinsUK_config.yaml --rerun-incomplete
 
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription.snakefile processed/TwinsUK/out.txt --jobs 100 --configfile configs/TwinsUK_config.yaml --rerun-incomplete
