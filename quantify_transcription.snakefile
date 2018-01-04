@@ -193,6 +193,23 @@ rule quantify_featureCounts:
 		rm {params.sorted_bam}
 		"""
 
+rule merge_featureCounts:
+	input:
+		expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"])
+	output:
+		"processed/{study}/matrices/gene_expression_featureCounts.txt"
+	params:
+		sample_ids = ','.join(config["samples"]),
+		dir = "processed/{study}/featureCounts/"
+	threads: 1
+	resources:
+		mem = 8000
+	shell:
+		"""
+		module load R-3.4.1
+		Rscript scripts/merge_featureCounts.R -s {params.sample_ids} -d {params.dir} -o {output}
+		"""
+
 #Quantify allele-specific expression
 rule count_ASE:
 	input:
@@ -213,11 +230,11 @@ rule count_ASE:
 rule make_all:
 	input:
 		#expand("processed/{study}/verifyBamID/{sample}.verifyBamID.bestSM", study = config["study"], sample=config["samples"]),
-		expand("processed/{study}/bigwig/{sample}.{strand}.bw", study = config["study"], sample=config["samples"], strand = config["bigwig_strands"]),
-		expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
-		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
+		#expand("processed/{study}/bigwig/{sample}.{strand}.bw", study = config["study"], sample=config["samples"], strand = config["bigwig_strands"]),
+		#expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
+		"processed/{study}/matrices/gene_expression_featureCounts.txt",
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
-		"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
+		#"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
 	output:
 		"processed/{study}/out.txt"
 	resources:
