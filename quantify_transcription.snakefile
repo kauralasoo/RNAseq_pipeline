@@ -182,7 +182,7 @@ rule leafcutter_cluster_junctions:
 		out_prefix = "processed/{study}/leafcutter/"
 	threads: 1
 	resources:
-		mem = 1000
+		mem = 6000
 	shell:
 		"source activate py2.7 && "
 		"ls --color=never {params.out_prefix}/junc/*.junc | cat > {params.junc_files} && "
