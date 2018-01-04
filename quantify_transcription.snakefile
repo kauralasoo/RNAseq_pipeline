@@ -128,6 +128,24 @@ rule quant_salmon:
 		"--index {input[2]} -1 {input[0]} -2 {input[1]} -p {threads} "
 		"-o {params.out_prefix}"
 
+#Merge Salmon results
+rule merge_salmon:
+	input:
+		expand("processed/{{study}}/salmon/{{annotation}}/{sample}/quant.sf", sample=config["samples"])
+	output:
+		"processed/{study}/matrices/{annotation}.salmon_txrevise.rds"
+	params:
+		sample_ids = ','.join(config["samples"]),
+		dir = "processed/{study}/salmon/{annotation}"
+	threads: 1
+	resources:
+		mem = 12000
+	shell:
+		"""
+		module load R-3.4.1
+		Rscript scripts/merge_Salmon.R -s {params.sample_ids} -d {params.dir} -o {output}
+		"""
+
 #Convert BAMs to bed for leafcutter
 rule leafcutter_bam_to_bed:
 	input:
@@ -193,6 +211,7 @@ rule quantify_featureCounts:
 		rm {params.sorted_bam}
 		"""
 
+#Merge featureCounts results
 rule merge_featureCounts:
 	input:
 		expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"])
@@ -203,7 +222,7 @@ rule merge_featureCounts:
 		dir = "processed/{study}/featureCounts/"
 	threads: 1
 	resources:
-		mem = 8000
+		mem = 12000
 	shell:
 		"""
 		module load R-3.4.1
@@ -231,7 +250,7 @@ rule make_all:
 	input:
 		#expand("processed/{study}/verifyBamID/{sample}.verifyBamID.bestSM", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/bigwig/{sample}.{strand}.bw", study = config["study"], sample=config["samples"], strand = config["bigwig_strands"]),
-		#expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
+		expand("processed/{study}/matrices/{annotation}.salmon_txrevise.rds", study = config["study"], annotation=config["annotations"]),
 		"processed/{study}/matrices/gene_expression_featureCounts.txt",
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
 		#"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
