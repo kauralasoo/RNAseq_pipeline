@@ -246,8 +246,9 @@ rule count_ASE:
 
 #Run MBV on all samples
 rule run_qtltools_mbv:
-	input: 
-		"processed/{study}/STAR/{sample}/{sample}.Aligned.sortedByCoord.out.bam"
+	input:
+		bam = "processed/{study}/STAR/{sample}/{sample}.Aligned.sortedByCoord.out.bam",
+		index = "processed/{study}/STAR/{sample}/{sample}.Aligned.sortedByCoord.out.bam.bai"
 	output:
 		"processed/{study}/mbv/{sample}.mbv_output.txt"
 	resources:
@@ -255,7 +256,7 @@ rule run_qtltools_mbv:
 	threads: 1
 	shell:
 		"""
-		QTLtools mbv --vcf {config[vcf_file]} --bam {input} --out {output}
+		QTLtools mbv --vcf {config[vcf_file]} --bam {input.bam} --out {output}
 		"""
 
 #Make sure that all final output files get created
