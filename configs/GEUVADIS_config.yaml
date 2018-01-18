@@ -2,7 +2,7 @@
 study: GEUVADIS
 leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
 chromosome_lengths: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/chromosome_lengths.txt
-vcf_file: /nfs/users/nfs_k/ka8/scratch/projects/macrophage-gxe-study/genotypes/SL1344/hipsci.wec.gtarray.HumanCoreExome-12_v1_0.858samples.20141111.genotypes.GRCh38.sorted.filtered.vcf.gz
+vcf_file: /gpfs/hpchome/a72094/rocket/projects/GEUVADIS/genotypes/GEUVADIS_445_samples.merged.vcf.gz
 
 #Reference annotations
 ensembl_gtf: /gpfs/rocket/home/a72094/annotations/GRCh38/Ensembl_90/Homo_sapiens.GRCh38.90.gtf

@@ -244,6 +244,19 @@ rule count_ASE:
 	shell:
 		"{params.gatk_command} -T ASEReadCounter -R {config[fasta]} -I {input.bam} -o {output.counts} -sites {config[ase_vcf]} -U ALLOW_N_CIGAR_READS -dt NONE --minMappingQuality 10 -rf MateSameStrand"
 
+#Run MBV on all samples
+rule run_qtltools_mbv:
+	input: 
+		"processed/{study}/STAR/{sample}/{sample}.Aligned.sortedByCoord.out.bam"
+	output:
+		"processed/{study}/mbv/{sample}.mbv_output.txt"
+	resources:
+		mem = 3000
+	threads: 1
+	shell:
+		"""
+		QTLtools mbv --vcf {config[vcf_file]} --bam {input} --out {output}
+		"""
 
 #Make sure that all final output files get created
 rule make_all:
@@ -252,6 +265,7 @@ rule make_all:
 		#expand("processed/{study}/bigwig/{sample}.{strand}.bw", study = config["study"], sample=config["samples"], strand = config["bigwig_strands"]),
 		expand("processed/{study}/matrices/{annotation}.salmon_txrevise.rds", study = config["study"], annotation=config["annotations"]),
 		"processed/{study}/matrices/gene_expression_featureCounts.txt",
+		expand("processed/{study}/mbv/{sample}.mbv_output.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
 		#"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
 	output:
