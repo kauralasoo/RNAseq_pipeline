@@ -20,12 +20,10 @@ opt <- parse_args(OptionParser(option_list=option_list))
 sample_ids = unlist(strsplit(opt$s, ","))
 
 #Construct file names
-file_names = file.path(opt$d, sample_ids, "quant.sf")
+file_names = setNames(file.path(opt$d, sample_ids, "quant.sf"), sample_ids)
 
 #Import quant results
 tx_abundances = tximport(file_names, type = "salmon", txOut = TRUE, importer = read_tsv, dropInfReps = TRUE, ignoreTxVersion = FALSE)
-tx_abundances$file_names = file_names
-tx_abundances$sample_ids = sample_ids
 saveRDS(tx_abundances, opt$o)
 
 
