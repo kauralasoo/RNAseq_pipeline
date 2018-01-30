@@ -35,7 +35,7 @@ rule index_bams:
 	output:
 		"processed/{study}/STAR/{sample}/{sample}.Aligned.sortedByCoord.out.bam.bai"
 	resources:
-		mem = 50
+		mem = 500
 	threads: 1
 	shell:
 		"module load samtools-1.6 && "
