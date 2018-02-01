@@ -119,14 +119,19 @@ rule quant_salmon:
 	output:
 		protected("processed/{study}/salmon/{annotation}/{sample}/quant.sf")
 	params:
-		out_prefix = "processed/{study}/salmon/{annotation}/{sample}"
+		out_prefix = "processed/{study}/salmon/{annotation}/{sample}",
+		local_tmp = "/tmp/" + uuid.uuid4().hex + "/"
 	resources:
 		mem = 10000
 	threads: 8	
 	shell:
-		"salmon --no-version-check quant --seqBias --gcBias --libType {config[libType]} "
-		"--index {input[2]} -1 {input[0]} -2 {input[1]} -p {threads} "
-		"-o {params.out_prefix}"
+		"""
+		mkdir {params.local_tmp}
+		cp {input[0]} {params.local_tmp}/{wildcards.sample}_1.fq.gz
+		cp {input[1]} {params.local_tmp}/{wildcards.sample}_2.fq.gz
+		salmon --no-version-check quant --seqBias --gcBias --libType {config[libType]} --index {input[2]} -1 {params.local_tmp}/{wildcards.sample}_1.fq.gz -2 {params.local_tmp}/{wildcards.sample}_2.fq.gz -p {threads} -o {params.out_prefix}
+		rm -r {params.local_tmp}
+		"""
 
 #Merge Salmon results
 rule merge_salmon:
