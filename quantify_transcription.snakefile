@@ -127,9 +127,11 @@ rule quant_salmon:
 	shell:
 		"""
 		mkdir {params.local_tmp}
+		mkdir {params.local_tmp}/salmon_index
+		cp -r {input[2]}/* {params.local_tmp}/salmon_index/
 		cp {input[0]} {params.local_tmp}/{wildcards.sample}_1.fq.gz
 		cp {input[1]} {params.local_tmp}/{wildcards.sample}_2.fq.gz
-		salmon --no-version-check quant --seqBias --gcBias --libType {config[libType]} --index {input[2]} -1 {params.local_tmp}/{wildcards.sample}_1.fq.gz -2 {params.local_tmp}/{wildcards.sample}_2.fq.gz -p {threads} -o {params.out_prefix}
+		salmon --no-version-check quant --seqBias --gcBias --libType {config[libType]} --index {params.local_tmp}/salmon_index -1 {params.local_tmp}/{wildcards.sample}_1.fq.gz -2 {params.local_tmp}/{wildcards.sample}_2.fq.gz -p {threads} -o {params.out_prefix}
 		rm -r {params.local_tmp}
 		"""
 
