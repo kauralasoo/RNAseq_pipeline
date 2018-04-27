@@ -13,8 +13,8 @@ rule bam_to_fastq:
 	threads: 1
 	shell:
 		"""
-		echo -e {params.input_string} | python scripts/merge_fastq.py --indir processed/{dataset}/raw_fastq/ --outdir processed/{dataset}/fastq/ --suffix _1.fastq.gz
-		echo -e {params.input_string} | python scripts/merge_fastq.py --indir processed/{dataset}/raw_fastq/ --outdir processed/{dataset}/fastq/ --suffix _2.fastq.gz
+		echo -e \"{params.input_string}\" | python scripts/merge_fastq.py --indir processed/{wildcards.dataset}/fastq_raw/ --outdir processed/{wildcards.dataset}/fastq/ --suffix _1.fastq.gz
+		echo -e \"{params.input_string}\" | python scripts/merge_fastq.py --indir processed/{wildcards.dataset}/fastq_raw/ --outdir processed/{wildcards.dataset}/fastq/ --suffix _2.fastq.gz
 		"""
 
 #Make sure that all final output files get created
