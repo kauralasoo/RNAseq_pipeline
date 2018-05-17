@@ -18,7 +18,7 @@ rule sra_to_fastq:
 #Make sure that all final output files get created
 rule make_all:
 	input:
-		expand("processed/{{dataset}}/fastq/{sample}_1.fastq.gz", sample=config["samples"])
+		expand("processed/{{dataset}}/fastq/{sample}_1.fastq.gz", sample=config["srr_samples"])
 	output:
 		"processed/{dataset}/out.txt"
 	resources:
