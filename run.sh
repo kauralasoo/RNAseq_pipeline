@@ -17,7 +17,9 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 
 
 
-
 ### Nedelec 2017 dataset ####
 #Convert .sra files to fastq
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s sra_to_fastq.snakefile processed/Macrophages_Nedelec_2016/out.txt --jobs 1 --configfile configs/Nedelec_config.yaml --rerun-incomplete
+
+#Quantify transcription
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Macrophages_Nedelec_2016/out.txt --jobs 1 --configfile configs/Nedelec_config.yaml --rerun-incomplete

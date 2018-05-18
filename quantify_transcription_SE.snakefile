@@ -4,7 +4,7 @@ import os
 #Align reads to the reference genome using HISAT2
 rule hisat2_align:
 	input:
-    	lambda wildcards: config["samples"][wildcards.sample]
+		lambda wildcards: config["samples"][wildcards.sample]
 	output:
 		bam = "processed/{study}/hisat2/{sample}.bam",
 		ss = "processed/{study}/hisat2_ss/{sample}.splice_sites.txt"
@@ -23,8 +23,7 @@ rule hisat2_align:
 		cp {params.local_tmp}/{wildcards.sample}.sorted.bam {output.bam}
 		rm -r {params.local_tmp}
 		"""
-
-
+		
 #Make sure that all final output files get created
 rule make_all:
 	input:
