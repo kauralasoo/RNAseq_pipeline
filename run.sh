@@ -14,3 +14,10 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s bam_to_fastq_PE.snakef
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription.snakefile processed/TwinsUK/out.txt --jobs 100 --configfile configs/TwinsUK_config.yaml --rerun-incomplete
 
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription.snakefile processed/TwinsUK/out.txt --jobs 100 --configfile configs/TwinsUK_config.yaml --rerun-incomplete
+
+
+
+
+### Nedelec 2017 dataset ####
+#Convert .sra files to fastq
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s sra_to_fastq.snakefile processed/Macrophages_Nedelec_2016/out.txt --jobs 1 --configfile configs/Nedelec_config.yaml --rerun-incomplete
