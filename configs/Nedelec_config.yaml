@@ -1,3 +1,7 @@
+#### General info ####
+# Read length: 101bp
+strandedness: Unstranded
+
 #General
 study: Macrophages_Nedelec_2016/
 leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
