@@ -10,7 +10,7 @@ reference_genome: /gpfs/rocket/home/a72094/annotations/GRCh38/Homo_sapiens.GRCh3
 
 #HISAT2 config
 hisat2_index: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/hisat2_index_v90/Homo_sapiens.GRCh38.dna.primary_assembly
-hisat2_flags: "--rna-strandness RF"
+hisat2_flags: "--rna-strandness R"
 
 #Salmon parameters
 annotations: ["Ensembl_87", "reviseAnnotations.grp_1_contained","reviseAnnotations.grp_1_upstream","reviseAnnotations.grp_1_downstream","reviseAnnotations.grp_2_contained","reviseAnnotations.grp_2_upstream","reviseAnnotations.grp_2_downstream"]
