@@ -17,9 +17,19 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 
 
 
-### Nedelec 2017 dataset ####
+### Nedelec 2016 dataset ####
 #Convert .sra files to fastq
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s sra_to_fastq.snakefile processed/Macrophages_Nedelec_2016/out.txt --jobs 1 --configfile configs/Nedelec_config.yaml --rerun-incomplete
 
 #Quantify transcription
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Macrophages_Nedelec_2016/out.txt --jobs 1 --configfile configs/Nedelec_config.yaml --rerun-incomplete
+
+
+### Quach 2016 dataset ####
+#Quantify transcription
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Monocytes_Quach_2016/out.txt --jobs 1 --configfile configs/Quach_2016_config.yaml --rerun-incomplete
+
+### BLUEPRINT SE dataset ####
+#Quantify transcription
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/BLUEPRINT/out.txt --jobs 1 --configfile configs/BLUEPRINT_SE_config.yaml --rerun-incomplete
+

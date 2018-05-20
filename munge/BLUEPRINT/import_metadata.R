@@ -16,9 +16,17 @@ file_names = readr::read_tsv("metadata/BLUEPRINT/monocyte_fastq_files.txt", col_
   tidyr::separate(fastq, c("prefix","ega_id", "file_name"), "_", extra = "merge", remove = FALSE) %>%
   dplyr::select(-prefix)
 
-sample_names = dplyr::left_join(sample_files, file_names, by = "file_name") %>% dplyr::select(sample_id, ega_id, fastq, ega_file) %>%
+#Export sample metadata
+mono_sample_names = dplyr::left_join(sample_files, file_names, by = "file_name") %>% dplyr::select(sample_id, ega_id, fastq, ega_file) %>%
   dplyr::filter(!is.na(fastq))
-write.table(sample_names, "metadata/BLUEPRINT/monocyte_compiled_metadata.txt", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(mono_sample_names, "metadata/BLUEPRINT/monocyte_compiled_metadata.txt", sep = "\t", row.names = FALSE, quote = FALSE)
+
+#Export snakemake fastq paths
+snakemake = dplyr::transmute(mono_sample_names, sample_id, fastq) %>% 
+  dplyr::mutate(snakemake_string = paste0(sample_id,": [", "processed/BLUEPRINT/fastq/monocytes/", fastq,"]")) %>% 
+  dplyr::select(snakemake_string)
+write.table(snakemake, "metadata/BLUEPRINT/monocytes_snakemake_string.txt", sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
+
 
 
 #Identify missing fastq files from EGA
@@ -41,8 +49,16 @@ file_names = readr::read_tsv("metadata/BLUEPRINT/neutrophil_fastq_files.txt", co
   tidyr::separate(fastq, c("prefix","ega_id", "file_name"), "_", extra = "merge", remove = FALSE) %>%
   dplyr::select(-prefix)
 
-sample_names = dplyr::left_join(sample_files, file_names, by = "file_name") %>% dplyr::select(sample_id, ega_id, fastq, ega_file) %>%
+neutro_sample_names = dplyr::left_join(sample_files, file_names, by = "file_name") %>% dplyr::select(sample_id, ega_id, fastq, ega_file) %>%
   dplyr::filter(!is.na(fastq))
+write.table(neutro_sample_names, "metadata/BLUEPRINT/neutrophil_compiled_metadata.txt", sep = "\t", row.names = FALSE, quote = FALSE)
+
+#Export snakemake fastq paths
+snakemake = dplyr::transmute(neutro_sample_names, sample_id, fastq) %>% 
+  dplyr::mutate(snakemake_string = paste0(sample_id,": [", "processed/BLUEPRINT/fastq/neutrophils/", fastq,"]")) %>% 
+  dplyr::select(snakemake_string)
+write.table(snakemake, "metadata/BLUEPRINT/neutrophils_snakemake_string.txt", sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
+
 
 #Identify missing fastq files from EGA
 all_files = read.table("metadata/BLUEPRINT/neutrophil_EGA_list.txt", stringsAsFactors = FALSE)
