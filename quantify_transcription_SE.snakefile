@@ -17,10 +17,10 @@ rule hisat2_align:
 		"""
 		module load samtools-1.6
 		mkdir {params.local_tmp}
-		cp {input[0]} {params.local_tmp}/{wildcards.sample}_1.fq.gz
+		rsync -aP --bwlimit=10000 {input[0]} {params.local_tmp}/{wildcards.sample}_1.fq.gz
 		hisat2 -p {threads} -x {config[hisat2_index]} {config[hisat2_flags]} --novel-splicesite-outfile {output.ss} -U {params.local_tmp}/{wildcards.sample}_1.fq.gz | samtools view -Sb > {params.local_tmp}/{wildcards.sample}.bam
 		samtools sort -m 1000M -o {params.local_tmp}/{wildcards.sample}.sorted.bam -O BAM --threads 6 {params.local_tmp}/{wildcards.sample}.bam
-		cp {params.local_tmp}/{wildcards.sample}.sorted.bam {output.bam}
+		rsync -aP --bwlimit=10000 {params.local_tmp}/{wildcards.sample}.sorted.bam {output.bam}
 		rm -r {params.local_tmp}
 		"""
 		
