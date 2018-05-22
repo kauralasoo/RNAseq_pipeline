@@ -129,8 +129,8 @@ rule quant_salmon:
 		mkdir {params.local_tmp}
 		mkdir {params.local_tmp}/salmon_index
 		cp -r {input[2]}/* {params.local_tmp}/salmon_index/
-		cp {input[0]} {params.local_tmp}/{wildcards.sample}_1.fq.gz
-		cp {input[1]} {params.local_tmp}/{wildcards.sample}_2.fq.gz
+		rsync -aP --bwlimit=10000 {input[0]} {params.local_tmp}/{wildcards.sample}_1.fq.gz
+		rsync -aP --bwlimit=10000 {input[1]} {params.local_tmp}/{wildcards.sample}_2.fq.gz
 		salmon --no-version-check quant --seqBias --gcBias --libType {config[libType]} --index {params.local_tmp}/salmon_index -1 {params.local_tmp}/{wildcards.sample}_1.fq.gz -2 {params.local_tmp}/{wildcards.sample}_2.fq.gz -p {threads} -o {params.out_prefix}
 		rm -r {params.local_tmp}
 		"""
@@ -211,7 +211,7 @@ rule quantify_featureCounts:
 	shell:
 		"""
 		module load samtools-1.6
-		cp {input.bam} {params.raw_bam}
+		rsync -aP --bwlimit=10000 {input.bam} {params.raw_bam}
 		samtools sort -n -m 1000M -o {params.sorted_bam} -O BAM --threads 5 {params.raw_bam}
 		featureCounts -p -C -D 5000 -d 50 --donotsort -a {config[ensembl_gtf]} -o {output.counts} {params.sorted_bam}
 		rm {params.raw_bam}

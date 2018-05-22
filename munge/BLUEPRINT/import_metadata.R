@@ -62,5 +62,35 @@ write.table(snakemake, "metadata/BLUEPRINT/neutrophils_snakemake_string.txt", se
 
 #Identify missing fastq files from EGA
 all_files = read.table("metadata/BLUEPRINT/neutrophil_EGA_list.txt", stringsAsFactors = FALSE)
-setdiff(all_files$V3, sample_names$ega_file)
+setdiff(all_files$V3, neutro_sample_names$ega_file)
+
+
+
+#T-cell data
+#Sample files
+sample_files = readr::read_tsv("metadata/BLUEPRINT/Tcell_sample_file.map", col_names = c("sample_id","id1", "file_name", "ega_file")) %>%
+  dplyr::select(-id1) %>%
+  dplyr::filter(!(file_name %like% ".bam.")) %>%
+  tidyr::separate(file_name, c("file_name", "suffix"), ".cip") %>%
+  dplyr::select(-suffix) %>%
+  dplyr::mutate(file_name = str_replace_all(file_name, "/", "_")) %>%
+  dplyr::mutate(file_name = str_replace(file_name, "_McGill", "McGill"))
+
+
+#Import file names
+file_names = readr::read_tsv("metadata/BLUEPRINT/Tcell_fastq_files.txt", col_names = "fastq") %>%
+  tidyr::separate(fastq, c("prefix","ega_id", "file_name"), "_", extra = "merge", remove = FALSE) %>%
+  dplyr::select(-prefix)
+
+tcell_sample_names = dplyr::left_join(sample_files, file_names, by = "file_name") %>% 
+  dplyr::select(sample_id, ega_id, fastq, ega_file) %>%
+  dplyr::filter(!is.na(fastq))
+
+
+
+
+
+#Identify missing fastq files from EGA
+all_files = read.table("metadata/BLUEPRINT/Tcell_EGA_list.txt", stringsAsFactors = FALSE)
+setdiff(all_files$V3, neutro_sample_names$ega_file)
 
