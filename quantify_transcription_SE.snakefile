@@ -23,6 +23,22 @@ rule hisat2_align:
 		rsync -aP --bwlimit=10000 {params.local_tmp}/{wildcards.sample}.sorted.bam {output.bam}
 		rm -r {params.local_tmp}
 		"""
+
+#Sort bam files by name and quantify gene expression using featureCounts
+rule quantify_featureCounts:
+	input:
+		bam = "processed/{study}/hisat2/{sample}.bam"
+	output:
+		counts = "processed/{study}/featureCounts/{sample}.featureCounts.txt",
+		summary = "processed/{study}/featureCounts/{sample}.featureCounts.txt.summary"
+
+	threads: 20
+	resources:
+		mem = 8000
+	shell:
+		"""
+		featureCounts -s0 -a {config[ensembl_gtf]} -o {output.counts} {input.bam}
+		"""
 		
 #Make sure that all final output files get created
 rule make_all:
@@ -30,6 +46,7 @@ rule make_all:
 		#expand("processed/{study}/verifyBamID/{sample}.verifyBamID.bestSM", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/bigwig/{sample}.str1.bw", study = config["study"], sample=config["samples"]),
 		expand("processed/{{study}}/hisat2/{sample}.bam", sample=config["samples"]),
+		expand("processed/{{study}}/feaureCounts/{sample}.featureCounts.txt", sample=config["samples"]),
 		#expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
 		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
