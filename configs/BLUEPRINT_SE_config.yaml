@@ -5,6 +5,9 @@
 #General
 study: BLUEPRINT/
 
+#featureCounts
+ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
+
 #HISAT2 config
 hisat2_index: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/hisat2_index_v90/Homo_sapiens.GRCh38.dna.primary_assembly
 hisat2_flags: "--rna-strandness R"
