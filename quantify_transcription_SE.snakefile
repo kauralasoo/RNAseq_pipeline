@@ -31,10 +31,9 @@ rule quantify_featureCounts:
 	output:
 		counts = "processed/{study}/featureCounts/{sample}.featureCounts.txt",
 		summary = "processed/{study}/featureCounts/{sample}.featureCounts.txt.summary"
-
-	threads: 20
+	threads: 1
 	resources:
-		mem = 8000
+		mem = 6000
 	shell:
 		"""
 		featureCounts -s0 -a {config[ensembl_gtf]} -o {output.counts} {input.bam}
