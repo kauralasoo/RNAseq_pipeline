@@ -38,7 +38,7 @@ rule quantify_featureCounts:
 		if(config["strandedness"] == "Stranded"):
 			 shell("featureCounts -s2 -a {config[ensembl_gtf]} -o {output.counts} {input.bam}")
 		else:
-			shell("featureCounts -s2 -a {config[ensembl_gtf]} -o {output.counts} {input.bam}")
+			shell("featureCounts -s0 -a {config[ensembl_gtf]} -o {output.counts} {input.bam}")
 
 		
 #Make sure that all final output files get created
