@@ -34,10 +34,12 @@ rule quantify_featureCounts:
 	threads: 1
 	resources:
 		mem = 6000
-	shell:
-		"""
-		featureCounts -s0 -a {config[ensembl_gtf]} -o {output.counts} {input.bam}
-		"""
+	run:
+		if(config["strandedness"] == "Stranded"):
+			 shell("featureCounts -s2 -a {config[ensembl_gtf]} -o {output.counts} {input.bam}")
+		else:
+			shell("featureCounts -s2 -a {config[ensembl_gtf]} -o {output.counts} {input.bam}")
+
 		
 #Make sure that all final output files get created
 rule make_all:
