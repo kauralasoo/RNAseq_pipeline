@@ -24,6 +24,29 @@ rule hisat2_align:
 		rsync -aP --bwlimit=10000 {params.local_tmp}/{wildcards.sample}.sorted.bam {output.bam}
 		rm -r {params.local_tmp}
 		"""
+
+#Sort bam files by name and quantify gene expression using featureCounts
+rule quantify_featureCounts:
+	input:
+		bam = "processed/{study}/hisat2/{sample}.bam"
+	output:
+		counts = "processed/{study}/featureCounts/{sample}.featureCounts.txt",
+		summary = "processed/{study}/featureCounts/{sample}.featureCounts.txt.summary"
+	params:
+		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
+	threads: 6
+	resources:
+		mem = 8000
+	run:
+		shell("module load samtools-1.6")
+		shell("mkdir {params.local_tmp}")
+		shell("rsync -aP --bwlimit=10000 {input.bam} {params.local_tmp}/{wildcards.sample}.bam")
+		shell("samtools sort -n -m 1000M -o {params.local_tmp}/{wildcards.sample}.sorted.bam -O BAM --threads 5 {params.local_tmp}/{wildcards.sample}.bam")
+		if(config["strandedness"] == "Stranded"):
+    		shell("featureCounts -s2 -p -C -D 5000 -d 50 --donotsort -a {config[ensembl_gtf]} -o {output.counts} {params.local_tmp}/{wildcards.sample}.sorted.bam")
+		else:
+    		shell("featureCounts -s0 -p -C -D 5000 -d 50 --donotsort -a {config[ensembl_gtf]} -o {output.counts} {params.local_tmp}/{wildcards.sample}.sorted.bam")
+		shell("rm -r {params.local_tmp}")
 		
 #Make sure that all final output files get created
 rule make_all:
@@ -31,6 +54,7 @@ rule make_all:
 		#expand("processed/{study}/verifyBamID/{sample}.verifyBamID.bestSM", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/bigwig/{sample}.str1.bw", study = config["study"], sample=config["samples"]),
 		expand("processed/{{study}}/hisat2/{sample}.bam", sample=config["samples"]),
+		expand("processed/{{study}}/featureCounts/{sample}.featureCounts.txt", sample=config["samples"]),
 		#expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
 		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
