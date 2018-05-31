@@ -1,6 +1,6 @@
 #### General info ####
-# Read length: 
-# strandedness: 
+# Read length: 100bp
+strandedness: Stranded 
 
 #General
 study: BLUEPRINT/
@@ -10,7 +10,7 @@ ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v
 
 #HISAT2 config
 hisat2_index: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/hisat2_index_v90/Homo_sapiens.GRCh38.dna.primary_assembly
-hisat2_flags: "--rna-strandness R"
+hisat2_flags: "--rna-strandness RF"
 
 #Dictionary of sample names
 samples:
