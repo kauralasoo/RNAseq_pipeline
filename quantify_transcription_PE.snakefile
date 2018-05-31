@@ -43,7 +43,7 @@ rule quantify_featureCounts:
 		shell("rsync -aP --bwlimit=10000 {input.bam} {params.local_tmp}/{wildcards.sample}.bam")
 		shell("samtools sort -n -m 1000M -o {params.local_tmp}/{wildcards.sample}.sorted.bam -O BAM --threads 5 {params.local_tmp}/{wildcards.sample}.bam")
 		if(config["strandedness"] == "Stranded"):
-    		shell("featureCounts -s2 -p -C -D 5000 -d 50 --donotsort -a {config[ensembl_gtf]} -o {output.counts} {params.local_tmp}/{wildcards.sample}.sorted.bam")
+			shell("featureCounts -s2 -p -C -D 5000 -d 50 --donotsort -a {config[ensembl_gtf]} -o {output.counts} {params.local_tmp}/{wildcards.sample}.sorted.bam")
 		else:
 			shell("featureCounts -s0 -p -C -D 5000 -d 50 --donotsort -a {config[ensembl_gtf]} -o {output.counts} {params.local_tmp}/{wildcards.sample}.sorted.bam")
 		shell("rm -r {params.local_tmp}")
