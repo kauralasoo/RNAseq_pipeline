@@ -43,7 +43,7 @@ rule quantify_featureCounts:
 #Merge featureCounts results
 rule merge_featureCounts:
 	input:
-		expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"])
+		expand("processed/{{study}}/featureCounts/{sample}.featureCounts.txt", sample=config["samples"])
 	output:
 		"processed/{study}/matrices/gene_expression_featureCounts.txt"
 	params:
