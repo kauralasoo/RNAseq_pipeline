@@ -32,4 +32,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 ### BLUEPRINT SE dataset ####
 #Quantify transcription
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/BLUEPRINT/out.txt --jobs 1 --configfile configs/BLUEPRINT_SE_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_PE_config.yaml --rerun-incomplete
 
+### Alasoo et al ####
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/Macrophages_Alasoo_2018/out.txt --jobs 20 --configfile configs/Alasoo_2018_config.yaml --rerun-incomplete

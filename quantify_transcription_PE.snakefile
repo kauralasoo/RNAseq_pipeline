@@ -47,13 +47,32 @@ rule quantify_featureCounts:
 			shell("featureCounts -s0 -p -C -D 5000 -d 50 --donotsort -a {config[ensembl_gtf]} -o {output.counts} {params.local_tmp}/{wildcards.sample}.sorted.bam")
 		shell("rm -r {params.local_tmp}")
 		
+#Merge featureCounts results
+rule merge_featureCounts:
+	input:
+		expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"])
+	output:
+		"processed/{study}/matrices/gene_expression_featureCounts.txt"
+	params:
+		sample_ids = ','.join(config["samples"]),
+		dir = "processed/{study}/featureCounts/"
+	threads: 1
+	resources:
+		mem = 12000
+	shell:
+		"""
+		module load R-3.4.1
+		Rscript scripts/merge_featureCounts.R -s {params.sample_ids} -d {params.dir} -o {output}
+		"""
+
+		
 #Make sure that all final output files get created
 rule make_all:
 	input:
 		#expand("processed/{study}/verifyBamID/{sample}.verifyBamID.bestSM", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/bigwig/{sample}.str1.bw", study = config["study"], sample=config["samples"]),
 		expand("processed/{{study}}/hisat2/{sample}.bam", sample=config["samples"]),
-		expand("processed/{{study}}/featureCounts/{sample}.featureCounts.txt", sample=config["samples"]),
+		"processed/{study}/matrices/gene_expression_featureCounts.txt",
 		#expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
 		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
