@@ -72,7 +72,7 @@ data = dict()
 for datacol in datacols:
     data[datacol] = []
 
-featurecounts = pd.read_csv('./gene_expression_featurecounts.txt', sep='\t')
+featurecounts = pd.read_csv('./gene_expression_featureCounts.txt', sep='\t')
 
 samples = featurecounts.columns.tolist()[2:]
 del featurecounts
