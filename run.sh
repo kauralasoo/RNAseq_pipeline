@@ -29,7 +29,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 #Quantify transcription
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Monocytes_Quach_2016/out.txt --jobs 1 --configfile configs/Quach_2016_config.yaml --rerun-incomplete
 
-### BLUEPRINT SE dataset ####
+### BLUEPRINT dataset ####
 #Quantify transcription
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/BLUEPRINT/out.txt --jobs 1 --configfile configs/BLUEPRINT_SE_config.yaml --rerun-incomplete
 snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_PE_config.yaml --rerun-incomplete
