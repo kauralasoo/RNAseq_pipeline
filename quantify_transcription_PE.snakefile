@@ -77,6 +77,7 @@ rule leafcutter_bam_to_bed:
 	shell:
 		"""
 		module load samtools-1.6
+		module load perl-5.22.0
 		samtools view {input} | python {config[leafcutter_root]}/scripts/filter_cs.py | {config[leafcutter_root]}/scripts/sam2bed.pl --use-RNA-strand - {output}
 		"""
 
