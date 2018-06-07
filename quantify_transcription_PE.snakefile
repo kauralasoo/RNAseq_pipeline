@@ -65,6 +65,33 @@ rule merge_featureCounts:
 		Rscript scripts/merge_featureCounts.R -s {params.sample_ids} -d {params.dir} -o {output}
 		"""
 
+#Convert BAMs to bed for leafcutter
+rule leafcutter_bam_to_bed:
+	input:
+		"processed/{study}/hisat2/{sample}.bam"
+	output:
+		temp("processed/{study}/leafcutter/bed/{sample}.bed")
+	threads: 3
+	resources:
+		mem = 1000
+	shell:
+		"""
+		module load samtools-1.6
+		samtools view {input} | python {config[leafcutter_root]}/scripts/filter_cs.py | {config[leafcutter_root]}/scripts/sam2bed.pl --use-RNA-strand - {output}
+		"""
+
+#Convert bed file to junctions
+rule leafcutter_bed_to_junc:
+	input:
+		"processed/{study}/leafcutter/bed/{sample}.bed"
+	output:
+		"processed/{study}/leafcutter/junc/{sample}.junc"
+	threads: 1
+	resources:
+		mem = 1000
+	shell:
+		"{config[leafcutter_root]}/scripts/bed2junc.pl {input} {output}"
+
 		
 #Make sure that all final output files get created
 rule make_all:
@@ -73,6 +100,7 @@ rule make_all:
 		#expand("processed/{study}/bigwig/{sample}.str1.bw", study = config["study"], sample=config["samples"]),
 		expand("processed/{{study}}/hisat2/{sample}.bam", sample=config["samples"]),
 		"processed/{study}/matrices/gene_expression_featureCounts.txt",
+		expand("processed/{{study}}/leafcutter/junc/{sample}.junc", sample=config["samples"]),
 		#expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
 		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),

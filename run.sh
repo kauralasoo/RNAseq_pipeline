@@ -3,6 +3,8 @@
 #Run the quantification pipeline
 snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription.snakefile processed/GEUVADIS/out.txt --jobs 100 --configfile configs/GEUVADIS_config.yaml --rerun-incomplete
 
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/GEUVADIS/out.txt --jobs 20 --configfile configs/GEUVADIS_config.yaml --rerun-incomplete
+
 
 #### TwinsUK dataset ####
 #Convert bams to fastq
@@ -30,9 +32,11 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/BLUEPRINT/out.txt --jobs 1 --configfile configs/BLUEPRINT_SE_config.yaml --rerun-incomplete
 snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_PE_config.yaml --rerun-incomplete
 
+snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_all_config.yaml --rerun-incomplete
+
 
 #### Alasoo et al ####
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/Macrophages_Alasoo_2018/out.txt --jobs 20 --configfile configs/Alasoo_2018_config.yaml --rerun-incomplete
 
 #### Fairfax et al ####
-snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_SE.snakefile processed/Fairfax/out.txt --jobs 1 --configfile configs/Fairfax_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Fairfax/out.txt --jobs 1 --configfile configs/Fairfax_config.yaml --rerun-incomplete
