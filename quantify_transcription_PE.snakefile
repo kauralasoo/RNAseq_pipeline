@@ -65,34 +65,28 @@ rule merge_featureCounts:
 		Rscript scripts/merge_featureCounts.R -s {params.sample_ids} -d {params.dir} -o {output}
 		"""
 
-#Convert BAMs to bed for leafcutter
-rule leafcutter_bam_to_bed:
+#Run two leafcutter steps in one command
+rule leafcutter_bam_to_junc:
 	input:
 		"processed/{study}/hisat2/{sample}.bam"
 	output:
-		temp("processed/{study}/leafcutter/bed/{sample}.bed")
-	threads: 3
+		"processed/{study}/leafcutter/junc/{sample}.junc"
+	params:
+		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
+	threads: 1
 	resources:
 		mem = 1000
 	shell:
 		"""
 		module load samtools-1.6
 		module load perl-5.22.0
-		samtools view {input} | python {config[leafcutter_root]}/scripts/filter_cs.py | {config[leafcutter_root]}/scripts/sam2bed.pl --use-RNA-strand - {output}
+		mkdir {params.local_tmp}
+		rsync -aP --bwlimit=10000 {input} {params.local_tmp}/{wildcards.sample}.bam
+		samtools view {params.local_tmp}/{wildcards.sample}.bam | python {config[leafcutter_root]}/scripts/filter_cs.py | {config[leafcutter_root]}/scripts/sam2bed.pl --use-RNA-strand - {params.local_tmp}/{wildcards.sample}.bed
+		{config[leafcutter_root]}/scripts/bed2junc.pl {params.local_tmp}/{wildcards.sample}.bed {params.local_tmp}/{wildcards.sample}.junc
+		cp {params.local_tmp}/{wildcards.sample}.junc {output}
+		rm -r {params.local_tmp}
 		"""
-
-#Convert bed file to junctions
-rule leafcutter_bed_to_junc:
-	input:
-		"processed/{study}/leafcutter/bed/{sample}.bed"
-	output:
-		"processed/{study}/leafcutter/junc/{sample}.junc"
-	threads: 1
-	resources:
-		mem = 1000
-	shell:
-		"{config[leafcutter_root]}/scripts/bed2junc.pl {input} {output}"
-
 		
 #Make sure that all final output files get created
 rule make_all:
