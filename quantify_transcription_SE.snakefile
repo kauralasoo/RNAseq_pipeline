@@ -58,6 +58,29 @@ rule merge_featureCounts:
 		Rscript scripts/merge_featureCounts.R -s {params.sample_ids} -d {params.dir} -o {output}
 		"""
 
+#Run two leafcutter steps in one command
+rule leafcutter_bam_to_junc:
+	input:
+		"processed/{study}/hisat2/{sample}.bam"
+	output:
+		"processed/{study}/leafcutter/junc/{sample}.junc"
+	params:
+		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
+	threads: 1
+	resources:
+		mem = 1000
+	shell:
+		"""
+		module load samtools-1.6
+		module load perl-5.22.0
+		mkdir {params.local_tmp}
+		rsync -aP --bwlimit=10000 {input} {params.local_tmp}/{wildcards.sample}.bam
+		samtools view {params.local_tmp}/{wildcards.sample}.bam | python {config[leafcutter_root]}/scripts/filter_cs.py | {config[leafcutter_root]}/scripts/sam2bed.pl --use-RNA-strand - {params.local_tmp}/{wildcards.sample}.bed
+		{config[leafcutter_root]}/scripts/bed2junc.pl {params.local_tmp}/{wildcards.sample}.bed {params.local_tmp}/{wildcards.sample}.junc
+		cp {params.local_tmp}/{wildcards.sample}.junc {output}
+		rm -r {params.local_tmp}
+		"""
+
 		
 #Make sure that all final output files get created
 rule make_all:
@@ -66,6 +89,7 @@ rule make_all:
 		#expand("processed/{study}/bigwig/{sample}.str1.bw", study = config["study"], sample=config["samples"]),
 		expand("processed/{{study}}/hisat2/{sample}.bam", sample=config["samples"]),
 		"processed/{study}/matrices/gene_expression_featureCounts.txt",
+		expand("processed/{{study}}/leafcutter/junc/{sample}.junc", sample=config["samples"]),
 		#expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
 		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
