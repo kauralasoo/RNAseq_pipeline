@@ -1,0 +1,6 @@
+#Config file for perparing Nedelec et al genotype files
+strand_file: "/gpfs/hpchome/a72094/rocket/datasets/imputation/strand_files/b37/HumanOmni5Exome-4v1_A-b37.strand"
+refalt_file: "/gpfs/hpchome/a72094/rocket/datasets/imputation/strand_files/b37/HumanOmni5Exome-4v1_A-b37.strand.RefAlt"
+raw_genotyes: "/gpfs/hpchome/a72094/rocket/datasets/Macrophages_Nedelec_2016/genotypes/Combo_Barreiro_3projects.BIN.NamesCorrected.171"
+ref_genome: "/gpfs/hpchome/a72094/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa"
+dbSNP: "/gpfs/hpchome/a72094/rocket/datasets/dbSNP/dbSNP_b151_GRCh37p13.vcf.gz"
