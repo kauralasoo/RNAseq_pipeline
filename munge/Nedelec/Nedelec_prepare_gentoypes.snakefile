@@ -42,3 +42,29 @@ rule prepare_genotypes:
 		bcftools index {output}
 		"""
 
+rule extract_chromosome:
+	input:
+		vcf = "processed/{study}.fixed.vcf.gz"
+	outout:
+		vcf = "processed/{study}/chr_{chr}.vcf.gz"
+	threads: 1
+	resources:
+		mem = 1000
+	shell:
+		"""
+		module load bcftools-1.8
+		bcftools view -r {wildcards.chr} {input.vcf} -Oz o {output.vcf}
+		"""
+
+rule make_all:
+	input:
+		vcf = expand("processed/{{study}}/chr_{chr}.vcf.gz", chr = config["chromosomes"])
+	output:
+		"processed/out.txt"
+	threads: 1
+	resources:
+		mem = 100
+	shell:
+		"""
+		echo 'Done' > {output}
+		"""
