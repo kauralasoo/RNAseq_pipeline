@@ -6,7 +6,7 @@ rule prepare_genotypes:
 		vcf = "processed/{study}.fixed.vcf.gz"
 	threads: 4
 	params:
-		bfile: expand("{file}", file = config["raw_genotypes"])
+		bfile = expand("{file}", file = config["raw_genotypes"])
 	resources:
 		mem = 4000
 	shell:
