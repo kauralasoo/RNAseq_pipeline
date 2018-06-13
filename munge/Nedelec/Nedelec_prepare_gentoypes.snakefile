@@ -60,7 +60,7 @@ rule make_all:
 	input:
 		vcf = expand("processed/{{study}}/chr_{chr}.vcf.gz", chr = config["chromosomes"])
 	output:
-		"processed/out.txt"
+		"processed/{study}_out.txt"
 	threads: 1
 	resources:
 		mem = 100
