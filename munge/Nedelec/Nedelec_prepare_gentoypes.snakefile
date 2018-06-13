@@ -45,7 +45,7 @@ rule prepare_genotypes:
 rule extract_chromosome:
 	input:
 		vcf = "processed/{study}.fixed.vcf.gz"
-	outout:
+	output:
 		vcf = "processed/{study}/chr_{chr}.vcf.gz"
 	threads: 1
 	resources:
