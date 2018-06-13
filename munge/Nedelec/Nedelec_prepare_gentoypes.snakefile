@@ -53,7 +53,7 @@ rule extract_chromosome:
 	shell:
 		"""
 		module load bcftools-1.8
-		bcftools view -r {wildcards.chr} {input.vcf} -Oz o {output.vcf}
+		bcftools view -r {wildcards.chr} {input.vcf} -Oz -o {output.vcf}
 		"""
 
 rule make_all:
