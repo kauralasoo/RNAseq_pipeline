@@ -1,7 +1,7 @@
 #Prepare genotypes
 rule prepare_genotypes:
 	input:
-		bfile = expand({bfile}, bfile = config['raw_genotypes'])
+		bfile = expand("{file}", file = config["raw_genotypes"])
 	output:
 		vcf = "processed/{study}.fixed.vcf.gz"
 	threads: 4
@@ -38,4 +38,5 @@ rule prepare_genotypes:
 
 		#Index the VCF file
 		bcftools index {output}
-		""""
+		"""
+
