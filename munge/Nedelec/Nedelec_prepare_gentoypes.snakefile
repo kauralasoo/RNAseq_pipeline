@@ -1,10 +1,12 @@
 #Prepare genotypes
 rule prepare_genotypes:
 	input:
-		bfile = expand("{file}", file = config["raw_genotypes"])
+		bfile = expand("{file}.bed", file = config["raw_genotypes"])
 	output:
 		vcf = "processed/{study}.fixed.vcf.gz"
 	threads: 4
+	params:
+		bfile: expand("{file}", file = config["raw_genotypes"])
 	resources:
 		mem = 4000
 	shell:
@@ -13,7 +15,7 @@ rule prepare_genotypes:
 		module load bcftools-1.8
 		
 		#Update to correct build
-		update_build.sh {input} {config[strand_file]} processed/{study}
+		update_build.sh {params.bfile} {config[strand_file]} processed/{study}
 
 		#Fix the ref and alt alleles
 		plink -bfile processed/{study} --reference-allele {config[refalt_file]} --make-bed --out processed/{study}.RefAlt
