@@ -12,6 +12,9 @@ ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v
 hisat2_index: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/hisat2_index_v90/Homo_sapiens.GRCh38.dna.primary_assembly
 hisat2_flags: "--rna-strandness R"
 
+#Splicing
+leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
+
 #Dictionary of sample names
 samples:
   S000GZB5: [processed/BLUEPRINT/fastq/monocytes/_EGAR00001155928_131114_SN935_0183_A_C36BYACXX_ACTGAT_2_read1.fastq.gz]

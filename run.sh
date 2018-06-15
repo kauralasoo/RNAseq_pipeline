@@ -24,7 +24,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 
 #### Quach 2016 dataset ####
 #Quantify transcription
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Monocytes_Quach_2016/out.txt --jobs 1 --configfile configs/Quach_2016_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Monocytes_Quach_2016/out.txt --jobs 20 --configfile configs/Quach_2016_config.yaml --rerun-incomplete
 
 
 #### BLUEPRINT dataset ####
@@ -32,6 +32,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/BLUEPRINT/out.txt --jobs 1 --configfile configs/BLUEPRINT_SE_config.yaml --rerun-incomplete
 snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_PE_config.yaml --rerun-incomplete
 
+#Run using all sample names at the same time
 snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_all_config.yaml --rerun-incomplete
 
 
