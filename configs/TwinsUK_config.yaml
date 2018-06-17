@@ -1,21 +1,16 @@
 #General
-study: TwinsUK
+# Read length: 49bp
+strandedness: Unstranded 
+
+#featureCounts
+ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
+
+#HISAT2 config
+hisat2_index: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/hisat2_index_v90/Homo_sapiens.GRCh38.dna.primary_assembly
+hisat2_flags: ""
+
+#Splicing
 leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
-chromosome_lengths: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/chromosome_lengths.txt
-vcf_file: /nfs/users/nfs_k/ka8/scratch/projects/macrophage-gxe-study/genotypes/SL1344/hipsci.wec.gtarray.HumanCoreExome-12_v1_0.858samples.20141111.genotypes.GRCh38.sorted.filtered.vcf.gz
-
-#Reference annotations
-ensembl_gtf: /gpfs/rocket/home/a72094/annotations/GRCh38/Ensembl_90/Homo_sapiens.GRCh38.90.gtf
-reference_genome: /gpfs/rocket/home/a72094/annotations/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa
-
-#STAR parameters
-star_index: /gpfs/rocket/home/a72094/annotations/GRCh38/STAR_index_v90_oh48
-outWigStrand: Unstranded
-bigwig_strands: str1
-
-#Salmon parameters
-annotations: ["Ensembl_87", "reviseAnnotations.grp_1_contained","reviseAnnotations.grp_1_upstream","reviseAnnotations.grp_1_downstream","reviseAnnotations.grp_2_contained","reviseAnnotations.grp_2_upstream","reviseAnnotations.grp_2_downstream"]
-libType: IU
 
 #Dictionary of sample names
 samples:
