@@ -7,3 +7,5 @@
 .snakemake
 processed
 SlurmOut
+annotations
+results
