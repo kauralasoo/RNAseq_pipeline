@@ -132,7 +132,7 @@ rule quant_salmon:
 		mem = 10000
 	threads: 8	
 	shell:
-		""""
+		"""
 		source activate py3.6
 		mkdir {params.local_tmp}
 		mkdir {params.local_tmp}/salmon_index
