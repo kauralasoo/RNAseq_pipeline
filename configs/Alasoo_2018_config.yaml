@@ -13,6 +13,10 @@ hisat2_flags: "--rna-strandness RF"
 #Splicing
 leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
 
+#Salmon parameters
+annotations: ["txrevise.grp_1.contained", "txrevise.grp_1.downstream","txrevise.grp_1.upstream","txrevise.grp_2.contained","txrevise.grp_2.downstream","txrevise.grp_2.upstream"]
+libType: ISR
+
 #Dictionary of sample names
 samples:
   aipt_A: [processed/Macrophages_Alasoo_2018/fastq/aipt_A.1.fastq.gz, processed/Macrophages_Alasoo_2018/fastq/aipt_A.2.fastq.gz]
