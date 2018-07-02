@@ -114,7 +114,6 @@ rule construct_salmon_index:
 	threads: 1
 	shell:
 		"""
-		source activate py3.6
 		salmon -no-version-check index -t {input} -i {output}
 		"""
 
@@ -133,7 +132,6 @@ rule quant_salmon:
 	threads: 8	
 	shell:
 		"""
-		source activate py3.6
 		mkdir {params.local_tmp}
 		mkdir {params.local_tmp}/salmon_index
 		rsync -aP --bwlimit=10000 {input[2]}/* {params.local_tmp}/salmon_index/
