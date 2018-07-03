@@ -119,7 +119,7 @@ rule quant_salmon:
 		protected("processed/{study}/salmon/{annotation}/{sample}/quant.sf")
 	params:
 		out_prefix = "processed/{study}/salmon/{annotation}/{sample}",
-		local_tmp = "/tmp/" + uuid.uuid4().hex + "/"
+		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
 	resources:
 		mem = 10000
 	threads: 8	
