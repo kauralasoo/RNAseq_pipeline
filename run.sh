@@ -11,7 +11,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s bam_to_fastq_PE.snakefile processed/TwinsUK/out.txt --jobs 1 --configfile configs/TwinsUK_config.yaml --rerun-incomplete
 
 #Run the alignment pipeline
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription.snakefile processed/TwinsUK/out.txt --jobs 100 --configfile configs/TwinsUK_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/TwinsUK/out.txt --jobs 20 --configfile configs/TwinsUK_config.yaml --rerun-incomplete
 
 
 #### Nedelec 2016 dataset ####
@@ -29,15 +29,15 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 
 #### BLUEPRINT dataset ####
 #Quantify transcription
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/BLUEPRINT/out.txt --jobs 1 --configfile configs/BLUEPRINT_SE_config.yaml --rerun-incomplete
-snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_PE_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_SE.snakefile processed/BLUEPRINT/out.txt --jobs 30 --configfile configs/BLUEPRINT_SE_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_PE_config.yaml --rerun-incomplete
 
 #Run using all sample names at the same time
 snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_all_config.yaml --rerun-incomplete
 
 
 #### Alasoo et al ####
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/Macrophages_Alasoo_2018/out.txt --jobs 20 --configfile configs/Alasoo_2018_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_PE.snakefile processed/Macrophages_Alasoo_2018/out.txt --jobs 8 --configfile configs/Alasoo_2018_config.yaml --rerun-incomplete
 
 #### Fairfax et al ####
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Fairfax/out.txt --jobs 1 --configfile configs/Fairfax_config.yaml --rerun-incomplete
