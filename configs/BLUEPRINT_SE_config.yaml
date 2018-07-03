@@ -15,6 +15,10 @@ hisat2_flags: "--rna-strandness R"
 #Splicing
 leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
 
+#Salmon parameters
+annotations: ["txrevise.grp_1.contained", "txrevise.grp_1.downstream","txrevise.grp_1.upstream","txrevise.grp_2.contained","txrevise.grp_2.downstream","txrevise.grp_2.upstream"]
+libType: SR
+
 #Dictionary of sample names
 samples:
   S000GZB5: [processed/BLUEPRINT/fastq/monocytes/_EGAR00001155928_131114_SN935_0183_A_C36BYACXX_ACTGAT_2_read1.fastq.gz]

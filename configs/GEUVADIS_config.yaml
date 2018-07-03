@@ -14,7 +14,7 @@ hisat2_flags: ""
 leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
 
 #Salmon parameters
-annotations: ["Ensembl_87", "reviseAnnotations.grp_1_contained","reviseAnnotations.grp_1_upstream","reviseAnnotations.grp_1_downstream","reviseAnnotations.grp_2_contained","reviseAnnotations.grp_2_upstream","reviseAnnotations.grp_2_downstream"]
+annotations: ["txrevise.grp_1.contained", "txrevise.grp_1.downstream","txrevise.grp_1.upstream","txrevise.grp_2.contained","txrevise.grp_2.downstream","txrevise.grp_2.upstream"]
 libType: IU
 
 #Dictionary of sample names
