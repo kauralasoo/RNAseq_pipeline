@@ -1,0 +1,18 @@
+#General
+# Read length: 49bp
+strandedness: Unstranded 
+
+#featureCounts
+ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
+
+#HISAT2 config
+hisat2_index: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/hisat2_index_v90/Homo_sapiens.GRCh38.dna.primary_assembly
+hisat2_flags: ""
+
+#Splicing
+leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
+
+#Dictionary of sample names
+samples:
+  TWPID18227_F: [processed/TwinsUK/fastq/_EGAZ00001039314_EB_TWPID18227_F_1.fastq.gz, processed/TwinsUK/fastq/_EGAZ00001039314_EB_TWPID18227_F_2.fastq.gz]
+  TWPID10860: [processed/TwinsUK/fastq/TWPID10860_1.fastq.gz, processed/TwinsUK/fastq/TWPID10860_2.fastq.gz]
