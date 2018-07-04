@@ -9,7 +9,7 @@ rule bam_to_fastq:
 		fq1 = "processed/{dataset}/fastq/{sample}_1.fastq.gz",
 		fq2 = "processed/{dataset}/fastq/{sample}_2.fastq.gz",
 	params:
-		local_tmp = "/tmp/" + uuid.uuid4().hex + "/"
+		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
 	resources:
 		mem = 3000
 	threads: 1
@@ -17,11 +17,11 @@ rule bam_to_fastq:
 		"""
 		module load samtools-1.6
 		mkdir {params.local_tmp}
-		cp {input} {params.local_tmp}/{wildcards.sample}.bam
+		rsync -aP --bwlimit=10000 {input} {params.local_tmp}/{wildcards.sample}.bam
 		samtools collate {params.local_tmp}/{wildcards.sample}.bam {params.local_tmp}/{wildcards.sample}.collated
 		samtools fastq -F 2816 -c 6 -1 {params.local_tmp}/{wildcards.sample}_1.fastq.gz -2 {params.local_tmp}/{wildcards.sample}_2.fastq.gz {params.local_tmp}/{wildcards.sample}.collated.bam
-		cp {params.local_tmp}/{wildcards.sample}_1.fastq.gz {output.fq1}
-		cp {params.local_tmp}/{wildcards.sample}_2.fastq.gz {output.fq2}
+		rsync -aP --bwlimit=10000 {params.local_tmp}/{wildcards.sample}_1.fastq.gz {output.fq1}
+		rsync -aP --bwlimit=10000 {params.local_tmp}/{wildcards.sample}_2.fastq.gz {output.fq2}
 		rm -r {params.local_tmp}
 		"""
 
