@@ -4,10 +4,10 @@ import os
 #Convert BAM files to fastq
 rule bam_to_fastq:
 	input:
-		"../../processed/{dataset}/input_bam/{sample}.bam"
+		"proj_base/processed/{dataset}/input_bam/{sample}.bam"
 	output:
-		fq1 = "../../processed/{dataset}/fastq/{sample}_1.fastq.gz",
-		fq2 = "../../processed/{dataset}/fastq/{sample}_2.fastq.gz",
+		fq1 = "proj_base/processed/{dataset}/fastq/{sample}_1.fastq.gz",
+		fq2 = "proj_base/processed/{dataset}/fastq/{sample}_2.fastq.gz",
 	params:
 		local_tmp = "/tmp/kerimov_" + uuid.uuid4().hex + "/"
 	resources:
@@ -28,9 +28,9 @@ rule bam_to_fastq:
 #Make sure that all final output files get created
 rule make_all:
 	input:
-		expand("../../processed/{{dataset}}/fastq/{sample}_1.fastq.gz", sample=config["samples"])
+		expand("proj_base/processed/{{dataset}}/fastq/{sample}_1.fastq.gz", sample=config["samples"])
 	output:
-		"../../processed/{dataset}/out.txt"
+		"proj_base/processed/{dataset}/out.txt"
 	resources:
 		mem = 100
 	threads: 1
