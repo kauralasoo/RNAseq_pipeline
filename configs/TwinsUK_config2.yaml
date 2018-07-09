@@ -1,6 +1,6 @@
 #General
 # Read length: 49bp
-strandedness: Unstranded 
+strandedness: Unstranded
 
 #featureCounts
 ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
@@ -14,5 +14,4 @@ leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
 
 #Dictionary of sample names
 samples:
-  TWPID18227_F: [processed/TwinsUK/fastq/_EGAZ00001039314_EB_TWPID18227_F_1.fastq.gz, processed/TwinsUK/fastq/_EGAZ00001039314_EB_TWPID18227_F_2.fastq.gz]
-  TWPID10860: [processed/TwinsUK/fastq/TWPID10860_1.fastq.gz, processed/TwinsUK/fastq/TWPID10860_2.fastq.gz]
+  _EGAZ00001039787_EB_TWPID11743_F: [processed/_EGAZ00001039787_EB_TWPID11743_F_1.fastq.gz, processed/_EGAZ00001039787_EB_TWPID11743_F_2.fastq.gz]
