@@ -6,14 +6,14 @@ rule rename_variants:
     output:
         gen = "processed/gen/chr_{chrom}.gen"
     shell:
-        "../../genotype_scripts/gen_replace_variant_id.py --gen {input.gen} --chr {wildcards.chrom} > {output.gen}"
+        "python ../../genotype_scripts/gen_replace_variant_id.py --gen {input.gen} --chr {wildcards.chrom} > {output.gen}"
 
 rule make_vcf:
     input:
-        gen = "processed/gen/chr_{chrom}.gen"
+        gen = "processed/gen/chr_{chrom}.gen",
         sample = "/gpfs/hpchome/a72094/rocket/datasets/TwinsUK/genotypes/sample_lists/chr{chrom}_Eurobats_Public.sample"
     output:
-        vcf = "processed/vcf/chr_{chrom}.vcf"
+        vcf = "processed/vcf/chr_{chrom}.vcf.gz"
     shell:
         """
         module load bcftools-1.8
@@ -22,7 +22,7 @@ rule make_vcf:
 
 rule merge_vcfs:
     input:
-        expand("processed/vcf/chr_{chrom}.vcf", chrom = CHROM)
+        expand("processed/vcf/chr_{chrom}.vcf.gz", chrom = CHROMS)
     output:
         "processed/TwinsUK_GRCh37_1KG_Phase1.vcf.gz"
     shell:
