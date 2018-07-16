@@ -1,6 +1,7 @@
 library("dplyr")
 library("data.table")
 
+#Import GENCORD metadata
 ega_data = read.table("metadata/GENCORD/Sample_File.map") %>%
   dplyr::as_tibble() %>%
   dplyr::select(V1, V3, V4) %>%
@@ -18,6 +19,12 @@ ega_data = read.table("metadata/GENCORD/Sample_File.map") %>%
   dplyr::mutate(genotype_id = stringr::str_replace_all(genotype_id, "UCF", "UC")) %>%
   dplyr::mutate(file_name = stringr::str_remove(file_name, "\\.cip"))
 
+
+
+
+
+
+#### Identify missing files and re-download them ####
 #Identify missing files
 dled = read.table("metadata/GENCORD/GENCORD_files.txt", stringsAsFactors = FALSE) %>%
   dplyr::rename(bam_name = V1) %>%
