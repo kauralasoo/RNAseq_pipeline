@@ -18,7 +18,6 @@ ega_data = read.table("metadata/GENCORD/Sample_File.map") %>%
   dplyr::mutate(genotype_id = stringr::str_replace_all(genotype_id, "UCT", "UC")) %>%
   dplyr::mutate(genotype_id = stringr::str_replace_all(genotype_id, "UCF", "UC")) %>%
   dplyr::mutate(file_name = stringr::str_remove(file_name, "\\.cip"))
-write.table(ega_data, "metadata/GENCORD/GENCORD_metadata.txt", sep = "\t", quote = FALSE, row.names = FALSE)
 
 
 
@@ -31,7 +30,9 @@ dled = read.table("metadata/GENCORD/GENCORD_files.txt", stringsAsFactors = FALSE
   dplyr::mutate(file_name = stringr::str_replace(bam_name, "_EGAR\\d+_", "")) %>%
   as_tibble()
 
-dplyr::left_join(ega_data, dled, by = "file_name")
+merged_data = dplyr::left_join(ega_data, dled, by = "file_name")
+write.table(merged_data, "metadata/GENCORD/GENCORD_metadata.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+
   
 missing = dplyr::anti_join(ega_data, dled, by = "file_name") %>% 
   dplyr::select(ega_file_name)
