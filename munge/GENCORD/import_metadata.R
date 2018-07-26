@@ -23,13 +23,16 @@ ega_data = read.table("metadata/GENCORD/Sample_File.map") %>%
 
 
 
-
 #### Identify missing files and re-download them ####
 #Identify missing files
 dled = read.table("metadata/GENCORD/GENCORD_files.txt", stringsAsFactors = FALSE) %>%
   dplyr::rename(bam_name = V1) %>%
   dplyr::mutate(file_name = stringr::str_replace(bam_name, "_EGAR\\d+_", "")) %>%
   as_tibble()
+
+merged_data = dplyr::left_join(ega_data, dled, by = "file_name")
+write.table(merged_data, "metadata/GENCORD/GENCORD_metadata.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+
   
 missing = dplyr::anti_join(ega_data, dled, by = "file_name") %>% 
   dplyr::select(ega_file_name)
