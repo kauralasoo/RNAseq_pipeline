@@ -160,8 +160,8 @@ rule run_qtltools_mbv:
 	params:
 		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
 	resources:
-		mem = 3000
-	threads: 1
+		mem = 6000
+	threads: 8
 	shell:
 		"""
 		module load samtools-1.6
