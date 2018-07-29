@@ -15,7 +15,9 @@ se_list = list(BLUEPRINT = readRDS("results/SummarizedExperiments/BLUEPRINT.rds"
      Nedelec = readRDS("results/SummarizedExperiments/Nedelec_2016_Macrophages.rds"),
      Alasoo = readRDS("results/SummarizedExperiments/Alasoo_2018_Macrophages.rds"),
      GEUVADIS = readRDS("results/SummarizedExperiments/GEUVADIS.rds"),
-     TwinsUK = readRDS("results/SummarizedExperiments/TwinsUK.rds"))
+     #TwinsUK = readRDS("results/SummarizedExperiments/TwinsUK.rds"),
+     Fairfax = readRDS("results/SummarizedExperiments/Fairfax_2018.rds"),
+     GENCORD = readRDS("results/SummarizedExperiments/GENCORD.rds"))
 
 
 #Merge studies
@@ -29,7 +31,7 @@ processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
 
 #Make PCA
 pca_res = transformSE_PCA(processed_se, assay_name = "tpms", n_pcs = 10, log_transform = TRUE, center = TRUE, scale. = TRUE)
-ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = cell_type, shape = study)) + geom_point()
+ggplot(pca_res$pca_matrix, aes(x = PC3, y = PC4, color = cell_type)) + geom_point()
 
 #Perform MDS
 matrix = log(assays(processed_se)$tpms+0.1,2)
@@ -40,7 +42,7 @@ mds_matrix = as.data.frame(fit$points) %>%
   as_tibble() %>%
   dplyr::mutate(sample_id = rownames(fit$points)) %>%
   dplyr::left_join(as.data.frame(colData(processed_se)), by = "sample_id")
-mds_plot = ggplot(mds_matrix, aes(x = V1, y = V2, color = cell_type, shape = study)) + 
+mds_plot = ggplot(mds_matrix, aes(x = V1, y = V2, color = cell_type)) + 
   geom_point() +
   xlab("MDS Coordinate 1") + 
   ylab("MDS Coordinate 2")

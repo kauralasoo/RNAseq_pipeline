@@ -157,8 +157,6 @@ ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = condition)) + geom_poin
 
 
 # TwinsUK -----------------------------------------------------------------
-
-# Alasoo_2018_Macrophages -------------------------------------------------
 read_counts = readr::read_tsv("processed/TwinsUK/matrices/gene_expression_featureCounts.txt.gz") %>%
   dplyr::filter(!(gene_id %like% "PAR_Y")) %>%
   removeGeneVersion()
@@ -175,5 +173,34 @@ processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
 processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
 pca_res = transformSE_PCA(processed_se, assay_name = "tpms", n_pcs = 10, log_transform = TRUE, center = TRUE, scale. = TRUE)
 ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = cell_type)) + geom_point()
+
+
+# Fairfax 2018 monocytes --------------------------------------------------
+read_counts = readr::read_tsv("processed/Fairfax/matrices/gene_expression_featureCounts.txt.gz") %>%
+  dplyr::filter(!(gene_id %like% "PAR_Y")) %>%
+  removeGeneVersion()
+mbv_results = readr::read_tsv("../Fairfax_monocytes/data/metadata/Fairfax_mbv_best_match.txt") %>% 
+  dplyr::select(sample_id, mbv_genotype_id)
+sample_metadata = readr::read_tsv("../Fairfax_monocytes/data/metadata/Fairfax_compiled_metadata.txt") %>%
+  dplyr::left_join(mbv_results) %>%
+  dplyr::transmute(sample_id, genotype_id = mbv_genotype_id, sex = NA_character_, cell_type = "monocyte", condition_original = condition, 
+                   timepoint = 0, read_length, stranded, paired, protocol = "poly(A)", qtl_mapping = TRUE, study = "Fairfax_2018") %>%
+  dplyr::mutate(condition = ifelse(condition_original == "UT", "naive", condition_original)) %>%
+  dplyr::mutate(timepoint = ifelse(condition == "naive", 0, 24)) %>%
+  dplyr::select(mandatory_cols, everything()) %>%
+  dplyr::mutate(qtl_mapping = ifelse(condition %in% c("naive", "LPS24", "IFN", "MET1m"), TRUE, FALSE))
+featureCounts_se = makeSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
+
+write.table(sample_metadata, "metadata/cleaned/Fairfax_2018.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+saveRDS(featureCounts_se, "results/SummarizedExperiments/Fairfax_2018.rds")
+
+#Keep only relevant conditions
+filtered_se = featureCounts_se[,featureCounts_se$qtl_mapping]
+processed_se = filterSE_gene_types(filtered_se) %>% normaliseSE_tpm()
+processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
+pca_res = transformSE_PCA(processed_se, assay_name = "tpms", n_pcs = 10, log_transform = TRUE, center = TRUE, scale. = TRUE)
+ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = condition, label = sample_id)) + geom_point() + geom_text()
+
+
 
 
