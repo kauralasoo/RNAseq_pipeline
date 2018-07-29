@@ -3,7 +3,7 @@
 strandedness: Stranded 
 
 #General
-vcf_file: /gpfs/hpchome/a72094/rocket/datasets/BLUEPRINT/genotypes/GRCh38/BLUEPRINT_06092016_GRCh38.sorted.MAF05.vcf.gz
+vcf_file: /gpfs/hpchome/a72094/rocket/datasets/controlled_access/BLUEPRINT/genotypes/GRCh38/BLUEPRINT_06092016_GRCh38.sorted.MAF05.vcf.gz
 
 #featureCounts
 ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
