@@ -18,16 +18,21 @@ transcript_meta = importBiomartMetadata("annotations/Ensembl92_biomart_download.
 read_counts = readr::read_tsv("processed/GEUVADIS/matrices/gene_expression_featureCounts.txt") %>%
   dplyr::filter(!(gene_id %like% "PAR_Y")) %>%
   removeGeneVersion()
+mbv_matches = readr::read_tsv("metadata/GEUVADIS/GEUVADIS_mbv_best_match.txt") %>%
+  dplyr::select(sample_id, mbv_genotype_id)
 sample_metadata = readr::read_delim("metadata/GEUVADIS/GEUVADIS_compiled_metadata.txt", delim = "\t") %>%
   dplyr::mutate(cell_type = "LCL", condition = "naive", read_length = "75bp", stranded = FALSE, paired = TRUE, protocol = "poly(A)", timepoint = 0, qtl_mapping = TRUE, study = "GEUVADIS") %>%
   dplyr::select(-fq1, -fq2) %>%
-  dplyr::select(mandatory_cols, everything())
+  dplyr::select(mandatory_cols, everything()) %>%
+  dplyr::left_join(mbv_matches, by = "sample_id") %>%
+  dplyr::mutate(qtl_mapping = ifelse(is.na(mbv_genotype_id), FALSE, TRUE)) %>%
+  dplyr::select(-mbv_genotype_id)
+write.table(sample_metadata, "metadata/cleaned/GEUVADIS.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 
 #Make GEUVADIS SE object
 featureCounts_se = makeSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
 
 #Export data
-write.table(sample_metadata, "metadata/cleaned/GEUVADIS.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 saveRDS(featureCounts_se, "results/SummarizedExperiments/GEUVADIS.rds")
 
 processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
