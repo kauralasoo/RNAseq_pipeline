@@ -27,6 +27,9 @@ filtered_se = se_object[intersect(valid_genes, expressed_genes),se_object$qtl_ma
 cqn_se = normaliseSE_cqn(filtered_se)
 qtltools_matrix = convertSEtoQTLtools(cqn_se, assay_name = "cqn")
 
+#Export matrix to disk
+write.table(qtltools_matrix, "processed/GEUVADIS/qtltools/phenotypes/featureCounts_EUR.bed", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
+
 
 
 

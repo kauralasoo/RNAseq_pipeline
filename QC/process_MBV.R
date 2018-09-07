@@ -16,7 +16,7 @@ sample_list = setNames(mbv_files, sample_names)
 mbv_results = purrr::map(sample_list, ~readr::read_delim(., delim = " ", col_types = "ciiiiiiiiii"))
 
 #Find best matches
-best_matches = purrr::map_df(mbv_results, findBestMatch, .id = "sample_id") %>%
+best_matches = purrr::map_df(mbv_results, mbvFindBestMatch, .id = "sample_id") %>%
   dplyr::filter(!is.na(het_consistent_frac)) %>%
   dplyr::filter(het_consistent_frac > 0.9)
 write.table(best_matches, "metadata/GEUVADIS/GEUVADIS_mbv_best_match.txt", sep = "\t", quote = F, row.names = F)
@@ -58,7 +58,7 @@ best_matches = purrr::map_df(mbv_results, mbvFindBestMatch, .id = "sample_id") %
 write.table(best_matches, "../Fairfax_monocytes/data/metadata/Fairfax_mbv_best_match.txt", sep = "\t", quote = F, row.names = F)
 
 
-a = mbv_results$S0026AB7
+a = mbv_results$S003Q3B1_mRNA
 res = dplyr::transmute(a, mbv_genotype_id = SampleID, 
                        het_consistent_frac = n_het_consistent/n_het_covered, 
                        hom_consistent_frac = n_hom_consistent/n_hom_covered)

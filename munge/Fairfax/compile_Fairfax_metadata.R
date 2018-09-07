@@ -15,3 +15,8 @@ merged_data = dplyr::bind_rows(pair1, pair19, pair21) %>%
   dplyr::rename(file_name = File_name) %>%
   dplyr::mutate(sample_id = paste0("S", sample, "_", treatment)) %>%
   dplyr::select(sample_id, everything())
+
+merged_df = dplyr::select(merged_data, sample_id, file_name) %>%
+  dplyr::group_by(sample_id) %>%
+  dplyr::summarise(file_names = paste(file_name, collapse = ";"))
+write.table(merged_df, "metadata/Fairfax/Fairfax_names_all.txt", sep = "\t", quote = FALSE, row.names = F, col.names = F)
