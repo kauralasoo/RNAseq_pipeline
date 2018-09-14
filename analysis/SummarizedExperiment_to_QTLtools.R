@@ -1,9 +1,14 @@
+library("cqn")
 library("dplyr")
 library("devtools")
+library("SummarizedExperiment")
 load_all("../seqUtils/")
 
 #Import SE object
 se_object = readRDS("results/SummarizedExperiments/GEUVADIS.rds")
+
+#Keep only samples that pass QC
+filtered_se = se_object[,se_object$qtl_mapping == TRUE & se_object$superpopulation_code == "EUR"]
 
 #Normalize gene expression
 expressed_counts = rowSums(assays(filtered_se)$counts >= 1)
@@ -17,19 +22,21 @@ valid_gene_biotypes = c("lincRNA","protein_coding","IG_C_gene","IG_D_gene","IG_J
                         "IG_V_gene", "TR_C_gene","TR_D_gene","TR_J_gene", "TR_V_gene",
                         "3prime_overlapping_ncrna","known_ncrna", "processed_transcript",
                         "antisense","sense_intronic","sense_overlapping")
-gene_data = rowData(expressed_se) %>% as.data.frame() %>% as_tibble()
+gene_data = rowData(filtered_se) %>% as.data.frame() %>% as_tibble()
 valid_genes = dplyr::filter(gene_data, gene_type %in% valid_gene_biotypes, chromosome %in% autosomes)$gene_id
 
-#Filter SE
-filtered_se = se_object[intersect(valid_genes, expressed_genes),se_object$qtl_mapping == TRUE & se_object$superpopulation_code == "EUR"]
+#Keep only valid and expressed genes
+filtered_se = filtered_se[intersect(valid_genes, expressed_genes),]
 
 #Normalise and make QTLtools matrix
 cqn_se = normaliseSE_cqn(filtered_se)
 qtltools_matrix = convertSEtoQTLtools(cqn_se, assay_name = "cqn")
 
 #Export matrix to disk
-write.table(qtltools_matrix, "processed/GEUVADIS/qtltools/phenotypes/featureCounts_EUR.bed", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
+write.table(qtltools_matrix, "processed/GEUVADIS/qtltools/phenotypes/GEUVADIS.featureCounts.bed", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
 
-
-
+#Extract sample list for the VCF file
+columns = colnames(qtltools_matrix)
+genotype_ids = columns[7:length(columns)]
+write.table(genotype_ids, "processed/GEUVADIS/qtltools/phenotypes/GEUVADIS.featureCounts.samples", sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
 
