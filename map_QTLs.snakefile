@@ -74,7 +74,7 @@ rule permutation_run:
 		bed = "processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz",
 		bed_index = "processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz.tbi",
 		covariates = "processed/{study}/qtltools/input/{annot_type}/{condition}.covariates.txt",
-		vcf = config["vcf_file"]
+		vcf = "processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.vcf.gz"
 	output:
 		temp("processed/{study}/qtltools/output/{annot_type}/batches/{condition}.permutation.batch.{batch}.{n_batches}.txt")
 	params:
@@ -110,7 +110,7 @@ rule nominal_run:
 		bed = "processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz",
 		bed_index = "processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz.tbi",
 		covariates = "processed/{study}/qtltools/input/{annot_type}/{condition}.covariates.txt",
-		vcf = config["vcf_file"]
+		vcf = "processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.vcf.gz"
 	output:
 		temp("processed/{study}/qtltools/output/{annot_type}/nominal_batches/{condition}.nominal.batch.{batch}.{n_batches}.txt")
 	params:
