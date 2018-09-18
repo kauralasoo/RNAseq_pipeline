@@ -40,7 +40,7 @@ rule extract_samples:
 	shell:
 		"""
 		module load bcftools-1.8
-		bcftools view -S {input.samples} {config.vcf_file} -Oz -o {output.vcf}
+		bcftools view -S {input.samples} {config[vcf_file]} -Oz -o {output.vcf}
 		bcftools index {output.vcf}
 		"""
 
@@ -73,7 +73,7 @@ rule permutation_run:
 		bed = "processed/{study}/qtltools/input/{annot_type}/{condition}.norm_prop.txt.gz",
 		bed_index = "processed/{study}/qtltools/input/{annot_type}/{condition}.norm_prop.txt.gz.tbi",
 		covariates = "processed/{study}/qtltools/input/{annot_type}/{condition}.covariates_prop.txt",
-		vcf = config["qtl_vcf"]
+		vcf = config["vcf_file"]
 	output:
 		temp("processed/{study}/qtltools/output/{annot_type}/batches/{condition}.permutation.batch.{batch}.{n_batches}.txt")
 	params:
@@ -109,7 +109,7 @@ rule nominal_run:
 		bed = "processed/{study}/qtltools/input/{annot_type}/{condition}.norm_prop.txt.gz",
 		bed_index = "processed/{study}/qtltools/input/{annot_type}/{condition}.norm_prop.txt.gz.tbi",
 		covariates = "processed/{study}/qtltools/input/{annot_type}/{condition}.covariates_prop.txt",
-		vcf = config["qtl_vcf"]
+		vcf = config["vcf_file"]
 	output:
 		temp("processed/{study}/qtltools/output/{annot_type}/nominal_batches/{condition}.nominal.batch.{batch}.{n_batches}.txt")
 	params:
