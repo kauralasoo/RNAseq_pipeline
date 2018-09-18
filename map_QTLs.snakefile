@@ -71,9 +71,9 @@ rule perform_pca:
 #Run QTLtools in permutation mode
 rule permutation_run:
 	input:
-		bed = "processed/{study}/qtltools/input/{annot_type}/{condition}.norm_prop.txt.gz",
-		bed_index = "processed/{study}/qtltools/input/{annot_type}/{condition}.norm_prop.txt.gz.tbi",
-		covariates = "processed/{study}/qtltools/input/{annot_type}/{condition}.covariates_prop.txt",
+		bed = "processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz",
+		bed_index = "processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz.tbi",
+		covariates = "processed/{study}/qtltools/input/{annot_type}/{condition}.covariates.txt",
 		vcf = config["vcf_file"]
 	output:
 		temp("processed/{study}/qtltools/output/{annot_type}/batches/{condition}.permutation.batch.{batch}.{n_batches}.txt")
@@ -107,9 +107,9 @@ rule merge_permutation_batches:
 #Run QTLtools in nominal mode
 rule nominal_run:
 	input:
-		bed = "processed/{study}/qtltools/input/{annot_type}/{condition}.norm_prop.txt.gz",
-		bed_index = "processed/{study}/qtltools/input/{annot_type}/{condition}.norm_prop.txt.gz.tbi",
-		covariates = "processed/{study}/qtltools/input/{annot_type}/{condition}.covariates_prop.txt",
+		bed = "processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz",
+		bed_index = "processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz.tbi",
+		covariates = "processed/{study}/qtltools/input/{annot_type}/{condition}.covariates.txt",
 		vcf = config["vcf_file"]
 	output:
 		temp("processed/{study}/qtltools/output/{annot_type}/nominal_batches/{condition}.nominal.batch.{batch}.{n_batches}.txt")
