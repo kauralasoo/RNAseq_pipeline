@@ -64,7 +64,7 @@ rule perform_pca:
 		QTLtools pca --bed {input.bed} --center --scale --out {params.pheno_pca}
 		QTLtools pca --vcf {input.vcf} --maf 0.05 --center --scale --distance 50000 --out {params.geno_pca}
 		head -n 7 {params.pheno_pca}.pca > {output.covariates}
-		tail -n+2 {params.geno_pca}.pca | head -n 6 >> {output.covariates}
+		set +o pipefile; tail -n+2 {params.geno_pca}.pca | head -n 6 >> {output.covariates}
 		"""
 
 
