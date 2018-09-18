@@ -14,10 +14,10 @@ rule map_qtls:
 #Compres and index input bed file
 rule compress_bed:
 	input:
-		bed = "processed/{study}/qtltools/input/{annot_type}/{condition}.norm_prop.txt"
+		bed = "processed/{study}/qtltools/input/{annot_type}/{condition}.bed"
 	output:
-		bed = protected("processed/{study}/qtltools/input/{annot_type}/{condition}.norm_prop.txt.gz"),
-		bed_index = protected("processed/{study}/qtltools/input/{annot_type}/{condition}.norm_prop.txt.gz.tbi")
+		bed = protected("processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz"),
+		bed_index = protected("processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz.tbi")
 	threads: 1
 	resources:
 		mem = 100
@@ -26,6 +26,46 @@ rule compress_bed:
 		module load samtools-1.6
 		bgzip {input.bed} && tabix -p bed {output.bed}
 		"""
+
+#Extract samples from vcf
+rule extract_samples:
+	input:
+		samples = "processed/{study}/qtltools/input/{annot_type}/{condition}.sample_names.txt"
+	output:
+		vcf = "processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.vcf.gz",
+		vcf_index = "processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.vcf.gz.csi"
+	threads: 1
+	resources:
+		mem = 100
+	shell:
+		"""
+		module load bcftools-1.8
+		bcftools view -S {input.samples} {config.vcf_file} -Oz -o {output.vcf}
+		bcftools index {output.vcf}
+		"""
+
+#Perform PCA on the genotype and phenotype data
+rule perform_pca:
+	input:
+		bed = "processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz",
+		bed_index = "processed/{study}/qtltools/input/{annot_type}/{condition}.bed.gz.tbi",
+		vcf = "processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.vcf.gz",
+		vcf_index = "processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.vcf.gz.csi"
+	output:
+		covariates = "processed/{study}/qtltools/input/{annot_type}/{condition}.covariates.txt"
+	params:
+		pheno_pca = "processed/{study}/qtltools/input/{annot_type}/{condition}.pheno",
+		geno_pca = "processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.geno"
+	threads: 1
+	resources:
+		mem = 2000
+	shell:
+		"""
+		QTLtools pca --bed {input.bed} --center --scale --out {params.pheno_pca}
+		QTLtools pca --vcf {input.vcf} --maf 0.05 --center --scale --distance 50000 --out {params.geno_pca}
+		(head -n 7 {params.pheno_pca}.pca > {output.covariates}) && (tail -n+2 {params.geno_pca}.pca | head -n 6 >> {output.covariates})
+		"""
+
 
 #Run QTLtools in permutation mode
 rule permutation_run:
