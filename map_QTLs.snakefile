@@ -119,7 +119,7 @@ rule nominal_run:
 	resources:
 		mem = 5000
 	shell:
-		"QTLtools --vcf {input.vcf} --bed {input.bed} --cov {input.covariates} --chunk {params.chunk} --out {output} --window {config[nominal_cis_window]} --nominal 1"
+		"QTLtools cis --vcf {input.vcf} --bed {input.bed} --cov {input.covariates} --chunk {params.chunk} --out {output} --window {config[nominal_cis_window]} --nominal 1"
 
 #Merge all batches from QTLtools
 rule merge_nominal_batches:
