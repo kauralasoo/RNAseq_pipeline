@@ -1,7 +1,7 @@
 rule run_CrossMap:
     input:
         vcf = "/gpfs/hpchome/a72094/rocket/datasets/TwinsUK/genotypes/GRCh37/TwinsUK_GRCh37_1KG_Phase1.vcf.gz",
-        chain = "../../GRCh37_to_GRCh38.chain",
+        chain = "../../genotype_scripts/GRCh37_to_GRCh38.chain",
         ref_genome = "/gpfs/rocket/home/a72094/annotations/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa",
     output:
         vcf = "processed/TwinsUK_GRCh38.vcf.gz",
