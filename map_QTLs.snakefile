@@ -145,12 +145,12 @@ rule sort_qtltools_output:
 	output:
 		protected("processed/{study}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz")
 	resources:
-		mem = 1000
+		mem = 10000
 	threads: 2
 	shell:
 		"""
 		module load samtools-1.6
-		zcat {input} | awk -v OFS='\\t' '{{$1=$1; print $0}}' | sort -k9,9 -k10,10n -k11,11n | bgzip > {output}
+		zcat {input} | awk -v OFS='\\t' '{{$1=$1; print $0}}' | sort -k9,9 -k10,10n -k11,11n -S1G --parallel=8 | bgzip > {output}
 		"""
 
 #Tabix-index QTLtools output files
