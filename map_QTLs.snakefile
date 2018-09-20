@@ -1,8 +1,9 @@
 rule map_qtls:
 	input:
 		expand("processed/{{study}}/qtltools/output/{annot_type}/{condition}.permuted.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
-		expand("processed/{{study}}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
-		expand("processed/{{study}}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz.tbi", annot_type = config["quant_methods"], condition = config["conditions"]),
+		expand("processed/{{study}}/qtltools/output/{annot_type}/tab/{condition}.nominal.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
+		#expand("processed/{{study}}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
+		#expand("processed/{{study}}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz.tbi", annot_type = config["quant_methods"], condition = config["conditions"]),
 	output:
 		"processed/{study}/out.txt"
 	resources:
@@ -136,6 +137,20 @@ rule merge_nominal_batches:
 		"""
 		module load samtools-1.6
 		cat {input} | bgzip > {output}
+		"""
+
+#Replace tabs
+rule replace_space_tabs:
+	input:
+		"processed/{study}/qtltools/output/{annot_type}/{condition}.nominal.txt.gz"
+	output:
+		"processed/{study}/qtltools/output/{annot_type}/tab/{condition}.nominal.txt.gz"
+	resources:
+		mem = 1000
+	threads: 2
+	shell:
+		"""
+		gzip -dc {input} | awk -v OFS='\\t' '{{$1=$1; print $0}}' | gzip > {output}
 		"""
 
 #Add SNP coordinates to QTLTools output file
