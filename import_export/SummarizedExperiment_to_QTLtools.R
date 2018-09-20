@@ -40,3 +40,26 @@ columns = colnames(qtltools_matrix)
 genotype_ids = columns[7:length(columns)]
 write.table(genotype_ids, "processed/GEUVADIS/qtltools/phenotypes/GEUVADIS.featureCounts.samples", sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
 
+
+##### txrevise #####
+#Export txrevise quants
+txrevise_usage = readRDS("results/SummarizedExperiments/GEUVADIS_txrevise.rds")
+txrevise_usage = txrevise_usage[rowData(txrevise_usage)$gene_id %in% rowData(cqn_se)$gene_id,]
+filtered_usage = txrevise_usage[,txrevise_usage$qtl_mapping & txrevise_usage$superpopulation_code == "EUR"]
+
+#Extract conditions and export to QTLtools
+conditions = unique(filtered_usage$condition)
+condition_list = setNames(as.list(conditions), conditions)
+condition_se_list = purrr::map(condition_list, ~subsetSEByColumnValue(filtered_usage, "condition", .))
+
+#Quantile normalise the ratios
+qnorm_list = purrr::map(condition_se_list, ~normaliseSE_quantile(., assay_name = "usage"))
+
+#Convert SE onbjects to QTLtools
+qtltools_list = purrr::map(qnorm_list, ~convertSEtoQTLtools(., assay_name = "qnorm"))
+saveQTLToolsMatrices(qtltools_list, output_dir = "processed/GEUVADIS/qtltools/input/txrevise/", file_suffix = "bed")
+
+#Extract sample names
+sample_names = purrr::map(qtltools_list, ~colnames(.)[-(1:6)])
+saveQTLToolsMatrices(sample_names, output_dir = "processed/GEUVADIS/qtltools/input/txrevise/", file_suffix = "sample_names.txt", col_names = FALSE)
+
