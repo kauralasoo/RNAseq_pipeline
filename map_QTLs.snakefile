@@ -156,16 +156,16 @@ rule replace_space_tabs:
 #Add SNP coordinates to QTLTools output file
 rule sort_qtltools_output:
 	input:
-		"processed/{study}/qtltools/output/{annot_type}/{condition}.nominal.txt.gz"
+		"processed/{study}/qtltools/output/{annot_type}/tab/{condition}.nominal.txt.gz"
 	output:
 		protected("processed/{study}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz")
 	resources:
 		mem = 10000
-	threads: 2
+	threads: 10
 	shell:
 		"""
 		module load samtools-1.6
-		zcat {input} | awk -v OFS='\\t' '{{$1=$1; print $0}}' | sort -k9,9 -k10,10n -k11,11n -S1G --parallel=8 | bgzip > {output}
+		gzip -dc {input} | LANG=C sort -k9,9 -k10,10n -k11,11n -S1G --parallel=8 | bgzip > {output}
 		"""
 
 #Tabix-index QTLtools output files
