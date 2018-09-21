@@ -20,6 +20,12 @@ leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
 annotations: ["txrevise.grp_1.contained", "txrevise.grp_1.downstream","txrevise.grp_1.upstream","txrevise.grp_2.contained","txrevise.grp_2.downstream","txrevise.grp_2.upstream"]
 libType: IU
 
+#QTL mapping
+quant_methods: ["txrevise"]
+n_batches: 200
+cis_window: 1000000
+nominal_cis_window: 1000000
+
 #Dictionary of sample names
 samples:
   ERR188021: [processed/GEUVADIS/fastq/ERR188021_1.fastq.gz, processed/GEUVADIS/fastq/ERR188021_2.fastq.gz]
