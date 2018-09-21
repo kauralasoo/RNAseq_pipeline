@@ -2,7 +2,7 @@ library("tximport")
 library("dplyr")
 library("devtools")
 library("tidyr")
-load_all("../seqUtils/")
+load_all("../eQTLUtils/")
 
 #### txrevise ####
 sample_metadata = read.table("../RNAseq_pipeline/metadata/cleaned/GEUVADIS.tsv", header = TRUE, stringsAsFactors = F)
