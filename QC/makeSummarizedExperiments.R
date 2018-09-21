@@ -1,7 +1,7 @@
 library("readr")
 library("dplyr")
 library("devtools")
-load_all("../seqUtils/")
+load_all("../eQTLUtils/")
 library("tidyr")
 library("ggplot2")
 library("cqn")
@@ -10,7 +10,7 @@ library("ggplot2")
 library("data.table")
 
 #Specify mandatory metadata columns
-mandatory_cols = c("sample_id", "genotype_id", "sex", "cell_type", "condition", "timepoint", "read_length", "stranded", "paired", "protocol", "qtl_mapping", "study")
+mandatory_cols = c("sample_id", "genotype_id", "sex", "cell_type", "condition", "timepoint", "read_length", "stranded", "paired", "protocol", "rna_qc_passed", "genotype_qc_passed","study")
 transcript_meta = importBiomartMetadata("annotations/Ensembl92_biomart_download.txt.gz")
 
 
@@ -21,16 +21,16 @@ read_counts = readr::read_tsv("processed/GEUVADIS/matrices/gene_expression_featu
 mbv_matches = readr::read_tsv("metadata/GEUVADIS/GEUVADIS_mbv_best_match.txt") %>%
   dplyr::select(sample_id, mbv_genotype_id)
 sample_metadata = readr::read_delim("metadata/GEUVADIS/GEUVADIS_compiled_metadata.txt", delim = "\t") %>%
-  dplyr::mutate(cell_type = "LCL", condition = "naive", read_length = "75bp", stranded = FALSE, paired = TRUE, protocol = "poly(A)", timepoint = 0, qtl_mapping = TRUE, study = "GEUVADIS") %>%
+  dplyr::mutate(cell_type = "LCL", condition = "naive", read_length = "75bp", stranded = FALSE, paired = TRUE, protocol = "poly(A)", timepoint = 0, rna_qc_passed = TRUE, genotype_qc_passed = TRUE, study = "GEUVADIS") %>%
   dplyr::select(-fq1, -fq2) %>%
   dplyr::select(mandatory_cols, everything()) %>%
   dplyr::left_join(mbv_matches, by = "sample_id") %>%
-  dplyr::mutate(qtl_mapping = ifelse(is.na(mbv_genotype_id), FALSE, TRUE)) %>%
+  dplyr::mutate(genotype_qc_passed = ifelse(is.na(mbv_genotype_id), FALSE, TRUE)) %>%
   dplyr::select(-mbv_genotype_id)
 write.table(sample_metadata, "metadata/cleaned/GEUVADIS.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 
 #Make GEUVADIS SE object
-featureCounts_se = makeSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
+featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
 
 #Export data
 saveRDS(featureCounts_se, "results/SummarizedExperiments/GEUVADIS.rds")

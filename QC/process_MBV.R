@@ -1,7 +1,7 @@
 library("stringr")
 library("ggplot2")
 library("devtools")
-load_all("../seqUtils/")
+load_all("../eQTLUtils/")
 
 
 #### GEUVADIS ####
