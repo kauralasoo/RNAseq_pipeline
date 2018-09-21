@@ -21,6 +21,7 @@ annotations: ["txrevise.grp_1.contained", "txrevise.grp_1.downstream","txrevise.
 libType: IU
 
 #QTL mapping
+conditions: ["naive"]
 quant_methods: ["txrevise"]
 n_batches: 200
 cis_window: 1000000
