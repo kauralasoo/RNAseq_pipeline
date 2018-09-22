@@ -1,6 +1,6 @@
 rule crossmap_genotypes:
     input:
-        vcf = expand("processed/{study}/genotypes/GRCh38/chr{chromosome}.dose.vcf.gz", chromosome = config["chromosomes"])
+        vcf = expand("processed/{{study}}/genotypes/GRCh38/chr{chromosome}.dose.vcf.gz", chromosome = config["chromosomes"])
     output:
         "processed/{study}/out.txt"
     threads: 1

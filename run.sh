@@ -41,3 +41,8 @@ snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_
 
 #### Fairfax et al ####
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Fairfax/out.txt --jobs 1 --configfile configs/Fairfax_config.yaml --rerun-incomplete
+
+
+##### CEDAR ####
+#CrossMap genotypes
+snakemake -s CrossMap_genotypes.snakefile -np processed/CEDAR/out.txt --configfile configs/CrossMap_config.yaml
