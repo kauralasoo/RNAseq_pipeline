@@ -22,17 +22,17 @@ bcftools view -S ^CEDAR_exclude_missing.txt CEDAR_GRCh37.vcf -Oz -o CEDAR_GRCh37
 bcftools +fill-tags CEDAR_GRCh37_nomissing.vcf.gz -Oz -o CEDAR_GRCh37_nomissing_tags.vgs.gz
 
 #Filter rare (AC<1) and non-HWE varaints and those with abnormal reference alleles
-bcftools filter -i 'INFO/HWE > 1e-6 & F_MISSIi < 0.05 & MAF[0] > 0.01' CEDAR_GRCh37_nomissing_tags.vcf.gz -Ou | bcftools filter -e 'REF="N" | REFeI" | REF="D"' -Oz -o CEDAR_GRCh37_nomissing_tags_filtered.vcf.gz
+bcftools filter -i 'INFO/HWE > 1e-6 & F_MISSING < 0.05 & MAF[0] > 0.01' CEDAR_GRCh37_nomissing_tags.vcf.gz -Ou | bcftools filter -e 'REF="N" | REF="I" | REF="D"' -Oz -o CEDAR_GRCh37_nomissing_tags_filtered.vcf.gz
 
 #Fix the ref allele
 bcftools index CEDAR_GRCh37_nomissing_tags_filtered.vcf.gz
-bcftools +fixref CEDAR_GRCh37_nomissing_tags_filtered.vcf.gz -DAR_GRCh37_nomissing_tags_filtered -o CEDAR_GRCh37_nomissing_tags_filtered_fixref.vcf.CEDAR_GRCh37_nomissing_tags_filtered -- -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa -i ~/rocket/datasets/dbSNP/dbSNP_b151_GRCh37p13.vcf.gz
+bcftools +fixref CEDAR_GRCh37_nomissing_tags_filtered.vcf.gz -Oz -o CEDAR_GRCh37_nomissing_tags_filtered_fixref.vcf.gz -- -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa -i ~/rocket/datasets/dbSNP/dbSNP_b151_GRCh37p13.vcf.gz
 
 #Sort the vcf file 
-bcftools sort CEDAR_GRCh37_nomissing_tags_filtered_fixref.vcf.gz -Oz -o CEDAR_fixref_sorted.vAR_GRCh37_nomissing_tags_filtered_fixref.gz
+bcftools sort CEDAR_GRCh37_nomissing_tags_filtered_fixref.vcf.gz -Oz -o CEDAR_fixref_sorted.vcf.gz
 
 #Remove remaining non-ref alleles
-bcftools norm -cx -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.d -f.primary_assembly.fa CEDAR_fixref_sorted.vcf.gz -Oz -o CEDAR_fixref_sorted_noref.vcf.gz
+bcftools norm -cx -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa CEDAR_fixref_sorted.vcf.gz -Oz -o CEDAR_fixref_sorted_noref.vcf.gz
 
 #Check AF distributions
 bcftools index CEDAR_fixref_sorted_noref.vcf.gz
@@ -68,3 +68,36 @@ bcftools view -r 20 CEDAR_GRCh37_genotyped.vcf.gz -Oz -o by_chr/CEDAR_GRCh37_chr
 bcftools view -r 21 CEDAR_GRCh37_genotyped.vcf.gz -Oz -o by_chr/CEDAR_GRCh37_chr21.vcf.gz
 bcftools view -r 22 CEDAR_GRCh37_genotyped.vcf.gz -Oz -o by_chr/CEDAR_GRCh37_chr22.vcf.gz
 bcftools view -r X CEDAR_GRCh37_genotyped.vcf.gz -Oz -o by_chr/CEDAR_GRCh37_chrX.vcf.gz
+
+
+#Extraxt all inputed files
+7za x chr_1.zip -p'syh0evL7VUeUAP'
+7za x chr_2.zip -p'syh0evL7VUeUAP'
+7za x chr_3.zip -p'syh0evL7VUeUAP'
+7za x chr_4.zip -p'syh0evL7VUeUAP'
+7za x chr_5.zip -p'syh0evL7VUeUAP'
+7za x chr_6.zip -p'syh0evL7VUeUAP'
+7za x chr_7.zip -p'syh0evL7VUeUAP'
+7za x chr_8.zip -p'syh0evL7VUeUAP'
+7za x chr_9.zip -p'syh0evL7VUeUAP'
+7za x chr_10.zip -p'syh0evL7VUeUAP'
+7za x chr_11.zip -p'syh0evL7VUeUAP'
+7za x chr_12.zip -p'syh0evL7VUeUAP'
+7za x chr_13.zip -p'syh0evL7VUeUAP'
+7za x chr_14.zip -p'syh0evL7VUeUAP'
+7za x chr_15.zip -p'syh0evL7VUeUAP'
+7za x chr_16.zip -p'syh0evL7VUeUAP'
+7za x chr_17.zip -p'syh0evL7VUeUAP'
+7za x chr_18.zip -p'syh0evL7VUeUAP'
+7za x chr_19.zip -p'syh0evL7VUeUAP'
+7za x chr_20.zip -p'syh0evL7VUeUAP'
+7za x chr_21.zip -p'syh0evL7VUeUAP'
+7za x chr_22.zip -p'syh0evL7VUeUAP'
+
+#CrossMap
+CrossMap.py vcf ~/rocket/projects/GEUVADIS/RNAseq_pipeline/genotype_scripts/GRCh37_to_GRCh38.chain chr21.dose.vcf.gz ~/rocket/annotations/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa GRCh38/chr21.vcf
+
+#Add imputation info
+bcftools +impute-info -Oz -o GRCh38/chr21.INFO.vcf.gz GRCh38/chr21.vcf
+
+
