@@ -29,8 +29,8 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 
 #### BLUEPRINT dataset ####
 #Quantify transcription
-snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_SE.snakefile processed/BLUEPRINT/out.txt --jobs 30 --configfile configs/BLUEPRINT_SE_config.yaml --rerun-incomplete
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_PE_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/BLUEPRINT/out.txt --jobs 30 --configfile configs/BLUEPRINT_SE_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 35 --configfile configs/BLUEPRINT_PE_config.yaml --rerun-incomplete
 
 #Run using all sample names at the same time
 snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_PE.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_all_config.yaml --rerun-incomplete
