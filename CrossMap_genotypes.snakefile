@@ -59,7 +59,8 @@ rule sort_vcf:
 
 rule keep_correct_chromosome:
     input:
-        vcf = "processed/{study}/genotypes/sorted/chr{chromosome}.dose.vcf.gz"
+        vcf = "processed/{study}/genotypes/sorted/chr{chromosome}.dose.vcf.gz",
+        csi = "processed/{study}/genotypes/sorted/chr{chromosome}.dose.vcf.gz.csi"
     output:
         vcf = "processed/{study}/genotypes/GRCh38/chr{chromosome}.dose.vcf.gz",
         csi = "processed/{study}/genotypes/GRCh38/chr{chromosome}.dose.vcf.gz.csi"
