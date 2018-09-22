@@ -93,11 +93,3 @@ bcftools view -r X CEDAR_GRCh37_genotyped.vcf.gz -Oz -o by_chr/CEDAR_GRCh37_chrX
 7za x chr_20.zip -p'syh0evL7VUeUAP'
 7za x chr_21.zip -p'syh0evL7VUeUAP'
 7za x chr_22.zip -p'syh0evL7VUeUAP'
-
-#CrossMap
-CrossMap.py vcf ~/rocket/projects/GEUVADIS/RNAseq_pipeline/genotype_scripts/GRCh37_to_GRCh38.chain chr21.dose.vcf.gz ~/rocket/annotations/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa GRCh38/chr21.vcf
-
-#Add imputation info
-bcftools +impute-info -Oz -o GRCh38/chr21.INFO.vcf.gz GRCh38/chr21.vcf
-
-
