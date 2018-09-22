@@ -15,7 +15,7 @@ rule run_CrossMap:
     output:
         vcf = temp("processed/{study}/genotypes/temp/chr{chromosome}.dose.vcf.gz"),
     params:
-        temp_vcf = "processed/{study}/genotypes/GRCh38/chr{chromosome}.dose.vcf"
+        temp_vcf = "processed/{study}/genotypes/temp/chr{chromosome}.dose.vcf"
     threads: 1
     resources:
         mem = 1000
