@@ -1,13 +1,16 @@
-rule crossmap_genotypes:
+rule concat_genotypes:
     input:
         vcf = expand("processed/{{study}}/genotypes/GRCh38/chr{chromosome}.dose.vcf.gz", chromosome = config["chromosomes"])
     output:
-        "processed/{study}/out.txt"
+        "processed/{study}/genotypes/GRCh38/{study}_GRCh38.vcf.gz"
     threads: 1
     resources:
         mem = 1000
     shell:
-        "echo 'Done!' > {output}" 
+        """
+        module load bcftools-1.9
+        bcftools concat {input.vcf} -Oz -o {output}
+        """
 
 rule run_CrossMap:
     input:
