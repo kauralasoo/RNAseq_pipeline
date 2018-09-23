@@ -7,7 +7,7 @@ rule crossmap_genotypes:
     resources:
         mem = 1000
     shell:
-        "echo 'Done! > {output}'" 
+        "echo 'Done!' > {output}" 
 
 rule run_CrossMap:
     input:
