@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?><STUDY_SET>
+   <STUDY alias="Mapping_regulatory_variation_in_sensory_neurons_using_IPS_lines_from_the_HIPSCI_project-sc-3505" accession="ERP009463" center_name="SC" broker_name="EGA" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <IDENTIFIERS>
+         <PRIMARY_ID>ERP009463</PRIMARY_ID>
+         <SUBMITTER_ID namespace="SC">Mapping_regulatory_variation_in_sensory_neurons_using_IPS_lines_from_the_HIPSCI_project-sc-3505</SUBMITTER_ID>
+      </IDENTIFIERS>
+      <DESCRIPTOR>
+         <STUDY_TITLE>Mapping_regulatory_variation_in_sensory_neurons_using_IPS_lines_from_the_HIPSCI_project</STUDY_TITLE>
+         <STUDY_DESCRIPTION>Sensory neurons are nerve cells that are activated by sensory input such as heat, light and convey information to the brain. Although a key cell type in complex organisms, human sensory neurons are challenging to study because they are impossible to obtain from living donors. We have collaborated with the Neucentis Pharmaceutical Research Unit to differentiate sensory neuron like cells from human induced pluripotent stem cells  derived as part of the Human Induced Pluripotent Stem Cells Initiative. We will sequence RNA from 100 IPS lines derived from healthy individuals and perform RNA-seq on the differentiated cells to identify noncoding variants that alter gene expression in human sensory neurons.</STUDY_DESCRIPTION>
+         <CENTER_PROJECT_NAME>Mapping_regulatory_variation_in_sensory_neurons_using_IPS_lines_from_the_HIPSCI_project</CENTER_PROJECT_NAME>
+         <STUDY_ABSTRACT>Sensory neurons are nerve cells that are activated by sensory input such as heat, light and convey information to the brain. Although a key cell type in complex organisms, human sensory neurons are challenging to study because they are impossible to obtain from living donors. We have collaborated with the Neucentis Pharmaceutical Research Unit to differentiate sensory neuron like cells from human induced pluripotent stem cells  derived as part of the Human Induced Pluripotent Stem Cells Initiative. We will sequence RNA from 100 IPS lines derived from healthy individuals and perform RNA-seq on the differentiated cells to identify noncoding variants that alter gene expression in human sensory neurons.</STUDY_ABSTRACT>
+         <STUDY_TYPE existing_study_type="Gene Regulation Study"/>
+         <RELATED_STUDIES>
+            <RELATED_STUDY>
+               <RELATED_LINK>
+                  <DB>PROJECT</DB>
+                  <ID>3505</ID>
+               </RELATED_LINK>
+               <IS_PRIMARY>false</IS_PRIMARY>
+            </RELATED_STUDY>
+         </RELATED_STUDIES>
+      </DESCRIPTOR>
+   </STUDY>
+</STUDY_SET>

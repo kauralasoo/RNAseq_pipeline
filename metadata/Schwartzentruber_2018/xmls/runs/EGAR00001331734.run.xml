@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?><RUN_SET>
+   <RUN alias="SC_RUN_15709_6#9" center_name="SC" accession="ERR912841" broker_name="EGA" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <IDENTIFIERS>
+         <PRIMARY_ID>ERR912841</PRIMARY_ID>
+         <SUBMITTER_ID namespace="SC">SC_RUN_15709_6#9</SUBMITTER_ID>
+      </IDENTIFIERS>
+      <EXPERIMENT_REF refname="SC_EXP_15709_6#9" refcenter="SC" accession="ERX991965">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERX991965</PRIMARY_ID>
+            <SUBMITTER_ID namespace="SC">SC_EXP_15709_6#9</SUBMITTER_ID>
+         </IDENTIFIERS>
+      </EXPERIMENT_REF>
+      <DATA_BLOCK>
+         <FILES>
+            <FILE filename="15709_6#9.cram.gpg" filetype="cram" checksum_method="MD5" checksum="47adf25b3fa64a24393acd217a97830b" unencrypted_checksum="1c253184478e0fe5e4ca52769ee712b6"/>
+         </FILES>
+      </DATA_BLOCK>
+   </RUN>
+</RUN_SET>

@@ -1,0 +1,177 @@
+<?xml version = '1.0' encoding = 'UTF-8'?><ANALYSIS_SET>
+   <ANALYSIS alias="SC_ATAC_consensus_peak.counts.txt.gz" accession="ERZ385780" center_name="SC" broker_name="EGA">
+      <IDENTIFIERS>
+         <PRIMARY_ID>ERZ385780</PRIMARY_ID>
+         <SUBMITTER_ID namespace="SC">SC_ATAC_consensus_peak.counts.txt.gz</SUBMITTER_ID>
+      </IDENTIFIERS>
+      <TITLE>ATAC-seq peak read counts</TITLE>
+      <DESCRIPTION>Sample-level read counts for consensus ATAC-seq peaks, computed with featureCounts (subread package).</DESCRIPTION>
+      <STUDY_REF accession="ERP009463">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERP009463</PRIMARY_ID>
+            <SECONDARY_ID>EGAS00001001149</SECONDARY_ID>
+         </IDENTIFIERS>
+      </STUDY_REF>
+      <SAMPLE_REF accession="ERS1025819">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025819</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025147">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025147</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052108">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052108</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052103">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052103</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052118">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052118</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025150">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025150</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052123">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052123</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025820">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025820</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052125">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052125</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052128">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052128</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025811">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025811</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052131">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052131</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025813">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025813</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052117">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052117</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025149">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025149</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025817">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025817</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025807">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025807</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052115">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052115</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025802">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025802</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052121">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052121</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052132">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052132</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052124">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052124</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052106">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052106</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025803">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025803</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052120">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052120</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792074">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792074</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025151">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025151</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052105">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052105</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052113">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052113</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792073">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792073</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052114">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052114</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <ANALYSIS_TYPE>
+         <SAMPLE_PHENOTYPE/>
+      </ANALYSIS_TYPE>
+      <FILES>
+         <FILE filename="ATAC_consensus_peak.counts.txt.gz.gpg" filetype="phenotype_file" checksum_method="MD5" checksum="a9e0502eeb263c9bdf1f352701f3c85f" unencrypted_checksum="b36965ebc1628cc470dd3a75c8a3c57a"/>
+      </FILES>
+   </ANALYSIS>
+</ANALYSIS_SET>

@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?><ANALYSIS_SET>
+   <ANALYSIS alias="SC_vorx_1_1.Aligned.sortedByCoord.out.bam" accession="ERZ375271" center_name="SC" broker_name="EGA">
+      <IDENTIFIERS>
+         <PRIMARY_ID>ERZ375271</PRIMARY_ID>
+         <SUBMITTER_ID namespace="SC">SC_vorx_1_1.Aligned.sortedByCoord.out.bam</SUBMITTER_ID>
+      </IDENTIFIERS>
+      <TITLE>vorx_1_1 RNA-seq</TITLE>
+      <DESCRIPTION>RNA-seq from iPSC-derived sensory neuronal cell line</DESCRIPTION>
+      <STUDY_REF accession="ERP009463">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERP009463</PRIMARY_ID>
+            <SECONDARY_ID>EGAS00001001149</SECONDARY_ID>
+         </IDENTIFIERS>
+      </STUDY_REF>
+      <SAMPLE_REF accession="ERS656275">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656275</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <ANALYSIS_TYPE>
+         <REFERENCE_ALIGNMENT/>
+      </ANALYSIS_TYPE>
+      <FILES>
+         <FILE filename="vorx_1_1.Aligned.sortedByCoord.out.bam.gpg" filetype="bam" checksum_method="MD5" checksum="cdf2dc640ba079094a61820f87da9d11" unencrypted_checksum="f06157a6a5500487aeb7ca74893819b0"/>
+      </FILES>
+   </ANALYSIS>
+</ANALYSIS_SET>

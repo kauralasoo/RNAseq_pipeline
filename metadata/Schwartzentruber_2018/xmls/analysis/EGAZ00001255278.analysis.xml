@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?><ANALYSIS_SET>
+   <ANALYSIS alias="SC_febc_2.Aligned.sortedByCoord.out.bam" accession="ERZ375273" center_name="SC" broker_name="EGA">
+      <IDENTIFIERS>
+         <PRIMARY_ID>ERZ375273</PRIMARY_ID>
+         <SUBMITTER_ID namespace="SC">SC_febc_2.Aligned.sortedByCoord.out.bam</SUBMITTER_ID>
+      </IDENTIFIERS>
+      <TITLE>febc_2 RNA-seq</TITLE>
+      <DESCRIPTION>RNA-seq from iPSC-derived sensory neuronal cell line</DESCRIPTION>
+      <STUDY_REF accession="ERP009463">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERP009463</PRIMARY_ID>
+            <SECONDARY_ID>EGAS00001001149</SECONDARY_ID>
+         </IDENTIFIERS>
+      </STUDY_REF>
+      <SAMPLE_REF accession="ERS1052108">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052108</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <ANALYSIS_TYPE>
+         <REFERENCE_ALIGNMENT/>
+      </ANALYSIS_TYPE>
+      <FILES>
+         <FILE filename="febc_2.Aligned.sortedByCoord.out.bam.gpg" filetype="bam" checksum_method="MD5" checksum="e60c6496938cf2104b37e5643ac4d416" unencrypted_checksum="cc19eb9c8dde59d1d4e00021117e179a"/>
+      </FILES>
+   </ANALYSIS>
+</ANALYSIS_SET>

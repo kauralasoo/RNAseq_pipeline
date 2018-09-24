@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?><ANALYSIS_SET>
+   <ANALYSIS alias="SC_ougl_2.Aligned.sortedByCoord.out.bam" accession="ERZ375269" center_name="SC" broker_name="EGA">
+      <IDENTIFIERS>
+         <PRIMARY_ID>ERZ375269</PRIMARY_ID>
+         <SUBMITTER_ID namespace="SC">SC_ougl_2.Aligned.sortedByCoord.out.bam</SUBMITTER_ID>
+      </IDENTIFIERS>
+      <TITLE>ougl_2 RNA-seq</TITLE>
+      <DESCRIPTION>RNA-seq from iPSC-derived sensory neuronal cell line</DESCRIPTION>
+      <STUDY_REF accession="ERP009463">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERP009463</PRIMARY_ID>
+            <SECONDARY_ID>EGAS00001001149</SECONDARY_ID>
+         </IDENTIFIERS>
+      </STUDY_REF>
+      <SAMPLE_REF accession="ERS1052102">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052102</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <ANALYSIS_TYPE>
+         <REFERENCE_ALIGNMENT/>
+      </ANALYSIS_TYPE>
+      <FILES>
+         <FILE filename="ougl_2.Aligned.sortedByCoord.out.bam.gpg" filetype="bam" checksum_method="MD5" checksum="841f1dba5b67c93bd46bb34c92799d52" unencrypted_checksum="0e7c5c6068fd1ec46fc0db9f126ed37f"/>
+      </FILES>
+   </ANALYSIS>
+</ANALYSIS_SET>
