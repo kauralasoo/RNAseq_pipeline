@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?><ANALYSIS_SET>
+   <ANALYSIS alias="SC_iakz_1.Aligned.sortedByCoord.out.bam" accession="ERZ375284" center_name="SC" broker_name="EGA">
+      <IDENTIFIERS>
+         <PRIMARY_ID>ERZ375284</PRIMARY_ID>
+         <SUBMITTER_ID namespace="SC">SC_iakz_1.Aligned.sortedByCoord.out.bam</SUBMITTER_ID>
+      </IDENTIFIERS>
+      <TITLE>iakz_1 RNA-seq</TITLE>
+      <DESCRIPTION>RNA-seq from iPSC-derived sensory neuronal cell line</DESCRIPTION>
+      <STUDY_REF accession="ERP009463">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERP009463</PRIMARY_ID>
+            <SECONDARY_ID>EGAS00001001149</SECONDARY_ID>
+         </IDENTIFIERS>
+      </STUDY_REF>
+      <SAMPLE_REF accession="ERS656300">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656300</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <ANALYSIS_TYPE>
+         <REFERENCE_ALIGNMENT/>
+      </ANALYSIS_TYPE>
+      <FILES>
+         <FILE filename="iakz_1.Aligned.sortedByCoord.out.bam.gpg" filetype="bam" checksum_method="MD5" checksum="b483b1f468d9fdfa2c2a87aebc095846" unencrypted_checksum="17d462a20e934e799ab4e0ab2c6f7b18"/>
+      </FILES>
+   </ANALYSIS>
+</ANALYSIS_SET>

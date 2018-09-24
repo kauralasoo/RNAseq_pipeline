@@ -1,0 +1,402 @@
+<?xml version = '1.0' encoding = 'UTF-8'?><ANALYSIS_SET>
+   <ANALYSIS alias="SC_metadata.all.txt" accession="ERZ385778" center_name="SC" broker_name="EGA">
+      <IDENTIFIERS>
+         <PRIMARY_ID>ERZ385778</PRIMARY_ID>
+         <SUBMITTER_ID namespace="SC">SC_metadata.all.txt</SUBMITTER_ID>
+      </IDENTIFIERS>
+      <TITLE>Sample metadata</TITLE>
+      <DESCRIPTION>Metadata for samples including HIPSCI donor ID, protocol version, estimated fibroblast RNA percentage, etc.</DESCRIPTION>
+      <STUDY_REF accession="ERP009463">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERP009463</PRIMARY_ID>
+            <SECONDARY_ID>EGAS00001001149</SECONDARY_ID>
+         </IDENTIFIERS>
+      </STUDY_REF>
+      <SAMPLE_REF accession="ERS656323" label="OARZ_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656323</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052111" label="POSC_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052111</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025818" label="FOQJ_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025818</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656269" label="COXY_33">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656269</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792081" label="RUQL_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792081</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792073" label="BULB_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792073</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792091" label="VEQZ_6">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792091</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792079" label="XAVK_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792079</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656287" label="HULS_2_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656287</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656304" label="OOMZ_2_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656304</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025817" label="COYI_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025817</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656304" label="OOMZ_2_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656304</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656302" label="KOUN_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656302</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656263" label="OARZ_22">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656263</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656341" label="RIIV_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656341</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656283" label="IURX_3_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656283</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025813" label="UAQE_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025813</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025819" label="NUKW_1C">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025819</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656321" label="GOLB_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656321</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052102" label="OUGL_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052102</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656327" label="GIUO_4">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656327</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656289" label="YUZE_1_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656289</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025812" label="GUSS_1B">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025812</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656310" label="XEKF_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656310</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025816" label="NUKW_1B">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025816</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792092" label="DARD_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792092</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656271" label="DOVQ_33">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656271</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656275" label="VORX_1_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656275</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656267" label="TADM_4">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656267</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656320" label="AIRC_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656320</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656283" label="IURX_3_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656283</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656312" label="FUNP_3_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656312</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052131" label="QONY_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052131</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656287" label="HULS_2_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656287</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052108" label="FEBC_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052108</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656277" label="GAAB_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656277</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656289" label="YUZE_1_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656289</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656348" label="MEQO_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656348</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792090" label="MIJN_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792090</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656285" label="PIUN_3_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656285</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656356" label="AUIM_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656356</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792099" label="ROBP_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792099</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656312" label="FUNP_3_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656312</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792087" label="OEFG_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792087</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656316" label="YUZE_1_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656316</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656352" label="KAKS_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656352</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656273" label="SUKZ_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656273</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656337" label="CEHW_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656337</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656300" label="IAKZ_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656300</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792089" label="CICB_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792089</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656335" label="FOCM_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656335</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052117" label="NEMB_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052117</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656308" label="COXY_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656308</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792088" label="SUKZ_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792088</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792095" label="XUCM_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792095</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656265" label="AEHN_22">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656265</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656285" label="PIUN_3_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656285</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792098" label="NIBO_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792098</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792078" label="RUYV_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792078</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025820" label="GUSS_1C">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025820</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792076" label="UIMO_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792076</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656350" label="VORX_1_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656350</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656345" label="DEBK_7">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656345</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656279" label="HIKJ_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656279</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656316" label="YUZE_1_4">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656316</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656343" label="PIUN_3_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656343</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656325" label="FFDM_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656325</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656329" label="UOXZ_5">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656329</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656333" label="CUAU_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656333</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656331" label="VOPM_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656331</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656339" label="FFDL_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656339</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656281" label="EOJR_3_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656281</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792077" label="IICQ_1">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792077</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792082" label="ZAUI_3">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792082</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656281" label="EOJR_3_2">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656281</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656261" label="XAVK_33">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656261</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <ANALYSIS_TYPE>
+         <SAMPLE_PHENOTYPE/>
+      </ANALYSIS_TYPE>
+      <FILES>
+         <FILE filename="metadata.all.txt.gpg" filetype="phenotype_file" checksum_method="MD5" checksum="093cd7265d3a804645b25ea09adc281f" unencrypted_checksum="b7eb5a648f84632faf3902c896be8b2b"/>
+      </FILES>
+   </ANALYSIS>
+</ANALYSIS_SET>
