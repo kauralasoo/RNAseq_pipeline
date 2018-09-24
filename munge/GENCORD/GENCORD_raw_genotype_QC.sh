@@ -58,5 +58,29 @@ bcftools +fixref GENCORD_tags_filtered_rename.vcf.gz -Oz -o GENCORD_tags_filtere
 
 #Remove remaining non-ref alleles
 bcftools norm -cx -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa GENCORD_tags_filtered_fixref.vcf.gz -Oz -o GENCORD_GRCh37_genotyped.vcf.gz
+bcftools index GENCORD_GRCh37_genotyped.vcf.gz
 
-
+#Extract chromosomes
+bcftools view -r 1 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr1.vcf.gz
+bcftools view -r 2 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr2.vcf.gz
+bcftools view -r 3 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr3.vcf.gz
+bcftools view -r 4 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr4.vcf.gz
+bcftools view -r 5 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr5.vcf.gz
+bcftools view -r 6 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr6.vcf.gz
+bcftools view -r 7 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr7.vcf.gz
+bcftools view -r 8 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr8.vcf.gz
+bcftools view -r 9 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr9.vcf.gz
+bcftools view -r 10 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr10.vcf.gz
+bcftools view -r 11 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr11.vcf.gz
+bcftools view -r 12 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr12.vcf.gz
+bcftools view -r 13 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr13.vcf.gz
+bcftools view -r 14 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr14.vcf.gz
+bcftools view -r 15 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr15.vcf.gz
+bcftools view -r 16 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr16.vcf.gz
+bcftools view -r 17 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr17.vcf.gz
+bcftools view -r 18 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr18.vcf.gz
+bcftools view -r 19 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr19.vcf.gz
+bcftools view -r 20 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr20.vcf.gz
+bcftools view -r 21 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr21.vcf.gz
+bcftools view -r 22 GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chr22.vcf.gz
+bcftools view -r X GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_chrX.vcf.gz

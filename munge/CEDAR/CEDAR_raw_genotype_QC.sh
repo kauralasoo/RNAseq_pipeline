@@ -38,8 +38,8 @@ bcftools norm -cx -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary
 bcftools index CEDAR_fixref_sorted_noref.vcf.gz
 bcftools annotate -c INFO/AF DAR_fixref_sorted_noref ~/rocket/datasets/100 -c/GRCh37_allele_frequencies.vcf.gz CEDAR_fixref_sorted_noref.vcf.gz | bcftools +af-dist | grep ^PROB > CEDAR_AFdist.txt
 
-#Remo | duplicates and multi-allelics
-bcftools norm -d all CEDAR_fixref_sorted_noref.vcf.gz | bcftools norm all+any | bcftools view -m2 -M2 -Oz any CEDAR_fixref_sorted_noref_nodup.vcf.gz 
+#Remove duplicates and multi-allelics
+bcftools norm -d all CEDAR_fixref_sorted_noref.vcf.gz | bcftools norm -m+any | bcftools view -m2 -M2 -Oz -o CEDAR_fixref_sorted_noref_nodup.vcf.gz
 
 #Rename
 mv CEDAR_fixref_sorted_noref_nodup.vcf.gz CEDAR_GRCh37_genotyped.vcf.gz
