@@ -1,4 +1,3 @@
-
 #### GEUVADIS dataset ####
 #Run the quantification pipeline
 snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription.snakefile processed/GEUVADIS/out.txt --jobs 100 --configfile configs/GEUVADIS_config.yaml --rerun-incomplete
@@ -13,6 +12,10 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s bam_to_fastq_PE.snakef
 #Run the alignment pipeline
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/TwinsUK/out.txt --jobs 20 --configfile configs/TwinsUK_config.yaml --rerun-incomplete
 
+#CrossMap genotypes
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes_no_R2.snakefile -np processed/TwinsUK/genotypes/GRCh38/TwinsUK_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 22 --rerun-incomplete
+
+
 
 #### Nedelec 2016 dataset ####
 #Convert .sra files to fastq
@@ -21,10 +24,16 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s sra_to_fastq.snakefile
 #Quantify transcription
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Macrophages_Nedelec_2016/out.txt --jobs 1 --configfile configs/Nedelec_config.yaml --rerun-incomplete
 
+#CrossMap genotypes
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -p processed/Macrophages_Nedelec_2016/genotypes/GRCh38/Macrophages_Nedelec_2016_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 10 --rerun-incomplete
+
 
 #### Quach 2016 dataset ####
 #Quantify transcription
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Monocytes_Quach_2016/out.txt --jobs 20 --configfile configs/Quach_2016_config.yaml --rerun-incomplete
+
+#CrossMap genotypes
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -p processed/Monocytes_Quach_2016/genotypes/GRCh38/Monocytes_Quach_2016_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 10 --rerun-incomplete
 
 
 #### BLUEPRINT dataset ####
@@ -41,6 +50,9 @@ snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription_
 
 #### Fairfax et al ####
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Fairfax/out.txt --jobs 1 --configfile configs/Fairfax_config.yaml --rerun-incomplete
+
+
+
 
 #### GENCORD dataset ####
 #Convert bams to fastq
@@ -65,6 +77,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s cram_to_fastq_PE.snake
 
 #Run the alignment pipeline
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/Schwartzentruber_2018/out.txt --jobs 30 --configfile configs/Schwartzentruber_2018_config_align.yaml --rerun-incomplete
+
 
 
 ##### CEDAR ####
