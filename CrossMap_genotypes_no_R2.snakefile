@@ -38,7 +38,7 @@ rule sort_vcf:
         csi = temp("processed/{study}/genotypes/sorted/chr{chromosome}.dose.vcf.gz.csi")
     threads: 1
     resources:
-        mem = 1000
+        mem = 2000
     shell:
         """
         module load bcftools-1.9
@@ -55,7 +55,7 @@ rule keep_correct_chromosome:
         csi = "processed/{study}/genotypes/GRCh38/chr{chromosome}.dose.vcf.gz.csi"
     threads: 1
     resources:
-        mem = 1000
+        mem = 2000
     shell:
         """
         module load bcftools-1.9
