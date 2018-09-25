@@ -45,4 +45,8 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 
 ##### CEDAR ####
 #CrossMap genotypes
-snakemake -s --cluster scripts/snakemake_submit_UT.py CrossMap_genotypes.snakefile -np processed/CEDAR/out.txt --configfile configs/CrossMap_config.yaml --jobs 1 --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/CEDAR/out.txt --configfile configs/CrossMap_config.yaml --jobs 1 --rerun-incomplete
+
+#### GENCORD ####
+#CrossMap genotypes
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/GENCORD/out.txt --configfile configs/CrossMap_config.yaml --jobs 10 --rerun-incomplete
