@@ -37,7 +37,7 @@ rule filter_R2:
         vcf = temp("processed/{study}/genotypes/filtered/chr{chromosome}.dose.vcf.gz")
     threads: 1
     resources:
-        mem = 1000
+        mem = 2000
     shell:
         """
         module load bcftools-1.9
