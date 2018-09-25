@@ -5,7 +5,10 @@
 .DS_Store
 *.Rproj
 .snakemake
+.vscode
 processed
 SlurmOut
 annotations
 results
+plots
+metadata
