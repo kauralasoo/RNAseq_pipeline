@@ -5,6 +5,9 @@ rule rename_variants:
         gen = "/gpfs/hpchome/a72094/rocket/datasets/controlled_access/TwinsUK/genotypes/gen/chr{chrom}_Eurobats_Public.gen"
     output:
         gen = "processed/gen/chr_{chrom}.gen"
+    threads: 1
+    resources:
+        mem = 1000
     shell:
         "python ../../genotype_scripts/gen_replace_variant_id.py --gen {input.gen} --chr {wildcards.chrom} > {output.gen}"
 
@@ -14,6 +17,9 @@ rule make_vcf:
         sample = "/gpfs/hpchome/a72094/rocket/datasets/controlled_access/TwinsUK/genotypes/sample_lists/chr{chrom}_Eurobats_Public.sample"
     output:
         vcf = "processed/vcf/chr{chrom}.dose.vcf.gz"
+    threads: 1
+    resources:
+        mem = 1000
     shell:
         """
         module load bcftools-1.8
@@ -25,6 +31,9 @@ rule merge_vcfs:
         expand("processed/vcf/chr{chrom}.dose.vcf.gz", chrom = CHROMS)
     output:
         "processed/out.txt"
+    threads: 1
+    resources:
+        mem = 1000
     shell:
         """
         echo 'Done!' > {output}
