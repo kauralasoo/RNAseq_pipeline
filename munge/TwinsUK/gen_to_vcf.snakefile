@@ -2,7 +2,7 @@ CHROMS = ["1","10","11","12","13","14","15","16","17","18","19","2","20","21","2
 
 rule rename_variants:
     input:
-        gen = "/gpfs/hpchome/a72094/rocket/datasets/TwinsUK/genotypes/gen/chr{chrom}_Eurobats_Public.gen"
+        gen = "/gpfs/hpchome/a72094/rocket/datasets/controlled_access/TwinsUK/genotypes/gen/chr{chrom}_Eurobats_Public.gen"
     output:
         gen = "processed/gen/chr_{chrom}.gen"
     shell:
@@ -11,7 +11,7 @@ rule rename_variants:
 rule make_vcf:
     input:
         gen = "processed/gen/chr_{chrom}.gen",
-        sample = "/gpfs/hpchome/a72094/rocket/datasets/TwinsUK/genotypes/sample_lists/chr{chrom}_Eurobats_Public.sample"
+        sample = "/gpfs/hpchome/a72094/rocket/datasets/controlled_access/TwinsUK/genotypes/sample_lists/chr{chrom}_Eurobats_Public.sample"
     output:
         vcf = "processed/vcf/chr{chrom}.dose.vcf.gz"
     shell:
