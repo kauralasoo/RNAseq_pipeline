@@ -2,6 +2,9 @@
 # Read length: 75bp
 strandedness: Unstranded
 
+#General
+vcf_file: /gpfs/hpchome/a72094/rocket/datasets/open_access/GEUVADIS/genotypes/GEUVADIS_445_samples.merged.vcf.gz
+
 #Reference annotations
 ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
 reference_genome: /gpfs/rocket/home/a72094/annotations/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa
@@ -16,6 +19,13 @@ leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
 #Salmon parameters
 annotations: ["txrevise.grp_1.contained", "txrevise.grp_1.downstream","txrevise.grp_1.upstream","txrevise.grp_2.contained","txrevise.grp_2.downstream","txrevise.grp_2.upstream"]
 libType: IU
+
+#QTL mapping
+conditions: ["naive"]
+quant_methods: ["txrevise"]
+n_batches: 200
+cis_window: 1000000
+nominal_cis_window: 1000000
 
 #Dictionary of sample names
 samples:

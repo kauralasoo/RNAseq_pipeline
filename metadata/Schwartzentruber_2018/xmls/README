@@ -1,0 +1,75 @@
+
+	
+	Meta information tar ball contains two sets of files that will help users to further understand the data. 
+	
+	1) All xml files from study, experiment, runs, analysis and samples are made available. XSD for these xml files can be accessed at 
+	   https://www.ebi.ac.uk/ena/about/formats. ENA also provides help on how these xml objects are connected.
+	   
+	2) 5 files tab delimited files
+	
+			- Analysis_Sample_meta_info.map
+			- Run_Sample_meta_info.map
+			- Study_analysis_sample.map
+			- Study_Experiment_Run_sample.map
+			- Sample_File.map
+		
+		Please note that if any of the files are empty that would mean that related information is not available.
+		
+		Folowing files are tab delimited files where the values in columns corresponds to following information and are in the same order.
+				
+		Run_Sample_meta_info.map AND Analysis_Sample_meta_info.map
+		==========================================================
+		
+	EGA_SAMPLE_ID
+	SAMPLE_ALIAS
+	BIOSAMPLE_ID
+	SAMPLE_TITLE
+	ATTRIBUTES
+	
+	Please note that last column of attribute is comma, ';' delimited ( each attribute key value pair is delited by ';') 
+	and 
+	key, value pair itself is delimted by '=' sign.
+	
+		Study_Experiment_Run_sample.map
+		===============================
+		
+	STUDY EGA_ID
+	STUDY_TITLE  
+	STUDY_TYPE        		
+	INSTRUMENT_PLATFORM		
+	INSTRUMENT_MODEL		
+	LIBRARY_LAYOUT			
+	LIBRARY_NAME
+	LIBRARY_STRATEGY
+	LIBRARY_SOURCE
+	LIBRARY_SELECTION
+	EXPERIMENT EGA_ID
+	RUN EGA_ID
+	SUBMISSION CENTER_NAME
+	RUN_CENTER_NAME
+	EA SAMPLE_ID
+	SAMPLE_ALIAS
+	BIOSAMPLE_ID
+	EGA_SAMPLE_ID
+	
+		Study_analysis_sample.map
+		=========================
+	STUDY EGA_ID
+	STUDY_TITLE
+	STUDY_TYPE
+	ANALYSIS EGA_ID
+	ANALYSIS_TYPE
+	ANALYSIS_TITLE
+	EGA_SAMPLE_ID
+	
+		Sample_File.map
+		=========================
+	SAMPLE_ALIAS
+	SAMPLE_ACCESSION
+	FILE_NAME
+	FILE_ACCESSION
+	
+	(Note This file is not yet populated for Array based datasets)
+	
+	
+	

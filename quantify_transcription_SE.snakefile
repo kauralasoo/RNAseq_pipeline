@@ -151,6 +151,27 @@ rule merge_salmon:
 		Rscript scripts/merge_Salmon.R -s {params.sample_ids} -d {params.dir} -o {output}
 		"""
 
+#Run MBV on all samples
+rule run_qtltools_mbv:
+	input:
+		bam = "processed/{study}/hisat2/{sample}.bam"
+	output:
+		"processed/{study}/mbv/{sample}.mbv_output.txt"
+	params:
+		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
+	resources:
+		mem = 6000
+	threads: 8
+	shell:
+		"""
+		module load samtools-1.6
+		mkdir {params.local_tmp}
+		rsync -aP --bwlimit=10000 {input.bam} {params.local_tmp}/{wildcards.sample}.bam
+		samtools index {params.local_tmp}/{wildcards.sample}.bam
+		QTLtools mbv --vcf {config[vcf_file]} --bam {params.local_tmp}/{wildcards.sample}.bam --out {output}
+		rm -r {params.local_tmp}
+		"""
+
 		
 #Make sure that all final output files get created
 rule make_all:
@@ -161,6 +182,7 @@ rule make_all:
 		expand("processed/{{study}}/leafcutter/junc/{sample}.junc", sample=config["samples"]),
 		#expand("processed/{{study}}/ASEcounts/{sample}.ASEcounts", sample=config["samples"]),
 		expand("processed/{{study}}/matrices/{annotation}.salmon_txrevise.rds", annotation=config["annotations"]),
+		expand("processed/{{study}}/mbv/{sample}.mbv_output.txt", sample=config["samples"]),
 		#"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
 	output:
 		"processed/{study}/out.txt"

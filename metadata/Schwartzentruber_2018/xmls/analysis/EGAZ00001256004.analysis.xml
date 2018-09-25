@@ -1,0 +1,677 @@
+<?xml version = '1.0' encoding = 'UTF-8'?><ANALYSIS_SET>
+   <ANALYSIS alias="SC_all_basic_counts.managed.txt.gz" accession="ERZ385777" center_name="SC" broker_name="EGA">
+      <IDENTIFIERS>
+         <PRIMARY_ID>ERZ385777</PRIMARY_ID>
+         <SUBMITTER_ID namespace="SC">SC_all_basic_counts.managed.txt.gz</SUBMITTER_ID>
+      </IDENTIFIERS>
+      <TITLE>RNA-seq gene expression counts</TITLE>
+      <DESCRIPTION>Sample-level gene expression counts computed with featureCounts (subread package), using Gencode Basic transcript annotations, GRCh38 release 79.</DESCRIPTION>
+      <STUDY_REF accession="ERP009463">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERP009463</PRIMARY_ID>
+            <SECONDARY_ID>EGAS00001001149</SECONDARY_ID>
+         </IDENTIFIERS>
+      </STUDY_REF>
+      <SAMPLE_REF accession="ERS656265">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656265</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656320">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656320</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656356">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656356</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656347">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656347</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052116">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052116</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052112">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052112</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792073">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792073</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656337">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656337</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792089">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792089</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656308">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656308</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656269">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656269</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025817">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025817</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656333">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656333</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792097">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792097</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792074">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792074</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792092">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792092</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656345">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656345</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052107">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052107</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656271">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656271</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792075">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792075</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052105">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052105</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052118">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052118</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656281">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656281</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656281">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656281</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792085">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792085</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025802">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025802</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052108">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052108</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052124">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052124</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656339">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656339</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656325">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656325</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052109">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052109</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656335">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656335</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025818">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025818</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656312">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656312</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656312">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656312</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656277">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656277</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656327">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656327</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656321">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656321</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025804">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025804</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025812">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025812</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025820">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025820</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025149">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025149</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025807">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025807</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025805">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025805</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025814">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025814</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052104">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052104</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656279">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656279</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025147">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025147</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656287">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656287</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656287">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656287</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656300">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656300</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792077">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792077</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656283">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656283</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656283">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656283</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792083">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792083</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656352">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656352</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052132">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052132</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792084">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792084</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656302">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656302</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052123">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052123</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052103">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052103</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025150">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025150</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656348">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656348</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792090">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792090</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792100">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792100</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052117">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052117</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792098">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792098</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025806">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025806</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025816">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025816</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025819">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025819</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052130">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052130</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656323">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656323</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656263">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656263</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792087">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792087</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052110">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052110</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656304">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656304</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656304">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656304</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052102">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052102</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792086">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792086</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052128">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052128</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052126">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052126</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052127">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052127</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052121">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052121</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656285">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656285</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656285">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656285</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656343">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656343</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052125">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052125</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052129">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052129</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052122">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052122</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052111">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052111</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025810">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025810</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025815">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025815</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025821">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025821</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025811">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025811</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025151">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025151</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052131">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052131</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052113">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052113</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656341">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656341</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792099">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792099</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052114">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052114</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792081">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792081</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792078">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792078</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792093">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792093</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792088">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792088</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656273">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656273</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656267">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656267</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025813">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025813</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792076">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792076</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052119">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052119</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656329">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656329</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052106">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052106</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792094">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792094</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792091">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792091</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656331">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656331</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656275">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656275</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656354">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656354</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792096">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792096</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052120">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052120</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792079">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792079</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656261">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656261</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656310">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656310</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792095">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792095</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1052115">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1052115</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS1025803">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS1025803</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792080">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792080</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656289">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656289</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656289">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656289</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656316">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656316</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656316">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656316</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS792082">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792082</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <SAMPLE_REF accession="ERS656350">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS656350</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <ANALYSIS_TYPE>
+         <SAMPLE_PHENOTYPE/>
+      </ANALYSIS_TYPE>
+      <FILES>
+         <FILE filename="all_basic_counts.managed.txt.gz.gpg" filetype="phenotype_file" checksum_method="MD5" checksum="885d14b4a4f33232b68e5be281639c37" unencrypted_checksum="33f8d60eda9759a4f11ad6303161755d"/>
+      </FILES>
+   </ANALYSIS>
+</ANALYSIS_SET>

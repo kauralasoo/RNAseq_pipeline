@@ -9,7 +9,7 @@ rule bam_to_fastq:
 		fq1 = "processed/{dataset}/fastq/{sample}_1.fastq.gz",
 		fq2 = "processed/{dataset}/fastq/{sample}_2.fastq.gz",
 	params:
-		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
+		local_tmp = "/tmp/kerimov_" + uuid.uuid4().hex + "/"
 	resources:
 		mem = 3000
 	threads: 1

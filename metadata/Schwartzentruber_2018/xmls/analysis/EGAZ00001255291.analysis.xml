@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?><ANALYSIS_SET>
+   <ANALYSIS alias="SC_xavk_3.Aligned.sortedByCoord.out.bam" accession="ERZ375286" center_name="SC" broker_name="EGA">
+      <IDENTIFIERS>
+         <PRIMARY_ID>ERZ375286</PRIMARY_ID>
+         <SUBMITTER_ID namespace="SC">SC_xavk_3.Aligned.sortedByCoord.out.bam</SUBMITTER_ID>
+      </IDENTIFIERS>
+      <TITLE>xavk_3 RNA-seq</TITLE>
+      <DESCRIPTION>RNA-seq from iPSC-derived sensory neuronal cell line</DESCRIPTION>
+      <STUDY_REF accession="ERP009463">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERP009463</PRIMARY_ID>
+            <SECONDARY_ID>EGAS00001001149</SECONDARY_ID>
+         </IDENTIFIERS>
+      </STUDY_REF>
+      <SAMPLE_REF accession="ERS792079">
+         <IDENTIFIERS>
+            <PRIMARY_ID>ERS792079</PRIMARY_ID>
+         </IDENTIFIERS>
+      </SAMPLE_REF>
+      <ANALYSIS_TYPE>
+         <REFERENCE_ALIGNMENT/>
+      </ANALYSIS_TYPE>
+      <FILES>
+         <FILE filename="xavk_3.Aligned.sortedByCoord.out.bam.gpg" filetype="bam" checksum_method="MD5" checksum="01bb06e939a0f35fc3c932dc20eb3e60" unencrypted_checksum="c77fc6064595bd404e902ab30dd11799"/>
+      </FILES>
+   </ANALYSIS>
+</ANALYSIS_SET>
