@@ -26,9 +26,23 @@ rule make_vcf:
         bcftools convert --gensample2vc {input.gen},{input.sample} -Oz -o {output.vcf}
         """
 
+remove_nonref_variants:
+    input:
+        vcf = "processed/vcf/chr{chrom}.dose.vcf.gz",
+    output:
+        vcf = "processed/ref/chr{chrom}.dose.vcf.gz"
+    threads: 1
+    resources:
+        mem = 1000
+    shell:
+        """
+        module load bcftools-1.9
+        bcftools norm -cx -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa {input.vcf} -Oz -o {output.vcf}
+        """
+
 rule merge_vcfs:
     input:
-        expand("processed/vcf/chr{chrom}.dose.vcf.gz", chrom = CHROMS)
+        expand("processed/ref/chr{chrom}.dose.vcf.gz", chrom = CHROMS)
     output:
         "processed/out.txt"
     threads: 1
@@ -38,3 +52,4 @@ rule merge_vcfs:
         """
         echo 'Done!' > {output}
         """
+
