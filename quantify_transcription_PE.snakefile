@@ -9,7 +9,7 @@ rule hisat2_align:
 		bam = "processed/{study}/hisat2/{sample}.bam",
 		ss = "processed/{study}/hisat2_ss/{sample}.splice_sites.txt"
 	params:
-		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
+		local_tmp = "/tmp/kerimov_" + uuid.uuid4().hex + "/"
 	resources:
 		mem = 8000
 	threads: 8
@@ -33,10 +33,10 @@ rule quantify_featureCounts:
 		counts = "processed/{study}/featureCounts/{sample}.featureCounts.txt",
 		summary = "processed/{study}/featureCounts/{sample}.featureCounts.txt.summary"
 	params:
-		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
+		local_tmp = "/tmp/kerimov_" + uuid.uuid4().hex + "/"
 	threads: 6
 	resources:
-		mem = 8000
+		mem = 10000
 	run:
 		shell("mkdir {params.local_tmp}")
 		shell("rsync -aP --bwlimit=10000 {input.bam} {params.local_tmp}/{wildcards.sample}.bam")
@@ -72,7 +72,7 @@ rule leafcutter_bam_to_junc:
 	output:
 		"processed/{study}/leafcutter/junc/{sample}.junc"
 	params:
-		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
+		local_tmp = "/tmp/kerimov_" + uuid.uuid4().hex + "/"
 	threads: 1
 	resources:
 		mem = 1000
@@ -159,26 +159,6 @@ rule merge_salmon:
 		Rscript scripts/merge_Salmon.R -s {params.sample_ids} -d {params.dir} -o {output}
 		"""
 
-#Run MBV on all samples
-rule run_qtltools_mbv:
-	input:
-		bam = "processed/{study}/hisat2/{sample}.bam"
-	output:
-		"processed/{study}/mbv/{sample}.mbv_output.txt"
-	params:
-		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
-	resources:
-		mem = 6000
-	threads: 8
-	shell:
-		"""
-		module load samtools-1.6
-		mkdir {params.local_tmp}
-		rsync -aP --bwlimit=10000 {input.bam} {params.local_tmp}/{wildcards.sample}.bam
-		samtools index {params.local_tmp}/{wildcards.sample}.bam
-		QTLtools mbv --vcf {config[vcf_file]} --bam {params.local_tmp}/{wildcards.sample}.bam --out {output}
-		rm -r {params.local_tmp}
-		"""
 
 		
 #Make sure that all final output files get created
@@ -188,12 +168,11 @@ rule make_all:
 		#expand("processed/{study}/bigwig/{sample}.str1.bw", study = config["study"], sample=config["samples"]),
 		expand("processed/{{study}}/hisat2/{sample}.bam", sample=config["samples"]),
 		"processed/{study}/matrices/gene_expression_featureCounts.txt",
-		expand("processed/{{study}}/leafcutter/junc/{sample}.junc", sample=config["samples"]),
+		# expand("processed/{{study}}/leafcutter/junc/{sample}.junc", sample=config["samples"]),
 		#expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
 		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
-		expand("processed/{{study}}/matrices/{annotation}.salmon_txrevise.rds", annotation=config["annotations"]),
-		expand("processed/{{study}}/mbv/{sample}.mbv_output.txt", sample=config["samples"]),
+		# expand("processed/{{study}}/matrices/{annotation}.salmon_txrevise.rds", annotation=config["annotations"]),
 		#"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
 	output:
 		"processed/{study}/out.txt"
