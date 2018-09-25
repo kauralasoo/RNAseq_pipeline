@@ -13,7 +13,7 @@ rule make_vcf:
         gen = "processed/gen/chr_{chrom}.gen",
         sample = "/gpfs/hpchome/a72094/rocket/datasets/TwinsUK/genotypes/sample_lists/chr{chrom}_Eurobats_Public.sample"
     output:
-        vcf = "processed/vcf/chr_{chrom}.vcf.gz"
+        vcf = "processed/vcf/chr{chrom}.dose.vcf.gz"
     shell:
         """
         module load bcftools-1.8
@@ -22,11 +22,10 @@ rule make_vcf:
 
 rule merge_vcfs:
     input:
-        expand("processed/vcf/chr_{chrom}.vcf.gz", chrom = CHROMS)
+        expand("processed/vcf/chr{chrom}.dose.vcf.gz", chrom = CHROMS)
     output:
-        "processed/TwinsUK_GRCh37_1KG_Phase1.vcf.gz"
+        "processed/out.txt"
     shell:
         """
-        module load bcftools-1.8
-        bcftools concat {input} -Oz -o {output}
+        echo 'Done!' > {output}
         """
