@@ -26,7 +26,7 @@ rule make_vcf:
         bcftools convert --gensample2vc {input.gen},{input.sample} -Oz -o {output.vcf}
         """
 
-remove_nonref_variants:
+rule remove_nonref_variants:
     input:
         vcf = "processed/vcf/chr{chrom}.dose.vcf.gz",
     output:
