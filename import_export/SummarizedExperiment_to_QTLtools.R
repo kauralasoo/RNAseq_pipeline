@@ -2,13 +2,15 @@ library("cqn")
 library("dplyr")
 library("devtools")
 library("SummarizedExperiment")
-load_all("../seqUtils/")
+load_all("../eQTLUtils/")
 
 #Import SE object
 se_object = readRDS("results/SummarizedExperiments/GEUVADIS.rds")
 
 #Keep only samples that pass QC
-filtered_se = se_object[,se_object$qtl_mapping == TRUE & se_object$superpopulation_code == "EUR"]
+filtered_se = se_object[,se_object$genotype_qc_passed & 
+                          se_object$rna_qc_passed & 
+                          se_object$superpopulation_code == "EUR"]
 
 #Normalize gene expression
 expressed_counts = rowSums(assays(filtered_se)$counts >= 1)
@@ -30,15 +32,21 @@ filtered_se = filtered_se[intersect(valid_genes, expressed_genes),]
 
 #Normalise and make QTLtools matrix
 cqn_se = normaliseSE_cqn(filtered_se)
-qtltools_matrix = convertSEtoQTLtools(cqn_se, assay_name = "cqn")
 
-#Export matrix to disk
-write.table(qtltools_matrix, "processed/GEUVADIS/qtltools/phenotypes/GEUVADIS.featureCounts.bed", sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
+#Extract conditions and export to QTLtools
+conditions = unique(cqn_se$condition)
+condition_list = setNames(as.list(conditions), conditions)
+condition_se_list = purrr::map(condition_list, ~subsetSEByColumnValue(cqn_se, "condition", .))
 
-#Extract sample list for the VCF file
-columns = colnames(qtltools_matrix)
-genotype_ids = columns[7:length(columns)]
-write.table(genotype_ids, "processed/GEUVADIS/qtltools/phenotypes/GEUVADIS.featureCounts.samples", sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
+#Convert SE onbjects to QTLtools
+qtltools_list = purrr::map(condition_se_list, ~convertSEtoQTLtools(., assay_name = "cqn"))
+saveQTLToolsMatrices(qtltools_list, output_dir = "processed/GEUVADIS/qtltools/input/featureCounts/", file_suffix = "bed")
+
+#Extract sample names
+sample_names = purrr::map(qtltools_list, ~colnames(.)[-(1:6)])
+saveQTLToolsMatrices(sample_names, output_dir = "processed/GEUVADIS/qtltools/input/featureCounts/", file_suffix = "sample_names.txt", col_names = FALSE)
+
+
 
 
 ##### txrevise #####
