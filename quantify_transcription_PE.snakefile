@@ -183,7 +183,7 @@ rule run_qtltools_mbv:
 #Make sure that all final output files get created
 rule make_all:
 	input:
-		expand("processed/{{study}}/verifyBamID/{sample}.verifyBamID.bestSM", sample=config["samples"]),
+		expand("processed/{{study}}/mbv/{sample}.mbv_output.txt", sample=config["samples"]),
 		#expand("processed/{{study}}/bigwig/{sample}.str1.bw", sample=config["samples"]),
 		#expand("processed/{{study}}/hisat2/{sample}.bam", sample=config["samples"]),
 		#"processed/{study}/matrices/gene_expression_featureCounts.txt",
