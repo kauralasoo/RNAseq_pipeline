@@ -4,6 +4,9 @@ snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription.
 
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/GEUVADIS/out.txt --jobs 20 --configfile configs/GEUVADIS_config.yaml --rerun-incomplete
 
+#Map QTLs
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/GEUVADIS/out.txt --configfile configs/GEUVADIS_config.yaml --rerun-incomplete --jobs 100
+
 
 #### TwinsUK dataset ####
 #Convert bams to fastq
