@@ -164,8 +164,8 @@ rule merge_salmon:
 #Make sure that all final output files get created
 rule make_all:
 	input:
-		expand("processed/{{study}}/verifyBamID/{sample}.verifyBamID.bestSM", study = config["study"], sample=config["samples"]),
-		#expand("processed/{study}/bigwig/{sample}.str1.bw", study = config["study"], sample=config["samples"]),
+		expand("processed/{{study}}/verifyBamID/{sample}.verifyBamID.bestSM", sample=config["samples"]),
+		#expand("processed/{{study}}/bigwig/{sample}.str1.bw", sample=config["samples"]),
 		#expand("processed/{{study}}/hisat2/{sample}.bam", sample=config["samples"]),
 		#"processed/{study}/matrices/gene_expression_featureCounts.txt",
 		# expand("processed/{{study}}/leafcutter/junc/{sample}.junc", sample=config["samples"]),
