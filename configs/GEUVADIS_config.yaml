@@ -22,6 +22,7 @@ libType: IU
 
 #QTL mapping
 conditions: ["naive"]
+is_imputed: False
 #quant_methods: ["txrevise", "featureCounts"]
 quant_methods: ["featureCounts"]
 n_batches: 400

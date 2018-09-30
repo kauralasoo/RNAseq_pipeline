@@ -4,6 +4,7 @@ rule map_qtls:
 		expand("processed/{{study}}/qtltools/output/{annot_type}/tab/{condition}.nominal.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
 		expand("processed/{{study}}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
 		expand("processed/{{study}}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz.tbi", annot_type = config["quant_methods"], condition = config["conditions"]),
+		expand("processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.variant_information.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
 	output:
 		"processed/{study}/out.txt"
 	resources:
@@ -44,6 +45,22 @@ rule extract_samples:
 		bcftools view -S {input.samples} {config[vcf_file]} -Oz -o {output.vcf}
 		bcftools index {output.vcf}
 		"""
+
+#Extract variant information from VCF
+rule extract_variant_information:
+	input:
+		vcf = "processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.vcf.gz",
+	output:
+		var_info = "processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.variant_information.txt.gz"
+	threads: 1
+	resources:
+		mem = 100
+	run:
+		shell("module load bcftools-1.8")
+		if(config["is_imputed"] == False):
+    		shell("bcftools +fill-tags {input.vcf} | bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%TYPE\t%AC\t%AN\t%MAF\tNA\n | gzip > {output.var_info}")
+		else:
+    		shell("bcftools +fill-tags {input.vcf} | bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%TYPE\t%AC\t%AN\t%MAF\tR2\n | gzip > {output.var_info}")
 
 #Perform PCA on the genotype and phenotype data
 rule perform_pca:
