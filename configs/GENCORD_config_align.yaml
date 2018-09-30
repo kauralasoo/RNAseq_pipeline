@@ -16,573 +16,573 @@ hisat2_flags: ""
 
 #Dictionary of sample names
 samples:
-  UCB018
-  UCB019
-  UCB024
-  UCB025
-  UCB042
-  UCB048
-  UCB049
-  UCB050
-  UCB051
-  UCB060
-  UCB062
-  UCB078
-  UCB086
-  UCB087
-  UCB088
-  UCB093
-  UCB1001
-  UCB1007
-  UCB100
-  UCB1010
-  UCB1011
-  UCB1012
-  UCB1014
-  UCB1016
-  UCB1021
-  UCB1023
-  UCB1024
-  UCB1025
-  UCB1027
-  UCB1028
-  UCB1029
-  UCB1030
-  UCB103
-  UCB1040
-  UCB1045
-  UCB1046
-  UCB1047
-  UCB1048
-  UCB1052
-  UCB1053
-  UCB1055
-  UCB1056
-  UCB1057
-  UCB1058
-  UCB1059
-  UCB105
-  UCB1061
-  UCB1062
-  UCB1064
-  UCB1067
-  UCB1068
-  UCB1069
-  UCB1070
-  UCB1071
-  UCB1072
-  UCB1073
-  UCB1074
-  UCB1075
-  UCB1076
-  UCB1077
-  UCB1078
-  UCB1079
-  UCB1080
-  UCB1083
-  UCB1085
-  UCB1086
-  UCB1087
-  UCB1088
-  UCB1089
-  UCB108
-  UCB1090
-  UCB1091
-  UCB1092
-  UCB1094
-  UCB1096
-  UCB1097
-  UCB1098
-  UCB1099
-  UCB1100
-  UCB1101
-  UCB1102
-  UCB1103
-  UCB1104
-  UCB1105
-  UCB1106
-  UCB1107
-  UCB1108
-  UCB1109
-  UCB110
-  UCB1112
-  UCB1113
-  UCB1115
-  UCB1116
-  UCB1117
-  UCB1119
-  UCB1120
-  UCB1123
-  UCB1124
-  UCB1125
-  UCB1126
-  UCB1128
-  UCB1129
-  UCB1130
-  UCB1131
-  UCB1135
-  UCB1136
-  UCB1137
-  UCB1139
-  UCB113
-  UCB1143
-  UCB1146
-  UCB1148
-  UCB114
-  UCB1156
-  UCB1159
-  UCB115
-  UCB1160
-  UCB1161
-  UCB1163
-  UCB1164
-  UCB1167
-  UCB1168
-  UCB1169
-  UCB116
-  UCB1170
-  UCB1171
-  UCB1174
-  UCB1175
-  UCB1176
-  UCB1178
-  UCB1179
-  UCB117
-  UCB1180
-  UCB1181
-  UCB1182
-  UCB1183
-  UCB1184
-  UCB1185
-  UCB1186
-  UCB1187
-  UCB1188
-  UCB1189
-  UCB1190
-  UCB1191
-  UCB1192
-  UCB1193
-  UCB1194
-  UCB1195
-  UCB1196
-  UCB1198
-  UCB1199
-  UCB1200
-  UCB1201
-  UCB1203
-  UCB1205
-  UCB1206
-  UCB1207
-  UCB1208
-  UCB1210
-  UCB1211
-  UCB1212
-  UCB1215
-  UCB1216
-  UCB1217
-  UCB1218
-  UCB122
-  UCB124
-  UCB125
-  UCB130
-  UCB137
-  UCB139
-  UCB141
-  UCB144
-  UCB152
-  UCB164
-  UCB167
-  UCB169
-  UCB177
-  UCB181
-  UCB183
-  UCB188
-  UCB223
-  UCB225
-  UCB226
-  UCB227
-  UCB251
-  UCB253
-  UCB255
-  UCB277
-  UCB282
-  UCB285
-  UCB304
-  UCF018
-  UCF025
-  UCF034
-  UCF042
-  UCF048
-  UCF049
-  UCF050
-  UCF051
-  UCF060
-  UCF062
-  UCF078
-  UCF079
-  UCF086
-  UCF088
-  UCF093
-  UCF1001
-  UCF1007
-  UCF100
-  UCF1010
-  UCF1011
-  UCF1012
-  UCF1013
-  UCF1014
-  UCF1016
-  UCF1021
-  UCF1023
-  UCF1024
-  UCF1025
-  UCF1027
-  UCF1028
-  UCF1029
-  UCF1030
-  UCF103
-  UCF1040
-  UCF1045
-  UCF1046
-  UCF1047
-  UCF1048
-  UCF1052
-  UCF1053
-  UCF1055
-  UCF1056
-  UCF1057
-  UCF1059
-  UCF105
-  UCF1061
-  UCF1062
-  UCF1064
-  UCF1067
-  UCF1068
-  UCF1069
-  UCF1070
-  UCF1071
-  UCF1072
-  UCF1073
-  UCF1074
-  UCF1075
-  UCF1076
-  UCF1077
-  UCF1078
-  UCF1079
-  UCF1080
-  UCF1083
-  UCF1085
-  UCF1086
-  UCF1087
-  UCF1088
-  UCF1089
-  UCF108
-  UCF1090
-  UCF1091
-  UCF1092
-  UCF1094
-  UCF1096
-  UCF1097
-  UCF1098
-  UCF1099
-  UCF1100
-  UCF1101
-  UCF1102
-  UCF1103
-  UCF1104
-  UCF1105
-  UCF1106
-  UCF1107
-  UCF1108
-  UCF1109
-  UCF110
-  UCF1112
-  UCF1113
-  UCF1115
-  UCF1116
-  UCF1117
-  UCF1119
-  UCF1120
-  UCF1123
-  UCF1124
-  UCF1125
-  UCF1126
-  UCF1128
-  UCF1129
-  UCF1130
-  UCF1131
-  UCF1135
-  UCF1136
-  UCF1137
-  UCF1139
-  UCF113
-  UCF1143
-  UCF1146
-  UCF1148
-  UCF114
-  UCF1156
-  UCF1159
-  UCF115
-  UCF1160
-  UCF1161
-  UCF1163
-  UCF1164
-  UCF1167
-  UCF1168
-  UCF1169
-  UCF116
-  UCF1170
-  UCF1171
-  UCF1174
-  UCF1175
-  UCF1176
-  UCF1178
-  UCF1179
-  UCF117
-  UCF1180
-  UCF1181
-  UCF1182
-  UCF1183
-  UCF1184
-  UCF1185
-  UCF1186
-  UCF1187
-  UCF1188
-  UCF1189
-  UCF1190
-  UCF1191
-  UCF1192
-  UCF1193
-  UCF1194
-  UCF1195
-  UCF1196
-  UCF1198
-  UCF1199
-  UCF1200
-  UCF1201
-  UCF1203
-  UCF1205
-  UCF1206
-  UCF1207
-  UCF1208
-  UCF1210
-  UCF1211
-  UCF1212
-  UCF1215
-  UCF1216
-  UCF1217
-  UCF1218
-  UCF122
-  UCF124
-  UCF130
-  UCF137
-  UCF139
-  UCF144
-  UCF152
-  UCF164
-  UCF167
-  UCF169
-  UCF177
-  UCF181
-  UCF183
-  UCF188
-  UCF223
-  UCF226
-  UCF227
-  UCF251
-  UCF253
-  UCF255
-  UCF277
-  UCF282
-  UCF285
-  UCF304
-  UCT018
-  UCT019
-  UCT024
-  UCT025
-  UCT034
-  UCT042
-  UCT048
-  UCT049
-  UCT050
-  UCT051
-  UCT060
-  UCT078
-  UCT079
-  UCT087
-  UCT088
-  UCT093
-  UCT1001
-  UCT1007
-  UCT100
-  UCT1010
-  UCT1011
-  UCT1012
-  UCT1013
-  UCT1014
-  UCT1016
-  UCT1021
-  UCT1023
-  UCT1024
-  UCT1025
-  UCT1027
-  UCT1028
-  UCT1029
-  UCT1030
-  UCT103
-  UCT1040
-  UCT1045
-  UCT1046
-  UCT1047
-  UCT1048
-  UCT1052
-  UCT1053
-  UCT1055
-  UCT1056
-  UCT1057
-  UCT1058
-  UCT1059
-  UCT105
-  UCT1061
-  UCT1062
-  UCT1064
-  UCT1067
-  UCT1068
-  UCT1069
-  UCT1070
-  UCT1071
-  UCT1072
-  UCT1073
-  UCT1074
-  UCT1075
-  UCT1076
-  UCT1077
-  UCT1078
-  UCT1079
-  UCT1080
-  UCT1083
-  UCT1086
-  UCT1087
-  UCT1088
-  UCT1089
-  UCT1090
-  UCT1091
-  UCT1092
-  UCT1094
-  UCT1096
-  UCT1097
-  UCT1098
-  UCT1099
-  UCT1100
-  UCT1101
-  UCT1102
-  UCT1103
-  UCT1104
-  UCT1105
-  UCT1106
-  UCT1107
-  UCT1108
-  UCT1109
-  UCT110
-  UCT1112
-  UCT1113
-  UCT1115
-  UCT1116
-  UCT1117
-  UCT1119
-  UCT1120
-  UCT1123
-  UCT1124
-  UCT1125
-  UCT1126
-  UCT1128
-  UCT1129
-  UCT1130
-  UCT1131
-  UCT1135
-  UCT1136
-  UCT1137
-  UCT1139
-  UCT113
-  UCT1143
-  UCT1146
-  UCT1148
-  UCT114
-  UCT1156
-  UCT1159
-  UCT1160
-  UCT1161
-  UCT1163
-  UCT1164
-  UCT1167
-  UCT1168
-  UCT1169
-  UCT1170
-  UCT1171
-  UCT1174
-  UCT1175
-  UCT1176
-  UCT1178
-  UCT1179
-  UCT117
-  UCT1180
-  UCT1181
-  UCT1182
-  UCT1183
-  UCT1184
-  UCT1185
-  UCT1186
-  UCT1188
-  UCT1189
-  UCT1190
-  UCT1191
-  UCT1192
-  UCT1193
-  UCT1194
-  UCT1195
-  UCT1196
-  UCT1198
-  UCT1199
-  UCT1200
-  UCT1201
-  UCT1203
-  UCT1205
-  UCT1206
-  UCT1207
-  UCT1208
-  UCT1210
-  UCT1211
-  UCT1212
-  UCT1215
-  UCT1216
-  UCT1217
-  UCT1218
-  UCT122
-  UCT124
-  UCT125
-  UCT130
-  UCT137
-  UCT139
-  UCT141
-  UCT144
-  UCT152
-  UCT164
-  UCT167
-  UCT169
-  UCT177
-  UCT181
-  UCT183
-  UCT188
-  UCT223
-  UCT226
-  UCT227
-  UCT251
-  UCT253
-  UCT255
-  UCT277
-  UCT282
-  UCT285
-  UCT304
+  UCB018: ['processed/GENCORD/fastq/UCB018_1.fastq.gz', 'processed/GENCORD/fastq/UCB018_2.fastq.gz']
+  UCB019: ['processed/GENCORD/fastq/UCB019_1.fastq.gz', 'processed/GENCORD/fastq/UCB019_2.fastq.gz']
+  UCB024: ['processed/GENCORD/fastq/UCB024_1.fastq.gz', 'processed/GENCORD/fastq/UCB024_2.fastq.gz']
+  UCB025: ['processed/GENCORD/fastq/UCB025_1.fastq.gz', 'processed/GENCORD/fastq/UCB025_2.fastq.gz']
+  UCB042: ['processed/GENCORD/fastq/UCB042_1.fastq.gz', 'processed/GENCORD/fastq/UCB042_2.fastq.gz']
+  UCB048: ['processed/GENCORD/fastq/UCB048_1.fastq.gz', 'processed/GENCORD/fastq/UCB048_2.fastq.gz']
+  UCB049: ['processed/GENCORD/fastq/UCB049_1.fastq.gz', 'processed/GENCORD/fastq/UCB049_2.fastq.gz']
+  UCB050: ['processed/GENCORD/fastq/UCB050_1.fastq.gz', 'processed/GENCORD/fastq/UCB050_2.fastq.gz']
+  UCB051: ['processed/GENCORD/fastq/UCB051_1.fastq.gz', 'processed/GENCORD/fastq/UCB051_2.fastq.gz']
+  UCB060: ['processed/GENCORD/fastq/UCB060_1.fastq.gz', 'processed/GENCORD/fastq/UCB060_2.fastq.gz']
+  UCB062: ['processed/GENCORD/fastq/UCB062_1.fastq.gz', 'processed/GENCORD/fastq/UCB062_2.fastq.gz']
+  UCB078: ['processed/GENCORD/fastq/UCB078_1.fastq.gz', 'processed/GENCORD/fastq/UCB078_2.fastq.gz']
+  UCB086: ['processed/GENCORD/fastq/UCB086_1.fastq.gz', 'processed/GENCORD/fastq/UCB086_2.fastq.gz']
+  UCB087: ['processed/GENCORD/fastq/UCB087_1.fastq.gz', 'processed/GENCORD/fastq/UCB087_2.fastq.gz']
+  UCB088: ['processed/GENCORD/fastq/UCB088_1.fastq.gz', 'processed/GENCORD/fastq/UCB088_2.fastq.gz']
+  UCB093: ['processed/GENCORD/fastq/UCB093_1.fastq.gz', 'processed/GENCORD/fastq/UCB093_2.fastq.gz']
+  UCB1001: ['processed/GENCORD/fastq/UCB1001_1.fastq.gz', 'processed/GENCORD/fastq/UCB1001_2.fastq.gz']
+  UCB1007: ['processed/GENCORD/fastq/UCB1007_1.fastq.gz', 'processed/GENCORD/fastq/UCB1007_2.fastq.gz']
+  UCB100: ['processed/GENCORD/fastq/UCB100_1.fastq.gz', 'processed/GENCORD/fastq/UCB100_2.fastq.gz']
+  UCB1010: ['processed/GENCORD/fastq/UCB1010_1.fastq.gz', 'processed/GENCORD/fastq/UCB1010_2.fastq.gz']
+  UCB1011: ['processed/GENCORD/fastq/UCB1011_1.fastq.gz', 'processed/GENCORD/fastq/UCB1011_2.fastq.gz']
+  UCB1012: ['processed/GENCORD/fastq/UCB1012_1.fastq.gz', 'processed/GENCORD/fastq/UCB1012_2.fastq.gz']
+  UCB1014: ['processed/GENCORD/fastq/UCB1014_1.fastq.gz', 'processed/GENCORD/fastq/UCB1014_2.fastq.gz']
+  UCB1016: ['processed/GENCORD/fastq/UCB1016_1.fastq.gz', 'processed/GENCORD/fastq/UCB1016_2.fastq.gz']
+  UCB1021: ['processed/GENCORD/fastq/UCB1021_1.fastq.gz', 'processed/GENCORD/fastq/UCB1021_2.fastq.gz']
+  UCB1023: ['processed/GENCORD/fastq/UCB1023_1.fastq.gz', 'processed/GENCORD/fastq/UCB1023_2.fastq.gz']
+  UCB1024: ['processed/GENCORD/fastq/UCB1024_1.fastq.gz', 'processed/GENCORD/fastq/UCB1024_2.fastq.gz']
+  UCB1025: ['processed/GENCORD/fastq/UCB1025_1.fastq.gz', 'processed/GENCORD/fastq/UCB1025_2.fastq.gz']
+  UCB1027: ['processed/GENCORD/fastq/UCB1027_1.fastq.gz', 'processed/GENCORD/fastq/UCB1027_2.fastq.gz']
+  UCB1028: ['processed/GENCORD/fastq/UCB1028_1.fastq.gz', 'processed/GENCORD/fastq/UCB1028_2.fastq.gz']
+  UCB1029: ['processed/GENCORD/fastq/UCB1029_1.fastq.gz', 'processed/GENCORD/fastq/UCB1029_2.fastq.gz']
+  UCB1030: ['processed/GENCORD/fastq/UCB1030_1.fastq.gz', 'processed/GENCORD/fastq/UCB1030_2.fastq.gz']
+  UCB103: ['processed/GENCORD/fastq/UCB103_1.fastq.gz', 'processed/GENCORD/fastq/UCB103_2.fastq.gz']
+  UCB1040: ['processed/GENCORD/fastq/UCB1040_1.fastq.gz', 'processed/GENCORD/fastq/UCB1040_2.fastq.gz']
+  UCB1045: ['processed/GENCORD/fastq/UCB1045_1.fastq.gz', 'processed/GENCORD/fastq/UCB1045_2.fastq.gz']
+  UCB1046: ['processed/GENCORD/fastq/UCB1046_1.fastq.gz', 'processed/GENCORD/fastq/UCB1046_2.fastq.gz']
+  UCB1047: ['processed/GENCORD/fastq/UCB1047_1.fastq.gz', 'processed/GENCORD/fastq/UCB1047_2.fastq.gz']
+  UCB1048: ['processed/GENCORD/fastq/UCB1048_1.fastq.gz', 'processed/GENCORD/fastq/UCB1048_2.fastq.gz']
+  UCB1052: ['processed/GENCORD/fastq/UCB1052_1.fastq.gz', 'processed/GENCORD/fastq/UCB1052_2.fastq.gz']
+  UCB1053: ['processed/GENCORD/fastq/UCB1053_1.fastq.gz', 'processed/GENCORD/fastq/UCB1053_2.fastq.gz']
+  UCB1055: ['processed/GENCORD/fastq/UCB1055_1.fastq.gz', 'processed/GENCORD/fastq/UCB1055_2.fastq.gz']
+  UCB1056: ['processed/GENCORD/fastq/UCB1056_1.fastq.gz', 'processed/GENCORD/fastq/UCB1056_2.fastq.gz']
+  UCB1057: ['processed/GENCORD/fastq/UCB1057_1.fastq.gz', 'processed/GENCORD/fastq/UCB1057_2.fastq.gz']
+  UCB1058: ['processed/GENCORD/fastq/UCB1058_1.fastq.gz', 'processed/GENCORD/fastq/UCB1058_2.fastq.gz']
+  UCB1059: ['processed/GENCORD/fastq/UCB1059_1.fastq.gz', 'processed/GENCORD/fastq/UCB1059_2.fastq.gz']
+  UCB105: ['processed/GENCORD/fastq/UCB105_1.fastq.gz', 'processed/GENCORD/fastq/UCB105_2.fastq.gz']
+  UCB1061: ['processed/GENCORD/fastq/UCB1061_1.fastq.gz', 'processed/GENCORD/fastq/UCB1061_2.fastq.gz']
+  UCB1062: ['processed/GENCORD/fastq/UCB1062_1.fastq.gz', 'processed/GENCORD/fastq/UCB1062_2.fastq.gz']
+  UCB1064: ['processed/GENCORD/fastq/UCB1064_1.fastq.gz', 'processed/GENCORD/fastq/UCB1064_2.fastq.gz']
+  UCB1067: ['processed/GENCORD/fastq/UCB1067_1.fastq.gz', 'processed/GENCORD/fastq/UCB1067_2.fastq.gz']
+  UCB1068: ['processed/GENCORD/fastq/UCB1068_1.fastq.gz', 'processed/GENCORD/fastq/UCB1068_2.fastq.gz']
+  UCB1069: ['processed/GENCORD/fastq/UCB1069_1.fastq.gz', 'processed/GENCORD/fastq/UCB1069_2.fastq.gz']
+  UCB1070: ['processed/GENCORD/fastq/UCB1070_1.fastq.gz', 'processed/GENCORD/fastq/UCB1070_2.fastq.gz']
+  UCB1071: ['processed/GENCORD/fastq/UCB1071_1.fastq.gz', 'processed/GENCORD/fastq/UCB1071_2.fastq.gz']
+  UCB1072: ['processed/GENCORD/fastq/UCB1072_1.fastq.gz', 'processed/GENCORD/fastq/UCB1072_2.fastq.gz']
+  UCB1073: ['processed/GENCORD/fastq/UCB1073_1.fastq.gz', 'processed/GENCORD/fastq/UCB1073_2.fastq.gz']
+  UCB1074: ['processed/GENCORD/fastq/UCB1074_1.fastq.gz', 'processed/GENCORD/fastq/UCB1074_2.fastq.gz']
+  UCB1075: ['processed/GENCORD/fastq/UCB1075_1.fastq.gz', 'processed/GENCORD/fastq/UCB1075_2.fastq.gz']
+  UCB1076: ['processed/GENCORD/fastq/UCB1076_1.fastq.gz', 'processed/GENCORD/fastq/UCB1076_2.fastq.gz']
+  UCB1077: ['processed/GENCORD/fastq/UCB1077_1.fastq.gz', 'processed/GENCORD/fastq/UCB1077_2.fastq.gz']
+  UCB1078: ['processed/GENCORD/fastq/UCB1078_1.fastq.gz', 'processed/GENCORD/fastq/UCB1078_2.fastq.gz']
+  UCB1079: ['processed/GENCORD/fastq/UCB1079_1.fastq.gz', 'processed/GENCORD/fastq/UCB1079_2.fastq.gz']
+  UCB1080: ['processed/GENCORD/fastq/UCB1080_1.fastq.gz', 'processed/GENCORD/fastq/UCB1080_2.fastq.gz']
+  UCB1083: ['processed/GENCORD/fastq/UCB1083_1.fastq.gz', 'processed/GENCORD/fastq/UCB1083_2.fastq.gz']
+  UCB1085: ['processed/GENCORD/fastq/UCB1085_1.fastq.gz', 'processed/GENCORD/fastq/UCB1085_2.fastq.gz']
+  UCB1086: ['processed/GENCORD/fastq/UCB1086_1.fastq.gz', 'processed/GENCORD/fastq/UCB1086_2.fastq.gz']
+  UCB1087: ['processed/GENCORD/fastq/UCB1087_1.fastq.gz', 'processed/GENCORD/fastq/UCB1087_2.fastq.gz']
+  UCB1088: ['processed/GENCORD/fastq/UCB1088_1.fastq.gz', 'processed/GENCORD/fastq/UCB1088_2.fastq.gz']
+  UCB1089: ['processed/GENCORD/fastq/UCB1089_1.fastq.gz', 'processed/GENCORD/fastq/UCB1089_2.fastq.gz']
+  UCB108: ['processed/GENCORD/fastq/UCB108_1.fastq.gz', 'processed/GENCORD/fastq/UCB108_2.fastq.gz']
+  UCB1090: ['processed/GENCORD/fastq/UCB1090_1.fastq.gz', 'processed/GENCORD/fastq/UCB1090_2.fastq.gz']
+  UCB1091: ['processed/GENCORD/fastq/UCB1091_1.fastq.gz', 'processed/GENCORD/fastq/UCB1091_2.fastq.gz']
+  UCB1092: ['processed/GENCORD/fastq/UCB1092_1.fastq.gz', 'processed/GENCORD/fastq/UCB1092_2.fastq.gz']
+  UCB1094: ['processed/GENCORD/fastq/UCB1094_1.fastq.gz', 'processed/GENCORD/fastq/UCB1094_2.fastq.gz']
+  UCB1096: ['processed/GENCORD/fastq/UCB1096_1.fastq.gz', 'processed/GENCORD/fastq/UCB1096_2.fastq.gz']
+  UCB1097: ['processed/GENCORD/fastq/UCB1097_1.fastq.gz', 'processed/GENCORD/fastq/UCB1097_2.fastq.gz']
+  UCB1098: ['processed/GENCORD/fastq/UCB1098_1.fastq.gz', 'processed/GENCORD/fastq/UCB1098_2.fastq.gz']
+  UCB1099: ['processed/GENCORD/fastq/UCB1099_1.fastq.gz', 'processed/GENCORD/fastq/UCB1099_2.fastq.gz']
+  UCB1100: ['processed/GENCORD/fastq/UCB1100_1.fastq.gz', 'processed/GENCORD/fastq/UCB1100_2.fastq.gz']
+  UCB1101: ['processed/GENCORD/fastq/UCB1101_1.fastq.gz', 'processed/GENCORD/fastq/UCB1101_2.fastq.gz']
+  UCB1102: ['processed/GENCORD/fastq/UCB1102_1.fastq.gz', 'processed/GENCORD/fastq/UCB1102_2.fastq.gz']
+  UCB1103: ['processed/GENCORD/fastq/UCB1103_1.fastq.gz', 'processed/GENCORD/fastq/UCB1103_2.fastq.gz']
+  UCB1104: ['processed/GENCORD/fastq/UCB1104_1.fastq.gz', 'processed/GENCORD/fastq/UCB1104_2.fastq.gz']
+  UCB1105: ['processed/GENCORD/fastq/UCB1105_1.fastq.gz', 'processed/GENCORD/fastq/UCB1105_2.fastq.gz']
+  UCB1106: ['processed/GENCORD/fastq/UCB1106_1.fastq.gz', 'processed/GENCORD/fastq/UCB1106_2.fastq.gz']
+  UCB1107: ['processed/GENCORD/fastq/UCB1107_1.fastq.gz', 'processed/GENCORD/fastq/UCB1107_2.fastq.gz']
+  UCB1108: ['processed/GENCORD/fastq/UCB1108_1.fastq.gz', 'processed/GENCORD/fastq/UCB1108_2.fastq.gz']
+  UCB1109: ['processed/GENCORD/fastq/UCB1109_1.fastq.gz', 'processed/GENCORD/fastq/UCB1109_2.fastq.gz']
+  UCB110: ['processed/GENCORD/fastq/UCB110_1.fastq.gz', 'processed/GENCORD/fastq/UCB110_2.fastq.gz']
+  UCB1112: ['processed/GENCORD/fastq/UCB1112_1.fastq.gz', 'processed/GENCORD/fastq/UCB1112_2.fastq.gz']
+  UCB1113: ['processed/GENCORD/fastq/UCB1113_1.fastq.gz', 'processed/GENCORD/fastq/UCB1113_2.fastq.gz']
+  UCB1115: ['processed/GENCORD/fastq/UCB1115_1.fastq.gz', 'processed/GENCORD/fastq/UCB1115_2.fastq.gz']
+  UCB1116: ['processed/GENCORD/fastq/UCB1116_1.fastq.gz', 'processed/GENCORD/fastq/UCB1116_2.fastq.gz']
+  UCB1117: ['processed/GENCORD/fastq/UCB1117_1.fastq.gz', 'processed/GENCORD/fastq/UCB1117_2.fastq.gz']
+  UCB1119: ['processed/GENCORD/fastq/UCB1119_1.fastq.gz', 'processed/GENCORD/fastq/UCB1119_2.fastq.gz']
+  UCB1120: ['processed/GENCORD/fastq/UCB1120_1.fastq.gz', 'processed/GENCORD/fastq/UCB1120_2.fastq.gz']
+  UCB1123: ['processed/GENCORD/fastq/UCB1123_1.fastq.gz', 'processed/GENCORD/fastq/UCB1123_2.fastq.gz']
+  UCB1124: ['processed/GENCORD/fastq/UCB1124_1.fastq.gz', 'processed/GENCORD/fastq/UCB1124_2.fastq.gz']
+  UCB1125: ['processed/GENCORD/fastq/UCB1125_1.fastq.gz', 'processed/GENCORD/fastq/UCB1125_2.fastq.gz']
+  UCB1126: ['processed/GENCORD/fastq/UCB1126_1.fastq.gz', 'processed/GENCORD/fastq/UCB1126_2.fastq.gz']
+  UCB1128: ['processed/GENCORD/fastq/UCB1128_1.fastq.gz', 'processed/GENCORD/fastq/UCB1128_2.fastq.gz']
+  UCB1129: ['processed/GENCORD/fastq/UCB1129_1.fastq.gz', 'processed/GENCORD/fastq/UCB1129_2.fastq.gz']
+  UCB1130: ['processed/GENCORD/fastq/UCB1130_1.fastq.gz', 'processed/GENCORD/fastq/UCB1130_2.fastq.gz']
+  UCB1131: ['processed/GENCORD/fastq/UCB1131_1.fastq.gz', 'processed/GENCORD/fastq/UCB1131_2.fastq.gz']
+  UCB1135: ['processed/GENCORD/fastq/UCB1135_1.fastq.gz', 'processed/GENCORD/fastq/UCB1135_2.fastq.gz']
+  UCB1136: ['processed/GENCORD/fastq/UCB1136_1.fastq.gz', 'processed/GENCORD/fastq/UCB1136_2.fastq.gz']
+  UCB1137: ['processed/GENCORD/fastq/UCB1137_1.fastq.gz', 'processed/GENCORD/fastq/UCB1137_2.fastq.gz']
+  UCB1139: ['processed/GENCORD/fastq/UCB1139_1.fastq.gz', 'processed/GENCORD/fastq/UCB1139_2.fastq.gz']
+  UCB113: ['processed/GENCORD/fastq/UCB113_1.fastq.gz', 'processed/GENCORD/fastq/UCB113_2.fastq.gz']
+  UCB1143: ['processed/GENCORD/fastq/UCB1143_1.fastq.gz', 'processed/GENCORD/fastq/UCB1143_2.fastq.gz']
+  UCB1146: ['processed/GENCORD/fastq/UCB1146_1.fastq.gz', 'processed/GENCORD/fastq/UCB1146_2.fastq.gz']
+  UCB1148: ['processed/GENCORD/fastq/UCB1148_1.fastq.gz', 'processed/GENCORD/fastq/UCB1148_2.fastq.gz']
+  UCB114: ['processed/GENCORD/fastq/UCB114_1.fastq.gz', 'processed/GENCORD/fastq/UCB114_2.fastq.gz']
+  UCB1156: ['processed/GENCORD/fastq/UCB1156_1.fastq.gz', 'processed/GENCORD/fastq/UCB1156_2.fastq.gz']
+  UCB1159: ['processed/GENCORD/fastq/UCB1159_1.fastq.gz', 'processed/GENCORD/fastq/UCB1159_2.fastq.gz']
+  UCB115: ['processed/GENCORD/fastq/UCB115_1.fastq.gz', 'processed/GENCORD/fastq/UCB115_2.fastq.gz']
+  UCB1160: ['processed/GENCORD/fastq/UCB1160_1.fastq.gz', 'processed/GENCORD/fastq/UCB1160_2.fastq.gz']
+  UCB1161: ['processed/GENCORD/fastq/UCB1161_1.fastq.gz', 'processed/GENCORD/fastq/UCB1161_2.fastq.gz']
+  UCB1163: ['processed/GENCORD/fastq/UCB1163_1.fastq.gz', 'processed/GENCORD/fastq/UCB1163_2.fastq.gz']
+  UCB1164: ['processed/GENCORD/fastq/UCB1164_1.fastq.gz', 'processed/GENCORD/fastq/UCB1164_2.fastq.gz']
+  UCB1167: ['processed/GENCORD/fastq/UCB1167_1.fastq.gz', 'processed/GENCORD/fastq/UCB1167_2.fastq.gz']
+  UCB1168: ['processed/GENCORD/fastq/UCB1168_1.fastq.gz', 'processed/GENCORD/fastq/UCB1168_2.fastq.gz']
+  UCB1169: ['processed/GENCORD/fastq/UCB1169_1.fastq.gz', 'processed/GENCORD/fastq/UCB1169_2.fastq.gz']
+  UCB116: ['processed/GENCORD/fastq/UCB116_1.fastq.gz', 'processed/GENCORD/fastq/UCB116_2.fastq.gz']
+  UCB1170: ['processed/GENCORD/fastq/UCB1170_1.fastq.gz', 'processed/GENCORD/fastq/UCB1170_2.fastq.gz']
+  UCB1171: ['processed/GENCORD/fastq/UCB1171_1.fastq.gz', 'processed/GENCORD/fastq/UCB1171_2.fastq.gz']
+  UCB1174: ['processed/GENCORD/fastq/UCB1174_1.fastq.gz', 'processed/GENCORD/fastq/UCB1174_2.fastq.gz']
+  UCB1175: ['processed/GENCORD/fastq/UCB1175_1.fastq.gz', 'processed/GENCORD/fastq/UCB1175_2.fastq.gz']
+  UCB1176: ['processed/GENCORD/fastq/UCB1176_1.fastq.gz', 'processed/GENCORD/fastq/UCB1176_2.fastq.gz']
+  UCB1178: ['processed/GENCORD/fastq/UCB1178_1.fastq.gz', 'processed/GENCORD/fastq/UCB1178_2.fastq.gz']
+  UCB1179: ['processed/GENCORD/fastq/UCB1179_1.fastq.gz', 'processed/GENCORD/fastq/UCB1179_2.fastq.gz']
+  UCB117: ['processed/GENCORD/fastq/UCB117_1.fastq.gz', 'processed/GENCORD/fastq/UCB117_2.fastq.gz']
+  UCB1180: ['processed/GENCORD/fastq/UCB1180_1.fastq.gz', 'processed/GENCORD/fastq/UCB1180_2.fastq.gz']
+  UCB1181: ['processed/GENCORD/fastq/UCB1181_1.fastq.gz', 'processed/GENCORD/fastq/UCB1181_2.fastq.gz']
+  UCB1182: ['processed/GENCORD/fastq/UCB1182_1.fastq.gz', 'processed/GENCORD/fastq/UCB1182_2.fastq.gz']
+  UCB1183: ['processed/GENCORD/fastq/UCB1183_1.fastq.gz', 'processed/GENCORD/fastq/UCB1183_2.fastq.gz']
+  UCB1184: ['processed/GENCORD/fastq/UCB1184_1.fastq.gz', 'processed/GENCORD/fastq/UCB1184_2.fastq.gz']
+  UCB1185: ['processed/GENCORD/fastq/UCB1185_1.fastq.gz', 'processed/GENCORD/fastq/UCB1185_2.fastq.gz']
+  UCB1186: ['processed/GENCORD/fastq/UCB1186_1.fastq.gz', 'processed/GENCORD/fastq/UCB1186_2.fastq.gz']
+  UCB1187: ['processed/GENCORD/fastq/UCB1187_1.fastq.gz', 'processed/GENCORD/fastq/UCB1187_2.fastq.gz']
+  UCB1188: ['processed/GENCORD/fastq/UCB1188_1.fastq.gz', 'processed/GENCORD/fastq/UCB1188_2.fastq.gz']
+  UCB1189: ['processed/GENCORD/fastq/UCB1189_1.fastq.gz', 'processed/GENCORD/fastq/UCB1189_2.fastq.gz']
+  UCB1190: ['processed/GENCORD/fastq/UCB1190_1.fastq.gz', 'processed/GENCORD/fastq/UCB1190_2.fastq.gz']
+  UCB1191: ['processed/GENCORD/fastq/UCB1191_1.fastq.gz', 'processed/GENCORD/fastq/UCB1191_2.fastq.gz']
+  UCB1192: ['processed/GENCORD/fastq/UCB1192_1.fastq.gz', 'processed/GENCORD/fastq/UCB1192_2.fastq.gz']
+  UCB1193: ['processed/GENCORD/fastq/UCB1193_1.fastq.gz', 'processed/GENCORD/fastq/UCB1193_2.fastq.gz']
+  UCB1194: ['processed/GENCORD/fastq/UCB1194_1.fastq.gz', 'processed/GENCORD/fastq/UCB1194_2.fastq.gz']
+  UCB1195: ['processed/GENCORD/fastq/UCB1195_1.fastq.gz', 'processed/GENCORD/fastq/UCB1195_2.fastq.gz']
+  UCB1196: ['processed/GENCORD/fastq/UCB1196_1.fastq.gz', 'processed/GENCORD/fastq/UCB1196_2.fastq.gz']
+  UCB1198: ['processed/GENCORD/fastq/UCB1198_1.fastq.gz', 'processed/GENCORD/fastq/UCB1198_2.fastq.gz']
+  UCB1199: ['processed/GENCORD/fastq/UCB1199_1.fastq.gz', 'processed/GENCORD/fastq/UCB1199_2.fastq.gz']
+  UCB1200: ['processed/GENCORD/fastq/UCB1200_1.fastq.gz', 'processed/GENCORD/fastq/UCB1200_2.fastq.gz']
+  UCB1201: ['processed/GENCORD/fastq/UCB1201_1.fastq.gz', 'processed/GENCORD/fastq/UCB1201_2.fastq.gz']
+  UCB1203: ['processed/GENCORD/fastq/UCB1203_1.fastq.gz', 'processed/GENCORD/fastq/UCB1203_2.fastq.gz']
+  UCB1205: ['processed/GENCORD/fastq/UCB1205_1.fastq.gz', 'processed/GENCORD/fastq/UCB1205_2.fastq.gz']
+  UCB1206: ['processed/GENCORD/fastq/UCB1206_1.fastq.gz', 'processed/GENCORD/fastq/UCB1206_2.fastq.gz']
+  UCB1207: ['processed/GENCORD/fastq/UCB1207_1.fastq.gz', 'processed/GENCORD/fastq/UCB1207_2.fastq.gz']
+  UCB1208: ['processed/GENCORD/fastq/UCB1208_1.fastq.gz', 'processed/GENCORD/fastq/UCB1208_2.fastq.gz']
+  UCB1210: ['processed/GENCORD/fastq/UCB1210_1.fastq.gz', 'processed/GENCORD/fastq/UCB1210_2.fastq.gz']
+  UCB1211: ['processed/GENCORD/fastq/UCB1211_1.fastq.gz', 'processed/GENCORD/fastq/UCB1211_2.fastq.gz']
+  UCB1212: ['processed/GENCORD/fastq/UCB1212_1.fastq.gz', 'processed/GENCORD/fastq/UCB1212_2.fastq.gz']
+  UCB1215: ['processed/GENCORD/fastq/UCB1215_1.fastq.gz', 'processed/GENCORD/fastq/UCB1215_2.fastq.gz']
+  UCB1216: ['processed/GENCORD/fastq/UCB1216_1.fastq.gz', 'processed/GENCORD/fastq/UCB1216_2.fastq.gz']
+  UCB1217: ['processed/GENCORD/fastq/UCB1217_1.fastq.gz', 'processed/GENCORD/fastq/UCB1217_2.fastq.gz']
+  UCB1218: ['processed/GENCORD/fastq/UCB1218_1.fastq.gz', 'processed/GENCORD/fastq/UCB1218_2.fastq.gz']
+  UCB122: ['processed/GENCORD/fastq/UCB122_1.fastq.gz', 'processed/GENCORD/fastq/UCB122_2.fastq.gz']
+  UCB124: ['processed/GENCORD/fastq/UCB124_1.fastq.gz', 'processed/GENCORD/fastq/UCB124_2.fastq.gz']
+  UCB125: ['processed/GENCORD/fastq/UCB125_1.fastq.gz', 'processed/GENCORD/fastq/UCB125_2.fastq.gz']
+  UCB130: ['processed/GENCORD/fastq/UCB130_1.fastq.gz', 'processed/GENCORD/fastq/UCB130_2.fastq.gz']
+  UCB137: ['processed/GENCORD/fastq/UCB137_1.fastq.gz', 'processed/GENCORD/fastq/UCB137_2.fastq.gz']
+  UCB139: ['processed/GENCORD/fastq/UCB139_1.fastq.gz', 'processed/GENCORD/fastq/UCB139_2.fastq.gz']
+  UCB141: ['processed/GENCORD/fastq/UCB141_1.fastq.gz', 'processed/GENCORD/fastq/UCB141_2.fastq.gz']
+  UCB144: ['processed/GENCORD/fastq/UCB144_1.fastq.gz', 'processed/GENCORD/fastq/UCB144_2.fastq.gz']
+  UCB152: ['processed/GENCORD/fastq/UCB152_1.fastq.gz', 'processed/GENCORD/fastq/UCB152_2.fastq.gz']
+  UCB164: ['processed/GENCORD/fastq/UCB164_1.fastq.gz', 'processed/GENCORD/fastq/UCB164_2.fastq.gz']
+  UCB167: ['processed/GENCORD/fastq/UCB167_1.fastq.gz', 'processed/GENCORD/fastq/UCB167_2.fastq.gz']
+  UCB169: ['processed/GENCORD/fastq/UCB169_1.fastq.gz', 'processed/GENCORD/fastq/UCB169_2.fastq.gz']
+  UCB177: ['processed/GENCORD/fastq/UCB177_1.fastq.gz', 'processed/GENCORD/fastq/UCB177_2.fastq.gz']
+  UCB181: ['processed/GENCORD/fastq/UCB181_1.fastq.gz', 'processed/GENCORD/fastq/UCB181_2.fastq.gz']
+  UCB183: ['processed/GENCORD/fastq/UCB183_1.fastq.gz', 'processed/GENCORD/fastq/UCB183_2.fastq.gz']
+  UCB188: ['processed/GENCORD/fastq/UCB188_1.fastq.gz', 'processed/GENCORD/fastq/UCB188_2.fastq.gz']
+  UCB223: ['processed/GENCORD/fastq/UCB223_1.fastq.gz', 'processed/GENCORD/fastq/UCB223_2.fastq.gz']
+  UCB225: ['processed/GENCORD/fastq/UCB225_1.fastq.gz', 'processed/GENCORD/fastq/UCB225_2.fastq.gz']
+  UCB226: ['processed/GENCORD/fastq/UCB226_1.fastq.gz', 'processed/GENCORD/fastq/UCB226_2.fastq.gz']
+  UCB227: ['processed/GENCORD/fastq/UCB227_1.fastq.gz', 'processed/GENCORD/fastq/UCB227_2.fastq.gz']
+  UCB251: ['processed/GENCORD/fastq/UCB251_1.fastq.gz', 'processed/GENCORD/fastq/UCB251_2.fastq.gz']
+  UCB253: ['processed/GENCORD/fastq/UCB253_1.fastq.gz', 'processed/GENCORD/fastq/UCB253_2.fastq.gz']
+  UCB255: ['processed/GENCORD/fastq/UCB255_1.fastq.gz', 'processed/GENCORD/fastq/UCB255_2.fastq.gz']
+  UCB277: ['processed/GENCORD/fastq/UCB277_1.fastq.gz', 'processed/GENCORD/fastq/UCB277_2.fastq.gz']
+  UCB282: ['processed/GENCORD/fastq/UCB282_1.fastq.gz', 'processed/GENCORD/fastq/UCB282_2.fastq.gz']
+  UCB285: ['processed/GENCORD/fastq/UCB285_1.fastq.gz', 'processed/GENCORD/fastq/UCB285_2.fastq.gz']
+  UCB304: ['processed/GENCORD/fastq/UCB304_1.fastq.gz', 'processed/GENCORD/fastq/UCB304_2.fastq.gz']
+  UCF018: ['processed/GENCORD/fastq/UCF018_1.fastq.gz', 'processed/GENCORD/fastq/UCF018_2.fastq.gz']
+  UCF025: ['processed/GENCORD/fastq/UCF025_1.fastq.gz', 'processed/GENCORD/fastq/UCF025_2.fastq.gz']
+  UCF034: ['processed/GENCORD/fastq/UCF034_1.fastq.gz', 'processed/GENCORD/fastq/UCF034_2.fastq.gz']
+  UCF042: ['processed/GENCORD/fastq/UCF042_1.fastq.gz', 'processed/GENCORD/fastq/UCF042_2.fastq.gz']
+  UCF048: ['processed/GENCORD/fastq/UCF048_1.fastq.gz', 'processed/GENCORD/fastq/UCF048_2.fastq.gz']
+  UCF049: ['processed/GENCORD/fastq/UCF049_1.fastq.gz', 'processed/GENCORD/fastq/UCF049_2.fastq.gz']
+  UCF050: ['processed/GENCORD/fastq/UCF050_1.fastq.gz', 'processed/GENCORD/fastq/UCF050_2.fastq.gz']
+  UCF051: ['processed/GENCORD/fastq/UCF051_1.fastq.gz', 'processed/GENCORD/fastq/UCF051_2.fastq.gz']
+  UCF060: ['processed/GENCORD/fastq/UCF060_1.fastq.gz', 'processed/GENCORD/fastq/UCF060_2.fastq.gz']
+  UCF062: ['processed/GENCORD/fastq/UCF062_1.fastq.gz', 'processed/GENCORD/fastq/UCF062_2.fastq.gz']
+  UCF078: ['processed/GENCORD/fastq/UCF078_1.fastq.gz', 'processed/GENCORD/fastq/UCF078_2.fastq.gz']
+  UCF079: ['processed/GENCORD/fastq/UCF079_1.fastq.gz', 'processed/GENCORD/fastq/UCF079_2.fastq.gz']
+  UCF086: ['processed/GENCORD/fastq/UCF086_1.fastq.gz', 'processed/GENCORD/fastq/UCF086_2.fastq.gz']
+  UCF088: ['processed/GENCORD/fastq/UCF088_1.fastq.gz', 'processed/GENCORD/fastq/UCF088_2.fastq.gz']
+  UCF093: ['processed/GENCORD/fastq/UCF093_1.fastq.gz', 'processed/GENCORD/fastq/UCF093_2.fastq.gz']
+  UCF1001: ['processed/GENCORD/fastq/UCF1001_1.fastq.gz', 'processed/GENCORD/fastq/UCF1001_2.fastq.gz']
+  UCF1007: ['processed/GENCORD/fastq/UCF1007_1.fastq.gz', 'processed/GENCORD/fastq/UCF1007_2.fastq.gz']
+  UCF100: ['processed/GENCORD/fastq/UCF100_1.fastq.gz', 'processed/GENCORD/fastq/UCF100_2.fastq.gz']
+  UCF1010: ['processed/GENCORD/fastq/UCF1010_1.fastq.gz', 'processed/GENCORD/fastq/UCF1010_2.fastq.gz']
+  UCF1011: ['processed/GENCORD/fastq/UCF1011_1.fastq.gz', 'processed/GENCORD/fastq/UCF1011_2.fastq.gz']
+  UCF1012: ['processed/GENCORD/fastq/UCF1012_1.fastq.gz', 'processed/GENCORD/fastq/UCF1012_2.fastq.gz']
+  UCF1013: ['processed/GENCORD/fastq/UCF1013_1.fastq.gz', 'processed/GENCORD/fastq/UCF1013_2.fastq.gz']
+  UCF1014: ['processed/GENCORD/fastq/UCF1014_1.fastq.gz', 'processed/GENCORD/fastq/UCF1014_2.fastq.gz']
+  UCF1016: ['processed/GENCORD/fastq/UCF1016_1.fastq.gz', 'processed/GENCORD/fastq/UCF1016_2.fastq.gz']
+  UCF1021: ['processed/GENCORD/fastq/UCF1021_1.fastq.gz', 'processed/GENCORD/fastq/UCF1021_2.fastq.gz']
+  UCF1023: ['processed/GENCORD/fastq/UCF1023_1.fastq.gz', 'processed/GENCORD/fastq/UCF1023_2.fastq.gz']
+  UCF1024: ['processed/GENCORD/fastq/UCF1024_1.fastq.gz', 'processed/GENCORD/fastq/UCF1024_2.fastq.gz']
+  UCF1025: ['processed/GENCORD/fastq/UCF1025_1.fastq.gz', 'processed/GENCORD/fastq/UCF1025_2.fastq.gz']
+  UCF1027: ['processed/GENCORD/fastq/UCF1027_1.fastq.gz', 'processed/GENCORD/fastq/UCF1027_2.fastq.gz']
+  UCF1028: ['processed/GENCORD/fastq/UCF1028_1.fastq.gz', 'processed/GENCORD/fastq/UCF1028_2.fastq.gz']
+  UCF1029: ['processed/GENCORD/fastq/UCF1029_1.fastq.gz', 'processed/GENCORD/fastq/UCF1029_2.fastq.gz']
+  UCF1030: ['processed/GENCORD/fastq/UCF1030_1.fastq.gz', 'processed/GENCORD/fastq/UCF1030_2.fastq.gz']
+  UCF103: ['processed/GENCORD/fastq/UCF103_1.fastq.gz', 'processed/GENCORD/fastq/UCF103_2.fastq.gz']
+  UCF1040: ['processed/GENCORD/fastq/UCF1040_1.fastq.gz', 'processed/GENCORD/fastq/UCF1040_2.fastq.gz']
+  UCF1045: ['processed/GENCORD/fastq/UCF1045_1.fastq.gz', 'processed/GENCORD/fastq/UCF1045_2.fastq.gz']
+  UCF1046: ['processed/GENCORD/fastq/UCF1046_1.fastq.gz', 'processed/GENCORD/fastq/UCF1046_2.fastq.gz']
+  UCF1047: ['processed/GENCORD/fastq/UCF1047_1.fastq.gz', 'processed/GENCORD/fastq/UCF1047_2.fastq.gz']
+  UCF1048: ['processed/GENCORD/fastq/UCF1048_1.fastq.gz', 'processed/GENCORD/fastq/UCF1048_2.fastq.gz']
+  UCF1052: ['processed/GENCORD/fastq/UCF1052_1.fastq.gz', 'processed/GENCORD/fastq/UCF1052_2.fastq.gz']
+  UCF1053: ['processed/GENCORD/fastq/UCF1053_1.fastq.gz', 'processed/GENCORD/fastq/UCF1053_2.fastq.gz']
+  UCF1055: ['processed/GENCORD/fastq/UCF1055_1.fastq.gz', 'processed/GENCORD/fastq/UCF1055_2.fastq.gz']
+  UCF1056: ['processed/GENCORD/fastq/UCF1056_1.fastq.gz', 'processed/GENCORD/fastq/UCF1056_2.fastq.gz']
+  UCF1057: ['processed/GENCORD/fastq/UCF1057_1.fastq.gz', 'processed/GENCORD/fastq/UCF1057_2.fastq.gz']
+  UCF1059: ['processed/GENCORD/fastq/UCF1059_1.fastq.gz', 'processed/GENCORD/fastq/UCF1059_2.fastq.gz']
+  UCF105: ['processed/GENCORD/fastq/UCF105_1.fastq.gz', 'processed/GENCORD/fastq/UCF105_2.fastq.gz']
+  UCF1061: ['processed/GENCORD/fastq/UCF1061_1.fastq.gz', 'processed/GENCORD/fastq/UCF1061_2.fastq.gz']
+  UCF1062: ['processed/GENCORD/fastq/UCF1062_1.fastq.gz', 'processed/GENCORD/fastq/UCF1062_2.fastq.gz']
+  UCF1064: ['processed/GENCORD/fastq/UCF1064_1.fastq.gz', 'processed/GENCORD/fastq/UCF1064_2.fastq.gz']
+  UCF1067: ['processed/GENCORD/fastq/UCF1067_1.fastq.gz', 'processed/GENCORD/fastq/UCF1067_2.fastq.gz']
+  UCF1068: ['processed/GENCORD/fastq/UCF1068_1.fastq.gz', 'processed/GENCORD/fastq/UCF1068_2.fastq.gz']
+  UCF1069: ['processed/GENCORD/fastq/UCF1069_1.fastq.gz', 'processed/GENCORD/fastq/UCF1069_2.fastq.gz']
+  UCF1070: ['processed/GENCORD/fastq/UCF1070_1.fastq.gz', 'processed/GENCORD/fastq/UCF1070_2.fastq.gz']
+  UCF1071: ['processed/GENCORD/fastq/UCF1071_1.fastq.gz', 'processed/GENCORD/fastq/UCF1071_2.fastq.gz']
+  UCF1072: ['processed/GENCORD/fastq/UCF1072_1.fastq.gz', 'processed/GENCORD/fastq/UCF1072_2.fastq.gz']
+  UCF1073: ['processed/GENCORD/fastq/UCF1073_1.fastq.gz', 'processed/GENCORD/fastq/UCF1073_2.fastq.gz']
+  UCF1074: ['processed/GENCORD/fastq/UCF1074_1.fastq.gz', 'processed/GENCORD/fastq/UCF1074_2.fastq.gz']
+  UCF1075: ['processed/GENCORD/fastq/UCF1075_1.fastq.gz', 'processed/GENCORD/fastq/UCF1075_2.fastq.gz']
+  UCF1076: ['processed/GENCORD/fastq/UCF1076_1.fastq.gz', 'processed/GENCORD/fastq/UCF1076_2.fastq.gz']
+  UCF1077: ['processed/GENCORD/fastq/UCF1077_1.fastq.gz', 'processed/GENCORD/fastq/UCF1077_2.fastq.gz']
+  UCF1078: ['processed/GENCORD/fastq/UCF1078_1.fastq.gz', 'processed/GENCORD/fastq/UCF1078_2.fastq.gz']
+  UCF1079: ['processed/GENCORD/fastq/UCF1079_1.fastq.gz', 'processed/GENCORD/fastq/UCF1079_2.fastq.gz']
+  UCF1080: ['processed/GENCORD/fastq/UCF1080_1.fastq.gz', 'processed/GENCORD/fastq/UCF1080_2.fastq.gz']
+  UCF1083: ['processed/GENCORD/fastq/UCF1083_1.fastq.gz', 'processed/GENCORD/fastq/UCF1083_2.fastq.gz']
+  UCF1085: ['processed/GENCORD/fastq/UCF1085_1.fastq.gz', 'processed/GENCORD/fastq/UCF1085_2.fastq.gz']
+  UCF1086: ['processed/GENCORD/fastq/UCF1086_1.fastq.gz', 'processed/GENCORD/fastq/UCF1086_2.fastq.gz']
+  UCF1087: ['processed/GENCORD/fastq/UCF1087_1.fastq.gz', 'processed/GENCORD/fastq/UCF1087_2.fastq.gz']
+  UCF1088: ['processed/GENCORD/fastq/UCF1088_1.fastq.gz', 'processed/GENCORD/fastq/UCF1088_2.fastq.gz']
+  UCF1089: ['processed/GENCORD/fastq/UCF1089_1.fastq.gz', 'processed/GENCORD/fastq/UCF1089_2.fastq.gz']
+  UCF108: ['processed/GENCORD/fastq/UCF108_1.fastq.gz', 'processed/GENCORD/fastq/UCF108_2.fastq.gz']
+  UCF1090: ['processed/GENCORD/fastq/UCF1090_1.fastq.gz', 'processed/GENCORD/fastq/UCF1090_2.fastq.gz']
+  UCF1091: ['processed/GENCORD/fastq/UCF1091_1.fastq.gz', 'processed/GENCORD/fastq/UCF1091_2.fastq.gz']
+  UCF1092: ['processed/GENCORD/fastq/UCF1092_1.fastq.gz', 'processed/GENCORD/fastq/UCF1092_2.fastq.gz']
+  UCF1094: ['processed/GENCORD/fastq/UCF1094_1.fastq.gz', 'processed/GENCORD/fastq/UCF1094_2.fastq.gz']
+  UCF1096: ['processed/GENCORD/fastq/UCF1096_1.fastq.gz', 'processed/GENCORD/fastq/UCF1096_2.fastq.gz']
+  UCF1097: ['processed/GENCORD/fastq/UCF1097_1.fastq.gz', 'processed/GENCORD/fastq/UCF1097_2.fastq.gz']
+  UCF1098: ['processed/GENCORD/fastq/UCF1098_1.fastq.gz', 'processed/GENCORD/fastq/UCF1098_2.fastq.gz']
+  UCF1099: ['processed/GENCORD/fastq/UCF1099_1.fastq.gz', 'processed/GENCORD/fastq/UCF1099_2.fastq.gz']
+  UCF1100: ['processed/GENCORD/fastq/UCF1100_1.fastq.gz', 'processed/GENCORD/fastq/UCF1100_2.fastq.gz']
+  UCF1101: ['processed/GENCORD/fastq/UCF1101_1.fastq.gz', 'processed/GENCORD/fastq/UCF1101_2.fastq.gz']
+  UCF1102: ['processed/GENCORD/fastq/UCF1102_1.fastq.gz', 'processed/GENCORD/fastq/UCF1102_2.fastq.gz']
+  UCF1103: ['processed/GENCORD/fastq/UCF1103_1.fastq.gz', 'processed/GENCORD/fastq/UCF1103_2.fastq.gz']
+  UCF1104: ['processed/GENCORD/fastq/UCF1104_1.fastq.gz', 'processed/GENCORD/fastq/UCF1104_2.fastq.gz']
+  UCF1105: ['processed/GENCORD/fastq/UCF1105_1.fastq.gz', 'processed/GENCORD/fastq/UCF1105_2.fastq.gz']
+  UCF1106: ['processed/GENCORD/fastq/UCF1106_1.fastq.gz', 'processed/GENCORD/fastq/UCF1106_2.fastq.gz']
+  UCF1107: ['processed/GENCORD/fastq/UCF1107_1.fastq.gz', 'processed/GENCORD/fastq/UCF1107_2.fastq.gz']
+  UCF1108: ['processed/GENCORD/fastq/UCF1108_1.fastq.gz', 'processed/GENCORD/fastq/UCF1108_2.fastq.gz']
+  UCF1109: ['processed/GENCORD/fastq/UCF1109_1.fastq.gz', 'processed/GENCORD/fastq/UCF1109_2.fastq.gz']
+  UCF110: ['processed/GENCORD/fastq/UCF110_1.fastq.gz', 'processed/GENCORD/fastq/UCF110_2.fastq.gz']
+  UCF1112: ['processed/GENCORD/fastq/UCF1112_1.fastq.gz', 'processed/GENCORD/fastq/UCF1112_2.fastq.gz']
+  UCF1113: ['processed/GENCORD/fastq/UCF1113_1.fastq.gz', 'processed/GENCORD/fastq/UCF1113_2.fastq.gz']
+  UCF1115: ['processed/GENCORD/fastq/UCF1115_1.fastq.gz', 'processed/GENCORD/fastq/UCF1115_2.fastq.gz']
+  UCF1116: ['processed/GENCORD/fastq/UCF1116_1.fastq.gz', 'processed/GENCORD/fastq/UCF1116_2.fastq.gz']
+  UCF1117: ['processed/GENCORD/fastq/UCF1117_1.fastq.gz', 'processed/GENCORD/fastq/UCF1117_2.fastq.gz']
+  UCF1119: ['processed/GENCORD/fastq/UCF1119_1.fastq.gz', 'processed/GENCORD/fastq/UCF1119_2.fastq.gz']
+  UCF1120: ['processed/GENCORD/fastq/UCF1120_1.fastq.gz', 'processed/GENCORD/fastq/UCF1120_2.fastq.gz']
+  UCF1123: ['processed/GENCORD/fastq/UCF1123_1.fastq.gz', 'processed/GENCORD/fastq/UCF1123_2.fastq.gz']
+  UCF1124: ['processed/GENCORD/fastq/UCF1124_1.fastq.gz', 'processed/GENCORD/fastq/UCF1124_2.fastq.gz']
+  UCF1125: ['processed/GENCORD/fastq/UCF1125_1.fastq.gz', 'processed/GENCORD/fastq/UCF1125_2.fastq.gz']
+  UCF1126: ['processed/GENCORD/fastq/UCF1126_1.fastq.gz', 'processed/GENCORD/fastq/UCF1126_2.fastq.gz']
+  UCF1128: ['processed/GENCORD/fastq/UCF1128_1.fastq.gz', 'processed/GENCORD/fastq/UCF1128_2.fastq.gz']
+  UCF1129: ['processed/GENCORD/fastq/UCF1129_1.fastq.gz', 'processed/GENCORD/fastq/UCF1129_2.fastq.gz']
+  UCF1130: ['processed/GENCORD/fastq/UCF1130_1.fastq.gz', 'processed/GENCORD/fastq/UCF1130_2.fastq.gz']
+  UCF1131: ['processed/GENCORD/fastq/UCF1131_1.fastq.gz', 'processed/GENCORD/fastq/UCF1131_2.fastq.gz']
+  UCF1135: ['processed/GENCORD/fastq/UCF1135_1.fastq.gz', 'processed/GENCORD/fastq/UCF1135_2.fastq.gz']
+  UCF1136: ['processed/GENCORD/fastq/UCF1136_1.fastq.gz', 'processed/GENCORD/fastq/UCF1136_2.fastq.gz']
+  UCF1137: ['processed/GENCORD/fastq/UCF1137_1.fastq.gz', 'processed/GENCORD/fastq/UCF1137_2.fastq.gz']
+  UCF1139: ['processed/GENCORD/fastq/UCF1139_1.fastq.gz', 'processed/GENCORD/fastq/UCF1139_2.fastq.gz']
+  UCF113: ['processed/GENCORD/fastq/UCF113_1.fastq.gz', 'processed/GENCORD/fastq/UCF113_2.fastq.gz']
+  UCF1143: ['processed/GENCORD/fastq/UCF1143_1.fastq.gz', 'processed/GENCORD/fastq/UCF1143_2.fastq.gz']
+  UCF1146: ['processed/GENCORD/fastq/UCF1146_1.fastq.gz', 'processed/GENCORD/fastq/UCF1146_2.fastq.gz']
+  UCF1148: ['processed/GENCORD/fastq/UCF1148_1.fastq.gz', 'processed/GENCORD/fastq/UCF1148_2.fastq.gz']
+  UCF114: ['processed/GENCORD/fastq/UCF114_1.fastq.gz', 'processed/GENCORD/fastq/UCF114_2.fastq.gz']
+  UCF1156: ['processed/GENCORD/fastq/UCF1156_1.fastq.gz', 'processed/GENCORD/fastq/UCF1156_2.fastq.gz']
+  UCF1159: ['processed/GENCORD/fastq/UCF1159_1.fastq.gz', 'processed/GENCORD/fastq/UCF1159_2.fastq.gz']
+  UCF115: ['processed/GENCORD/fastq/UCF115_1.fastq.gz', 'processed/GENCORD/fastq/UCF115_2.fastq.gz']
+  UCF1160: ['processed/GENCORD/fastq/UCF1160_1.fastq.gz', 'processed/GENCORD/fastq/UCF1160_2.fastq.gz']
+  UCF1161: ['processed/GENCORD/fastq/UCF1161_1.fastq.gz', 'processed/GENCORD/fastq/UCF1161_2.fastq.gz']
+  UCF1163: ['processed/GENCORD/fastq/UCF1163_1.fastq.gz', 'processed/GENCORD/fastq/UCF1163_2.fastq.gz']
+  UCF1164: ['processed/GENCORD/fastq/UCF1164_1.fastq.gz', 'processed/GENCORD/fastq/UCF1164_2.fastq.gz']
+  UCF1167: ['processed/GENCORD/fastq/UCF1167_1.fastq.gz', 'processed/GENCORD/fastq/UCF1167_2.fastq.gz']
+  UCF1168: ['processed/GENCORD/fastq/UCF1168_1.fastq.gz', 'processed/GENCORD/fastq/UCF1168_2.fastq.gz']
+  UCF1169: ['processed/GENCORD/fastq/UCF1169_1.fastq.gz', 'processed/GENCORD/fastq/UCF1169_2.fastq.gz']
+  UCF116: ['processed/GENCORD/fastq/UCF116_1.fastq.gz', 'processed/GENCORD/fastq/UCF116_2.fastq.gz']
+  UCF1170: ['processed/GENCORD/fastq/UCF1170_1.fastq.gz', 'processed/GENCORD/fastq/UCF1170_2.fastq.gz']
+  UCF1171: ['processed/GENCORD/fastq/UCF1171_1.fastq.gz', 'processed/GENCORD/fastq/UCF1171_2.fastq.gz']
+  UCF1174: ['processed/GENCORD/fastq/UCF1174_1.fastq.gz', 'processed/GENCORD/fastq/UCF1174_2.fastq.gz']
+  UCF1175: ['processed/GENCORD/fastq/UCF1175_1.fastq.gz', 'processed/GENCORD/fastq/UCF1175_2.fastq.gz']
+  UCF1176: ['processed/GENCORD/fastq/UCF1176_1.fastq.gz', 'processed/GENCORD/fastq/UCF1176_2.fastq.gz']
+  UCF1178: ['processed/GENCORD/fastq/UCF1178_1.fastq.gz', 'processed/GENCORD/fastq/UCF1178_2.fastq.gz']
+  UCF1179: ['processed/GENCORD/fastq/UCF1179_1.fastq.gz', 'processed/GENCORD/fastq/UCF1179_2.fastq.gz']
+  UCF117: ['processed/GENCORD/fastq/UCF117_1.fastq.gz', 'processed/GENCORD/fastq/UCF117_2.fastq.gz']
+  UCF1180: ['processed/GENCORD/fastq/UCF1180_1.fastq.gz', 'processed/GENCORD/fastq/UCF1180_2.fastq.gz']
+  UCF1181: ['processed/GENCORD/fastq/UCF1181_1.fastq.gz', 'processed/GENCORD/fastq/UCF1181_2.fastq.gz']
+  UCF1182: ['processed/GENCORD/fastq/UCF1182_1.fastq.gz', 'processed/GENCORD/fastq/UCF1182_2.fastq.gz']
+  UCF1183: ['processed/GENCORD/fastq/UCF1183_1.fastq.gz', 'processed/GENCORD/fastq/UCF1183_2.fastq.gz']
+  UCF1184: ['processed/GENCORD/fastq/UCF1184_1.fastq.gz', 'processed/GENCORD/fastq/UCF1184_2.fastq.gz']
+  UCF1185: ['processed/GENCORD/fastq/UCF1185_1.fastq.gz', 'processed/GENCORD/fastq/UCF1185_2.fastq.gz']
+  UCF1186: ['processed/GENCORD/fastq/UCF1186_1.fastq.gz', 'processed/GENCORD/fastq/UCF1186_2.fastq.gz']
+  UCF1187: ['processed/GENCORD/fastq/UCF1187_1.fastq.gz', 'processed/GENCORD/fastq/UCF1187_2.fastq.gz']
+  UCF1188: ['processed/GENCORD/fastq/UCF1188_1.fastq.gz', 'processed/GENCORD/fastq/UCF1188_2.fastq.gz']
+  UCF1189: ['processed/GENCORD/fastq/UCF1189_1.fastq.gz', 'processed/GENCORD/fastq/UCF1189_2.fastq.gz']
+  UCF1190: ['processed/GENCORD/fastq/UCF1190_1.fastq.gz', 'processed/GENCORD/fastq/UCF1190_2.fastq.gz']
+  UCF1191: ['processed/GENCORD/fastq/UCF1191_1.fastq.gz', 'processed/GENCORD/fastq/UCF1191_2.fastq.gz']
+  UCF1192: ['processed/GENCORD/fastq/UCF1192_1.fastq.gz', 'processed/GENCORD/fastq/UCF1192_2.fastq.gz']
+  UCF1193: ['processed/GENCORD/fastq/UCF1193_1.fastq.gz', 'processed/GENCORD/fastq/UCF1193_2.fastq.gz']
+  UCF1194: ['processed/GENCORD/fastq/UCF1194_1.fastq.gz', 'processed/GENCORD/fastq/UCF1194_2.fastq.gz']
+  UCF1195: ['processed/GENCORD/fastq/UCF1195_1.fastq.gz', 'processed/GENCORD/fastq/UCF1195_2.fastq.gz']
+  UCF1196: ['processed/GENCORD/fastq/UCF1196_1.fastq.gz', 'processed/GENCORD/fastq/UCF1196_2.fastq.gz']
+  UCF1198: ['processed/GENCORD/fastq/UCF1198_1.fastq.gz', 'processed/GENCORD/fastq/UCF1198_2.fastq.gz']
+  UCF1199: ['processed/GENCORD/fastq/UCF1199_1.fastq.gz', 'processed/GENCORD/fastq/UCF1199_2.fastq.gz']
+  UCF1200: ['processed/GENCORD/fastq/UCF1200_1.fastq.gz', 'processed/GENCORD/fastq/UCF1200_2.fastq.gz']
+  UCF1201: ['processed/GENCORD/fastq/UCF1201_1.fastq.gz', 'processed/GENCORD/fastq/UCF1201_2.fastq.gz']
+  UCF1203: ['processed/GENCORD/fastq/UCF1203_1.fastq.gz', 'processed/GENCORD/fastq/UCF1203_2.fastq.gz']
+  UCF1205: ['processed/GENCORD/fastq/UCF1205_1.fastq.gz', 'processed/GENCORD/fastq/UCF1205_2.fastq.gz']
+  UCF1206: ['processed/GENCORD/fastq/UCF1206_1.fastq.gz', 'processed/GENCORD/fastq/UCF1206_2.fastq.gz']
+  UCF1207: ['processed/GENCORD/fastq/UCF1207_1.fastq.gz', 'processed/GENCORD/fastq/UCF1207_2.fastq.gz']
+  UCF1208: ['processed/GENCORD/fastq/UCF1208_1.fastq.gz', 'processed/GENCORD/fastq/UCF1208_2.fastq.gz']
+  UCF1210: ['processed/GENCORD/fastq/UCF1210_1.fastq.gz', 'processed/GENCORD/fastq/UCF1210_2.fastq.gz']
+  UCF1211: ['processed/GENCORD/fastq/UCF1211_1.fastq.gz', 'processed/GENCORD/fastq/UCF1211_2.fastq.gz']
+  UCF1212: ['processed/GENCORD/fastq/UCF1212_1.fastq.gz', 'processed/GENCORD/fastq/UCF1212_2.fastq.gz']
+  UCF1215: ['processed/GENCORD/fastq/UCF1215_1.fastq.gz', 'processed/GENCORD/fastq/UCF1215_2.fastq.gz']
+  UCF1216: ['processed/GENCORD/fastq/UCF1216_1.fastq.gz', 'processed/GENCORD/fastq/UCF1216_2.fastq.gz']
+  UCF1217: ['processed/GENCORD/fastq/UCF1217_1.fastq.gz', 'processed/GENCORD/fastq/UCF1217_2.fastq.gz']
+  UCF1218: ['processed/GENCORD/fastq/UCF1218_1.fastq.gz', 'processed/GENCORD/fastq/UCF1218_2.fastq.gz']
+  UCF122: ['processed/GENCORD/fastq/UCF122_1.fastq.gz', 'processed/GENCORD/fastq/UCF122_2.fastq.gz']
+  UCF124: ['processed/GENCORD/fastq/UCF124_1.fastq.gz', 'processed/GENCORD/fastq/UCF124_2.fastq.gz']
+  UCF130: ['processed/GENCORD/fastq/UCF130_1.fastq.gz', 'processed/GENCORD/fastq/UCF130_2.fastq.gz']
+  UCF137: ['processed/GENCORD/fastq/UCF137_1.fastq.gz', 'processed/GENCORD/fastq/UCF137_2.fastq.gz']
+  UCF139: ['processed/GENCORD/fastq/UCF139_1.fastq.gz', 'processed/GENCORD/fastq/UCF139_2.fastq.gz']
+  UCF144: ['processed/GENCORD/fastq/UCF144_1.fastq.gz', 'processed/GENCORD/fastq/UCF144_2.fastq.gz']
+  UCF152: ['processed/GENCORD/fastq/UCF152_1.fastq.gz', 'processed/GENCORD/fastq/UCF152_2.fastq.gz']
+  UCF164: ['processed/GENCORD/fastq/UCF164_1.fastq.gz', 'processed/GENCORD/fastq/UCF164_2.fastq.gz']
+  UCF167: ['processed/GENCORD/fastq/UCF167_1.fastq.gz', 'processed/GENCORD/fastq/UCF167_2.fastq.gz']
+  UCF169: ['processed/GENCORD/fastq/UCF169_1.fastq.gz', 'processed/GENCORD/fastq/UCF169_2.fastq.gz']
+  UCF177: ['processed/GENCORD/fastq/UCF177_1.fastq.gz', 'processed/GENCORD/fastq/UCF177_2.fastq.gz']
+  UCF181: ['processed/GENCORD/fastq/UCF181_1.fastq.gz', 'processed/GENCORD/fastq/UCF181_2.fastq.gz']
+  UCF183: ['processed/GENCORD/fastq/UCF183_1.fastq.gz', 'processed/GENCORD/fastq/UCF183_2.fastq.gz']
+  UCF188: ['processed/GENCORD/fastq/UCF188_1.fastq.gz', 'processed/GENCORD/fastq/UCF188_2.fastq.gz']
+  UCF223: ['processed/GENCORD/fastq/UCF223_1.fastq.gz', 'processed/GENCORD/fastq/UCF223_2.fastq.gz']
+  UCF226: ['processed/GENCORD/fastq/UCF226_1.fastq.gz', 'processed/GENCORD/fastq/UCF226_2.fastq.gz']
+  UCF227: ['processed/GENCORD/fastq/UCF227_1.fastq.gz', 'processed/GENCORD/fastq/UCF227_2.fastq.gz']
+  UCF251: ['processed/GENCORD/fastq/UCF251_1.fastq.gz', 'processed/GENCORD/fastq/UCF251_2.fastq.gz']
+  UCF253: ['processed/GENCORD/fastq/UCF253_1.fastq.gz', 'processed/GENCORD/fastq/UCF253_2.fastq.gz']
+  UCF255: ['processed/GENCORD/fastq/UCF255_1.fastq.gz', 'processed/GENCORD/fastq/UCF255_2.fastq.gz']
+  UCF277: ['processed/GENCORD/fastq/UCF277_1.fastq.gz', 'processed/GENCORD/fastq/UCF277_2.fastq.gz']
+  UCF282: ['processed/GENCORD/fastq/UCF282_1.fastq.gz', 'processed/GENCORD/fastq/UCF282_2.fastq.gz']
+  UCF285: ['processed/GENCORD/fastq/UCF285_1.fastq.gz', 'processed/GENCORD/fastq/UCF285_2.fastq.gz']
+  UCF304: ['processed/GENCORD/fastq/UCF304_1.fastq.gz', 'processed/GENCORD/fastq/UCF304_2.fastq.gz']
+  UCT018: ['processed/GENCORD/fastq/UCT018_1.fastq.gz', 'processed/GENCORD/fastq/UCT018_2.fastq.gz']
+  UCT019: ['processed/GENCORD/fastq/UCT019_1.fastq.gz', 'processed/GENCORD/fastq/UCT019_2.fastq.gz']
+  UCT024: ['processed/GENCORD/fastq/UCT024_1.fastq.gz', 'processed/GENCORD/fastq/UCT024_2.fastq.gz']
+  UCT025: ['processed/GENCORD/fastq/UCT025_1.fastq.gz', 'processed/GENCORD/fastq/UCT025_2.fastq.gz']
+  UCT034: ['processed/GENCORD/fastq/UCT034_1.fastq.gz', 'processed/GENCORD/fastq/UCT034_2.fastq.gz']
+  UCT042: ['processed/GENCORD/fastq/UCT042_1.fastq.gz', 'processed/GENCORD/fastq/UCT042_2.fastq.gz']
+  UCT048: ['processed/GENCORD/fastq/UCT048_1.fastq.gz', 'processed/GENCORD/fastq/UCT048_2.fastq.gz']
+  UCT049: ['processed/GENCORD/fastq/UCT049_1.fastq.gz', 'processed/GENCORD/fastq/UCT049_2.fastq.gz']
+  UCT050: ['processed/GENCORD/fastq/UCT050_1.fastq.gz', 'processed/GENCORD/fastq/UCT050_2.fastq.gz']
+  UCT051: ['processed/GENCORD/fastq/UCT051_1.fastq.gz', 'processed/GENCORD/fastq/UCT051_2.fastq.gz']
+  UCT060: ['processed/GENCORD/fastq/UCT060_1.fastq.gz', 'processed/GENCORD/fastq/UCT060_2.fastq.gz']
+  UCT078: ['processed/GENCORD/fastq/UCT078_1.fastq.gz', 'processed/GENCORD/fastq/UCT078_2.fastq.gz']
+  UCT079: ['processed/GENCORD/fastq/UCT079_1.fastq.gz', 'processed/GENCORD/fastq/UCT079_2.fastq.gz']
+  UCT087: ['processed/GENCORD/fastq/UCT087_1.fastq.gz', 'processed/GENCORD/fastq/UCT087_2.fastq.gz']
+  UCT088: ['processed/GENCORD/fastq/UCT088_1.fastq.gz', 'processed/GENCORD/fastq/UCT088_2.fastq.gz']
+  UCT093: ['processed/GENCORD/fastq/UCT093_1.fastq.gz', 'processed/GENCORD/fastq/UCT093_2.fastq.gz']
+  UCT1001: ['processed/GENCORD/fastq/UCT1001_1.fastq.gz', 'processed/GENCORD/fastq/UCT1001_2.fastq.gz']
+  UCT1007: ['processed/GENCORD/fastq/UCT1007_1.fastq.gz', 'processed/GENCORD/fastq/UCT1007_2.fastq.gz']
+  UCT100: ['processed/GENCORD/fastq/UCT100_1.fastq.gz', 'processed/GENCORD/fastq/UCT100_2.fastq.gz']
+  UCT1010: ['processed/GENCORD/fastq/UCT1010_1.fastq.gz', 'processed/GENCORD/fastq/UCT1010_2.fastq.gz']
+  UCT1011: ['processed/GENCORD/fastq/UCT1011_1.fastq.gz', 'processed/GENCORD/fastq/UCT1011_2.fastq.gz']
+  UCT1012: ['processed/GENCORD/fastq/UCT1012_1.fastq.gz', 'processed/GENCORD/fastq/UCT1012_2.fastq.gz']
+  UCT1013: ['processed/GENCORD/fastq/UCT1013_1.fastq.gz', 'processed/GENCORD/fastq/UCT1013_2.fastq.gz']
+  UCT1014: ['processed/GENCORD/fastq/UCT1014_1.fastq.gz', 'processed/GENCORD/fastq/UCT1014_2.fastq.gz']
+  UCT1016: ['processed/GENCORD/fastq/UCT1016_1.fastq.gz', 'processed/GENCORD/fastq/UCT1016_2.fastq.gz']
+  UCT1021: ['processed/GENCORD/fastq/UCT1021_1.fastq.gz', 'processed/GENCORD/fastq/UCT1021_2.fastq.gz']
+  UCT1023: ['processed/GENCORD/fastq/UCT1023_1.fastq.gz', 'processed/GENCORD/fastq/UCT1023_2.fastq.gz']
+  UCT1024: ['processed/GENCORD/fastq/UCT1024_1.fastq.gz', 'processed/GENCORD/fastq/UCT1024_2.fastq.gz']
+  UCT1025: ['processed/GENCORD/fastq/UCT1025_1.fastq.gz', 'processed/GENCORD/fastq/UCT1025_2.fastq.gz']
+  UCT1027: ['processed/GENCORD/fastq/UCT1027_1.fastq.gz', 'processed/GENCORD/fastq/UCT1027_2.fastq.gz']
+  UCT1028: ['processed/GENCORD/fastq/UCT1028_1.fastq.gz', 'processed/GENCORD/fastq/UCT1028_2.fastq.gz']
+  UCT1029: ['processed/GENCORD/fastq/UCT1029_1.fastq.gz', 'processed/GENCORD/fastq/UCT1029_2.fastq.gz']
+  UCT1030: ['processed/GENCORD/fastq/UCT1030_1.fastq.gz', 'processed/GENCORD/fastq/UCT1030_2.fastq.gz']
+  UCT103: ['processed/GENCORD/fastq/UCT103_1.fastq.gz', 'processed/GENCORD/fastq/UCT103_2.fastq.gz']
+  UCT1040: ['processed/GENCORD/fastq/UCT1040_1.fastq.gz', 'processed/GENCORD/fastq/UCT1040_2.fastq.gz']
+  UCT1045: ['processed/GENCORD/fastq/UCT1045_1.fastq.gz', 'processed/GENCORD/fastq/UCT1045_2.fastq.gz']
+  UCT1046: ['processed/GENCORD/fastq/UCT1046_1.fastq.gz', 'processed/GENCORD/fastq/UCT1046_2.fastq.gz']
+  UCT1047: ['processed/GENCORD/fastq/UCT1047_1.fastq.gz', 'processed/GENCORD/fastq/UCT1047_2.fastq.gz']
+  UCT1048: ['processed/GENCORD/fastq/UCT1048_1.fastq.gz', 'processed/GENCORD/fastq/UCT1048_2.fastq.gz']
+  UCT1052: ['processed/GENCORD/fastq/UCT1052_1.fastq.gz', 'processed/GENCORD/fastq/UCT1052_2.fastq.gz']
+  UCT1053: ['processed/GENCORD/fastq/UCT1053_1.fastq.gz', 'processed/GENCORD/fastq/UCT1053_2.fastq.gz']
+  UCT1055: ['processed/GENCORD/fastq/UCT1055_1.fastq.gz', 'processed/GENCORD/fastq/UCT1055_2.fastq.gz']
+  UCT1056: ['processed/GENCORD/fastq/UCT1056_1.fastq.gz', 'processed/GENCORD/fastq/UCT1056_2.fastq.gz']
+  UCT1057: ['processed/GENCORD/fastq/UCT1057_1.fastq.gz', 'processed/GENCORD/fastq/UCT1057_2.fastq.gz']
+  UCT1058: ['processed/GENCORD/fastq/UCT1058_1.fastq.gz', 'processed/GENCORD/fastq/UCT1058_2.fastq.gz']
+  UCT1059: ['processed/GENCORD/fastq/UCT1059_1.fastq.gz', 'processed/GENCORD/fastq/UCT1059_2.fastq.gz']
+  UCT105: ['processed/GENCORD/fastq/UCT105_1.fastq.gz', 'processed/GENCORD/fastq/UCT105_2.fastq.gz']
+  UCT1061: ['processed/GENCORD/fastq/UCT1061_1.fastq.gz', 'processed/GENCORD/fastq/UCT1061_2.fastq.gz']
+  UCT1062: ['processed/GENCORD/fastq/UCT1062_1.fastq.gz', 'processed/GENCORD/fastq/UCT1062_2.fastq.gz']
+  UCT1064: ['processed/GENCORD/fastq/UCT1064_1.fastq.gz', 'processed/GENCORD/fastq/UCT1064_2.fastq.gz']
+  UCT1067: ['processed/GENCORD/fastq/UCT1067_1.fastq.gz', 'processed/GENCORD/fastq/UCT1067_2.fastq.gz']
+  UCT1068: ['processed/GENCORD/fastq/UCT1068_1.fastq.gz', 'processed/GENCORD/fastq/UCT1068_2.fastq.gz']
+  UCT1069: ['processed/GENCORD/fastq/UCT1069_1.fastq.gz', 'processed/GENCORD/fastq/UCT1069_2.fastq.gz']
+  UCT1070: ['processed/GENCORD/fastq/UCT1070_1.fastq.gz', 'processed/GENCORD/fastq/UCT1070_2.fastq.gz']
+  UCT1071: ['processed/GENCORD/fastq/UCT1071_1.fastq.gz', 'processed/GENCORD/fastq/UCT1071_2.fastq.gz']
+  UCT1072: ['processed/GENCORD/fastq/UCT1072_1.fastq.gz', 'processed/GENCORD/fastq/UCT1072_2.fastq.gz']
+  UCT1073: ['processed/GENCORD/fastq/UCT1073_1.fastq.gz', 'processed/GENCORD/fastq/UCT1073_2.fastq.gz']
+  UCT1074: ['processed/GENCORD/fastq/UCT1074_1.fastq.gz', 'processed/GENCORD/fastq/UCT1074_2.fastq.gz']
+  UCT1075: ['processed/GENCORD/fastq/UCT1075_1.fastq.gz', 'processed/GENCORD/fastq/UCT1075_2.fastq.gz']
+  UCT1076: ['processed/GENCORD/fastq/UCT1076_1.fastq.gz', 'processed/GENCORD/fastq/UCT1076_2.fastq.gz']
+  UCT1077: ['processed/GENCORD/fastq/UCT1077_1.fastq.gz', 'processed/GENCORD/fastq/UCT1077_2.fastq.gz']
+  UCT1078: ['processed/GENCORD/fastq/UCT1078_1.fastq.gz', 'processed/GENCORD/fastq/UCT1078_2.fastq.gz']
+  UCT1079: ['processed/GENCORD/fastq/UCT1079_1.fastq.gz', 'processed/GENCORD/fastq/UCT1079_2.fastq.gz']
+  UCT1080: ['processed/GENCORD/fastq/UCT1080_1.fastq.gz', 'processed/GENCORD/fastq/UCT1080_2.fastq.gz']
+  UCT1083: ['processed/GENCORD/fastq/UCT1083_1.fastq.gz', 'processed/GENCORD/fastq/UCT1083_2.fastq.gz']
+  UCT1086: ['processed/GENCORD/fastq/UCT1086_1.fastq.gz', 'processed/GENCORD/fastq/UCT1086_2.fastq.gz']
+  UCT1087: ['processed/GENCORD/fastq/UCT1087_1.fastq.gz', 'processed/GENCORD/fastq/UCT1087_2.fastq.gz']
+  UCT1088: ['processed/GENCORD/fastq/UCT1088_1.fastq.gz', 'processed/GENCORD/fastq/UCT1088_2.fastq.gz']
+  UCT1089: ['processed/GENCORD/fastq/UCT1089_1.fastq.gz', 'processed/GENCORD/fastq/UCT1089_2.fastq.gz']
+  UCT1090: ['processed/GENCORD/fastq/UCT1090_1.fastq.gz', 'processed/GENCORD/fastq/UCT1090_2.fastq.gz']
+  UCT1091: ['processed/GENCORD/fastq/UCT1091_1.fastq.gz', 'processed/GENCORD/fastq/UCT1091_2.fastq.gz']
+  UCT1092: ['processed/GENCORD/fastq/UCT1092_1.fastq.gz', 'processed/GENCORD/fastq/UCT1092_2.fastq.gz']
+  UCT1094: ['processed/GENCORD/fastq/UCT1094_1.fastq.gz', 'processed/GENCORD/fastq/UCT1094_2.fastq.gz']
+  UCT1096: ['processed/GENCORD/fastq/UCT1096_1.fastq.gz', 'processed/GENCORD/fastq/UCT1096_2.fastq.gz']
+  UCT1097: ['processed/GENCORD/fastq/UCT1097_1.fastq.gz', 'processed/GENCORD/fastq/UCT1097_2.fastq.gz']
+  UCT1098: ['processed/GENCORD/fastq/UCT1098_1.fastq.gz', 'processed/GENCORD/fastq/UCT1098_2.fastq.gz']
+  UCT1099: ['processed/GENCORD/fastq/UCT1099_1.fastq.gz', 'processed/GENCORD/fastq/UCT1099_2.fastq.gz']
+  UCT1100: ['processed/GENCORD/fastq/UCT1100_1.fastq.gz', 'processed/GENCORD/fastq/UCT1100_2.fastq.gz']
+  UCT1101: ['processed/GENCORD/fastq/UCT1101_1.fastq.gz', 'processed/GENCORD/fastq/UCT1101_2.fastq.gz']
+  UCT1102: ['processed/GENCORD/fastq/UCT1102_1.fastq.gz', 'processed/GENCORD/fastq/UCT1102_2.fastq.gz']
+  UCT1103: ['processed/GENCORD/fastq/UCT1103_1.fastq.gz', 'processed/GENCORD/fastq/UCT1103_2.fastq.gz']
+  UCT1104: ['processed/GENCORD/fastq/UCT1104_1.fastq.gz', 'processed/GENCORD/fastq/UCT1104_2.fastq.gz']
+  UCT1105: ['processed/GENCORD/fastq/UCT1105_1.fastq.gz', 'processed/GENCORD/fastq/UCT1105_2.fastq.gz']
+  UCT1106: ['processed/GENCORD/fastq/UCT1106_1.fastq.gz', 'processed/GENCORD/fastq/UCT1106_2.fastq.gz']
+  UCT1107: ['processed/GENCORD/fastq/UCT1107_1.fastq.gz', 'processed/GENCORD/fastq/UCT1107_2.fastq.gz']
+  UCT1108: ['processed/GENCORD/fastq/UCT1108_1.fastq.gz', 'processed/GENCORD/fastq/UCT1108_2.fastq.gz']
+  UCT1109: ['processed/GENCORD/fastq/UCT1109_1.fastq.gz', 'processed/GENCORD/fastq/UCT1109_2.fastq.gz']
+  UCT110: ['processed/GENCORD/fastq/UCT110_1.fastq.gz', 'processed/GENCORD/fastq/UCT110_2.fastq.gz']
+  UCT1112: ['processed/GENCORD/fastq/UCT1112_1.fastq.gz', 'processed/GENCORD/fastq/UCT1112_2.fastq.gz']
+  UCT1113: ['processed/GENCORD/fastq/UCT1113_1.fastq.gz', 'processed/GENCORD/fastq/UCT1113_2.fastq.gz']
+  UCT1115: ['processed/GENCORD/fastq/UCT1115_1.fastq.gz', 'processed/GENCORD/fastq/UCT1115_2.fastq.gz']
+  UCT1116: ['processed/GENCORD/fastq/UCT1116_1.fastq.gz', 'processed/GENCORD/fastq/UCT1116_2.fastq.gz']
+  UCT1117: ['processed/GENCORD/fastq/UCT1117_1.fastq.gz', 'processed/GENCORD/fastq/UCT1117_2.fastq.gz']
+  UCT1119: ['processed/GENCORD/fastq/UCT1119_1.fastq.gz', 'processed/GENCORD/fastq/UCT1119_2.fastq.gz']
+  UCT1120: ['processed/GENCORD/fastq/UCT1120_1.fastq.gz', 'processed/GENCORD/fastq/UCT1120_2.fastq.gz']
+  UCT1123: ['processed/GENCORD/fastq/UCT1123_1.fastq.gz', 'processed/GENCORD/fastq/UCT1123_2.fastq.gz']
+  UCT1124: ['processed/GENCORD/fastq/UCT1124_1.fastq.gz', 'processed/GENCORD/fastq/UCT1124_2.fastq.gz']
+  UCT1125: ['processed/GENCORD/fastq/UCT1125_1.fastq.gz', 'processed/GENCORD/fastq/UCT1125_2.fastq.gz']
+  UCT1126: ['processed/GENCORD/fastq/UCT1126_1.fastq.gz', 'processed/GENCORD/fastq/UCT1126_2.fastq.gz']
+  UCT1128: ['processed/GENCORD/fastq/UCT1128_1.fastq.gz', 'processed/GENCORD/fastq/UCT1128_2.fastq.gz']
+  UCT1129: ['processed/GENCORD/fastq/UCT1129_1.fastq.gz', 'processed/GENCORD/fastq/UCT1129_2.fastq.gz']
+  UCT1130: ['processed/GENCORD/fastq/UCT1130_1.fastq.gz', 'processed/GENCORD/fastq/UCT1130_2.fastq.gz']
+  UCT1131: ['processed/GENCORD/fastq/UCT1131_1.fastq.gz', 'processed/GENCORD/fastq/UCT1131_2.fastq.gz']
+  UCT1135: ['processed/GENCORD/fastq/UCT1135_1.fastq.gz', 'processed/GENCORD/fastq/UCT1135_2.fastq.gz']
+  UCT1136: ['processed/GENCORD/fastq/UCT1136_1.fastq.gz', 'processed/GENCORD/fastq/UCT1136_2.fastq.gz']
+  UCT1137: ['processed/GENCORD/fastq/UCT1137_1.fastq.gz', 'processed/GENCORD/fastq/UCT1137_2.fastq.gz']
+  UCT1139: ['processed/GENCORD/fastq/UCT1139_1.fastq.gz', 'processed/GENCORD/fastq/UCT1139_2.fastq.gz']
+  UCT113: ['processed/GENCORD/fastq/UCT113_1.fastq.gz', 'processed/GENCORD/fastq/UCT113_2.fastq.gz']
+  UCT1143: ['processed/GENCORD/fastq/UCT1143_1.fastq.gz', 'processed/GENCORD/fastq/UCT1143_2.fastq.gz']
+  UCT1146: ['processed/GENCORD/fastq/UCT1146_1.fastq.gz', 'processed/GENCORD/fastq/UCT1146_2.fastq.gz']
+  UCT1148: ['processed/GENCORD/fastq/UCT1148_1.fastq.gz', 'processed/GENCORD/fastq/UCT1148_2.fastq.gz']
+  UCT114: ['processed/GENCORD/fastq/UCT114_1.fastq.gz', 'processed/GENCORD/fastq/UCT114_2.fastq.gz']
+  UCT1156: ['processed/GENCORD/fastq/UCT1156_1.fastq.gz', 'processed/GENCORD/fastq/UCT1156_2.fastq.gz']
+  UCT1159: ['processed/GENCORD/fastq/UCT1159_1.fastq.gz', 'processed/GENCORD/fastq/UCT1159_2.fastq.gz']
+  UCT1160: ['processed/GENCORD/fastq/UCT1160_1.fastq.gz', 'processed/GENCORD/fastq/UCT1160_2.fastq.gz']
+  UCT1161: ['processed/GENCORD/fastq/UCT1161_1.fastq.gz', 'processed/GENCORD/fastq/UCT1161_2.fastq.gz']
+  UCT1163: ['processed/GENCORD/fastq/UCT1163_1.fastq.gz', 'processed/GENCORD/fastq/UCT1163_2.fastq.gz']
+  UCT1164: ['processed/GENCORD/fastq/UCT1164_1.fastq.gz', 'processed/GENCORD/fastq/UCT1164_2.fastq.gz']
+  UCT1167: ['processed/GENCORD/fastq/UCT1167_1.fastq.gz', 'processed/GENCORD/fastq/UCT1167_2.fastq.gz']
+  UCT1168: ['processed/GENCORD/fastq/UCT1168_1.fastq.gz', 'processed/GENCORD/fastq/UCT1168_2.fastq.gz']
+  UCT1169: ['processed/GENCORD/fastq/UCT1169_1.fastq.gz', 'processed/GENCORD/fastq/UCT1169_2.fastq.gz']
+  UCT1170: ['processed/GENCORD/fastq/UCT1170_1.fastq.gz', 'processed/GENCORD/fastq/UCT1170_2.fastq.gz']
+  UCT1171: ['processed/GENCORD/fastq/UCT1171_1.fastq.gz', 'processed/GENCORD/fastq/UCT1171_2.fastq.gz']
+  UCT1174: ['processed/GENCORD/fastq/UCT1174_1.fastq.gz', 'processed/GENCORD/fastq/UCT1174_2.fastq.gz']
+  UCT1175: ['processed/GENCORD/fastq/UCT1175_1.fastq.gz', 'processed/GENCORD/fastq/UCT1175_2.fastq.gz']
+  UCT1176: ['processed/GENCORD/fastq/UCT1176_1.fastq.gz', 'processed/GENCORD/fastq/UCT1176_2.fastq.gz']
+  UCT1178: ['processed/GENCORD/fastq/UCT1178_1.fastq.gz', 'processed/GENCORD/fastq/UCT1178_2.fastq.gz']
+  UCT1179: ['processed/GENCORD/fastq/UCT1179_1.fastq.gz', 'processed/GENCORD/fastq/UCT1179_2.fastq.gz']
+  UCT117: ['processed/GENCORD/fastq/UCT117_1.fastq.gz', 'processed/GENCORD/fastq/UCT117_2.fastq.gz']
+  UCT1180: ['processed/GENCORD/fastq/UCT1180_1.fastq.gz', 'processed/GENCORD/fastq/UCT1180_2.fastq.gz']
+  UCT1181: ['processed/GENCORD/fastq/UCT1181_1.fastq.gz', 'processed/GENCORD/fastq/UCT1181_2.fastq.gz']
+  UCT1182: ['processed/GENCORD/fastq/UCT1182_1.fastq.gz', 'processed/GENCORD/fastq/UCT1182_2.fastq.gz']
+  UCT1183: ['processed/GENCORD/fastq/UCT1183_1.fastq.gz', 'processed/GENCORD/fastq/UCT1183_2.fastq.gz']
+  UCT1184: ['processed/GENCORD/fastq/UCT1184_1.fastq.gz', 'processed/GENCORD/fastq/UCT1184_2.fastq.gz']
+  UCT1185: ['processed/GENCORD/fastq/UCT1185_1.fastq.gz', 'processed/GENCORD/fastq/UCT1185_2.fastq.gz']
+  UCT1186: ['processed/GENCORD/fastq/UCT1186_1.fastq.gz', 'processed/GENCORD/fastq/UCT1186_2.fastq.gz']
+  UCT1188: ['processed/GENCORD/fastq/UCT1188_1.fastq.gz', 'processed/GENCORD/fastq/UCT1188_2.fastq.gz']
+  UCT1189: ['processed/GENCORD/fastq/UCT1189_1.fastq.gz', 'processed/GENCORD/fastq/UCT1189_2.fastq.gz']
+  UCT1190: ['processed/GENCORD/fastq/UCT1190_1.fastq.gz', 'processed/GENCORD/fastq/UCT1190_2.fastq.gz']
+  UCT1191: ['processed/GENCORD/fastq/UCT1191_1.fastq.gz', 'processed/GENCORD/fastq/UCT1191_2.fastq.gz']
+  UCT1192: ['processed/GENCORD/fastq/UCT1192_1.fastq.gz', 'processed/GENCORD/fastq/UCT1192_2.fastq.gz']
+  UCT1193: ['processed/GENCORD/fastq/UCT1193_1.fastq.gz', 'processed/GENCORD/fastq/UCT1193_2.fastq.gz']
+  UCT1194: ['processed/GENCORD/fastq/UCT1194_1.fastq.gz', 'processed/GENCORD/fastq/UCT1194_2.fastq.gz']
+  UCT1195: ['processed/GENCORD/fastq/UCT1195_1.fastq.gz', 'processed/GENCORD/fastq/UCT1195_2.fastq.gz']
+  UCT1196: ['processed/GENCORD/fastq/UCT1196_1.fastq.gz', 'processed/GENCORD/fastq/UCT1196_2.fastq.gz']
+  UCT1198: ['processed/GENCORD/fastq/UCT1198_1.fastq.gz', 'processed/GENCORD/fastq/UCT1198_2.fastq.gz']
+  UCT1199: ['processed/GENCORD/fastq/UCT1199_1.fastq.gz', 'processed/GENCORD/fastq/UCT1199_2.fastq.gz']
+  UCT1200: ['processed/GENCORD/fastq/UCT1200_1.fastq.gz', 'processed/GENCORD/fastq/UCT1200_2.fastq.gz']
+  UCT1201: ['processed/GENCORD/fastq/UCT1201_1.fastq.gz', 'processed/GENCORD/fastq/UCT1201_2.fastq.gz']
+  UCT1203: ['processed/GENCORD/fastq/UCT1203_1.fastq.gz', 'processed/GENCORD/fastq/UCT1203_2.fastq.gz']
+  UCT1205: ['processed/GENCORD/fastq/UCT1205_1.fastq.gz', 'processed/GENCORD/fastq/UCT1205_2.fastq.gz']
+  UCT1206: ['processed/GENCORD/fastq/UCT1206_1.fastq.gz', 'processed/GENCORD/fastq/UCT1206_2.fastq.gz']
+  UCT1207: ['processed/GENCORD/fastq/UCT1207_1.fastq.gz', 'processed/GENCORD/fastq/UCT1207_2.fastq.gz']
+  UCT1208: ['processed/GENCORD/fastq/UCT1208_1.fastq.gz', 'processed/GENCORD/fastq/UCT1208_2.fastq.gz']
+  UCT1210: ['processed/GENCORD/fastq/UCT1210_1.fastq.gz', 'processed/GENCORD/fastq/UCT1210_2.fastq.gz']
+  UCT1211: ['processed/GENCORD/fastq/UCT1211_1.fastq.gz', 'processed/GENCORD/fastq/UCT1211_2.fastq.gz']
+  UCT1212: ['processed/GENCORD/fastq/UCT1212_1.fastq.gz', 'processed/GENCORD/fastq/UCT1212_2.fastq.gz']
+  UCT1215: ['processed/GENCORD/fastq/UCT1215_1.fastq.gz', 'processed/GENCORD/fastq/UCT1215_2.fastq.gz']
+  UCT1216: ['processed/GENCORD/fastq/UCT1216_1.fastq.gz', 'processed/GENCORD/fastq/UCT1216_2.fastq.gz']
+  UCT1217: ['processed/GENCORD/fastq/UCT1217_1.fastq.gz', 'processed/GENCORD/fastq/UCT1217_2.fastq.gz']
+  UCT1218: ['processed/GENCORD/fastq/UCT1218_1.fastq.gz', 'processed/GENCORD/fastq/UCT1218_2.fastq.gz']
+  UCT122: ['processed/GENCORD/fastq/UCT122_1.fastq.gz', 'processed/GENCORD/fastq/UCT122_2.fastq.gz']
+  UCT124: ['processed/GENCORD/fastq/UCT124_1.fastq.gz', 'processed/GENCORD/fastq/UCT124_2.fastq.gz']
+  UCT125: ['processed/GENCORD/fastq/UCT125_1.fastq.gz', 'processed/GENCORD/fastq/UCT125_2.fastq.gz']
+  UCT130: ['processed/GENCORD/fastq/UCT130_1.fastq.gz', 'processed/GENCORD/fastq/UCT130_2.fastq.gz']
+  UCT137: ['processed/GENCORD/fastq/UCT137_1.fastq.gz', 'processed/GENCORD/fastq/UCT137_2.fastq.gz']
+  UCT139: ['processed/GENCORD/fastq/UCT139_1.fastq.gz', 'processed/GENCORD/fastq/UCT139_2.fastq.gz']
+  UCT141: ['processed/GENCORD/fastq/UCT141_1.fastq.gz', 'processed/GENCORD/fastq/UCT141_2.fastq.gz']
+  UCT144: ['processed/GENCORD/fastq/UCT144_1.fastq.gz', 'processed/GENCORD/fastq/UCT144_2.fastq.gz']
+  UCT152: ['processed/GENCORD/fastq/UCT152_1.fastq.gz', 'processed/GENCORD/fastq/UCT152_2.fastq.gz']
+  UCT164: ['processed/GENCORD/fastq/UCT164_1.fastq.gz', 'processed/GENCORD/fastq/UCT164_2.fastq.gz']
+  UCT167: ['processed/GENCORD/fastq/UCT167_1.fastq.gz', 'processed/GENCORD/fastq/UCT167_2.fastq.gz']
+  UCT169: ['processed/GENCORD/fastq/UCT169_1.fastq.gz', 'processed/GENCORD/fastq/UCT169_2.fastq.gz']
+  UCT177: ['processed/GENCORD/fastq/UCT177_1.fastq.gz', 'processed/GENCORD/fastq/UCT177_2.fastq.gz']
+  UCT181: ['processed/GENCORD/fastq/UCT181_1.fastq.gz', 'processed/GENCORD/fastq/UCT181_2.fastq.gz']
+  UCT183: ['processed/GENCORD/fastq/UCT183_1.fastq.gz', 'processed/GENCORD/fastq/UCT183_2.fastq.gz']
+  UCT188: ['processed/GENCORD/fastq/UCT188_1.fastq.gz', 'processed/GENCORD/fastq/UCT188_2.fastq.gz']
+  UCT223: ['processed/GENCORD/fastq/UCT223_1.fastq.gz', 'processed/GENCORD/fastq/UCT223_2.fastq.gz']
+  UCT226: ['processed/GENCORD/fastq/UCT226_1.fastq.gz', 'processed/GENCORD/fastq/UCT226_2.fastq.gz']
+  UCT227: ['processed/GENCORD/fastq/UCT227_1.fastq.gz', 'processed/GENCORD/fastq/UCT227_2.fastq.gz']
+  UCT251: ['processed/GENCORD/fastq/UCT251_1.fastq.gz', 'processed/GENCORD/fastq/UCT251_2.fastq.gz']
+  UCT253: ['processed/GENCORD/fastq/UCT253_1.fastq.gz', 'processed/GENCORD/fastq/UCT253_2.fastq.gz']
+  UCT255: ['processed/GENCORD/fastq/UCT255_1.fastq.gz', 'processed/GENCORD/fastq/UCT255_2.fastq.gz']
+  UCT277: ['processed/GENCORD/fastq/UCT277_1.fastq.gz', 'processed/GENCORD/fastq/UCT277_2.fastq.gz']
+  UCT282: ['processed/GENCORD/fastq/UCT282_1.fastq.gz', 'processed/GENCORD/fastq/UCT282_2.fastq.gz']
+  UCT285: ['processed/GENCORD/fastq/UCT285_1.fastq.gz', 'processed/GENCORD/fastq/UCT285_2.fastq.gz']
+  UCT304: ['processed/GENCORD/fastq/UCT304_1.fastq.gz', 'processed/GENCORD/fastq/UCT304_2.fastq.gz']
 
 
   
