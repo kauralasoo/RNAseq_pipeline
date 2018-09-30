@@ -1,6 +1,6 @@
 #General
 # Read length: 49bp
-strandedness: Unstranded 
+strandedness: Stranded 
 
 #featureCounts
 ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
