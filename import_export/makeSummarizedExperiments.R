@@ -1,18 +1,17 @@
 library("readr")
 library("dplyr")
-library("devtools")
-load_all("../eQTLUtils/")
 library("tidyr")
 library("ggplot2")
 library("cqn")
 library("SummarizedExperiment")
 library("ggplot2")
 library("data.table")
+library("devtools")
+load_all("../eQTLUtils/")
 
 #Specify mandatory metadata columns
 mandatory_cols = c("sample_id", "genotype_id", "sex", "cell_type", "condition", "timepoint", "read_length", "stranded", "paired", "protocol", "rna_qc_passed", "genotype_qc_passed","study")
 transcript_meta = importBiomartMetadata("annotations/Ensembl92_biomart_download.txt.gz")
-
 
 #GEUVADIS
 read_counts = readr::read_tsv("processed/GEUVADIS/matrices/gene_expression_featureCounts.txt") %>%
@@ -34,6 +33,11 @@ featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript
 
 #Export data
 saveRDS(featureCounts_se, "results/SummarizedExperiments/GEUVADIS.rds")
+
+#Export gene metadata
+meta = extractPhenotypeData(featureCounts_se)
+write.table(meta, "results/phenotype_metadata/featureCounts_phenotype_metadata.txt", row.names = FALSE, quote = FALSE, sep = "\t")
+
 
 processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
 processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]

@@ -27,6 +27,7 @@ txrevise_se = makeSummarizedExperiment(quant_matrix, row_data, sample_metadata, 
 #Calculate transcript ratios
 txrevise_usage = normaliseSE_ratios(txrevise_se, assay_name = "tpms")
 saveRDS(txrevise_usage, "results/SummarizedExperiments/GEUVADIS_txrevise.rds")
+txrevise_usage = readRDS("results/SummarizedExperiments/GEUVADIS_txrevise.rds")
 
 
 
