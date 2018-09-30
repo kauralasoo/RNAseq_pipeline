@@ -106,7 +106,7 @@ samples:
   UC137T: [processed/GENCORD/fastq/UC137T_1.fastq.gz,processed/GENCORD/fastq/UC137T_2.fastq.gz]
   UC139F: [processed/GENCORD/fastq/UC139F_1.fastq.gz,processed/GENCORD/fastq/UC139F_2.fastq.gz]
   UC139L: [processed/GENCORD/fastq/UC139L_1.fastq.gz,processed/GENCORD/fastq/UC139L_2.fastq.gz]
-  UC139T: [processed/GENCORD/fastq/UC139T_1.fastq.gz,processed/GENCORD/fastq/UC139T_2.fastq.gz]
+#  UC139T: [processed/GENCORD/fastq/UC139T_1.fastq.gz,processed/GENCORD/fastq/UC139T_2.fastq.gz]
   UC141L: [processed/GENCORD/fastq/UC141L_1.fastq.gz,processed/GENCORD/fastq/UC141L_2.fastq.gz]
   UC141T: [processed/GENCORD/fastq/UC141T_1.fastq.gz,processed/GENCORD/fastq/UC141T_2.fastq.gz]
   UC144F: [processed/GENCORD/fastq/UC144F_1.fastq.gz,processed/GENCORD/fastq/UC144F_2.fastq.gz]
