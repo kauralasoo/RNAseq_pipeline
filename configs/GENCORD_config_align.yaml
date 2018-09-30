@@ -2,6 +2,9 @@
 # Read length: 49bp
 strandedness: Unstranded 
 
+#General
+vcf_file: /gpfs/hpchome/a72094/rocket/datasets/controlled_access/GENCORD2/genotypes/Michigan_GRCh37_1KGPhase3_220918/GRCh38/GENCORD_GRCh38.filtered.vcf.gz
+
 #featureCounts
 ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
 
