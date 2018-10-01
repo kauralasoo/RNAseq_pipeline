@@ -211,5 +211,33 @@ pca_res = transformSE_PCA(processed_se, assay_name = "tpms", n_pcs = 10, log_tra
 ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = condition, label = sample_id)) + geom_point() + geom_text()
 
 
+# GENCORD -----------------------------------------------------------------
+read_counts = read.table("processed/GENCORD/matrices/gene_expression_featureCounts.txt", header = T, stringsAsFactors = F) %>%
+  dplyr::as_tibble() %>%
+  dplyr::filter(!(gene_id %like% "PAR_Y")) %>%
+  removeGeneVersion()
+mbv_matches = readr::read_tsv("metadata/GENCORD/GENCORD_mbv_best_match.txt") %>%
+  dplyr::filter(hom_consistent_frac >= 0.75) %>%
+  dplyr::select(sample_id, mbv_genotype_id)
+sample_metadata = readr::read_delim("metadata/GENCORD/GENCORD_metadata_final.tsv", delim = "\t") %>%
+  dplyr::mutate(rna_qc_passed = ifelse(sample_id %in% c("UCB1193", "UCB087", "UCF1183", "UCF1119"), FALSE, TRUE)) %>%
+  dplyr::left_join(mbv_matches, by = "sample_id") %>%
+  dplyr::mutate(genotype_qc_passed = ifelse(is.na(mbv_genotype_id), FALSE, TRUE)) %>%
+  dplyr::select(-mbv_genotype_id, -qtl_mapping) %>%
+  dplyr::select(mandatory_cols, everything())
+write.table(sample_metadata, "metadata/cleaned/GENCORD.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+
+#Make GEUVADIS SE object
+featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
+
+#Export data
+saveRDS(featureCounts_se, "results/SummarizedExperiments/GENCORD.rds")
+
+#Make PCA
+filtered_se = featureCounts_se[,featureCounts_se$rna_qc_passed & featureCounts_se$genotype_qc_passed]
+processed_se = filterSE_gene_types(filtered_se) %>% normaliseSE_tpm()
+processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
+pca_res = transformSE_PCA(processed_se, assay_name = "tpms", n_pcs = 10, log_transform = TRUE, center = TRUE, scale. = TRUE)
+ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = cell_type)) + geom_point()
 
 
