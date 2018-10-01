@@ -5,14 +5,25 @@ strandedness: Unstranded
 #General
 vcf_file: /gpfs/hpchome/a72094/rocket/datasets/controlled_access/GENCORD2/genotypes/Michigan_GRCh37_1KGPhase3_220918/GRCh38/GENCORD_GRCh38.filtered.vcf.gz
 
-#featureCounts
+#Reference annotations
 ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
+reference_genome: /gpfs/rocket/home/a72094/annotations/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa
 
 #HISAT2 config
 hisat2_index: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/hisat2_index_v90/Homo_sapiens.GRCh38.dna.primary_assembly
 hisat2_flags: ""
 
 #Splicing
+leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
+
+#QTL mapping
+conditions: ["LCL", "fibroblast", "T-cell"]
+is_imputed: False
+#quant_methods: ["txrevise", "featureCounts"]
+quant_methods: ["featureCounts"]
+n_batches: 400
+cis_window: 1000000
+nominal_cis_window: 1000000
 
 #Dictionary of sample names
 samples:
