@@ -18,7 +18,7 @@ leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
 
 #QTL mapping
 conditions: ["LCL", "fibroblast", "T-cell"]
-is_imputed: False
+is_imputed: True
 #quant_methods: ["txrevise", "featureCounts"]
 quant_methods: ["featureCounts"]
 n_batches: 400
