@@ -74,12 +74,17 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s samtools_index.snakefi
 #Run Samtools MBV analysis on HPC
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s mbv_analysis.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_all_config.yaml --rerun-incomplete
 
-
+# Schwartzentruber
 #Convert crams to fastq
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s cram_to_fastq_PE.snakefile processed/SensoryNeurons/out.txt --jobs 20 --configfile configs/Schwartzentruber_2018_config_cram_to_fastq.yaml --rerun-incomplete
 
 #Run the alignment pipeline
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/Schwartzentruber_2018/out.txt --jobs 30 --configfile configs/Schwartzentruber_2018_config_align.yaml --rerun-incomplete
+
+#Hipsci
+#Convert crams to fastq
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s cram_to_fastq_PE.snakefile processed/HipSci/out.txt --jobs 30 --configfile configs/HipSci_config_cram_to_fastq.yaml --rerun-incomplete
+
 
 
 
