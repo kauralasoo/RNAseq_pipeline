@@ -2,9 +2,9 @@ rule map_qtls:
 	input:
 		expand("processed/{{study}}/qtltools/output/{annot_type}/{condition}.permuted.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
 		expand("processed/{{study}}/qtltools/output/{annot_type}/tab/{condition}.nominal.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
-		expand("processed/{{study}}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
-		expand("processed/{{study}}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz.tbi", annot_type = config["quant_methods"], condition = config["conditions"]),
-		expand("processed/{{study}}/qtltools/input/{annot_type}/vcf/{condition}.variant_information.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
+		expand("processed/{{study}}/qtltools/output/{annot_type}/final/{condition}.nominal.sorted.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
+		expand("processed/{{study}}/qtltools/output/{annot_type}/final/{condition}.nominal.sorted.txt.gz.tbi", annot_type = config["quant_methods"], condition = config["conditions"]),
+		#expand("processed/{{study}}/qtltools/output/{annot_type}/final/{condition}.variant_information.txt.gz", annot_type = config["quant_methods"], condition = config["conditions"]),
 	output:
 		"processed/{study}/out.txt"
 	resources:
@@ -51,7 +51,7 @@ rule extract_variant_information:
 	input:
 		vcf = "processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.vcf.gz",
 	output:
-		var_info = "processed/{study}/qtltools/input/{annot_type}/vcf/{condition}.variant_information.txt.gz"
+		var_info = "processed/{study}/qtltools/output/{annot_type}/final/{condition}.variant_information.txt.gz"
 	threads: 1
 	resources:
 		mem = 100
@@ -175,7 +175,7 @@ rule sort_qtltools_output:
 	input:
 		"processed/{study}/qtltools/output/{annot_type}/tab/{condition}.nominal.txt.gz"
 	output:
-		protected("processed/{study}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz")
+		protected("processed/{study}/qtltools/output/{annot_type}/final/{condition}.nominal.sorted.txt.gz")
 	resources:
 		mem = 12000
 	threads: 10
@@ -188,9 +188,9 @@ rule sort_qtltools_output:
 #Tabix-index QTLtools output files
 rule index_qtltools_output:
 	input:
-		"processed/{study}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz"
+		"processed/{study}/qtltools/output/{annot_type}/final/{condition}.nominal.sorted.txt.gz"
 	output:
-		"processed/{study}/qtltools/output/{annot_type}/sorted/{condition}.nominal.sorted.txt.gz.tbi"
+		"processed/{study}/qtltools/output/{annot_type}/final/{condition}.nominal.sorted.txt.gz.tbi"
 	resources:
 		mem = 1000
 	threads: 1

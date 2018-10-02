@@ -80,5 +80,5 @@ mbv_results = purrr::map(sample_list, ~readr::read_delim(., delim = " ", col_typ
 #Find best matches
 best_matches = purrr::map_df(mbv_results, mbvFindBestMatch, .id = "sample_id") %>%
   dplyr::filter(!is.na(het_consistent_frac))
-write.table(best_matches, "metadata/GEUVADIS/GEUVADIS_mbv_best_match.txt", sep = "\t", quote = F, row.names = F)
+write.table(best_matches, "metadata/GENCORD/GENCORD_mbv_best_match.txt", sep = "\t", quote = F, row.names = F)
 
