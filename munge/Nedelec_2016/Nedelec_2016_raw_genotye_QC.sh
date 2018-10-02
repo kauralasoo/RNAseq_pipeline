@@ -9,3 +9,7 @@ plink -bfile Nedelec_2016 --reference-allele /gpfs/hpchome/a72094/rocket/dataset
 
 #Convert to VCF
 plink --bfile Nedelec_2016_RefAlt --recode vcf-iid --out Nedelec_2016_RefAlt
+
+#Filter final vcf file and add unique variant ids
+bcftools filter -i 'MAF[0] > 0.05' Macrophages_Nedelec_2016_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o Nedelec_2016_GRCh38.filtered.vcf.gz
+bcftools index Nedelec_2016_GRCh38.filtered.vcf.gz

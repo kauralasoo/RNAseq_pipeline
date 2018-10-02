@@ -177,11 +177,11 @@ rule run_qtltools_mbv:
 rule make_all:
 	input:
 		#expand("processed/{study}/bigwig/{sample}.str1.bw", sample=config["samples"]),
-		expand("processed/{{study}}/hisat2/{sample}.bam", sample=config["samples"]),
-		"processed/{study}/matrices/gene_expression_featureCounts.txt",
-		expand("processed/{{study}}/leafcutter/junc/{sample}.junc", sample=config["samples"]),
+		#expand("processed/{{study}}/hisat2/{sample}.bam", sample=config["samples"]),
+		#"processed/{study}/matrices/gene_expression_featureCounts.txt",
+		#expand("processed/{{study}}/leafcutter/junc/{sample}.junc", sample=config["samples"]),
 		#expand("processed/{{study}}/ASEcounts/{sample}.ASEcounts", sample=config["samples"]),
-		expand("processed/{{study}}/matrices/{annotation}.salmon_txrevise.rds", annotation=config["annotations"]),
+		#expand("processed/{{study}}/matrices/{annotation}.salmon_txrevise.rds", annotation=config["annotations"]),
 		expand("processed/{{study}}/mbv/{sample}.mbv_output.txt", sample=config["samples"]),
 		#"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
 	output:
