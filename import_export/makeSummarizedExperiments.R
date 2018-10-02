@@ -84,30 +84,36 @@ ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = protocol)) + geom_point
 
 
 # Nedelec_2016_Macrophages ------------------------------------------------
-read_counts = readr::read_tsv("processed/Macrophages_Nedelec_2016/matrices/gene_expression_featureCounts.txt") %>%
+read_counts = readr::read_tsv("processed/Nedelec_2016/matrices/gene_expression_featureCounts.txt") %>%
   dplyr::filter(!(gene_id %like% "PAR_Y")) %>%
   removeGeneVersion()
+mbv_matches = readr::read_tsv("metadata/Nedelec_2016/Nedelec_2016_mbv_best_match.txt") %>%
+  dplyr::select(sample_id, mbv_genotype_id)
+
 sample_metadata = readr::read_tsv("metadata/Nedelec_2016/Nedelec_2016_compiled_metadata.txt") %>%
   dplyr::transmute(sample_id, genotype_id = donor, sex = "male", cell_type = "macrophage", 
                    condition, timepoint = 5, read_length = "100bp", stranded = FALSE, paired = FALSE, 
-                   protocol = "poly(A)", qtl_mapping = TRUE, run_id, geo_sample_id, sequencing_center, flowcell, lane, 
+                   protocol = "poly(A)", rna_qc_passed = TRUE, run_id, geo_sample_id, sequencing_center, flowcell, lane, 
                    self_reported_ethnic, AF_admixture, EU_admixture, ethnic_bin) %>%
   dplyr::mutate(condition = ifelse(condition == "Non-infected", "naive", condition), study = "Nedelec_2016") %>%
+  dplyr::left_join(mbv_matches, by = "sample_id") %>%
+  dplyr::mutate(genotype_qc_passed = ifelse(is.na(mbv_genotype_id), FALSE, TRUE)) %>%
+  dplyr::select(-mbv_genotype_id) %>%
   dplyr::select(mandatory_cols, everything())
 
 #Make SE
-featureCounts_se = makeSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
+featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
 
 #Export data
-write.table(sample_metadata, "metadata/cleaned/Nedelec_2016_Macrophages.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
-saveRDS(featureCounts_se, "results/SummarizedExperiments/Nedelec_2016_Macrophages.rds")
+write.table(sample_metadata, "metadata/cleaned/Nedelec_2016.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+saveRDS(featureCounts_se, "results/SummarizedExperiments/Nedelec_2016.rds")
 
 
 #QC
 processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
 processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
 pca_res = transformSE_PCA(processed_se, assay_name = "tpms", n_pcs = 10, log_transform = TRUE, center = TRUE, scale. = TRUE)
-ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = sequencing_center)) + geom_point()
+ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = condition)) + geom_point()
 
 
 # Quach_2016_Monocytes ----------------------------------------------------
