@@ -58,9 +58,9 @@ rule extract_variant_information:
 	run:
 		shell("module load bcftools-1.8")
 		if(config["is_imputed"] == False):
-			shell("bcftools +fill-tags {input.vcf} | bcftools query -f '%CHROM\\t%POS\\t%ID\\t%REF\\t%ALT\\t%TYPE\\t%AC\\t%AN\\t%MAF\\tNA\\n' | gzip > {output.var_info}")
+			shell("set +o pipefail; bcftools +fill-tags {input.vcf} | bcftools query -f '%CHROM\\t%POS\\t%ID\\t%REF\\t%ALT\\t%TYPE\\t%AC\\t%AN\\t%MAF\\tNA\\n' | gzip > {output.var_info}")
 		else:
-			shell("bcftools +fill-tags {input.vcf} | bcftools query -f '%CHROM\\t%POS\\t%ID\\t%REF\\t%ALT\\t%TYPE\\t%AC\\t%AN\\t%MAF\\tR2\\n' | gzip > {output.var_info}")
+			shell("set +o pipefail; bcftools +fill-tags {input.vcf} | bcftools query -f '%CHROM\\t%POS\\t%ID\\t%REF\\t%ALT\\t%TYPE\\t%AC\\t%AN\\t%MAF\\t%R2\\n' | gzip > {output.var_info}")
 
 #Perform PCA on the genotype and phenotype data
 rule perform_pca:
