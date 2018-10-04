@@ -60,34 +60,33 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 
 
 
-#### GENCORD dataset ####
+#### GENCORD ####
 #Convert bams to fastq
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s bam_to_fastq_PE_tryHPC.snakefile processed/GENCORD/out.txt --jobs 20 --configfile configs/GENCORD_config.yaml --rerun-incomplete
 
 #Run the alignment pipeline
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/GENCORD/out.txt --jobs 30 --configfile configs/GENCORD_config_align.yaml --rerun-incomplete
 
-#Run the alignment pipeline NonCluster
-snakemake -np -s quantify_transcription_PE.snakefile processed/GENCORD/out.txt --configfile configs/GENCORD_config_align.yaml --rerun-incomplete
+#CrossMap genotypes
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/GENCORD/out.txt --configfile configs/CrossMap_config.yaml --jobs 10 --rerun-incomplete
+
+#Map QTLs
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/GENCORD/out.txt --configfile configs/GENCORD_config_align.yaml --rerun-incomplete --jobs 100
 
 
-#Run Samtools indexing on HPC
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s samtools_index.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_all_config.yaml --rerun-incomplete
 
-#Run Samtools MBV analysis on HPC
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s mbv_analysis.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_all_config.yaml --rerun-incomplete
-
-# Schwartzentruber
+#### Schwartzentruber ####
 #Convert crams to fastq
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s cram_to_fastq_PE.snakefile processed/SensoryNeurons/out.txt --jobs 20 --configfile configs/Schwartzentruber_2018_config_cram_to_fastq.yaml --rerun-incomplete
 
 #Run the alignment pipeline
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/Schwartzentruber_2018/out.txt --jobs 30 --configfile configs/Schwartzentruber_2018_config_align.yaml --rerun-incomplete
 
-#Hipsci
+
+
+#### HipSci ####
 #Convert crams to fastq
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s cram_to_fastq_PE.snakefile processed/HipSci/out.txt --jobs 30 --configfile configs/HipSci_config_cram_to_fastq.yaml --rerun-incomplete
-
 
 
 
@@ -95,9 +94,11 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s cram_to_fastq_PE.snake
 #CrossMap genotypes
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/CEDAR/out.txt --configfile configs/CrossMap_config.yaml --jobs 1 --rerun-incomplete
 
-#### GENCORD ####
-#CrossMap genotypes
-snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/GENCORD/out.txt --configfile configs/CrossMap_config.yaml --jobs 10 --rerun-incomplete
 
-#Map QTLs
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/GENCORD/out.txt --configfile configs/GENCORD_config_align.yaml --rerun-incomplete --jobs 100
+
+
+#Run Samtools indexing on HPC
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s samtools_index.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_all_config.yaml --rerun-incomplete
+
+#Run Samtools MBV analysis on HPC
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s mbv_analysis.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_all_config.yaml --rerun-incomplete
