@@ -168,7 +168,7 @@ rule run_qtltools_mbv:
 	params:
 		local_tmp = "/tmp/a72094_" + uuid.uuid4().hex + "/"
 	resources:
-		mem = 6000
+		mem = 10000
 	threads: 8
 	shell:
 		"""
