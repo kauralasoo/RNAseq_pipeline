@@ -21,6 +21,15 @@ leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
 annotations: ["Ensembl_87", "reviseAnnotations.grp_1_contained","reviseAnnotations.grp_1_upstream","reviseAnnotations.grp_1_downstream","reviseAnnotations.grp_2_contained","reviseAnnotations.grp_2_upstream","reviseAnnotations.grp_2_downstream"]
 libType: IU
 
+#QTL mapping
+conditions: ["naive","LPS","Pam3CSK4","R848","IAV"]
+is_imputed: True
+#quant_methods: ["txrevise", "featureCounts"]
+quant_methods: ["featureCounts"]
+n_batches: 400
+cis_window: 1000000
+nominal_cis_window: 1000000
+
 #Dictionary of sample names
 samples:
   ACCOORCPIE_1: [processed/Monocytes_Quach_2016/fastq/_EGAR00001481672_EIP@ACCOORCPIE-1_aligned.fq.gz]
