@@ -117,21 +117,26 @@ ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = condition)) + geom_poin
 
 
 # Quach_2016_Monocytes ----------------------------------------------------
-read_counts = readr::read_tsv("processed/Monocytes_Quach_2016/matrices/gene_expression_featureCounts.txt") %>%
+read_counts = readr::read_tsv("processed/Quach_2016/matrices/gene_expression_featureCounts.txt") %>%
   dplyr::filter(!(gene_id %like% "PAR_Y")) %>%
   removeGeneVersion()
 outlier_samples = c("LVOMJJWNYB_5")
+mbv_matches = readr::read_tsv("metadata/Quach_2016/Quach_2016_mbv_best_match.txt") %>%
+  dplyr::select(sample_id, mbv_genotype_id)
 sample_metadata = readr::read_tsv("metadata/Quach_2016/Quach_2016_compiled_metadata.txt") %>%
   dplyr::transmute(sample_id, genotype_id = donor, sex = "male", cell_type = "monocyte", 
                    condition = condition_name, timepoint = 6, read_length = "100bp", stranded = FALSE, paired = FALSE, 
-                   protocol = "poly(A)", qtl_mapping = TRUE, ega_id) %>%
-  dplyr::mutate(qtl_mapping = ifelse(sample_id %in% outlier_samples, FALSE, TRUE), study = "Quach_2016") %>%
+                   protocol = "poly(A)", rna_qc_passed = TRUE, genotype_qc_passed = TRUE, ega_id, study = "Quach_2016") %>%
+  dplyr::mutate(rna_qc_passed = ifelse(sample_id %in% outlier_samples, FALSE, TRUE)) %>%
+  dplyr::left_join(mbv_matches, by = "sample_id") %>%
+  dplyr::mutate(genotype_id = mbv_genotype_id) %>%
+  dplyr::select(-mbv_genotype_id) %>%
   dplyr::select(mandatory_cols, everything())
-featureCounts_se = makeSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
+featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
 
 #Export data
-write.table(sample_metadata, "metadata/cleaned/Quach_2016_Monocytes.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
-saveRDS(featureCounts_se, "results/SummarizedExperiments/Quach_2016_Monocytes.rds")
+write.table(sample_metadata, "metadata/cleaned/Quach_2016.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+saveRDS(featureCounts_se, "results/SummarizedExperiments/Quach_2016.rds")
 
 
 processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
@@ -245,5 +250,3 @@ processed_se = filterSE_gene_types(filtered_se) %>% normaliseSE_tpm()
 processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
 pca_res = transformSE_PCA(processed_se, assay_name = "tpms", n_pcs = 10, log_transform = TRUE, center = TRUE, scale. = TRUE)
 ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = cell_type)) + geom_point()
-
-
