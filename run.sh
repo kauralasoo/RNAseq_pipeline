@@ -38,6 +38,9 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 #CrossMap genotypes
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -p processed/Monocytes_Quach_2016/genotypes/GRCh38/Monocytes_Quach_2016_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 10 --rerun-incomplete
 
+#Map QTLs
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/Monocytes_Quach_2016/out.txt --configfile configs/Quach_2016_config.yaml --rerun-incomplete --jobs 100
+
 
 #### BLUEPRINT dataset ####
 #Quantify transcription
@@ -95,3 +98,6 @@ snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefi
 #### GENCORD ####
 #CrossMap genotypes
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/GENCORD/out.txt --configfile configs/CrossMap_config.yaml --jobs 10 --rerun-incomplete
+
+#Map QTLs
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/GENCORD/out.txt --configfile configs/GENCORD_config_align.yaml --rerun-incomplete --jobs 100
