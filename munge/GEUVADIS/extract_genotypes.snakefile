@@ -25,5 +25,3 @@ rule extract_genotypes:
         module load bcftools-1.9
         bcftools view -S {input.samples}  --force-samples {input.vcf} | bcftools filter -i 'MAF[0] >= 0.01' -Oz -o {output.vcf}
         """
-
-#bcftools concat GEUVADIS_445_samples.chr1.vcf.gz GEUVADIS_445_samples.chr2.vcf.gz GEUVADIS_445_samples.chr10.vcf.gz GEUVADIS_445_samples.chr11.vcf.gz GEUVADIS_445_samples.chr12.vcf.gz GEUVADIS_445_samples.chr13.vcf.gz GEUVADIS_445_samples.chr14.vcf.gz GEUVADIS_445_samples.chr15.vcf.gz GEUVADIS_445_samples.chr16.vcf.gz GEUVADIS_445_samples.chr17.vcf.gz GEUVADIS_445_samples.chr18.vcf.gz GEUVADIS_445_samples.chr19.vcf.gz GEUVADIS_445_samples.chr20.vcf.gz GEUVADIS_445_samples.chr21.vcf.gz GEUVADIS_445_samples.chr22.vcf.gz GEUVADIS_445_samples.chr3.vcf.gz GEUVADIS_445_samples.chr4.vcf.gz GEUVADIS_445_samples.chr5.vcf.gz GEUVADIS_445_samples.chr6.vcf.gz GEUVADIS_445_samples.chr7.vcf.gz GEUVADIS_445_samples.chr8.vcf.gz GEUVADIS_445_samples.chr9.vcf.gz -O z -o GEUVADIS_445_samples.merged.vcf.gz
