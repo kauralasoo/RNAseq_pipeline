@@ -110,4 +110,5 @@ bcftools view -r X GENCORD_GRCh37_genotyped.vcf.gz -Oz -o by_chr/GENCORD_GRCh37_
 7za x chr_22.zip -p'Thr6tAkSFIQfU2'
 
 #Filter final vcf file and add unique variant ids
-bcftools filter -i 'MAF[0] > 0.05' GENCORD_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o GENCORD_GRCh38.filtered.vcf.gz
+bcftools filter -i 'MAF[0] > 0.01' GENCORD_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o GENCORD_GRCh38.filtered.vcf.gz
+bcftools index GENCORD_GRCh38.filtered.vcf.gz
