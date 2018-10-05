@@ -3,7 +3,7 @@
 strandedness: Unstranded
 
 #General
-vcf_file: /gpfs/hpchome/a72094/rocket/datasets/open_access/GEUVADIS/genotypes/GEUVADIS_445_samples.merged.vcf.gz
+vcf_file: /gpfs/hpchome/a72094/rocket/datasets/open_access/GEUVADIS/genotypes/GEUVADIS_GRCh38_filtered.vcf.gz
 
 #Reference annotations
 ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
