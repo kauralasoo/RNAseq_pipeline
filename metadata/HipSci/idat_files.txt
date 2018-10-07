@@ -392,6 +392,7 @@ HPSI0513pf-debk.HumanCoreExome-12_v1_0.9465608032_R05C01_Grn.gtarray.20141111.id
 HPSI0513pf-debk.HumanCoreExome-12_v1_0.9465608032_R05C01_Red.gtarray.20141111.idat
 HPSI0513pf-dipe.HumanCoreExome-12_v1_0.9439653109_R04C01_Grn.gtarray.20141111.idat
 HPSI0513pf-dipe.HumanCoreExome-12_v1_0.9439653109_R04C01_Red.gtarray.20141111.idat
+HPSI0513pf-dovq.HumanCoreExome-12_v1_0.9741953050_R05C01_Grn.gtarray.20141111.idat
 HPSI0513pf-dovq.HumanCoreExome-12_v1_0.9741953050_R05C01_Red.gtarray.20141111.idat
 HPSI0513pf-dulv.HumanCoreExome-12_v1_0.9465604059_R04C01_Grn.gtarray.20141111.idat
 HPSI0513pf-dulv.HumanCoreExome-12_v1_0.9465604059_R04C01_Red.gtarray.20141111.idat
@@ -551,6 +552,7 @@ HPSI0613i-lula_3.HumanCoreExome-12_v1_0.9969483030_R01C02_Grn.gtarray.20160912.i
 HPSI0613i-lula_3.HumanCoreExome-12_v1_0.9969483030_R01C02_Red.gtarray.20160912.idat
 HPSI0613i-nukw_1.HumanCoreExome-12_v1_0.9970498023_R05C01_Grn.gtarray.20141111.idat
 HPSI0613i-nukw_1.HumanCoreExome-12_v1_0.9970498023_R05C01_Red.gtarray.20141111.idat
+HPSI0613i-nukw_3.HumanCoreExome-12_v1_0.9970498023_R06C01_Grn.gtarray.20141111.idat
 HPSI0613i-nukw_3.HumanCoreExome-12_v1_0.9970498023_R06C01_Red.gtarray.20141111.idat
 HPSI0613i-oefg_1.HumanCoreExome-12_v1_0.9439653146_R03C02_Grn.gtarray.20141111.idat
 HPSI0613i-oefg_1.HumanCoreExome-12_v1_0.9439653146_R03C02_Red.gtarray.20141111.idat
@@ -645,6 +647,7 @@ HPSI0613pf-aevs.HumanCoreExome-12_v1_0.9741953046_R06C01_Red.gtarray.20141111.id
 HPSI0613pf-auim.HumanCoreExome-12_v1_0.9426369103_R05C02_Grn.gtarray.20141111.idat
 HPSI0613pf-auim.HumanCoreExome-12_v1_0.9426369103_R05C02_Red.gtarray.20141111.idat
 HPSI0613pf-bawa.HumanCoreExome-12_v1_0.9969483090_R01C02_Grn.gtarray.20141111.idat
+HPSI0613pf-bawa.HumanCoreExome-12_v1_0.9969483090_R01C02_Red.gtarray.20141111.idat
 HPSI0613pf-bohf.HumanCoreExome-12_v1_0.9878599118_R01C01_Grn.gtarray.20141111.idat
 HPSI0613pf-bohf.HumanCoreExome-12_v1_0.9878599118_R01C01_Red.gtarray.20141111.idat
 HPSI0613pf-dium.HumanCoreExome-12_v1_0.9439653064_R05C02_Grn.gtarray.20141111.idat
@@ -707,6 +710,7 @@ HPSI0613pf-xavk.HumanCoreExome-12_v1_0.9439653008_R04C02_Grn.gtarray.20141111.id
 HPSI0613pf-xavk.HumanCoreExome-12_v1_0.9439653008_R04C02_Red.gtarray.20141111.idat
 HPSI0613pf-xosg.HumanCoreExome-12_v1_0.9723038152_R04C02_Grn.gtarray.20141111.idat
 HPSI0613pf-xosg.HumanCoreExome-12_v1_0.9723038152_R04C02_Red.gtarray.20141111.idat
+HPSI0613pf-xucm.HumanCoreExome-12_v1_0.9741952052_R02C02_Grn.gtarray.20141111.idat
 HPSI0613pf-xucm.HumanCoreExome-12_v1_0.9741952052_R02C02_Red.gtarray.20141111.idat
 HPSI0613pf-zisa.HumanCoreExome-12_v1_0.9465547102_R03C01_Grn.gtarray.20141111.idat
 HPSI0613pf-zisa.HumanCoreExome-12_v1_0.9465547102_R03C01_Red.gtarray.20141111.idat
@@ -787,6 +791,7 @@ HPSI0713i-ruyl_2.HumanCoreExome-12_v1_0.9465555091_R04C01_Red.gtarray.20141111.i
 HPSI0713i-ruyl_3.HumanCoreExome-12_v1_0.9466853019_R02C01_Grn.gtarray.20141111.idat
 HPSI0713i-ruyl_3.HumanCoreExome-12_v1_0.9466853019_R02C01_Red.gtarray.20141111.idat
 HPSI0713i-ruyv_1.HumanCoreExome-12_v1_0.9439653158_R05C01_Grn.gtarray.20141111.idat
+HPSI0713i-ruyv_1.HumanCoreExome-12_v1_0.9439653158_R05C01_Red.gtarray.20141111.idat
 HPSI0713i-ruyv_2.HumanCoreExome-12_v1_0.9439653158_R06C01_Grn.gtarray.20141111.idat
 HPSI0713i-ruyv_2.HumanCoreExome-12_v1_0.9439653158_R06C01_Red.gtarray.20141111.idat
 HPSI0713i-ruyv_3.HumanCoreExome-12_v1_0.9439653158_R01C02_Grn.gtarray.20141111.idat
@@ -885,6 +890,7 @@ HPSI0813i-aizi_2.HumanCoreExome-12_v1_0.9741778139_R02C01_Grn.gtarray.20141111.i
 HPSI0813i-aizi_2.HumanCoreExome-12_v1_0.9741778139_R02C01_Red.gtarray.20141111.idat
 HPSI0813i-aizi_3.HumanCoreExome-12_v1_0.9741778139_R03C01_Grn.gtarray.20141111.idat
 HPSI0813i-aizi_3.HumanCoreExome-12_v1_0.9741778139_R03C01_Red.gtarray.20141111.idat
+HPSI0813i-aomg_2.HumanCoreExome-12_v1_0.9426368035_R01C01_Grn.gtarray.20141111.idat
 HPSI0813i-aomg_2.HumanCoreExome-12_v1_0.9426368035_R01C01_Red.gtarray.20141111.idat
 HPSI0813i-aomg_3.HumanCoreExome-12_v1_0.9421902025_R05C01_Grn.gtarray.20141111.idat
 HPSI0813i-aomg_3.HumanCoreExome-12_v1_0.9421902025_R05C01_Red.gtarray.20141111.idat
@@ -958,6 +964,7 @@ HPSI0813i-fpdk_1.HumanCoreExome-12_v1_0.9300870057_R04C01_Grn.gtarray.20141111.i
 HPSI0813i-fpdk_1.HumanCoreExome-12_v1_0.9300870057_R04C01_Red.gtarray.20141111.idat
 HPSI0813i-fpdk_2.HumanCoreExome-12_v1_0.9300870057_R05C01_Grn.gtarray.20141111.idat
 HPSI0813i-fpdk_2.HumanCoreExome-12_v1_0.9300870057_R05C01_Red.gtarray.20141111.idat
+HPSI0813i-fpdk_3.HumanCoreExome-12_v1_0.9300870057_R06C01_Grn.gtarray.20141111.idat
 HPSI0813i-fpdk_3.HumanCoreExome-12_v1_0.9300870057_R06C01_Red.gtarray.20141111.idat
 HPSI0813i-fpdl_1.HumanCoreExome-12_v1_0.9300870166_R01C01_Grn.gtarray.20141111.idat
 HPSI0813i-fpdl_1.HumanCoreExome-12_v1_0.9300870166_R01C01_Red.gtarray.20141111.idat
@@ -1017,6 +1024,7 @@ HPSI0813i-uaqe_1.HumanCoreExome-12_v1_0.9439653037_R02C01_Grn.gtarray.20141111.i
 HPSI0813i-uaqe_1.HumanCoreExome-12_v1_0.9439653037_R02C01_Red.gtarray.20141111.idat
 HPSI0813i-uaqe_2.HumanCoreExome-12_v1_0.9439653037_R03C01_Grn.gtarray.20141111.idat
 HPSI0813i-uaqe_2.HumanCoreExome-12_v1_0.9439653037_R03C01_Red.gtarray.20141111.idat
+HPSI0813i-vajx_1.HumanCoreExome-12_v1_0.9741778064_R04C02_Grn.gtarray.20141111.idat
 HPSI0813i-vajx_1.HumanCoreExome-12_v1_0.9741778064_R04C02_Red.gtarray.20141111.idat
 HPSI0813i-vajx_2.HumanCoreExome-12_v1_0.9741778064_R01C02_Grn.gtarray.20141111.idat
 HPSI0813i-vajx_2.HumanCoreExome-12_v1_0.9741778064_R01C02_Red.gtarray.20141111.idat
@@ -1179,6 +1187,7 @@ HPSI0913pf-gedo.HumanCoreExome-12_v1_0.9323194020_R05C02_Red.gtarray.20141111.id
 HPSI0913pf-iuqb.HumanCoreExome-12_v1_0.9465555085_R02C02_Grn.gtarray.20141111.idat
 HPSI0913pf-iuqb.HumanCoreExome-12_v1_0.9465555085_R02C02_Red.gtarray.20141111.idat
 HPSI0913pf-lofv.HumanCoreExome-12_v1_0.9272930098_R02C01_Grn.gtarray.20141111.idat
+HPSI0913pf-lofv.HumanCoreExome-12_v1_0.9272930098_R02C01_Red.gtarray.20141111.idat
 HPSI0913pf-qiea.HumanCoreExome-12_v1_0.9466853009_R01C02_Grn.gtarray.20141111.idat
 HPSI0913pf-qiea.HumanCoreExome-12_v1_0.9466853009_R01C02_Red.gtarray.20141111.idat
 HPSI0913pf-ruql.HumanCoreExome-12_v1_0.9741778060_R04C01_Grn.gtarray.20141111.idat
