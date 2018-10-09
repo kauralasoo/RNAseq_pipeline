@@ -1,0 +1,1161 @@
+#General
+# Read length: 49bp
+strandedness: Stranded 
+
+#featureCounts
+ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
+
+#HISAT2 config
+hisat2_index: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/hisat2_index_v90/Homo_sapiens.GRCh38.dna.primary_assembly
+hisat2_flags: ""
+
+#Splicing
+
+#Dictionary of sample names
+samples:
+  SAMEA103884170: [processed/HipSci/fastq/SAMEA103884170/SAMEA103884170_1.fastq.gz, processed/HipSci/fastq/SAMEA103884170/SAMEA103884170_2.fastq.gz]
+  SAMEA103884673: [processed/HipSci/fastq/SAMEA103884673/SAMEA103884673_1.fastq.gz, processed/HipSci/fastq/SAMEA103884673/SAMEA103884673_2.fastq.gz]
+  SAMEA103884675: [processed/HipSci/fastq/SAMEA103884675/SAMEA103884675_1.fastq.gz, processed/HipSci/fastq/SAMEA103884675/SAMEA103884675_2.fastq.gz]
+  SAMEA103884677: [processed/HipSci/fastq/SAMEA103884677/SAMEA103884677_1.fastq.gz, processed/HipSci/fastq/SAMEA103884677/SAMEA103884677_2.fastq.gz]
+  SAMEA103884850: [processed/HipSci/fastq/SAMEA103884850/SAMEA103884850_1.fastq.gz, processed/HipSci/fastq/SAMEA103884850/SAMEA103884850_2.fastq.gz]
+  SAMEA103885510: [processed/HipSci/fastq/SAMEA103885510/SAMEA103885510_1.fastq.gz, processed/HipSci/fastq/SAMEA103885510/SAMEA103885510_2.fastq.gz]
+  SAMEA103885511: [processed/HipSci/fastq/SAMEA103885511/SAMEA103885511_1.fastq.gz, processed/HipSci/fastq/SAMEA103885511/SAMEA103885511_2.fastq.gz]
+  SAMEA103885513: [processed/HipSci/fastq/SAMEA103885513/SAMEA103885513_1.fastq.gz, processed/HipSci/fastq/SAMEA103885513/SAMEA103885513_2.fastq.gz]
+  SAMEA103885514: [processed/HipSci/fastq/SAMEA103885514/SAMEA103885514_1.fastq.gz, processed/HipSci/fastq/SAMEA103885514/SAMEA103885514_2.fastq.gz]
+  SAMEA103886060: [processed/HipSci/fastq/SAMEA103886060/SAMEA103886060_1.fastq.gz, processed/HipSci/fastq/SAMEA103886060/SAMEA103886060_2.fastq.gz]
+  SAMEA103887419: [processed/HipSci/fastq/SAMEA103887419/SAMEA103887419_1.fastq.gz, processed/HipSci/fastq/SAMEA103887419/SAMEA103887419_2.fastq.gz]
+  SAMEA103988283: [processed/HipSci/fastq/SAMEA103988283/SAMEA103988283_1.fastq.gz, processed/HipSci/fastq/SAMEA103988283/SAMEA103988283_2.fastq.gz]
+  SAMEA103992842: [processed/HipSci/fastq/SAMEA103992842/SAMEA103992842_1.fastq.gz, processed/HipSci/fastq/SAMEA103992842/SAMEA103992842_2.fastq.gz]
+  SAMEA103992843: [processed/HipSci/fastq/SAMEA103992843/SAMEA103992843_1.fastq.gz, processed/HipSci/fastq/SAMEA103992843/SAMEA103992843_2.fastq.gz]
+  SAMEA103992846: [processed/HipSci/fastq/SAMEA103992846/SAMEA103992846_1.fastq.gz, processed/HipSci/fastq/SAMEA103992846/SAMEA103992846_2.fastq.gz]
+  SAMEA103992851: [processed/HipSci/fastq/SAMEA103992851/SAMEA103992851_1.fastq.gz, processed/HipSci/fastq/SAMEA103992851/SAMEA103992851_2.fastq.gz]
+  SAMEA103992896: [processed/HipSci/fastq/SAMEA103992896/SAMEA103992896_1.fastq.gz, processed/HipSci/fastq/SAMEA103992896/SAMEA103992896_2.fastq.gz]
+  SAMEA104009786: [processed/HipSci/fastq/SAMEA104009786/SAMEA104009786_1.fastq.gz, processed/HipSci/fastq/SAMEA104009786/SAMEA104009786_2.fastq.gz]
+  SAMEA104009787: [processed/HipSci/fastq/SAMEA104009787/SAMEA104009787_1.fastq.gz, processed/HipSci/fastq/SAMEA104009787/SAMEA104009787_2.fastq.gz]
+  SAMEA104009794: [processed/HipSci/fastq/SAMEA104009794/SAMEA104009794_1.fastq.gz, processed/HipSci/fastq/SAMEA104009794/SAMEA104009794_2.fastq.gz]
+  SAMEA104009795: [processed/HipSci/fastq/SAMEA104009795/SAMEA104009795_1.fastq.gz, processed/HipSci/fastq/SAMEA104009795/SAMEA104009795_2.fastq.gz]
+  SAMEA104009796: [processed/HipSci/fastq/SAMEA104009796/SAMEA104009796_1.fastq.gz, processed/HipSci/fastq/SAMEA104009796/SAMEA104009796_2.fastq.gz]
+  SAMEA104009798: [processed/HipSci/fastq/SAMEA104009798/SAMEA104009798_1.fastq.gz, processed/HipSci/fastq/SAMEA104009798/SAMEA104009798_2.fastq.gz]
+  SAMEA104011279: [processed/HipSci/fastq/SAMEA104011279/SAMEA104011279_1.fastq.gz, processed/HipSci/fastq/SAMEA104011279/SAMEA104011279_2.fastq.gz]
+  SAMEA104011280: [processed/HipSci/fastq/SAMEA104011280/SAMEA104011280_1.fastq.gz, processed/HipSci/fastq/SAMEA104011280/SAMEA104011280_2.fastq.gz]
+  SAMEA104011281: [processed/HipSci/fastq/SAMEA104011281/SAMEA104011281_1.fastq.gz, processed/HipSci/fastq/SAMEA104011281/SAMEA104011281_2.fastq.gz]
+  SAMEA104011282: [processed/HipSci/fastq/SAMEA104011282/SAMEA104011282_1.fastq.gz, processed/HipSci/fastq/SAMEA104011282/SAMEA104011282_2.fastq.gz]
+  SAMEA104011285: [processed/HipSci/fastq/SAMEA104011285/SAMEA104011285_1.fastq.gz, processed/HipSci/fastq/SAMEA104011285/SAMEA104011285_2.fastq.gz]
+  SAMEA104011286: [processed/HipSci/fastq/SAMEA104011286/SAMEA104011286_1.fastq.gz, processed/HipSci/fastq/SAMEA104011286/SAMEA104011286_2.fastq.gz]
+  SAMEA104011287: [processed/HipSci/fastq/SAMEA104011287/SAMEA104011287_1.fastq.gz, processed/HipSci/fastq/SAMEA104011287/SAMEA104011287_2.fastq.gz]
+  SAMEA104011288: [processed/HipSci/fastq/SAMEA104011288/SAMEA104011288_1.fastq.gz, processed/HipSci/fastq/SAMEA104011288/SAMEA104011288_2.fastq.gz]
+  SAMEA104011289: [processed/HipSci/fastq/SAMEA104011289/SAMEA104011289_1.fastq.gz, processed/HipSci/fastq/SAMEA104011289/SAMEA104011289_2.fastq.gz]
+  SAMEA104011290: [processed/HipSci/fastq/SAMEA104011290/SAMEA104011290_1.fastq.gz, processed/HipSci/fastq/SAMEA104011290/SAMEA104011290_2.fastq.gz]
+  SAMEA104026891: [processed/HipSci/fastq/SAMEA104026891/SAMEA104026891_1.fastq.gz, processed/HipSci/fastq/SAMEA104026891/SAMEA104026891_2.fastq.gz]
+  SAMEA104026892: [processed/HipSci/fastq/SAMEA104026892/SAMEA104026892_1.fastq.gz, processed/HipSci/fastq/SAMEA104026892/SAMEA104026892_2.fastq.gz]
+  SAMEA104130210: [processed/HipSci/fastq/SAMEA104130210/SAMEA104130210_1.fastq.gz, processed/HipSci/fastq/SAMEA104130210/SAMEA104130210_2.fastq.gz]
+  SAMEA104130211: [processed/HipSci/fastq/SAMEA104130211/SAMEA104130211_1.fastq.gz, processed/HipSci/fastq/SAMEA104130211/SAMEA104130211_2.fastq.gz]
+  SAMEA104130216: [processed/HipSci/fastq/SAMEA104130216/SAMEA104130216_1.fastq.gz, processed/HipSci/fastq/SAMEA104130216/SAMEA104130216_2.fastq.gz]
+  SAMEA104132470: [processed/HipSci/fastq/SAMEA104132470/SAMEA104132470_1.fastq.gz, processed/HipSci/fastq/SAMEA104132470/SAMEA104132470_2.fastq.gz]
+  SAMEA104132471: [processed/HipSci/fastq/SAMEA104132471/SAMEA104132471_1.fastq.gz, processed/HipSci/fastq/SAMEA104132471/SAMEA104132471_2.fastq.gz]
+  SAMEA104132710: [processed/HipSci/fastq/SAMEA104132710/SAMEA104132710_1.fastq.gz, processed/HipSci/fastq/SAMEA104132710/SAMEA104132710_2.fastq.gz]
+  SAMEA104237550: [processed/HipSci/fastq/SAMEA104237550/SAMEA104237550_1.fastq.gz, processed/HipSci/fastq/SAMEA104237550/SAMEA104237550_2.fastq.gz]
+  SAMEA104237551: [processed/HipSci/fastq/SAMEA104237551/SAMEA104237551_1.fastq.gz, processed/HipSci/fastq/SAMEA104237551/SAMEA104237551_2.fastq.gz]
+  SAMEA104237552: [processed/HipSci/fastq/SAMEA104237552/SAMEA104237552_1.fastq.gz, processed/HipSci/fastq/SAMEA104237552/SAMEA104237552_2.fastq.gz]
+  SAMEA104241751: [processed/HipSci/fastq/SAMEA104241751/SAMEA104241751_1.fastq.gz, processed/HipSci/fastq/SAMEA104241751/SAMEA104241751_2.fastq.gz]
+  SAMEA104241752: [processed/HipSci/fastq/SAMEA104241752/SAMEA104241752_1.fastq.gz, processed/HipSci/fastq/SAMEA104241752/SAMEA104241752_2.fastq.gz]
+  SAMEA17511418: [processed/HipSci/fastq/SAMEA17511418/SAMEA17511418_1.fastq.gz, processed/HipSci/fastq/SAMEA17511418/SAMEA17511418_2.fastq.gz]
+  SAMEA2398028: [processed/HipSci/fastq/SAMEA2398028/SAMEA2398028_1.fastq.gz, processed/HipSci/fastq/SAMEA2398028/SAMEA2398028_2.fastq.gz]
+  SAMEA2398080: [processed/HipSci/fastq/SAMEA2398080/SAMEA2398080_1.fastq.gz, processed/HipSci/fastq/SAMEA2398080/SAMEA2398080_2.fastq.gz]
+  SAMEA2398552: [processed/HipSci/fastq/SAMEA2398552/SAMEA2398552_1.fastq.gz, processed/HipSci/fastq/SAMEA2398552/SAMEA2398552_2.fastq.gz]
+  SAMEA2399461: [processed/HipSci/fastq/SAMEA2399461/SAMEA2399461_1.fastq.gz, processed/HipSci/fastq/SAMEA2399461/SAMEA2399461_2.fastq.gz]
+  SAMEA2399463: [processed/HipSci/fastq/SAMEA2399463/SAMEA2399463_1.fastq.gz, processed/HipSci/fastq/SAMEA2399463/SAMEA2399463_2.fastq.gz]
+  SAMEA2420640: [processed/HipSci/fastq/SAMEA2420640/SAMEA2420640_1.fastq.gz, processed/HipSci/fastq/SAMEA2420640/SAMEA2420640_2.fastq.gz]
+  SAMEA2433566: [processed/HipSci/fastq/SAMEA2433566/SAMEA2433566_1.fastq.gz, processed/HipSci/fastq/SAMEA2433566/SAMEA2433566_2.fastq.gz]
+  SAMEA2433568: [processed/HipSci/fastq/SAMEA2433568/SAMEA2433568_1.fastq.gz, processed/HipSci/fastq/SAMEA2433568/SAMEA2433568_2.fastq.gz]
+  SAMEA2445779: [processed/HipSci/fastq/SAMEA2445779/SAMEA2445779_1.fastq.gz, processed/HipSci/fastq/SAMEA2445779/SAMEA2445779_2.fastq.gz]
+  SAMEA2445783: [processed/HipSci/fastq/SAMEA2445783/SAMEA2445783_1.fastq.gz, processed/HipSci/fastq/SAMEA2445783/SAMEA2445783_2.fastq.gz]
+  SAMEA2445784: [processed/HipSci/fastq/SAMEA2445784/SAMEA2445784_1.fastq.gz, processed/HipSci/fastq/SAMEA2445784/SAMEA2445784_2.fastq.gz]
+  SAMEA2445787: [processed/HipSci/fastq/SAMEA2445787/SAMEA2445787_1.fastq.gz, processed/HipSci/fastq/SAMEA2445787/SAMEA2445787_2.fastq.gz]
+  SAMEA2445790: [processed/HipSci/fastq/SAMEA2445790/SAMEA2445790_1.fastq.gz, processed/HipSci/fastq/SAMEA2445790/SAMEA2445790_2.fastq.gz]
+  SAMEA2459959: [processed/HipSci/fastq/SAMEA2459959/SAMEA2459959_1.fastq.gz, processed/HipSci/fastq/SAMEA2459959/SAMEA2459959_2.fastq.gz]
+  SAMEA2459961: [processed/HipSci/fastq/SAMEA2459961/SAMEA2459961_1.fastq.gz, processed/HipSci/fastq/SAMEA2459961/SAMEA2459961_2.fastq.gz]
+  SAMEA2459968: [processed/HipSci/fastq/SAMEA2459968/SAMEA2459968_1.fastq.gz, processed/HipSci/fastq/SAMEA2459968/SAMEA2459968_2.fastq.gz]
+  SAMEA2459970: [processed/HipSci/fastq/SAMEA2459970/SAMEA2459970_1.fastq.gz, processed/HipSci/fastq/SAMEA2459970/SAMEA2459970_2.fastq.gz]
+  SAMEA2464779: [processed/HipSci/fastq/SAMEA2464779/SAMEA2464779_1.fastq.gz, processed/HipSci/fastq/SAMEA2464779/SAMEA2464779_2.fastq.gz]
+  SAMEA2464797: [processed/HipSci/fastq/SAMEA2464797/SAMEA2464797_1.fastq.gz, processed/HipSci/fastq/SAMEA2464797/SAMEA2464797_2.fastq.gz]
+  SAMEA2464810: [processed/HipSci/fastq/SAMEA2464810/SAMEA2464810_1.fastq.gz, processed/HipSci/fastq/SAMEA2464810/SAMEA2464810_2.fastq.gz]
+  SAMEA2464814: [processed/HipSci/fastq/SAMEA2464814/SAMEA2464814_1.fastq.gz, processed/HipSci/fastq/SAMEA2464814/SAMEA2464814_2.fastq.gz]
+  SAMEA2464819: [processed/HipSci/fastq/SAMEA2464819/SAMEA2464819_1.fastq.gz, processed/HipSci/fastq/SAMEA2464819/SAMEA2464819_2.fastq.gz]
+  SAMEA2474454: [processed/HipSci/fastq/SAMEA2474454/SAMEA2474454_1.fastq.gz, processed/HipSci/fastq/SAMEA2474454/SAMEA2474454_2.fastq.gz]
+  SAMEA2474456: [processed/HipSci/fastq/SAMEA2474456/SAMEA2474456_1.fastq.gz, processed/HipSci/fastq/SAMEA2474456/SAMEA2474456_2.fastq.gz]
+  SAMEA2474458: [processed/HipSci/fastq/SAMEA2474458/SAMEA2474458_1.fastq.gz, processed/HipSci/fastq/SAMEA2474458/SAMEA2474458_2.fastq.gz]
+  SAMEA2494988: [processed/HipSci/fastq/SAMEA2494988/SAMEA2494988_1.fastq.gz, processed/HipSci/fastq/SAMEA2494988/SAMEA2494988_2.fastq.gz]
+  SAMEA2498700: [processed/HipSci/fastq/SAMEA2498700/SAMEA2498700_1.fastq.gz, processed/HipSci/fastq/SAMEA2498700/SAMEA2498700_2.fastq.gz]
+  SAMEA2518322: [processed/HipSci/fastq/SAMEA2518322/SAMEA2518322_1.fastq.gz, processed/HipSci/fastq/SAMEA2518322/SAMEA2518322_2.fastq.gz]
+  SAMEA2518324: [processed/HipSci/fastq/SAMEA2518324/SAMEA2518324_1.fastq.gz, processed/HipSci/fastq/SAMEA2518324/SAMEA2518324_2.fastq.gz]
+  SAMEA2518325: [processed/HipSci/fastq/SAMEA2518325/SAMEA2518325_1.fastq.gz, processed/HipSci/fastq/SAMEA2518325/SAMEA2518325_2.fastq.gz]
+  SAMEA2518332: [processed/HipSci/fastq/SAMEA2518332/SAMEA2518332_1.fastq.gz, processed/HipSci/fastq/SAMEA2518332/SAMEA2518332_2.fastq.gz]
+  SAMEA2518334: [processed/HipSci/fastq/SAMEA2518334/SAMEA2518334_1.fastq.gz, processed/HipSci/fastq/SAMEA2518334/SAMEA2518334_2.fastq.gz]
+  SAMEA2518338: [processed/HipSci/fastq/SAMEA2518338/SAMEA2518338_1.fastq.gz, processed/HipSci/fastq/SAMEA2518338/SAMEA2518338_2.fastq.gz]
+  SAMEA2533336: [processed/HipSci/fastq/SAMEA2533336/SAMEA2533336_1.fastq.gz, processed/HipSci/fastq/SAMEA2533336/SAMEA2533336_2.fastq.gz]
+  SAMEA2533339: [processed/HipSci/fastq/SAMEA2533339/SAMEA2533339_1.fastq.gz, processed/HipSci/fastq/SAMEA2533339/SAMEA2533339_2.fastq.gz]
+  SAMEA2536404: [processed/HipSci/fastq/SAMEA2536404/SAMEA2536404_1.fastq.gz, processed/HipSci/fastq/SAMEA2536404/SAMEA2536404_2.fastq.gz]
+  SAMEA2536405: [processed/HipSci/fastq/SAMEA2536405/SAMEA2536405_1.fastq.gz, processed/HipSci/fastq/SAMEA2536405/SAMEA2536405_2.fastq.gz]
+  SAMEA2536410: [processed/HipSci/fastq/SAMEA2536410/SAMEA2536410_1.fastq.gz, processed/HipSci/fastq/SAMEA2536410/SAMEA2536410_2.fastq.gz]
+  SAMEA2536412: [processed/HipSci/fastq/SAMEA2536412/SAMEA2536412_1.fastq.gz, processed/HipSci/fastq/SAMEA2536412/SAMEA2536412_2.fastq.gz]
+  SAMEA2536413: [processed/HipSci/fastq/SAMEA2536413/SAMEA2536413_1.fastq.gz, processed/HipSci/fastq/SAMEA2536413/SAMEA2536413_2.fastq.gz]
+  SAMEA2536416: [processed/HipSci/fastq/SAMEA2536416/SAMEA2536416_1.fastq.gz, processed/HipSci/fastq/SAMEA2536416/SAMEA2536416_2.fastq.gz]
+  SAMEA2536417: [processed/HipSci/fastq/SAMEA2536417/SAMEA2536417_1.fastq.gz, processed/HipSci/fastq/SAMEA2536417/SAMEA2536417_2.fastq.gz]
+  SAMEA2547615: [processed/HipSci/fastq/SAMEA2547615/SAMEA2547615_1.fastq.gz, processed/HipSci/fastq/SAMEA2547615/SAMEA2547615_2.fastq.gz]
+  SAMEA2547616: [processed/HipSci/fastq/SAMEA2547616/SAMEA2547616_1.fastq.gz, processed/HipSci/fastq/SAMEA2547616/SAMEA2547616_2.fastq.gz]
+  SAMEA2547619: [processed/HipSci/fastq/SAMEA2547619/SAMEA2547619_1.fastq.gz, processed/HipSci/fastq/SAMEA2547619/SAMEA2547619_2.fastq.gz]
+  SAMEA2547622: [processed/HipSci/fastq/SAMEA2547622/SAMEA2547622_1.fastq.gz, processed/HipSci/fastq/SAMEA2547622/SAMEA2547622_2.fastq.gz]
+  SAMEA2547633: [processed/HipSci/fastq/SAMEA2547633/SAMEA2547633_1.fastq.gz, processed/HipSci/fastq/SAMEA2547633/SAMEA2547633_2.fastq.gz]
+  SAMEA2547637: [processed/HipSci/fastq/SAMEA2547637/SAMEA2547637_1.fastq.gz, processed/HipSci/fastq/SAMEA2547637/SAMEA2547637_2.fastq.gz]
+  SAMEA2547644: [processed/HipSci/fastq/SAMEA2547644/SAMEA2547644_1.fastq.gz, processed/HipSci/fastq/SAMEA2547644/SAMEA2547644_2.fastq.gz]
+  SAMEA2547899: [processed/HipSci/fastq/SAMEA2547899/SAMEA2547899_1.fastq.gz, processed/HipSci/fastq/SAMEA2547899/SAMEA2547899_2.fastq.gz]
+  SAMEA2555012: [processed/HipSci/fastq/SAMEA2555012/SAMEA2555012_1.fastq.gz, processed/HipSci/fastq/SAMEA2555012/SAMEA2555012_2.fastq.gz]
+  SAMEA2555017: [processed/HipSci/fastq/SAMEA2555017/SAMEA2555017_1.fastq.gz, processed/HipSci/fastq/SAMEA2555017/SAMEA2555017_2.fastq.gz]
+  SAMEA2570426: [processed/HipSci/fastq/SAMEA2570426/SAMEA2570426_1.fastq.gz, processed/HipSci/fastq/SAMEA2570426/SAMEA2570426_2.fastq.gz]
+  SAMEA2570432: [processed/HipSci/fastq/SAMEA2570432/SAMEA2570432_1.fastq.gz, processed/HipSci/fastq/SAMEA2570432/SAMEA2570432_2.fastq.gz]
+  SAMEA2570435: [processed/HipSci/fastq/SAMEA2570435/SAMEA2570435_1.fastq.gz, processed/HipSci/fastq/SAMEA2570435/SAMEA2570435_2.fastq.gz]
+  SAMEA2590621: [processed/HipSci/fastq/SAMEA2590621/SAMEA2590621_1.fastq.gz, processed/HipSci/fastq/SAMEA2590621/SAMEA2590621_2.fastq.gz]
+  SAMEA2593858: [processed/HipSci/fastq/SAMEA2593858/SAMEA2593858_1.fastq.gz, processed/HipSci/fastq/SAMEA2593858/SAMEA2593858_2.fastq.gz]
+  SAMEA2595426: [processed/HipSci/fastq/SAMEA2595426/SAMEA2595426_1.fastq.gz, processed/HipSci/fastq/SAMEA2595426/SAMEA2595426_2.fastq.gz]
+  SAMEA2609965: [processed/HipSci/fastq/SAMEA2609965/SAMEA2609965_1.fastq.gz, processed/HipSci/fastq/SAMEA2609965/SAMEA2609965_2.fastq.gz]
+  SAMEA2609968: [processed/HipSci/fastq/SAMEA2609968/SAMEA2609968_1.fastq.gz, processed/HipSci/fastq/SAMEA2609968/SAMEA2609968_2.fastq.gz]
+  SAMEA2609971: [processed/HipSci/fastq/SAMEA2609971/SAMEA2609971_1.fastq.gz, processed/HipSci/fastq/SAMEA2609971/SAMEA2609971_2.fastq.gz]
+  SAMEA2609972: [processed/HipSci/fastq/SAMEA2609972/SAMEA2609972_1.fastq.gz, processed/HipSci/fastq/SAMEA2609972/SAMEA2609972_2.fastq.gz]
+  SAMEA2612471: [processed/HipSci/fastq/SAMEA2612471/SAMEA2612471_1.fastq.gz, processed/HipSci/fastq/SAMEA2612471/SAMEA2612471_2.fastq.gz]
+  SAMEA2612483: [processed/HipSci/fastq/SAMEA2612483/SAMEA2612483_1.fastq.gz, processed/HipSci/fastq/SAMEA2612483/SAMEA2612483_2.fastq.gz]
+  SAMEA2613897: [processed/HipSci/fastq/SAMEA2613897/SAMEA2613897_1.fastq.gz, processed/HipSci/fastq/SAMEA2613897/SAMEA2613897_2.fastq.gz]
+  SAMEA2613912: [processed/HipSci/fastq/SAMEA2613912/SAMEA2613912_1.fastq.gz, processed/HipSci/fastq/SAMEA2613912/SAMEA2613912_2.fastq.gz]
+  SAMEA2625589: [processed/HipSci/fastq/SAMEA2625589/SAMEA2625589_1.fastq.gz, processed/HipSci/fastq/SAMEA2625589/SAMEA2625589_2.fastq.gz]
+  SAMEA2625592: [processed/HipSci/fastq/SAMEA2625592/SAMEA2625592_1.fastq.gz, processed/HipSci/fastq/SAMEA2625592/SAMEA2625592_2.fastq.gz]
+  SAMEA2627141: [processed/HipSci/fastq/SAMEA2627141/SAMEA2627141_1.fastq.gz, processed/HipSci/fastq/SAMEA2627141/SAMEA2627141_2.fastq.gz]
+  SAMEA2627566: [processed/HipSci/fastq/SAMEA2627566/SAMEA2627566_1.fastq.gz, processed/HipSci/fastq/SAMEA2627566/SAMEA2627566_2.fastq.gz]
+  SAMEA2627567: [processed/HipSci/fastq/SAMEA2627567/SAMEA2627567_1.fastq.gz, processed/HipSci/fastq/SAMEA2627567/SAMEA2627567_2.fastq.gz]
+  SAMEA2627569: [processed/HipSci/fastq/SAMEA2627569/SAMEA2627569_1.fastq.gz, processed/HipSci/fastq/SAMEA2627569/SAMEA2627569_2.fastq.gz]
+  SAMEA2627571: [processed/HipSci/fastq/SAMEA2627571/SAMEA2627571_1.fastq.gz, processed/HipSci/fastq/SAMEA2627571/SAMEA2627571_2.fastq.gz]
+  SAMEA2627577: [processed/HipSci/fastq/SAMEA2627577/SAMEA2627577_1.fastq.gz, processed/HipSci/fastq/SAMEA2627577/SAMEA2627577_2.fastq.gz]
+  SAMEA2627578: [processed/HipSci/fastq/SAMEA2627578/SAMEA2627578_1.fastq.gz, processed/HipSci/fastq/SAMEA2627578/SAMEA2627578_2.fastq.gz]
+  SAMEA2632921: [processed/HipSci/fastq/SAMEA2632921/SAMEA2632921_1.fastq.gz, processed/HipSci/fastq/SAMEA2632921/SAMEA2632921_2.fastq.gz]
+  SAMEA2645805: [processed/HipSci/fastq/SAMEA2645805/SAMEA2645805_1.fastq.gz, processed/HipSci/fastq/SAMEA2645805/SAMEA2645805_2.fastq.gz]
+  SAMEA2645809: [processed/HipSci/fastq/SAMEA2645809/SAMEA2645809_1.fastq.gz, processed/HipSci/fastq/SAMEA2645809/SAMEA2645809_2.fastq.gz]
+  SAMEA2645811: [processed/HipSci/fastq/SAMEA2645811/SAMEA2645811_1.fastq.gz, processed/HipSci/fastq/SAMEA2645811/SAMEA2645811_2.fastq.gz]
+  SAMEA2645814: [processed/HipSci/fastq/SAMEA2645814/SAMEA2645814_1.fastq.gz, processed/HipSci/fastq/SAMEA2645814/SAMEA2645814_2.fastq.gz]
+  SAMEA2649534: [processed/HipSci/fastq/SAMEA2649534/SAMEA2649534_1.fastq.gz, processed/HipSci/fastq/SAMEA2649534/SAMEA2649534_2.fastq.gz]
+  SAMEA2658084: [processed/HipSci/fastq/SAMEA2658084/SAMEA2658084_1.fastq.gz, processed/HipSci/fastq/SAMEA2658084/SAMEA2658084_2.fastq.gz]
+  SAMEA2658090: [processed/HipSci/fastq/SAMEA2658090/SAMEA2658090_1.fastq.gz, processed/HipSci/fastq/SAMEA2658090/SAMEA2658090_2.fastq.gz]
+  SAMEA2658107: [processed/HipSci/fastq/SAMEA2658107/SAMEA2658107_1.fastq.gz, processed/HipSci/fastq/SAMEA2658107/SAMEA2658107_2.fastq.gz]
+  SAMEA2675459: [processed/HipSci/fastq/SAMEA2675459/SAMEA2675459_1.fastq.gz, processed/HipSci/fastq/SAMEA2675459/SAMEA2675459_2.fastq.gz]
+  SAMEA2678738: [processed/HipSci/fastq/SAMEA2678738/SAMEA2678738_1.fastq.gz, processed/HipSci/fastq/SAMEA2678738/SAMEA2678738_2.fastq.gz]
+  SAMEA2678742: [processed/HipSci/fastq/SAMEA2678742/SAMEA2678742_1.fastq.gz, processed/HipSci/fastq/SAMEA2678742/SAMEA2678742_2.fastq.gz]
+  SAMEA2682670: [processed/HipSci/fastq/SAMEA2682670/SAMEA2682670_1.fastq.gz, processed/HipSci/fastq/SAMEA2682670/SAMEA2682670_2.fastq.gz]
+  SAMEA2682671: [processed/HipSci/fastq/SAMEA2682671/SAMEA2682671_1.fastq.gz, processed/HipSci/fastq/SAMEA2682671/SAMEA2682671_2.fastq.gz]
+  SAMEA2698309: [processed/HipSci/fastq/SAMEA2698309/SAMEA2698309_1.fastq.gz, processed/HipSci/fastq/SAMEA2698309/SAMEA2698309_2.fastq.gz]
+  SAMEA2698315: [processed/HipSci/fastq/SAMEA2698315/SAMEA2698315_1.fastq.gz, processed/HipSci/fastq/SAMEA2698315/SAMEA2698315_2.fastq.gz]
+  SAMEA2707499: [processed/HipSci/fastq/SAMEA2707499/SAMEA2707499_1.fastq.gz, processed/HipSci/fastq/SAMEA2707499/SAMEA2707499_2.fastq.gz]
+  SAMEA2707507: [processed/HipSci/fastq/SAMEA2707507/SAMEA2707507_1.fastq.gz, processed/HipSci/fastq/SAMEA2707507/SAMEA2707507_2.fastq.gz]
+  SAMEA2711371: [processed/HipSci/fastq/SAMEA2711371/SAMEA2711371_1.fastq.gz, processed/HipSci/fastq/SAMEA2711371/SAMEA2711371_2.fastq.gz]
+  SAMEA2719619: [processed/HipSci/fastq/SAMEA2719619/SAMEA2719619_1.fastq.gz, processed/HipSci/fastq/SAMEA2719619/SAMEA2719619_2.fastq.gz]
+  SAMEA2724743: [processed/HipSci/fastq/SAMEA2724743/SAMEA2724743_1.fastq.gz, processed/HipSci/fastq/SAMEA2724743/SAMEA2724743_2.fastq.gz]
+  SAMEA3282737: [processed/HipSci/fastq/SAMEA3282737/SAMEA3282737_1.fastq.gz, processed/HipSci/fastq/SAMEA3282737/SAMEA3282737_2.fastq.gz]
+  SAMEA3311866: [processed/HipSci/fastq/SAMEA3311866/SAMEA3311866_1.fastq.gz, processed/HipSci/fastq/SAMEA3311866/SAMEA3311866_2.fastq.gz]
+  SAMEA3311872: [processed/HipSci/fastq/SAMEA3311872/SAMEA3311872_1.fastq.gz, processed/HipSci/fastq/SAMEA3311872/SAMEA3311872_2.fastq.gz]
+  SAMEA3312840: [processed/HipSci/fastq/SAMEA3312840/SAMEA3312840_1.fastq.gz, processed/HipSci/fastq/SAMEA3312840/SAMEA3312840_2.fastq.gz]
+  SAMEA3316296: [processed/HipSci/fastq/SAMEA3316296/SAMEA3316296_1.fastq.gz, processed/HipSci/fastq/SAMEA3316296/SAMEA3316296_2.fastq.gz]
+  SAMEA3335591: [processed/HipSci/fastq/SAMEA3335591/SAMEA3335591_1.fastq.gz, processed/HipSci/fastq/SAMEA3335591/SAMEA3335591_2.fastq.gz]
+  SAMEA3355549: [processed/HipSci/fastq/SAMEA3355549/SAMEA3355549_1.fastq.gz, processed/HipSci/fastq/SAMEA3355549/SAMEA3355549_2.fastq.gz]
+  SAMEA3355550: [processed/HipSci/fastq/SAMEA3355550/SAMEA3355550_1.fastq.gz, processed/HipSci/fastq/SAMEA3355550/SAMEA3355550_2.fastq.gz]
+  SAMEA3374091: [processed/HipSci/fastq/SAMEA3374091/SAMEA3374091_1.fastq.gz, processed/HipSci/fastq/SAMEA3374091/SAMEA3374091_2.fastq.gz]
+  SAMEA3374092: [processed/HipSci/fastq/SAMEA3374092/SAMEA3374092_1.fastq.gz, processed/HipSci/fastq/SAMEA3374092/SAMEA3374092_2.fastq.gz]
+  SAMEA3443156: [processed/HipSci/fastq/SAMEA3443156/SAMEA3443156_1.fastq.gz, processed/HipSci/fastq/SAMEA3443156/SAMEA3443156_2.fastq.gz]
+  SAMEA3448738: [processed/HipSci/fastq/SAMEA3448738/SAMEA3448738_1.fastq.gz, processed/HipSci/fastq/SAMEA3448738/SAMEA3448738_2.fastq.gz]
+  SAMEA3448741: [processed/HipSci/fastq/SAMEA3448741/SAMEA3448741_1.fastq.gz, processed/HipSci/fastq/SAMEA3448741/SAMEA3448741_2.fastq.gz]
+  SAMEA3460677: [processed/HipSci/fastq/SAMEA3460677/SAMEA3460677_1.fastq.gz, processed/HipSci/fastq/SAMEA3460677/SAMEA3460677_2.fastq.gz]
+  SAMEA3460678: [processed/HipSci/fastq/SAMEA3460678/SAMEA3460678_1.fastq.gz, processed/HipSci/fastq/SAMEA3460678/SAMEA3460678_2.fastq.gz]
+  SAMEA3460681: [processed/HipSci/fastq/SAMEA3460681/SAMEA3460681_1.fastq.gz, processed/HipSci/fastq/SAMEA3460681/SAMEA3460681_2.fastq.gz]
+  SAMEA3463756: [processed/HipSci/fastq/SAMEA3463756/SAMEA3463756_1.fastq.gz, processed/HipSci/fastq/SAMEA3463756/SAMEA3463756_2.fastq.gz]
+  SAMEA3466477: [processed/HipSci/fastq/SAMEA3466477/SAMEA3466477_1.fastq.gz, processed/HipSci/fastq/SAMEA3466477/SAMEA3466477_2.fastq.gz]
+  SAMEA3466481: [processed/HipSci/fastq/SAMEA3466481/SAMEA3466481_1.fastq.gz, processed/HipSci/fastq/SAMEA3466481/SAMEA3466481_2.fastq.gz]
+  SAMEA3469236: [processed/HipSci/fastq/SAMEA3469236/SAMEA3469236_1.fastq.gz, processed/HipSci/fastq/SAMEA3469236/SAMEA3469236_2.fastq.gz]
+  SAMEA3470396: [processed/HipSci/fastq/SAMEA3470396/SAMEA3470396_1.fastq.gz, processed/HipSci/fastq/SAMEA3470396/SAMEA3470396_2.fastq.gz]
+  SAMEA3470401: [processed/HipSci/fastq/SAMEA3470401/SAMEA3470401_1.fastq.gz, processed/HipSci/fastq/SAMEA3470401/SAMEA3470401_2.fastq.gz]
+  SAMEA3474016: [processed/HipSci/fastq/SAMEA3474016/SAMEA3474016_1.fastq.gz, processed/HipSci/fastq/SAMEA3474016/SAMEA3474016_2.fastq.gz]
+  SAMEA3477720: [processed/HipSci/fastq/SAMEA3477720/SAMEA3477720_1.fastq.gz, processed/HipSci/fastq/SAMEA3477720/SAMEA3477720_2.fastq.gz]
+  SAMEA3483996: [processed/HipSci/fastq/SAMEA3483996/SAMEA3483996_1.fastq.gz, processed/HipSci/fastq/SAMEA3483996/SAMEA3483996_2.fastq.gz]
+  SAMEA3483998: [processed/HipSci/fastq/SAMEA3483998/SAMEA3483998_1.fastq.gz, processed/HipSci/fastq/SAMEA3483998/SAMEA3483998_2.fastq.gz]
+  SAMEA3483999: [processed/HipSci/fastq/SAMEA3483999/SAMEA3483999_1.fastq.gz, processed/HipSci/fastq/SAMEA3483999/SAMEA3483999_2.fastq.gz]
+  SAMEA3484001: [processed/HipSci/fastq/SAMEA3484001/SAMEA3484001_1.fastq.gz, processed/HipSci/fastq/SAMEA3484001/SAMEA3484001_2.fastq.gz]
+  SAMEA3485957: [processed/HipSci/fastq/SAMEA3485957/SAMEA3485957_1.fastq.gz, processed/HipSci/fastq/SAMEA3485957/SAMEA3485957_2.fastq.gz]
+  SAMEA3485958: [processed/HipSci/fastq/SAMEA3485958/SAMEA3485958_1.fastq.gz, processed/HipSci/fastq/SAMEA3485958/SAMEA3485958_2.fastq.gz]
+  SAMEA3485962: [processed/HipSci/fastq/SAMEA3485962/SAMEA3485962_1.fastq.gz, processed/HipSci/fastq/SAMEA3485962/SAMEA3485962_2.fastq.gz]
+  SAMEA3485963: [processed/HipSci/fastq/SAMEA3485963/SAMEA3485963_1.fastq.gz, processed/HipSci/fastq/SAMEA3485963/SAMEA3485963_2.fastq.gz]
+  SAMEA3735470: [processed/HipSci/fastq/SAMEA3735470/SAMEA3735470_1.fastq.gz, processed/HipSci/fastq/SAMEA3735470/SAMEA3735470_2.fastq.gz]
+  SAMEA3735541: [processed/HipSci/fastq/SAMEA3735541/SAMEA3735541_1.fastq.gz, processed/HipSci/fastq/SAMEA3735541/SAMEA3735541_2.fastq.gz]
+  SAMEA3753601: [processed/HipSci/fastq/SAMEA3753601/SAMEA3753601_1.fastq.gz, processed/HipSci/fastq/SAMEA3753601/SAMEA3753601_2.fastq.gz]
+  SAMEA3754201: [processed/HipSci/fastq/SAMEA3754201/SAMEA3754201_1.fastq.gz, processed/HipSci/fastq/SAMEA3754201/SAMEA3754201_2.fastq.gz]
+  SAMEA3754202: [processed/HipSci/fastq/SAMEA3754202/SAMEA3754202_1.fastq.gz, processed/HipSci/fastq/SAMEA3754202/SAMEA3754202_2.fastq.gz]
+  SAMEA3754203: [processed/HipSci/fastq/SAMEA3754203/SAMEA3754203_1.fastq.gz, processed/HipSci/fastq/SAMEA3754203/SAMEA3754203_2.fastq.gz]
+  SAMEA3754205: [processed/HipSci/fastq/SAMEA3754205/SAMEA3754205_1.fastq.gz, processed/HipSci/fastq/SAMEA3754205/SAMEA3754205_2.fastq.gz]
+  SAMEA3754916: [processed/HipSci/fastq/SAMEA3754916/SAMEA3754916_1.fastq.gz, processed/HipSci/fastq/SAMEA3754916/SAMEA3754916_2.fastq.gz]
+  SAMEA3755280: [processed/HipSci/fastq/SAMEA3755280/SAMEA3755280_1.fastq.gz, processed/HipSci/fastq/SAMEA3755280/SAMEA3755280_2.fastq.gz]
+  SAMEA3755284: [processed/HipSci/fastq/SAMEA3755284/SAMEA3755284_1.fastq.gz, processed/HipSci/fastq/SAMEA3755284/SAMEA3755284_2.fastq.gz]
+  SAMEA3847031: [processed/HipSci/fastq/SAMEA3847031/SAMEA3847031_1.fastq.gz, processed/HipSci/fastq/SAMEA3847031/SAMEA3847031_2.fastq.gz]
+  SAMEA3847036: [processed/HipSci/fastq/SAMEA3847036/SAMEA3847036_1.fastq.gz, processed/HipSci/fastq/SAMEA3847036/SAMEA3847036_2.fastq.gz]
+  SAMEA3847037: [processed/HipSci/fastq/SAMEA3847037/SAMEA3847037_1.fastq.gz, processed/HipSci/fastq/SAMEA3847037/SAMEA3847037_2.fastq.gz]
+  SAMEA3847979: [processed/HipSci/fastq/SAMEA3847979/SAMEA3847979_1.fastq.gz, processed/HipSci/fastq/SAMEA3847979/SAMEA3847979_2.fastq.gz]
+  SAMEA3848359: [processed/HipSci/fastq/SAMEA3848359/SAMEA3848359_1.fastq.gz, processed/HipSci/fastq/SAMEA3848359/SAMEA3848359_2.fastq.gz]
+  SAMEA3851966: [processed/HipSci/fastq/SAMEA3851966/SAMEA3851966_1.fastq.gz, processed/HipSci/fastq/SAMEA3851966/SAMEA3851966_2.fastq.gz]
+  SAMEA3851971: [processed/HipSci/fastq/SAMEA3851971/SAMEA3851971_1.fastq.gz, processed/HipSci/fastq/SAMEA3851971/SAMEA3851971_2.fastq.gz]
+  SAMEA3853038: [processed/HipSci/fastq/SAMEA3853038/SAMEA3853038_1.fastq.gz, processed/HipSci/fastq/SAMEA3853038/SAMEA3853038_2.fastq.gz]
+  SAMEA3853119: [processed/HipSci/fastq/SAMEA3853119/SAMEA3853119_1.fastq.gz, processed/HipSci/fastq/SAMEA3853119/SAMEA3853119_2.fastq.gz]
+  SAMEA3853121: [processed/HipSci/fastq/SAMEA3853121/SAMEA3853121_1.fastq.gz, processed/HipSci/fastq/SAMEA3853121/SAMEA3853121_2.fastq.gz]
+  SAMEA3853122: [processed/HipSci/fastq/SAMEA3853122/SAMEA3853122_1.fastq.gz, processed/HipSci/fastq/SAMEA3853122/SAMEA3853122_2.fastq.gz]
+  SAMEA3853129: [processed/HipSci/fastq/SAMEA3853129/SAMEA3853129_1.fastq.gz, processed/HipSci/fastq/SAMEA3853129/SAMEA3853129_2.fastq.gz]
+  SAMEA3853131: [processed/HipSci/fastq/SAMEA3853131/SAMEA3853131_1.fastq.gz, processed/HipSci/fastq/SAMEA3853131/SAMEA3853131_2.fastq.gz]
+  SAMEA3853136: [processed/HipSci/fastq/SAMEA3853136/SAMEA3853136_1.fastq.gz, processed/HipSci/fastq/SAMEA3853136/SAMEA3853136_2.fastq.gz]
+  SAMEA3853137: [processed/HipSci/fastq/SAMEA3853137/SAMEA3853137_1.fastq.gz, processed/HipSci/fastq/SAMEA3853137/SAMEA3853137_2.fastq.gz]
+  SAMEA3853140: [processed/HipSci/fastq/SAMEA3853140/SAMEA3853140_1.fastq.gz, processed/HipSci/fastq/SAMEA3853140/SAMEA3853140_2.fastq.gz]
+  SAMEA3853143: [processed/HipSci/fastq/SAMEA3853143/SAMEA3853143_1.fastq.gz, processed/HipSci/fastq/SAMEA3853143/SAMEA3853143_2.fastq.gz]
+  SAMEA3853157: [processed/HipSci/fastq/SAMEA3853157/SAMEA3853157_1.fastq.gz, processed/HipSci/fastq/SAMEA3853157/SAMEA3853157_2.fastq.gz]
+  SAMEA3853161: [processed/HipSci/fastq/SAMEA3853161/SAMEA3853161_1.fastq.gz, processed/HipSci/fastq/SAMEA3853161/SAMEA3853161_2.fastq.gz]
+  SAMEA3853165: [processed/HipSci/fastq/SAMEA3853165/SAMEA3853165_1.fastq.gz, processed/HipSci/fastq/SAMEA3853165/SAMEA3853165_2.fastq.gz]
+  SAMEA3853173: [processed/HipSci/fastq/SAMEA3853173/SAMEA3853173_1.fastq.gz, processed/HipSci/fastq/SAMEA3853173/SAMEA3853173_2.fastq.gz]
+  SAMEA3853180: [processed/HipSci/fastq/SAMEA3853180/SAMEA3853180_1.fastq.gz, processed/HipSci/fastq/SAMEA3853180/SAMEA3853180_2.fastq.gz]
+  SAMEA3854068: [processed/HipSci/fastq/SAMEA3854068/SAMEA3854068_1.fastq.gz, processed/HipSci/fastq/SAMEA3854068/SAMEA3854068_2.fastq.gz]
+  SAMEA3854130: [processed/HipSci/fastq/SAMEA3854130/SAMEA3854130_1.fastq.gz, processed/HipSci/fastq/SAMEA3854130/SAMEA3854130_2.fastq.gz]
+  SAMEA3854215: [processed/HipSci/fastq/SAMEA3854215/SAMEA3854215_1.fastq.gz, processed/HipSci/fastq/SAMEA3854215/SAMEA3854215_2.fastq.gz]
+  SAMEA3854226: [processed/HipSci/fastq/SAMEA3854226/SAMEA3854226_1.fastq.gz, processed/HipSci/fastq/SAMEA3854226/SAMEA3854226_2.fastq.gz]
+  SAMEA3854232: [processed/HipSci/fastq/SAMEA3854232/SAMEA3854232_1.fastq.gz, processed/HipSci/fastq/SAMEA3854232/SAMEA3854232_2.fastq.gz]
+  SAMEA3854239: [processed/HipSci/fastq/SAMEA3854239/SAMEA3854239_1.fastq.gz, processed/HipSci/fastq/SAMEA3854239/SAMEA3854239_2.fastq.gz]
+  SAMEA3854308: [processed/HipSci/fastq/SAMEA3854308/SAMEA3854308_1.fastq.gz, processed/HipSci/fastq/SAMEA3854308/SAMEA3854308_2.fastq.gz]
+  SAMEA3854309: [processed/HipSci/fastq/SAMEA3854309/SAMEA3854309_1.fastq.gz, processed/HipSci/fastq/SAMEA3854309/SAMEA3854309_2.fastq.gz]
+  SAMEA3854313: [processed/HipSci/fastq/SAMEA3854313/SAMEA3854313_1.fastq.gz, processed/HipSci/fastq/SAMEA3854313/SAMEA3854313_2.fastq.gz]
+  SAMEA3962372: [processed/HipSci/fastq/SAMEA3962372/SAMEA3962372_1.fastq.gz, processed/HipSci/fastq/SAMEA3962372/SAMEA3962372_2.fastq.gz]
+  SAMEA3962381: [processed/HipSci/fastq/SAMEA3962381/SAMEA3962381_1.fastq.gz, processed/HipSci/fastq/SAMEA3962381/SAMEA3962381_2.fastq.gz]
+  SAMEA3962382: [processed/HipSci/fastq/SAMEA3962382/SAMEA3962382_1.fastq.gz, processed/HipSci/fastq/SAMEA3962382/SAMEA3962382_2.fastq.gz]
+  SAMEA3962387: [processed/HipSci/fastq/SAMEA3962387/SAMEA3962387_1.fastq.gz, processed/HipSci/fastq/SAMEA3962387/SAMEA3962387_2.fastq.gz]
+  SAMEA3962389: [processed/HipSci/fastq/SAMEA3962389/SAMEA3962389_1.fastq.gz, processed/HipSci/fastq/SAMEA3962389/SAMEA3962389_2.fastq.gz]
+  SAMEA3962524: [processed/HipSci/fastq/SAMEA3962524/SAMEA3962524_1.fastq.gz, processed/HipSci/fastq/SAMEA3962524/SAMEA3962524_2.fastq.gz]
+  SAMEA3962525: [processed/HipSci/fastq/SAMEA3962525/SAMEA3962525_1.fastq.gz, processed/HipSci/fastq/SAMEA3962525/SAMEA3962525_2.fastq.gz]
+  SAMEA3962528: [processed/HipSci/fastq/SAMEA3962528/SAMEA3962528_1.fastq.gz, processed/HipSci/fastq/SAMEA3962528/SAMEA3962528_2.fastq.gz]
+  SAMEA3962529: [processed/HipSci/fastq/SAMEA3962529/SAMEA3962529_1.fastq.gz, processed/HipSci/fastq/SAMEA3962529/SAMEA3962529_2.fastq.gz]
+  SAMEA3962530: [processed/HipSci/fastq/SAMEA3962530/SAMEA3962530_1.fastq.gz, processed/HipSci/fastq/SAMEA3962530/SAMEA3962530_2.fastq.gz]
+  SAMEA3962560: [processed/HipSci/fastq/SAMEA3962560/SAMEA3962560_1.fastq.gz, processed/HipSci/fastq/SAMEA3962560/SAMEA3962560_2.fastq.gz]
+  SAMEA3962561: [processed/HipSci/fastq/SAMEA3962561/SAMEA3962561_1.fastq.gz, processed/HipSci/fastq/SAMEA3962561/SAMEA3962561_2.fastq.gz]
+  SAMEA3962562: [processed/HipSci/fastq/SAMEA3962562/SAMEA3962562_1.fastq.gz, processed/HipSci/fastq/SAMEA3962562/SAMEA3962562_2.fastq.gz]
+  SAMEA3962563: [processed/HipSci/fastq/SAMEA3962563/SAMEA3962563_1.fastq.gz, processed/HipSci/fastq/SAMEA3962563/SAMEA3962563_2.fastq.gz]
+  SAMEA3962566: [processed/HipSci/fastq/SAMEA3962566/SAMEA3962566_1.fastq.gz, processed/HipSci/fastq/SAMEA3962566/SAMEA3962566_2.fastq.gz]
+  SAMEA3962568: [processed/HipSci/fastq/SAMEA3962568/SAMEA3962568_1.fastq.gz, processed/HipSci/fastq/SAMEA3962568/SAMEA3962568_2.fastq.gz]
+  SAMEA3962619: [processed/HipSci/fastq/SAMEA3962619/SAMEA3962619_1.fastq.gz, processed/HipSci/fastq/SAMEA3962619/SAMEA3962619_2.fastq.gz]
+  SAMEA3962620: [processed/HipSci/fastq/SAMEA3962620/SAMEA3962620_1.fastq.gz, processed/HipSci/fastq/SAMEA3962620/SAMEA3962620_2.fastq.gz]
+  SAMEA3962624: [processed/HipSci/fastq/SAMEA3962624/SAMEA3962624_1.fastq.gz, processed/HipSci/fastq/SAMEA3962624/SAMEA3962624_2.fastq.gz]
+  SAMEA3962628: [processed/HipSci/fastq/SAMEA3962628/SAMEA3962628_1.fastq.gz, processed/HipSci/fastq/SAMEA3962628/SAMEA3962628_2.fastq.gz]
+  SAMEA3963884: [processed/HipSci/fastq/SAMEA3963884/SAMEA3963884_1.fastq.gz, processed/HipSci/fastq/SAMEA3963884/SAMEA3963884_2.fastq.gz]
+  SAMEA3963885: [processed/HipSci/fastq/SAMEA3963885/SAMEA3963885_1.fastq.gz, processed/HipSci/fastq/SAMEA3963885/SAMEA3963885_2.fastq.gz]
+  SAMEA3964246: [processed/HipSci/fastq/SAMEA3964246/SAMEA3964246_1.fastq.gz, processed/HipSci/fastq/SAMEA3964246/SAMEA3964246_2.fastq.gz]
+  SAMEA3964247: [processed/HipSci/fastq/SAMEA3964247/SAMEA3964247_1.fastq.gz, processed/HipSci/fastq/SAMEA3964247/SAMEA3964247_2.fastq.gz]
+  SAMEA3964256: [processed/HipSci/fastq/SAMEA3964256/SAMEA3964256_1.fastq.gz, processed/HipSci/fastq/SAMEA3964256/SAMEA3964256_2.fastq.gz]
+  SAMEA3964906: [processed/HipSci/fastq/SAMEA3964906/SAMEA3964906_1.fastq.gz, processed/HipSci/fastq/SAMEA3964906/SAMEA3964906_2.fastq.gz]
+  SAMEA3964907: [processed/HipSci/fastq/SAMEA3964907/SAMEA3964907_1.fastq.gz, processed/HipSci/fastq/SAMEA3964907/SAMEA3964907_2.fastq.gz]
+  SAMEA3965164: [processed/HipSci/fastq/SAMEA3965164/SAMEA3965164_1.fastq.gz, processed/HipSci/fastq/SAMEA3965164/SAMEA3965164_2.fastq.gz]
+  SAMEA3965165: [processed/HipSci/fastq/SAMEA3965165/SAMEA3965165_1.fastq.gz, processed/HipSci/fastq/SAMEA3965165/SAMEA3965165_2.fastq.gz]
+  SAMEA3966033: [processed/HipSci/fastq/SAMEA3966033/SAMEA3966033_1.fastq.gz, processed/HipSci/fastq/SAMEA3966033/SAMEA3966033_2.fastq.gz]
+  SAMEA3966392: [processed/HipSci/fastq/SAMEA3966392/SAMEA3966392_1.fastq.gz, processed/HipSci/fastq/SAMEA3966392/SAMEA3966392_2.fastq.gz]
+  SAMEA3966782: [processed/HipSci/fastq/SAMEA3966782/SAMEA3966782_1.fastq.gz, processed/HipSci/fastq/SAMEA3966782/SAMEA3966782_2.fastq.gz]
+  SAMEA3967041: [processed/HipSci/fastq/SAMEA3967041/SAMEA3967041_1.fastq.gz, processed/HipSci/fastq/SAMEA3967041/SAMEA3967041_2.fastq.gz]
+  SAMEA3967410: [processed/HipSci/fastq/SAMEA3967410/SAMEA3967410_1.fastq.gz, processed/HipSci/fastq/SAMEA3967410/SAMEA3967410_2.fastq.gz]
+  SAMEA3967411: [processed/HipSci/fastq/SAMEA3967411/SAMEA3967411_1.fastq.gz, processed/HipSci/fastq/SAMEA3967411/SAMEA3967411_2.fastq.gz]
+  SAMEA3967414: [processed/HipSci/fastq/SAMEA3967414/SAMEA3967414_1.fastq.gz, processed/HipSci/fastq/SAMEA3967414/SAMEA3967414_2.fastq.gz]
+  SAMEA3968753: [processed/HipSci/fastq/SAMEA3968753/SAMEA3968753_1.fastq.gz, processed/HipSci/fastq/SAMEA3968753/SAMEA3968753_2.fastq.gz]
+  SAMEA3968755: [processed/HipSci/fastq/SAMEA3968755/SAMEA3968755_1.fastq.gz, processed/HipSci/fastq/SAMEA3968755/SAMEA3968755_2.fastq.gz]
+  SAMEA3968761: [processed/HipSci/fastq/SAMEA3968761/SAMEA3968761_1.fastq.gz, processed/HipSci/fastq/SAMEA3968761/SAMEA3968761_2.fastq.gz]
+  SAMEA3968772: [processed/HipSci/fastq/SAMEA3968772/SAMEA3968772_1.fastq.gz, processed/HipSci/fastq/SAMEA3968772/SAMEA3968772_2.fastq.gz]
+  SAMEA3968774: [processed/HipSci/fastq/SAMEA3968774/SAMEA3968774_1.fastq.gz, processed/HipSci/fastq/SAMEA3968774/SAMEA3968774_2.fastq.gz]
+  SAMEA3968781: [processed/HipSci/fastq/SAMEA3968781/SAMEA3968781_1.fastq.gz, processed/HipSci/fastq/SAMEA3968781/SAMEA3968781_2.fastq.gz]
+  SAMEA3969686: [processed/HipSci/fastq/SAMEA3969686/SAMEA3969686_1.fastq.gz, processed/HipSci/fastq/SAMEA3969686/SAMEA3969686_2.fastq.gz]
+  SAMEA3969693: [processed/HipSci/fastq/SAMEA3969693/SAMEA3969693_1.fastq.gz, processed/HipSci/fastq/SAMEA3969693/SAMEA3969693_2.fastq.gz]
+  SAMEA3969710: [processed/HipSci/fastq/SAMEA3969710/SAMEA3969710_1.fastq.gz, processed/HipSci/fastq/SAMEA3969710/SAMEA3969710_2.fastq.gz]
+  SAMEA3970237: [processed/HipSci/fastq/SAMEA3970237/SAMEA3970237_1.fastq.gz, processed/HipSci/fastq/SAMEA3970237/SAMEA3970237_2.fastq.gz]
+  SAMEA3970239: [processed/HipSci/fastq/SAMEA3970239/SAMEA3970239_1.fastq.gz, processed/HipSci/fastq/SAMEA3970239/SAMEA3970239_2.fastq.gz]
+  SAMEA3973284: [processed/HipSci/fastq/SAMEA3973284/SAMEA3973284_1.fastq.gz, processed/HipSci/fastq/SAMEA3973284/SAMEA3973284_2.fastq.gz]
+  SAMEA3973288: [processed/HipSci/fastq/SAMEA3973288/SAMEA3973288_1.fastq.gz, processed/HipSci/fastq/SAMEA3973288/SAMEA3973288_2.fastq.gz]
+  SAMEA3973848: [processed/HipSci/fastq/SAMEA3973848/SAMEA3973848_1.fastq.gz, processed/HipSci/fastq/SAMEA3973848/SAMEA3973848_2.fastq.gz]
+  SAMEA3973851: [processed/HipSci/fastq/SAMEA3973851/SAMEA3973851_1.fastq.gz, processed/HipSci/fastq/SAMEA3973851/SAMEA3973851_2.fastq.gz]
+  SAMEA3973852: [processed/HipSci/fastq/SAMEA3973852/SAMEA3973852_1.fastq.gz, processed/HipSci/fastq/SAMEA3973852/SAMEA3973852_2.fastq.gz]
+  SAMEA3973854: [processed/HipSci/fastq/SAMEA3973854/SAMEA3973854_1.fastq.gz, processed/HipSci/fastq/SAMEA3973854/SAMEA3973854_2.fastq.gz]
+  SAMEA3973871: [processed/HipSci/fastq/SAMEA3973871/SAMEA3973871_1.fastq.gz, processed/HipSci/fastq/SAMEA3973871/SAMEA3973871_2.fastq.gz]
+  SAMEA3974014: [processed/HipSci/fastq/SAMEA3974014/SAMEA3974014_1.fastq.gz, processed/HipSci/fastq/SAMEA3974014/SAMEA3974014_2.fastq.gz]
+  SAMEA3974015: [processed/HipSci/fastq/SAMEA3974015/SAMEA3974015_1.fastq.gz, processed/HipSci/fastq/SAMEA3974015/SAMEA3974015_2.fastq.gz]
+  SAMEA3974064: [processed/HipSci/fastq/SAMEA3974064/SAMEA3974064_1.fastq.gz, processed/HipSci/fastq/SAMEA3974064/SAMEA3974064_2.fastq.gz]
+  SAMEA3974236: [processed/HipSci/fastq/SAMEA3974236/SAMEA3974236_1.fastq.gz, processed/HipSci/fastq/SAMEA3974236/SAMEA3974236_2.fastq.gz]
+  SAMEA3974241: [processed/HipSci/fastq/SAMEA3974241/SAMEA3974241_1.fastq.gz, processed/HipSci/fastq/SAMEA3974241/SAMEA3974241_2.fastq.gz]
+  SAMEA3974244: [processed/HipSci/fastq/SAMEA3974244/SAMEA3974244_1.fastq.gz, processed/HipSci/fastq/SAMEA3974244/SAMEA3974244_2.fastq.gz]
+  SAMEA3974246: [processed/HipSci/fastq/SAMEA3974246/SAMEA3974246_1.fastq.gz, processed/HipSci/fastq/SAMEA3974246/SAMEA3974246_2.fastq.gz]
+  SAMEA3974247: [processed/HipSci/fastq/SAMEA3974247/SAMEA3974247_1.fastq.gz, processed/HipSci/fastq/SAMEA3974247/SAMEA3974247_2.fastq.gz]
+  SAMEA3974502: [processed/HipSci/fastq/SAMEA3974502/SAMEA3974502_1.fastq.gz, processed/HipSci/fastq/SAMEA3974502/SAMEA3974502_2.fastq.gz]
+  SAMEA3977051: [processed/HipSci/fastq/SAMEA3977051/SAMEA3977051_1.fastq.gz, processed/HipSci/fastq/SAMEA3977051/SAMEA3977051_2.fastq.gz]
+  SAMEA4085297: [processed/HipSci/fastq/SAMEA4085297/SAMEA4085297_1.fastq.gz, processed/HipSci/fastq/SAMEA4085297/SAMEA4085297_2.fastq.gz]
+  SAMEA4085299: [processed/HipSci/fastq/SAMEA4085299/SAMEA4085299_1.fastq.gz, processed/HipSci/fastq/SAMEA4085299/SAMEA4085299_2.fastq.gz]
+  SAMEA4089453: [processed/HipSci/fastq/SAMEA4089453/SAMEA4089453_1.fastq.gz, processed/HipSci/fastq/SAMEA4089453/SAMEA4089453_2.fastq.gz]
+  SAMEA4089454: [processed/HipSci/fastq/SAMEA4089454/SAMEA4089454_1.fastq.gz, processed/HipSci/fastq/SAMEA4089454/SAMEA4089454_2.fastq.gz]
+  SAMEA4089842: [processed/HipSci/fastq/SAMEA4089842/SAMEA4089842_1.fastq.gz, processed/HipSci/fastq/SAMEA4089842/SAMEA4089842_2.fastq.gz]
+  SAMEA4089843: [processed/HipSci/fastq/SAMEA4089843/SAMEA4089843_1.fastq.gz, processed/HipSci/fastq/SAMEA4089843/SAMEA4089843_2.fastq.gz]
+  SAMEA4090531: [processed/HipSci/fastq/SAMEA4090531/SAMEA4090531_1.fastq.gz, processed/HipSci/fastq/SAMEA4090531/SAMEA4090531_2.fastq.gz]
+  SAMEA4090533: [processed/HipSci/fastq/SAMEA4090533/SAMEA4090533_1.fastq.gz, processed/HipSci/fastq/SAMEA4090533/SAMEA4090533_2.fastq.gz]
+  SAMEA4091336: [processed/HipSci/fastq/SAMEA4091336/SAMEA4091336_1.fastq.gz, processed/HipSci/fastq/SAMEA4091336/SAMEA4091336_2.fastq.gz]
+  SAMEA4092051: [processed/HipSci/fastq/SAMEA4092051/SAMEA4092051_1.fastq.gz, processed/HipSci/fastq/SAMEA4092051/SAMEA4092051_2.fastq.gz]
+  SAMEA4303610: [processed/HipSci/fastq/SAMEA4303610/SAMEA4303610_1.fastq.gz, processed/HipSci/fastq/SAMEA4303610/SAMEA4303610_2.fastq.gz]
+  SAMEA4303613: [processed/HipSci/fastq/SAMEA4303613/SAMEA4303613_1.fastq.gz, processed/HipSci/fastq/SAMEA4303613/SAMEA4303613_2.fastq.gz]
+  SAMEA4303614: [processed/HipSci/fastq/SAMEA4303614/SAMEA4303614_1.fastq.gz, processed/HipSci/fastq/SAMEA4303614/SAMEA4303614_2.fastq.gz]
+  SAMEA4303617: [processed/HipSci/fastq/SAMEA4303617/SAMEA4303617_1.fastq.gz, processed/HipSci/fastq/SAMEA4303617/SAMEA4303617_2.fastq.gz]
+  SAMEA4303618: [processed/HipSci/fastq/SAMEA4303618/SAMEA4303618_1.fastq.gz, processed/HipSci/fastq/SAMEA4303618/SAMEA4303618_2.fastq.gz]
+  SAMEA4303619: [processed/HipSci/fastq/SAMEA4303619/SAMEA4303619_1.fastq.gz, processed/HipSci/fastq/SAMEA4303619/SAMEA4303619_2.fastq.gz]
+  SAMEA4339548: [processed/HipSci/fastq/SAMEA4339548/SAMEA4339548_1.fastq.gz, processed/HipSci/fastq/SAMEA4339548/SAMEA4339548_2.fastq.gz]
+  SAMEA4339550: [processed/HipSci/fastq/SAMEA4339550/SAMEA4339550_1.fastq.gz, processed/HipSci/fastq/SAMEA4339550/SAMEA4339550_2.fastq.gz]
+  SAMEA4339634: [processed/HipSci/fastq/SAMEA4339634/SAMEA4339634_1.fastq.gz, processed/HipSci/fastq/SAMEA4339634/SAMEA4339634_2.fastq.gz]
+  SAMEA4339703: [processed/HipSci/fastq/SAMEA4339703/SAMEA4339703_1.fastq.gz, processed/HipSci/fastq/SAMEA4339703/SAMEA4339703_2.fastq.gz]
+  SAMEA4339705: [processed/HipSci/fastq/SAMEA4339705/SAMEA4339705_1.fastq.gz, processed/HipSci/fastq/SAMEA4339705/SAMEA4339705_2.fastq.gz]
+  SAMEA4342379: [processed/HipSci/fastq/SAMEA4342379/SAMEA4342379_1.fastq.gz, processed/HipSci/fastq/SAMEA4342379/SAMEA4342379_2.fastq.gz]
+  SAMEA4343046: [processed/HipSci/fastq/SAMEA4343046/SAMEA4343046_1.fastq.gz, processed/HipSci/fastq/SAMEA4343046/SAMEA4343046_2.fastq.gz]
+  SAMEA4343049: [processed/HipSci/fastq/SAMEA4343049/SAMEA4343049_1.fastq.gz, processed/HipSci/fastq/SAMEA4343049/SAMEA4343049_2.fastq.gz]
+  SAMEA4343052: [processed/HipSci/fastq/SAMEA4343052/SAMEA4343052_1.fastq.gz, processed/HipSci/fastq/SAMEA4343052/SAMEA4343052_2.fastq.gz]
+  SAMEA4446772: [processed/HipSci/fastq/SAMEA4446772/SAMEA4446772_1.fastq.gz, processed/HipSci/fastq/SAMEA4446772/SAMEA4446772_2.fastq.gz]
+  SAMEA4446780: [processed/HipSci/fastq/SAMEA4446780/SAMEA4446780_1.fastq.gz, processed/HipSci/fastq/SAMEA4446780/SAMEA4446780_2.fastq.gz]
+  SAMEA4446953: [processed/HipSci/fastq/SAMEA4446953/SAMEA4446953_1.fastq.gz, processed/HipSci/fastq/SAMEA4446953/SAMEA4446953_2.fastq.gz]
+  SAMEA4446956: [processed/HipSci/fastq/SAMEA4446956/SAMEA4446956_1.fastq.gz, processed/HipSci/fastq/SAMEA4446956/SAMEA4446956_2.fastq.gz]
+  SAMEA4447178: [processed/HipSci/fastq/SAMEA4447178/SAMEA4447178_1.fastq.gz, processed/HipSci/fastq/SAMEA4447178/SAMEA4447178_2.fastq.gz]
+  SAMEA4448538: [processed/HipSci/fastq/SAMEA4448538/SAMEA4448538_1.fastq.gz, processed/HipSci/fastq/SAMEA4448538/SAMEA4448538_2.fastq.gz]
+  SAMEA4448539: [processed/HipSci/fastq/SAMEA4448539/SAMEA4448539_1.fastq.gz, processed/HipSci/fastq/SAMEA4448539/SAMEA4448539_2.fastq.gz]
+  SAMEA4448549: [processed/HipSci/fastq/SAMEA4448549/SAMEA4448549_1.fastq.gz, processed/HipSci/fastq/SAMEA4448549/SAMEA4448549_2.fastq.gz]
+  SAMEA4451098: [processed/HipSci/fastq/SAMEA4451098/SAMEA4451098_1.fastq.gz, processed/HipSci/fastq/SAMEA4451098/SAMEA4451098_2.fastq.gz]
+  SAMEA4451100: [processed/HipSci/fastq/SAMEA4451100/SAMEA4451100_1.fastq.gz, processed/HipSci/fastq/SAMEA4451100/SAMEA4451100_2.fastq.gz]
+  SAMEA4451109: [processed/HipSci/fastq/SAMEA4451109/SAMEA4451109_1.fastq.gz, processed/HipSci/fastq/SAMEA4451109/SAMEA4451109_2.fastq.gz]
+  SAMEA4451111: [processed/HipSci/fastq/SAMEA4451111/SAMEA4451111_1.fastq.gz, processed/HipSci/fastq/SAMEA4451111/SAMEA4451111_2.fastq.gz]
+  SAMEA4451652: [processed/HipSci/fastq/SAMEA4451652/SAMEA4451652_1.fastq.gz, processed/HipSci/fastq/SAMEA4451652/SAMEA4451652_2.fastq.gz]
+  SAMEA4451655: [processed/HipSci/fastq/SAMEA4451655/SAMEA4451655_1.fastq.gz, processed/HipSci/fastq/SAMEA4451655/SAMEA4451655_2.fastq.gz]
+  SAMEA4451657: [processed/HipSci/fastq/SAMEA4451657/SAMEA4451657_1.fastq.gz, processed/HipSci/fastq/SAMEA4451657/SAMEA4451657_2.fastq.gz]
+  SAMEA4452626: [processed/HipSci/fastq/SAMEA4452626/SAMEA4452626_1.fastq.gz, processed/HipSci/fastq/SAMEA4452626/SAMEA4452626_2.fastq.gz]
+  SAMEA4454941: [processed/HipSci/fastq/SAMEA4454941/SAMEA4454941_1.fastq.gz, processed/HipSci/fastq/SAMEA4454941/SAMEA4454941_2.fastq.gz]
+  SAMEA4454942: [processed/HipSci/fastq/SAMEA4454942/SAMEA4454942_1.fastq.gz, processed/HipSci/fastq/SAMEA4454942/SAMEA4454942_2.fastq.gz]
+  SAMEA4454944: [processed/HipSci/fastq/SAMEA4454944/SAMEA4454944_1.fastq.gz, processed/HipSci/fastq/SAMEA4454944/SAMEA4454944_2.fastq.gz]
+  SAMEA4458545: [processed/HipSci/fastq/SAMEA4458545/SAMEA4458545_1.fastq.gz, processed/HipSci/fastq/SAMEA4458545/SAMEA4458545_2.fastq.gz]
+  SAMEA4458546: [processed/HipSci/fastq/SAMEA4458546/SAMEA4458546_1.fastq.gz, processed/HipSci/fastq/SAMEA4458546/SAMEA4458546_2.fastq.gz]
+  SAMEA4562183: [processed/HipSci/fastq/SAMEA4562183/SAMEA4562183_1.fastq.gz, processed/HipSci/fastq/SAMEA4562183/SAMEA4562183_2.fastq.gz]
+  SAMEA4564805: [processed/HipSci/fastq/SAMEA4564805/SAMEA4564805_1.fastq.gz, processed/HipSci/fastq/SAMEA4564805/SAMEA4564805_2.fastq.gz]
+  SAMEA4564806: [processed/HipSci/fastq/SAMEA4564806/SAMEA4564806_1.fastq.gz, processed/HipSci/fastq/SAMEA4564806/SAMEA4564806_2.fastq.gz]
+  SAMEA4677418: [processed/HipSci/fastq/SAMEA4677418/SAMEA4677418_1.fastq.gz, processed/HipSci/fastq/SAMEA4677418/SAMEA4677418_2.fastq.gz]
+  SAMEA7417168: [processed/HipSci/fastq/SAMEA7417168/SAMEA7417168_1.fastq.gz, processed/HipSci/fastq/SAMEA7417168/SAMEA7417168_2.fastq.gz]
+  SAMEA7417918: [processed/HipSci/fastq/SAMEA7417918/SAMEA7417918_1.fastq.gz, processed/HipSci/fastq/SAMEA7417918/SAMEA7417918_2.fastq.gz]
+  SAMEA2201445: [processed/HipSci/fastq/SAMEA2201445/SAMEA2201445_1.fastq.gz, processed/HipSci/fastq/SAMEA2201445/SAMEA2201445_2.fastq.gz]
+  SAMEA2201446: [processed/HipSci/fastq/SAMEA2201446/SAMEA2201446_1.fastq.gz, processed/HipSci/fastq/SAMEA2201446/SAMEA2201446_2.fastq.gz]
+  SAMEA2201447: [processed/HipSci/fastq/SAMEA2201447/SAMEA2201447_1.fastq.gz, processed/HipSci/fastq/SAMEA2201447/SAMEA2201447_2.fastq.gz]
+  SAMEA2201448: [processed/HipSci/fastq/SAMEA2201448/SAMEA2201448_1.fastq.gz, processed/HipSci/fastq/SAMEA2201448/SAMEA2201448_2.fastq.gz]
+  SAMEA2201450: [processed/HipSci/fastq/SAMEA2201450/SAMEA2201450_1.fastq.gz, processed/HipSci/fastq/SAMEA2201450/SAMEA2201450_2.fastq.gz]
+  SAMEA2201451: [processed/HipSci/fastq/SAMEA2201451/SAMEA2201451_1.fastq.gz, processed/HipSci/fastq/SAMEA2201451/SAMEA2201451_2.fastq.gz]
+  SAMEA2397802: [processed/HipSci/fastq/SAMEA2397802/SAMEA2397802_1.fastq.gz, processed/HipSci/fastq/SAMEA2397802/SAMEA2397802_2.fastq.gz]
+  SAMEA2397806: [processed/HipSci/fastq/SAMEA2397806/SAMEA2397806_1.fastq.gz, processed/HipSci/fastq/SAMEA2397806/SAMEA2397806_2.fastq.gz]
+  SAMEA2397812: [processed/HipSci/fastq/SAMEA2397812/SAMEA2397812_1.fastq.gz, processed/HipSci/fastq/SAMEA2397812/SAMEA2397812_2.fastq.gz]
+  SAMEA2397851: [processed/HipSci/fastq/SAMEA2397851/SAMEA2397851_1.fastq.gz, processed/HipSci/fastq/SAMEA2397851/SAMEA2397851_2.fastq.gz]
+  SAMEA2397854: [processed/HipSci/fastq/SAMEA2397854/SAMEA2397854_1.fastq.gz, processed/HipSci/fastq/SAMEA2397854/SAMEA2397854_2.fastq.gz]
+  SAMEA2397860: [processed/HipSci/fastq/SAMEA2397860/SAMEA2397860_1.fastq.gz, processed/HipSci/fastq/SAMEA2397860/SAMEA2397860_2.fastq.gz]
+  SAMEA2397877: [processed/HipSci/fastq/SAMEA2397877/SAMEA2397877_1.fastq.gz, processed/HipSci/fastq/SAMEA2397877/SAMEA2397877_2.fastq.gz]
+  SAMEA2397889: [processed/HipSci/fastq/SAMEA2397889/SAMEA2397889_1.fastq.gz, processed/HipSci/fastq/SAMEA2397889/SAMEA2397889_2.fastq.gz]
+  SAMEA2397905: [processed/HipSci/fastq/SAMEA2397905/SAMEA2397905_1.fastq.gz, processed/HipSci/fastq/SAMEA2397905/SAMEA2397905_2.fastq.gz]
+  SAMEA2397911: [processed/HipSci/fastq/SAMEA2397911/SAMEA2397911_1.fastq.gz, processed/HipSci/fastq/SAMEA2397911/SAMEA2397911_2.fastq.gz]
+  SAMEA2397914: [processed/HipSci/fastq/SAMEA2397914/SAMEA2397914_1.fastq.gz, processed/HipSci/fastq/SAMEA2397914/SAMEA2397914_2.fastq.gz]
+  SAMEA2397920: [processed/HipSci/fastq/SAMEA2397920/SAMEA2397920_1.fastq.gz, processed/HipSci/fastq/SAMEA2397920/SAMEA2397920_2.fastq.gz]
+  SAMEA2397921: [processed/HipSci/fastq/SAMEA2397921/SAMEA2397921_1.fastq.gz, processed/HipSci/fastq/SAMEA2397921/SAMEA2397921_2.fastq.gz]
+  SAMEA2397935: [processed/HipSci/fastq/SAMEA2397935/SAMEA2397935_1.fastq.gz, processed/HipSci/fastq/SAMEA2397935/SAMEA2397935_2.fastq.gz]
+  SAMEA2397944: [processed/HipSci/fastq/SAMEA2397944/SAMEA2397944_1.fastq.gz, processed/HipSci/fastq/SAMEA2397944/SAMEA2397944_2.fastq.gz]
+  SAMEA2397946: [processed/HipSci/fastq/SAMEA2397946/SAMEA2397946_1.fastq.gz, processed/HipSci/fastq/SAMEA2397946/SAMEA2397946_2.fastq.gz]
+  SAMEA2397948: [processed/HipSci/fastq/SAMEA2397948/SAMEA2397948_1.fastq.gz, processed/HipSci/fastq/SAMEA2397948/SAMEA2397948_2.fastq.gz]
+  SAMEA2397955: [processed/HipSci/fastq/SAMEA2397955/SAMEA2397955_1.fastq.gz, processed/HipSci/fastq/SAMEA2397955/SAMEA2397955_2.fastq.gz]
+  SAMEA2397959: [processed/HipSci/fastq/SAMEA2397959/SAMEA2397959_1.fastq.gz, processed/HipSci/fastq/SAMEA2397959/SAMEA2397959_2.fastq.gz]
+  SAMEA2397967: [processed/HipSci/fastq/SAMEA2397967/SAMEA2397967_1.fastq.gz, processed/HipSci/fastq/SAMEA2397967/SAMEA2397967_2.fastq.gz]
+  SAMEA2397979: [processed/HipSci/fastq/SAMEA2397979/SAMEA2397979_1.fastq.gz, processed/HipSci/fastq/SAMEA2397979/SAMEA2397979_2.fastq.gz]
+  SAMEA2397988: [processed/HipSci/fastq/SAMEA2397988/SAMEA2397988_1.fastq.gz, processed/HipSci/fastq/SAMEA2397988/SAMEA2397988_2.fastq.gz]
+  SAMEA2397999: [processed/HipSci/fastq/SAMEA2397999/SAMEA2397999_1.fastq.gz, processed/HipSci/fastq/SAMEA2397999/SAMEA2397999_2.fastq.gz]
+  SAMEA2398005: [processed/HipSci/fastq/SAMEA2398005/SAMEA2398005_1.fastq.gz, processed/HipSci/fastq/SAMEA2398005/SAMEA2398005_2.fastq.gz]
+  SAMEA2398007: [processed/HipSci/fastq/SAMEA2398007/SAMEA2398007_1.fastq.gz, processed/HipSci/fastq/SAMEA2398007/SAMEA2398007_2.fastq.gz]
+  SAMEA2398021: [processed/HipSci/fastq/SAMEA2398021/SAMEA2398021_1.fastq.gz, processed/HipSci/fastq/SAMEA2398021/SAMEA2398021_2.fastq.gz]
+  SAMEA2398024: [processed/HipSci/fastq/SAMEA2398024/SAMEA2398024_1.fastq.gz, processed/HipSci/fastq/SAMEA2398024/SAMEA2398024_2.fastq.gz]
+  SAMEA2398043: [processed/HipSci/fastq/SAMEA2398043/SAMEA2398043_1.fastq.gz, processed/HipSci/fastq/SAMEA2398043/SAMEA2398043_2.fastq.gz]
+  SAMEA2398046: [processed/HipSci/fastq/SAMEA2398046/SAMEA2398046_1.fastq.gz, processed/HipSci/fastq/SAMEA2398046/SAMEA2398046_2.fastq.gz]
+  SAMEA2398050: [processed/HipSci/fastq/SAMEA2398050/SAMEA2398050_1.fastq.gz, processed/HipSci/fastq/SAMEA2398050/SAMEA2398050_2.fastq.gz]
+  SAMEA2398071: [processed/HipSci/fastq/SAMEA2398071/SAMEA2398071_1.fastq.gz, processed/HipSci/fastq/SAMEA2398071/SAMEA2398071_2.fastq.gz]
+  SAMEA2398073: [processed/HipSci/fastq/SAMEA2398073/SAMEA2398073_1.fastq.gz, processed/HipSci/fastq/SAMEA2398073/SAMEA2398073_2.fastq.gz]
+  SAMEA2398098: [processed/HipSci/fastq/SAMEA2398098/SAMEA2398098_1.fastq.gz, processed/HipSci/fastq/SAMEA2398098/SAMEA2398098_2.fastq.gz]
+  SAMEA2398121: [processed/HipSci/fastq/SAMEA2398121/SAMEA2398121_1.fastq.gz, processed/HipSci/fastq/SAMEA2398121/SAMEA2398121_2.fastq.gz]
+  SAMEA2398123: [processed/HipSci/fastq/SAMEA2398123/SAMEA2398123_1.fastq.gz, processed/HipSci/fastq/SAMEA2398123/SAMEA2398123_2.fastq.gz]
+  SAMEA2398124: [processed/HipSci/fastq/SAMEA2398124/SAMEA2398124_1.fastq.gz, processed/HipSci/fastq/SAMEA2398124/SAMEA2398124_2.fastq.gz]
+  SAMEA2398125: [processed/HipSci/fastq/SAMEA2398125/SAMEA2398125_1.fastq.gz, processed/HipSci/fastq/SAMEA2398125/SAMEA2398125_2.fastq.gz]
+  SAMEA2398128: [processed/HipSci/fastq/SAMEA2398128/SAMEA2398128_1.fastq.gz, processed/HipSci/fastq/SAMEA2398128/SAMEA2398128_2.fastq.gz]
+  SAMEA2398133: [processed/HipSci/fastq/SAMEA2398133/SAMEA2398133_1.fastq.gz, processed/HipSci/fastq/SAMEA2398133/SAMEA2398133_2.fastq.gz]
+  SAMEA2398134: [processed/HipSci/fastq/SAMEA2398134/SAMEA2398134_1.fastq.gz, processed/HipSci/fastq/SAMEA2398134/SAMEA2398134_2.fastq.gz]
+  SAMEA2398137: [processed/HipSci/fastq/SAMEA2398137/SAMEA2398137_1.fastq.gz, processed/HipSci/fastq/SAMEA2398137/SAMEA2398137_2.fastq.gz]
+  SAMEA2398167: [processed/HipSci/fastq/SAMEA2398167/SAMEA2398167_1.fastq.gz, processed/HipSci/fastq/SAMEA2398167/SAMEA2398167_2.fastq.gz]
+  SAMEA2398200: [processed/HipSci/fastq/SAMEA2398200/SAMEA2398200_1.fastq.gz, processed/HipSci/fastq/SAMEA2398200/SAMEA2398200_2.fastq.gz]
+  SAMEA2398219: [processed/HipSci/fastq/SAMEA2398219/SAMEA2398219_1.fastq.gz, processed/HipSci/fastq/SAMEA2398219/SAMEA2398219_2.fastq.gz]
+  SAMEA2398224: [processed/HipSci/fastq/SAMEA2398224/SAMEA2398224_1.fastq.gz, processed/HipSci/fastq/SAMEA2398224/SAMEA2398224_2.fastq.gz]
+  SAMEA2398231: [processed/HipSci/fastq/SAMEA2398231/SAMEA2398231_1.fastq.gz, processed/HipSci/fastq/SAMEA2398231/SAMEA2398231_2.fastq.gz]
+  SAMEA2398233: [processed/HipSci/fastq/SAMEA2398233/SAMEA2398233_1.fastq.gz, processed/HipSci/fastq/SAMEA2398233/SAMEA2398233_2.fastq.gz]
+  SAMEA2398240: [processed/HipSci/fastq/SAMEA2398240/SAMEA2398240_1.fastq.gz, processed/HipSci/fastq/SAMEA2398240/SAMEA2398240_2.fastq.gz]
+  SAMEA2398251: [processed/HipSci/fastq/SAMEA2398251/SAMEA2398251_1.fastq.gz, processed/HipSci/fastq/SAMEA2398251/SAMEA2398251_2.fastq.gz]
+  SAMEA2398252: [processed/HipSci/fastq/SAMEA2398252/SAMEA2398252_1.fastq.gz, processed/HipSci/fastq/SAMEA2398252/SAMEA2398252_2.fastq.gz]
+  SAMEA2398257: [processed/HipSci/fastq/SAMEA2398257/SAMEA2398257_1.fastq.gz, processed/HipSci/fastq/SAMEA2398257/SAMEA2398257_2.fastq.gz]
+  SAMEA2398265: [processed/HipSci/fastq/SAMEA2398265/SAMEA2398265_1.fastq.gz, processed/HipSci/fastq/SAMEA2398265/SAMEA2398265_2.fastq.gz]
+  SAMEA2398291: [processed/HipSci/fastq/SAMEA2398291/SAMEA2398291_1.fastq.gz, processed/HipSci/fastq/SAMEA2398291/SAMEA2398291_2.fastq.gz]
+  SAMEA2398294: [processed/HipSci/fastq/SAMEA2398294/SAMEA2398294_1.fastq.gz, processed/HipSci/fastq/SAMEA2398294/SAMEA2398294_2.fastq.gz]
+  SAMEA2398295: [processed/HipSci/fastq/SAMEA2398295/SAMEA2398295_1.fastq.gz, processed/HipSci/fastq/SAMEA2398295/SAMEA2398295_2.fastq.gz]
+  SAMEA2398296: [processed/HipSci/fastq/SAMEA2398296/SAMEA2398296_1.fastq.gz, processed/HipSci/fastq/SAMEA2398296/SAMEA2398296_2.fastq.gz]
+  SAMEA2398297: [processed/HipSci/fastq/SAMEA2398297/SAMEA2398297_1.fastq.gz, processed/HipSci/fastq/SAMEA2398297/SAMEA2398297_2.fastq.gz]
+  SAMEA2398298: [processed/HipSci/fastq/SAMEA2398298/SAMEA2398298_1.fastq.gz, processed/HipSci/fastq/SAMEA2398298/SAMEA2398298_2.fastq.gz]
+  SAMEA2398313: [processed/HipSci/fastq/SAMEA2398313/SAMEA2398313_1.fastq.gz, processed/HipSci/fastq/SAMEA2398313/SAMEA2398313_2.fastq.gz]
+  SAMEA2398316: [processed/HipSci/fastq/SAMEA2398316/SAMEA2398316_1.fastq.gz, processed/HipSci/fastq/SAMEA2398316/SAMEA2398316_2.fastq.gz]
+  SAMEA2398319: [processed/HipSci/fastq/SAMEA2398319/SAMEA2398319_1.fastq.gz, processed/HipSci/fastq/SAMEA2398319/SAMEA2398319_2.fastq.gz]
+  SAMEA2398322: [processed/HipSci/fastq/SAMEA2398322/SAMEA2398322_1.fastq.gz, processed/HipSci/fastq/SAMEA2398322/SAMEA2398322_2.fastq.gz]
+  SAMEA2398335: [processed/HipSci/fastq/SAMEA2398335/SAMEA2398335_1.fastq.gz, processed/HipSci/fastq/SAMEA2398335/SAMEA2398335_2.fastq.gz]
+  SAMEA2398343: [processed/HipSci/fastq/SAMEA2398343/SAMEA2398343_1.fastq.gz, processed/HipSci/fastq/SAMEA2398343/SAMEA2398343_2.fastq.gz]
+  SAMEA2398345: [processed/HipSci/fastq/SAMEA2398345/SAMEA2398345_1.fastq.gz, processed/HipSci/fastq/SAMEA2398345/SAMEA2398345_2.fastq.gz]
+  SAMEA2398347: [processed/HipSci/fastq/SAMEA2398347/SAMEA2398347_1.fastq.gz, processed/HipSci/fastq/SAMEA2398347/SAMEA2398347_2.fastq.gz]
+  SAMEA2398350: [processed/HipSci/fastq/SAMEA2398350/SAMEA2398350_1.fastq.gz, processed/HipSci/fastq/SAMEA2398350/SAMEA2398350_2.fastq.gz]
+  SAMEA2398365: [processed/HipSci/fastq/SAMEA2398365/SAMEA2398365_1.fastq.gz, processed/HipSci/fastq/SAMEA2398365/SAMEA2398365_2.fastq.gz]
+  SAMEA2398371: [processed/HipSci/fastq/SAMEA2398371/SAMEA2398371_1.fastq.gz, processed/HipSci/fastq/SAMEA2398371/SAMEA2398371_2.fastq.gz]
+  SAMEA2398374: [processed/HipSci/fastq/SAMEA2398374/SAMEA2398374_1.fastq.gz, processed/HipSci/fastq/SAMEA2398374/SAMEA2398374_2.fastq.gz]
+  SAMEA2398377: [processed/HipSci/fastq/SAMEA2398377/SAMEA2398377_1.fastq.gz, processed/HipSci/fastq/SAMEA2398377/SAMEA2398377_2.fastq.gz]
+  SAMEA2398412: [processed/HipSci/fastq/SAMEA2398412/SAMEA2398412_1.fastq.gz, processed/HipSci/fastq/SAMEA2398412/SAMEA2398412_2.fastq.gz]
+  SAMEA2398428: [processed/HipSci/fastq/SAMEA2398428/SAMEA2398428_1.fastq.gz, processed/HipSci/fastq/SAMEA2398428/SAMEA2398428_2.fastq.gz]
+  SAMEA2398442: [processed/HipSci/fastq/SAMEA2398442/SAMEA2398442_1.fastq.gz, processed/HipSci/fastq/SAMEA2398442/SAMEA2398442_2.fastq.gz]
+  SAMEA2398446: [processed/HipSci/fastq/SAMEA2398446/SAMEA2398446_1.fastq.gz, processed/HipSci/fastq/SAMEA2398446/SAMEA2398446_2.fastq.gz]
+  SAMEA2398450: [processed/HipSci/fastq/SAMEA2398450/SAMEA2398450_1.fastq.gz, processed/HipSci/fastq/SAMEA2398450/SAMEA2398450_2.fastq.gz]
+  SAMEA2398465: [processed/HipSci/fastq/SAMEA2398465/SAMEA2398465_1.fastq.gz, processed/HipSci/fastq/SAMEA2398465/SAMEA2398465_2.fastq.gz]
+  SAMEA2398471: [processed/HipSci/fastq/SAMEA2398471/SAMEA2398471_1.fastq.gz, processed/HipSci/fastq/SAMEA2398471/SAMEA2398471_2.fastq.gz]
+  SAMEA2398478: [processed/HipSci/fastq/SAMEA2398478/SAMEA2398478_1.fastq.gz, processed/HipSci/fastq/SAMEA2398478/SAMEA2398478_2.fastq.gz]
+  SAMEA2398485: [processed/HipSci/fastq/SAMEA2398485/SAMEA2398485_1.fastq.gz, processed/HipSci/fastq/SAMEA2398485/SAMEA2398485_2.fastq.gz]
+  SAMEA2398494: [processed/HipSci/fastq/SAMEA2398494/SAMEA2398494_1.fastq.gz, processed/HipSci/fastq/SAMEA2398494/SAMEA2398494_2.fastq.gz]
+  SAMEA2398496: [processed/HipSci/fastq/SAMEA2398496/SAMEA2398496_1.fastq.gz, processed/HipSci/fastq/SAMEA2398496/SAMEA2398496_2.fastq.gz]
+  SAMEA2398515: [processed/HipSci/fastq/SAMEA2398515/SAMEA2398515_1.fastq.gz, processed/HipSci/fastq/SAMEA2398515/SAMEA2398515_2.fastq.gz]
+  SAMEA2398519: [processed/HipSci/fastq/SAMEA2398519/SAMEA2398519_1.fastq.gz, processed/HipSci/fastq/SAMEA2398519/SAMEA2398519_2.fastq.gz]
+  SAMEA2398530: [processed/HipSci/fastq/SAMEA2398530/SAMEA2398530_1.fastq.gz, processed/HipSci/fastq/SAMEA2398530/SAMEA2398530_2.fastq.gz]
+  SAMEA2398534: [processed/HipSci/fastq/SAMEA2398534/SAMEA2398534_1.fastq.gz, processed/HipSci/fastq/SAMEA2398534/SAMEA2398534_2.fastq.gz]
+  SAMEA2398553: [processed/HipSci/fastq/SAMEA2398553/SAMEA2398553_1.fastq.gz, processed/HipSci/fastq/SAMEA2398553/SAMEA2398553_2.fastq.gz]
+  SAMEA2398560: [processed/HipSci/fastq/SAMEA2398560/SAMEA2398560_1.fastq.gz, processed/HipSci/fastq/SAMEA2398560/SAMEA2398560_2.fastq.gz]
+  SAMEA2398586: [processed/HipSci/fastq/SAMEA2398586/SAMEA2398586_1.fastq.gz, processed/HipSci/fastq/SAMEA2398586/SAMEA2398586_2.fastq.gz]
+  SAMEA2398593: [processed/HipSci/fastq/SAMEA2398593/SAMEA2398593_1.fastq.gz, processed/HipSci/fastq/SAMEA2398593/SAMEA2398593_2.fastq.gz]
+  SAMEA2398618: [processed/HipSci/fastq/SAMEA2398618/SAMEA2398618_1.fastq.gz, processed/HipSci/fastq/SAMEA2398618/SAMEA2398618_2.fastq.gz]
+  SAMEA2398634: [processed/HipSci/fastq/SAMEA2398634/SAMEA2398634_1.fastq.gz, processed/HipSci/fastq/SAMEA2398634/SAMEA2398634_2.fastq.gz]
+  SAMEA2398643: [processed/HipSci/fastq/SAMEA2398643/SAMEA2398643_1.fastq.gz, processed/HipSci/fastq/SAMEA2398643/SAMEA2398643_2.fastq.gz]
+  SAMEA2398656: [processed/HipSci/fastq/SAMEA2398656/SAMEA2398656_1.fastq.gz, processed/HipSci/fastq/SAMEA2398656/SAMEA2398656_2.fastq.gz]
+  SAMEA2398670: [processed/HipSci/fastq/SAMEA2398670/SAMEA2398670_1.fastq.gz, processed/HipSci/fastq/SAMEA2398670/SAMEA2398670_2.fastq.gz]
+  SAMEA2398680: [processed/HipSci/fastq/SAMEA2398680/SAMEA2398680_1.fastq.gz, processed/HipSci/fastq/SAMEA2398680/SAMEA2398680_2.fastq.gz]
+  SAMEA2398691: [processed/HipSci/fastq/SAMEA2398691/SAMEA2398691_1.fastq.gz, processed/HipSci/fastq/SAMEA2398691/SAMEA2398691_2.fastq.gz]
+  SAMEA2398712: [processed/HipSci/fastq/SAMEA2398712/SAMEA2398712_1.fastq.gz, processed/HipSci/fastq/SAMEA2398712/SAMEA2398712_2.fastq.gz]
+  SAMEA2398725: [processed/HipSci/fastq/SAMEA2398725/SAMEA2398725_1.fastq.gz, processed/HipSci/fastq/SAMEA2398725/SAMEA2398725_2.fastq.gz]
+  SAMEA2398732: [processed/HipSci/fastq/SAMEA2398732/SAMEA2398732_1.fastq.gz, processed/HipSci/fastq/SAMEA2398732/SAMEA2398732_2.fastq.gz]
+  SAMEA2398734: [processed/HipSci/fastq/SAMEA2398734/SAMEA2398734_1.fastq.gz, processed/HipSci/fastq/SAMEA2398734/SAMEA2398734_2.fastq.gz]
+  SAMEA2398792: [processed/HipSci/fastq/SAMEA2398792/SAMEA2398792_1.fastq.gz, processed/HipSci/fastq/SAMEA2398792/SAMEA2398792_2.fastq.gz]
+  SAMEA2398812: [processed/HipSci/fastq/SAMEA2398812/SAMEA2398812_1.fastq.gz, processed/HipSci/fastq/SAMEA2398812/SAMEA2398812_2.fastq.gz]
+  SAMEA2398821: [processed/HipSci/fastq/SAMEA2398821/SAMEA2398821_1.fastq.gz, processed/HipSci/fastq/SAMEA2398821/SAMEA2398821_2.fastq.gz]
+  SAMEA2398822: [processed/HipSci/fastq/SAMEA2398822/SAMEA2398822_1.fastq.gz, processed/HipSci/fastq/SAMEA2398822/SAMEA2398822_2.fastq.gz]
+  SAMEA2398834: [processed/HipSci/fastq/SAMEA2398834/SAMEA2398834_1.fastq.gz, processed/HipSci/fastq/SAMEA2398834/SAMEA2398834_2.fastq.gz]
+  SAMEA2398838: [processed/HipSci/fastq/SAMEA2398838/SAMEA2398838_1.fastq.gz, processed/HipSci/fastq/SAMEA2398838/SAMEA2398838_2.fastq.gz]
+  SAMEA2398841: [processed/HipSci/fastq/SAMEA2398841/SAMEA2398841_1.fastq.gz, processed/HipSci/fastq/SAMEA2398841/SAMEA2398841_2.fastq.gz]
+  SAMEA2398851: [processed/HipSci/fastq/SAMEA2398851/SAMEA2398851_1.fastq.gz, processed/HipSci/fastq/SAMEA2398851/SAMEA2398851_2.fastq.gz]
+  SAMEA2398858: [processed/HipSci/fastq/SAMEA2398858/SAMEA2398858_1.fastq.gz, processed/HipSci/fastq/SAMEA2398858/SAMEA2398858_2.fastq.gz]
+  SAMEA2398862: [processed/HipSci/fastq/SAMEA2398862/SAMEA2398862_1.fastq.gz, processed/HipSci/fastq/SAMEA2398862/SAMEA2398862_2.fastq.gz]
+  SAMEA2398865: [processed/HipSci/fastq/SAMEA2398865/SAMEA2398865_1.fastq.gz, processed/HipSci/fastq/SAMEA2398865/SAMEA2398865_2.fastq.gz]
+  SAMEA2398866: [processed/HipSci/fastq/SAMEA2398866/SAMEA2398866_1.fastq.gz, processed/HipSci/fastq/SAMEA2398866/SAMEA2398866_2.fastq.gz]
+  SAMEA2398868: [processed/HipSci/fastq/SAMEA2398868/SAMEA2398868_1.fastq.gz, processed/HipSci/fastq/SAMEA2398868/SAMEA2398868_2.fastq.gz]
+  SAMEA2398883: [processed/HipSci/fastq/SAMEA2398883/SAMEA2398883_1.fastq.gz, processed/HipSci/fastq/SAMEA2398883/SAMEA2398883_2.fastq.gz]
+  SAMEA2398884: [processed/HipSci/fastq/SAMEA2398884/SAMEA2398884_1.fastq.gz, processed/HipSci/fastq/SAMEA2398884/SAMEA2398884_2.fastq.gz]
+  SAMEA2398899: [processed/HipSci/fastq/SAMEA2398899/SAMEA2398899_1.fastq.gz, processed/HipSci/fastq/SAMEA2398899/SAMEA2398899_2.fastq.gz]
+  SAMEA2398900: [processed/HipSci/fastq/SAMEA2398900/SAMEA2398900_1.fastq.gz, processed/HipSci/fastq/SAMEA2398900/SAMEA2398900_2.fastq.gz]
+  SAMEA2398916: [processed/HipSci/fastq/SAMEA2398916/SAMEA2398916_1.fastq.gz, processed/HipSci/fastq/SAMEA2398916/SAMEA2398916_2.fastq.gz]
+  SAMEA2398925: [processed/HipSci/fastq/SAMEA2398925/SAMEA2398925_1.fastq.gz, processed/HipSci/fastq/SAMEA2398925/SAMEA2398925_2.fastq.gz]
+  SAMEA2398957: [processed/HipSci/fastq/SAMEA2398957/SAMEA2398957_1.fastq.gz, processed/HipSci/fastq/SAMEA2398957/SAMEA2398957_2.fastq.gz]
+  SAMEA2398966: [processed/HipSci/fastq/SAMEA2398966/SAMEA2398966_1.fastq.gz, processed/HipSci/fastq/SAMEA2398966/SAMEA2398966_2.fastq.gz]
+  SAMEA2398982: [processed/HipSci/fastq/SAMEA2398982/SAMEA2398982_1.fastq.gz, processed/HipSci/fastq/SAMEA2398982/SAMEA2398982_2.fastq.gz]
+  SAMEA2399014: [processed/HipSci/fastq/SAMEA2399014/SAMEA2399014_1.fastq.gz, processed/HipSci/fastq/SAMEA2399014/SAMEA2399014_2.fastq.gz]
+  SAMEA2399032: [processed/HipSci/fastq/SAMEA2399032/SAMEA2399032_1.fastq.gz, processed/HipSci/fastq/SAMEA2399032/SAMEA2399032_2.fastq.gz]
+  SAMEA2399037: [processed/HipSci/fastq/SAMEA2399037/SAMEA2399037_1.fastq.gz, processed/HipSci/fastq/SAMEA2399037/SAMEA2399037_2.fastq.gz]
+  SAMEA2399040: [processed/HipSci/fastq/SAMEA2399040/SAMEA2399040_1.fastq.gz, processed/HipSci/fastq/SAMEA2399040/SAMEA2399040_2.fastq.gz]
+  SAMEA2399058: [processed/HipSci/fastq/SAMEA2399058/SAMEA2399058_1.fastq.gz, processed/HipSci/fastq/SAMEA2399058/SAMEA2399058_2.fastq.gz]
+  SAMEA2399071: [processed/HipSci/fastq/SAMEA2399071/SAMEA2399071_1.fastq.gz, processed/HipSci/fastq/SAMEA2399071/SAMEA2399071_2.fastq.gz]
+  SAMEA2399080: [processed/HipSci/fastq/SAMEA2399080/SAMEA2399080_1.fastq.gz, processed/HipSci/fastq/SAMEA2399080/SAMEA2399080_2.fastq.gz]
+  SAMEA2399088: [processed/HipSci/fastq/SAMEA2399088/SAMEA2399088_1.fastq.gz, processed/HipSci/fastq/SAMEA2399088/SAMEA2399088_2.fastq.gz]
+  SAMEA2399089: [processed/HipSci/fastq/SAMEA2399089/SAMEA2399089_1.fastq.gz, processed/HipSci/fastq/SAMEA2399089/SAMEA2399089_2.fastq.gz]
+  SAMEA2399112: [processed/HipSci/fastq/SAMEA2399112/SAMEA2399112_1.fastq.gz, processed/HipSci/fastq/SAMEA2399112/SAMEA2399112_2.fastq.gz]
+  SAMEA2399121: [processed/HipSci/fastq/SAMEA2399121/SAMEA2399121_1.fastq.gz, processed/HipSci/fastq/SAMEA2399121/SAMEA2399121_2.fastq.gz]
+  SAMEA2399123: [processed/HipSci/fastq/SAMEA2399123/SAMEA2399123_1.fastq.gz, processed/HipSci/fastq/SAMEA2399123/SAMEA2399123_2.fastq.gz]
+  SAMEA2399142: [processed/HipSci/fastq/SAMEA2399142/SAMEA2399142_1.fastq.gz, processed/HipSci/fastq/SAMEA2399142/SAMEA2399142_2.fastq.gz]
+  SAMEA2399146: [processed/HipSci/fastq/SAMEA2399146/SAMEA2399146_1.fastq.gz, processed/HipSci/fastq/SAMEA2399146/SAMEA2399146_2.fastq.gz]
+  SAMEA2399149: [processed/HipSci/fastq/SAMEA2399149/SAMEA2399149_1.fastq.gz, processed/HipSci/fastq/SAMEA2399149/SAMEA2399149_2.fastq.gz]
+  SAMEA2399150: [processed/HipSci/fastq/SAMEA2399150/SAMEA2399150_1.fastq.gz, processed/HipSci/fastq/SAMEA2399150/SAMEA2399150_2.fastq.gz]
+  SAMEA2399151: [processed/HipSci/fastq/SAMEA2399151/SAMEA2399151_1.fastq.gz, processed/HipSci/fastq/SAMEA2399151/SAMEA2399151_2.fastq.gz]
+  #SAMEA2399161: [processed/HipSci/fastq/SAMEA2399161/SAMEA2399161_1.fastq.gz, processed/HipSci/fastq/SAMEA2399161/SAMEA2399161_2.fastq.gz]
+  SAMEA2399165: [processed/HipSci/fastq/SAMEA2399165/SAMEA2399165_1.fastq.gz, processed/HipSci/fastq/SAMEA2399165/SAMEA2399165_2.fastq.gz]
+  SAMEA2399172: [processed/HipSci/fastq/SAMEA2399172/SAMEA2399172_1.fastq.gz, processed/HipSci/fastq/SAMEA2399172/SAMEA2399172_2.fastq.gz]
+  SAMEA2399182: [processed/HipSci/fastq/SAMEA2399182/SAMEA2399182_1.fastq.gz, processed/HipSci/fastq/SAMEA2399182/SAMEA2399182_2.fastq.gz]
+  SAMEA2399188: [processed/HipSci/fastq/SAMEA2399188/SAMEA2399188_1.fastq.gz, processed/HipSci/fastq/SAMEA2399188/SAMEA2399188_2.fastq.gz]
+  SAMEA2399194: [processed/HipSci/fastq/SAMEA2399194/SAMEA2399194_1.fastq.gz, processed/HipSci/fastq/SAMEA2399194/SAMEA2399194_2.fastq.gz]
+  SAMEA2399199: [processed/HipSci/fastq/SAMEA2399199/SAMEA2399199_1.fastq.gz, processed/HipSci/fastq/SAMEA2399199/SAMEA2399199_2.fastq.gz]
+  SAMEA2399200: [processed/HipSci/fastq/SAMEA2399200/SAMEA2399200_1.fastq.gz, processed/HipSci/fastq/SAMEA2399200/SAMEA2399200_2.fastq.gz]
+  SAMEA2399222: [processed/HipSci/fastq/SAMEA2399222/SAMEA2399222_1.fastq.gz, processed/HipSci/fastq/SAMEA2399222/SAMEA2399222_2.fastq.gz]
+  SAMEA2399224: [processed/HipSci/fastq/SAMEA2399224/SAMEA2399224_1.fastq.gz, processed/HipSci/fastq/SAMEA2399224/SAMEA2399224_2.fastq.gz]
+  SAMEA2399236: [processed/HipSci/fastq/SAMEA2399236/SAMEA2399236_1.fastq.gz, processed/HipSci/fastq/SAMEA2399236/SAMEA2399236_2.fastq.gz]
+  SAMEA2399242: [processed/HipSci/fastq/SAMEA2399242/SAMEA2399242_1.fastq.gz, processed/HipSci/fastq/SAMEA2399242/SAMEA2399242_2.fastq.gz]
+  SAMEA2399249: [processed/HipSci/fastq/SAMEA2399249/SAMEA2399249_1.fastq.gz, processed/HipSci/fastq/SAMEA2399249/SAMEA2399249_2.fastq.gz]
+  SAMEA2399257: [processed/HipSci/fastq/SAMEA2399257/SAMEA2399257_1.fastq.gz, processed/HipSci/fastq/SAMEA2399257/SAMEA2399257_2.fastq.gz]
+  SAMEA2399264: [processed/HipSci/fastq/SAMEA2399264/SAMEA2399264_1.fastq.gz, processed/HipSci/fastq/SAMEA2399264/SAMEA2399264_2.fastq.gz]
+  SAMEA2399265: [processed/HipSci/fastq/SAMEA2399265/SAMEA2399265_1.fastq.gz, processed/HipSci/fastq/SAMEA2399265/SAMEA2399265_2.fastq.gz]
+  SAMEA2399275: [processed/HipSci/fastq/SAMEA2399275/SAMEA2399275_1.fastq.gz, processed/HipSci/fastq/SAMEA2399275/SAMEA2399275_2.fastq.gz]
+  SAMEA2399459: [processed/HipSci/fastq/SAMEA2399459/SAMEA2399459_1.fastq.gz, processed/HipSci/fastq/SAMEA2399459/SAMEA2399459_2.fastq.gz]
+  SAMEA2399460: [processed/HipSci/fastq/SAMEA2399460/SAMEA2399460_1.fastq.gz, processed/HipSci/fastq/SAMEA2399460/SAMEA2399460_2.fastq.gz]
+  SAMEA2400645: [processed/HipSci/fastq/SAMEA2400645/SAMEA2400645_1.fastq.gz, processed/HipSci/fastq/SAMEA2400645/SAMEA2400645_2.fastq.gz]
+  SAMEA2402582: [processed/HipSci/fastq/SAMEA2402582/SAMEA2402582_1.fastq.gz, processed/HipSci/fastq/SAMEA2402582/SAMEA2402582_2.fastq.gz]
+  SAMEA2420639: [processed/HipSci/fastq/SAMEA2420639/SAMEA2420639_1.fastq.gz, processed/HipSci/fastq/SAMEA2420639/SAMEA2420639_2.fastq.gz]
+  SAMEA2420642: [processed/HipSci/fastq/SAMEA2420642/SAMEA2420642_1.fastq.gz, processed/HipSci/fastq/SAMEA2420642/SAMEA2420642_2.fastq.gz]
+  SAMEA2448270: [processed/HipSci/fastq/SAMEA2448270/SAMEA2448270_1.fastq.gz, processed/HipSci/fastq/SAMEA2448270/SAMEA2448270_2.fastq.gz]
+  SAMEA2459960: [processed/HipSci/fastq/SAMEA2459960/SAMEA2459960_1.fastq.gz, processed/HipSci/fastq/SAMEA2459960/SAMEA2459960_2.fastq.gz]
+  SAMEA2469773: [processed/HipSci/fastq/SAMEA2469773/SAMEA2469773_1.fastq.gz, processed/HipSci/fastq/SAMEA2469773/SAMEA2469773_2.fastq.gz]
+  SAMEA2469776: [processed/HipSci/fastq/SAMEA2469776/SAMEA2469776_1.fastq.gz, processed/HipSci/fastq/SAMEA2469776/SAMEA2469776_2.fastq.gz]
+  SAMEA2469777: [processed/HipSci/fastq/SAMEA2469777/SAMEA2469777_1.fastq.gz, processed/HipSci/fastq/SAMEA2469777/SAMEA2469777_2.fastq.gz]
+  SAMEA2469778: [processed/HipSci/fastq/SAMEA2469778/SAMEA2469778_1.fastq.gz, processed/HipSci/fastq/SAMEA2469778/SAMEA2469778_2.fastq.gz]
+  SAMEA2482140: [processed/HipSci/fastq/SAMEA2482140/SAMEA2482140_1.fastq.gz, processed/HipSci/fastq/SAMEA2482140/SAMEA2482140_2.fastq.gz]
+  SAMEA2493816: [processed/HipSci/fastq/SAMEA2493816/SAMEA2493816_1.fastq.gz, processed/HipSci/fastq/SAMEA2493816/SAMEA2493816_2.fastq.gz]
+  SAMEA2501466: [processed/HipSci/fastq/SAMEA2501466/SAMEA2501466_1.fastq.gz, processed/HipSci/fastq/SAMEA2501466/SAMEA2501466_2.fastq.gz]
+  SAMEA2518336: [processed/HipSci/fastq/SAMEA2518336/SAMEA2518336_1.fastq.gz, processed/HipSci/fastq/SAMEA2518336/SAMEA2518336_2.fastq.gz]
+  SAMEA2555015: [processed/HipSci/fastq/SAMEA2555015/SAMEA2555015_1.fastq.gz, processed/HipSci/fastq/SAMEA2555015/SAMEA2555015_2.fastq.gz]
+  SAMEA2604130: [processed/HipSci/fastq/SAMEA2604130/SAMEA2604130_1.fastq.gz, processed/HipSci/fastq/SAMEA2604130/SAMEA2604130_2.fastq.gz]
+  SAMEA2625596: [processed/HipSci/fastq/SAMEA2625596/SAMEA2625596_1.fastq.gz, processed/HipSci/fastq/SAMEA2625596/SAMEA2625596_2.fastq.gz]
+  SAMEA2677117: [processed/HipSci/fastq/SAMEA2677117/SAMEA2677117_1.fastq.gz, processed/HipSci/fastq/SAMEA2677117/SAMEA2677117_2.fastq.gz]
+  SAMEA2678739: [processed/HipSci/fastq/SAMEA2678739/SAMEA2678739_1.fastq.gz, processed/HipSci/fastq/SAMEA2678739/SAMEA2678739_2.fastq.gz]
+  SAMEA2697658: [processed/HipSci/fastq/SAMEA2697658/SAMEA2697658_1.fastq.gz, processed/HipSci/fastq/SAMEA2697658/SAMEA2697658_2.fastq.gz]
+  SAMEA2697659: [processed/HipSci/fastq/SAMEA2697659/SAMEA2697659_1.fastq.gz, processed/HipSci/fastq/SAMEA2697659/SAMEA2697659_2.fastq.gz]
+  SAMEA3143053: [processed/HipSci/fastq/SAMEA3143053/SAMEA3143053_1.fastq.gz, processed/HipSci/fastq/SAMEA3143053/SAMEA3143053_2.fastq.gz]
+  SAMEA4449169: [processed/HipSci/fastq/SAMEA4449169/SAMEA4449169_1.fastq.gz, processed/HipSci/fastq/SAMEA4449169/SAMEA4449169_2.fastq.gz]
+  SAMEA4449172: [processed/HipSci/fastq/SAMEA4449172/SAMEA4449172_1.fastq.gz, processed/HipSci/fastq/SAMEA4449172/SAMEA4449172_2.fastq.gz]
+  SAMEA4451488: [processed/HipSci/fastq/SAMEA4451488/SAMEA4451488_1.fastq.gz, processed/HipSci/fastq/SAMEA4451488/SAMEA4451488_2.fastq.gz]
+  SAMEA4451496  : [processed/HipSci/fastq/SAMEA4451496/SAMEA4451496_1.fastq.gz, processed/HipSci/fastq/SAMEA4451496/SAMEA4451496_2.fastq.gz]
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
