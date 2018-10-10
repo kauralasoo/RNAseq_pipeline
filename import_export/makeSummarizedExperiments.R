@@ -180,14 +180,30 @@ ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = condition)) + geom_poin
 read_counts = readr::read_tsv("processed/TwinsUK/matrices/gene_expression_featureCounts.txt.gz") %>%
   dplyr::filter(!(gene_id %like% "PAR_Y")) %>%
   removeGeneVersion()
-sample_metadata = dplyr::data_frame(sample_id = colnames(read_counts)[3:ncol(read_counts)]) %>%
-  dplyr::mutate(genotype_id = sample_id, sex = as.character(NA), cell_type = "LCL", condition = "naive", timepoint = 0, 
-                read_length = "50bp", stranded = FALSE, paired = TRUE, qtl_mapping = TRUE, study = "TwinsUK", protocol = "poly(A)") %>%
+outlier_samples = c("TWPID10593_B", "TWPID11605_B", "TWPID8405_S","TWPID12889_S", "TWPID2140_F","TWPID9396_F")
+mbv_matches = readr::read_tsv("metadata/TwinsUK/TwinsUK_mbv_best_match.txt") %>%
+  dplyr::select(sample_id, mbv_genotype_id)
+sample_metadata = readr::read_delim("metadata/TwinsUK/TwinsUK_sample_metadata.txt", delim = "\t") %>%
+  tidyr::separate(genotype_id, into = c("genotype_id", "suffix"), sep = "_") %>%
+  dplyr::select(-suffix) %>%
+  dplyr::mutate(rna_qc_passed = ifelse(sample_id %in% outlier_samples, FALSE, TRUE)) %>%
+  dplyr::left_join(mbv_matches, by = "sample_id") %>%
+  dplyr::mutate(id_match = genotype_id == mbv_genotype_id) %>%
+  dplyr::mutate(id_match = ifelse(is.na(id_match), FALSE, id_match)) %>%
+  dplyr::group_by(mbv_genotype_id, cell_type) %>% 
+  dplyr::arrange(mbv_genotype_id, cell_type, -id_match) %>%
+  dplyr::mutate(genotype_qc_passed = ifelse(row_number() == 1, TRUE, FALSE)) %>%
+  dplyr::mutate(genotype_qc_passed = ifelse(is.na(mbv_genotype_id), FALSE, genotype_qc_passed)) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(genotype_id = mbv_genotype_id) %>%
+  dplyr::select(-id_match, -mbv_genotype_id, -qtl_mapping) %>%
   dplyr::select(mandatory_cols, everything())
+
 featureCounts_se = makeSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
 
 write.table(sample_metadata, "metadata/cleaned/TwinsUK.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 saveRDS(featureCounts_se, "results/SummarizedExperiments/TwinsUK.rds")
+
 
 processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
 processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
