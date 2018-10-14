@@ -60,14 +60,51 @@ bcftools view -r X HipSci_GRCh37_OA_genotyped.vcf.gz -Oz -o by_chr/HipSci_GRCh37
 
 
 #Controlled access genotypes
-plink --file HipSci_test5 --make-bed --out HipSci_GRCh37
+module load plink-1.9
+plink --file controlled/HipSci_v1-0_PLINK/HipSci_v1-0 --make-bed --out controlled/HipSci_v1-0_PLINK/HipSci_GRCh37_v1-0
+plink --file controlled/HipSci_v1-1_PLINK/HipSci_v1-1 --make-bed --out controlled/HipSci_v1-1_PLINK/HipSci_GRCh37_v1-1
 
 #Update build
-update_build.sh HipSci_GRCh37 strand_files/HumanCoreExome-12-v1-0-D-b37.strand HipSci_12v1-0_GRCh37
+update_build.sh controlled/HipSci_v1-0_PLINK/HipSci_GRCh37_v1-0 controlled/strand_files/HumanCoreExome-12-v1-0-D-b37.strand controlled/processed/HipSci_GRCh37_v1-0
+update_build.sh controlled/HipSci_v1-1_PLINK/HipSci_GRCh37_v1-1 controlled/strand_files/HumanCoreExome-12-v1-1-C-b37.strand controlled/processed/HipSci_GRCh37_v1-1
 
 #Convert to VCF
-plink --bfile HipSci_12v1-0_GRCh37 --recode vcf-iid --out HipSci_12v1-0_GRCh37
+plink --bfile controlled/processed/HipSci_GRCh37_v1-0 --recode vcf-iid --out controlled/processed/HipSci_GRCh37_v1-0
+plink --bfile controlled/processed/HipSci_GRCh37_v1-1 --recode vcf-iid --out controlled/processed/HipSci_GRCh37_v1-1
 
 #Identify individuals with high level of missingness
 module load vcftools-0.1.13
-vcftools --vcf HipSci_12v1-0_GRCh37.vcf --missing-indv --out HipSci_12v1-0_GRCh37_missing
+vcftools --vcf controlled/processed/HipSci_GRCh37_v1-0.vcf --missing-indv --out controlled/processed/HipSci_GRCh37_v1-0
+vcftools --vcf controlled/processed/HipSci_GRCh37_v1-1.vcf --missing-indv --out controlled/processed/HipSci_GRCh37_v1-1
+
+#Remove samples with high level of missingness (>5%)
+bcftools view controlled/processed/HipSci_GRCh37_v1-0.vcf -Oz -o controlled/processed/HipSci_GRCh37_v1-0.imiss.vcf.gz
+bcftools view -s ^HPSI0513pf-dovq,HPSI0713pf-uimo,HPSI0713i-uimo_2 controlled/processed/HipSci_GRCh37_v1-1.vcf -Oz -o controlled/processed/HipSci_GRCh37_v1-1.imiss.vcf.gz
+
+#Add all INFO tags
+bcftools +fill-tags controlled/processed/HipSci_GRCh37_v1-0.imiss.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.vcf.gz
+bcftools +fill-tags controlled/processed/HipSci_GRCh37_v1-1.imiss.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.vcf.gz
+
+#Filter rare (AC<1) and non-HWE varaints and those with abnormal reference alleles
+bcftools filter -i 'INFO/HWE > 1e-6 & F_MISSING < 0.05 & MAF[0] > 0.01' controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.vcf.gz -Ou | bcftools filter -e 'REF="N" | REF="I" | REF="D"' -Oz -o controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.vcf.gz
+bcftools filter -i 'INFO/HWE > 1e-6 & F_MISSING < 0.05 & MAF[0] > 0.01' controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.vcf.gz -Ou | bcftools filter -e 'REF="N" | REF="I" | REF="D"' -Oz -o controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.vcf.gz
+
+#Remane chromosomes and remove MT sequences
+bcftools annotate --rename-chrs ~/rocket/projects/GEUVADIS/RNAseq_pipeline/genotype_scripts/chromsome_names.txt controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.vcf.gz | bcftools view -t ^MT -Oz -o controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.vcf.gz
+bcftools annotate --rename-chrs ~/rocket/projects/GEUVADIS/RNAseq_pipeline/genotype_scripts/chromsome_names.txt controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.vcf.gz | bcftools view -t ^MT -Oz -o controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.vcf.gz
+
+#Index
+bcftools index controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.vcf.gz
+bcftools index controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.vcf.gz
+
+#Add SNP ids from dbSNP
+bcftools annotate -a /gpfs/hpchome/a72094/rocket/datasets/dbSNP/dbSNP_b151_GRCh37p13.vcf.gz -c ID controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.dbSNP.vcf.gz
+bcftools annotate -a /gpfs/hpchome/a72094/rocket/datasets/dbSNP/dbSNP_b151_GRCh37p13.vcf.gz -c ID controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.dbSNP.vcf.gz
+
+#Index
+bcftools index controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.dbSNP.vcf.gz
+bcftools index controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.dbSNP.vcf.gz
+
+#Fix ref and alt alleles
+bcftools +fixref controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.dbSNP.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.dbSNP.fixref.vcf.gz -- -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa -i ~/rocket/datasets/dbSNP/dbSNP_b151_GRCh37p13.vcf.gz
+bcftools +fixref controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.dbSNP.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.dbSNP.fixref.vcf.gz -- -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa -i ~/rocket/datasets/dbSNP/dbSNP_b151_GRCh37p13.vcf.gz
