@@ -1,609 +1,609 @@
-sample_id	genotype_id	sex	cell_type	condition	timepoint	read_length	stranded	paired	protocol	qtl_mapping	study	original_cell_type	donor_age
-S000GZB5	S000GZ	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S000X1B6	S000X1	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S0010QB8	S0010Q	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S0012MB2	S0012M	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
-S001C2B8	S001C2	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S001GVB7	S001GV	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S001KNB9	S001KN	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
-S001NHB7	S001NH	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S001T5B3	S001T5	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S001YWB6	S001YW	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S0020MBC	S0020M	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S0021KB8	S0021K	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
-S0026AB7	S0026A	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00278B4	S00278	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S00294B8	S00294	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S002EVB7	S002EV	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S002FTB7	S002FT	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S002KJB6	S002KJ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S002MFB7	S002MF	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S002WWB5	S002WW	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S002XUB5	S002XU	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S0031GB7	S0031G	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S0032EB6	S0032E	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00382B6	S00382	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S003AZB3	S003AZ	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S003JHB9	S003JH	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S003KFB3	S003KF	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S003MBB2	S003MB	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S003P5B4	S003P5	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S003Q3B5	S003Q3	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S003R1B5	S003R1	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S0041CB7	S0041C	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00446B5	S00446	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S004M7B6	S004M7	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S004N5B7	S004N5	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S005N1B6	S005N1	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S005VMB6	S005VM	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S005WKB4	S005WK	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00630B1	S00630	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
-S0064ZB9	S0064Z	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S006UKB7	S006UK	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S006XEB5	S006XE	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S007CFB8	S007CF	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S007DDB5	S007DD	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S007F9B6	S007F9	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S007G7B6	S007G7	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S007PQB5	S007PQ	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S007WCB7	S007WC	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00D9YB6	S00D9Y	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00DKCB4	S00DKC	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00DP2B4	S00DP2	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00E9UB4	S00E9U	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00F9QB3	S00F9Q	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00FK4B5	S00FK4	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00FPVB5	S00FPV	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00FULB4	S00FUL	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
-S00FVJB5	S00FVJ	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S00G5UB6	S00G5U	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00G7QB6	S00G7Q	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00G9MB6	S00G9M	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
-S00GBIB9	S00GBI	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
-S00GECB4	S00GEC	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00GSLB4	S00GSL	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
-S00GWDB5	S00GWD	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
-S00H5QB8	S00H5Q	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00HE8B6	S00HE8	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S00HVBB4	S00HVB	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00J5IB5	S00J5I	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S00J9AB4	S00J9A	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	25 - 30
-S00JA8B4	S00JA8	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	20 - 25
-S00JD2B6	S00JD2	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S00JT7B6	S00JT7	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00JU5B4	S00JU5	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S00JV3B5	S00JV3	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	20 - 25
-S00JYYB6	S00JYY	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00K0OB6	S00K0O	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S00K4GB1	S00K4G	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
-S00KEXB1	S00KEX	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00KFVB1	S00KFV	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00KHRB5	S00KHR	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00KKLB5	S00KKL	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00M0GB5	S00M0G	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00M1EB4	S00M1E	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S00M2CB4	S00M2C	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00M48B5	S00M48	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00M80B5	S00M80	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00MBVB5	S00MBV	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S00N52B4	S00N52	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00N7ZB5	S00N7Z	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00NBRB4	S00NBR	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00NHFB5	S00NHF	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
-S00NQYB1	S00NQY	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00NRWB4	S00NRW	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00NUQB5	S00NUQ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00NWMB4	S00NWM	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00NXKB5	S00NXK	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00P04B4	S00P04	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
-S00P20B6	S00P20	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00P4XB4	S00P4X	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00P8PB5	S00P8P	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00PBJB4	S00PBJ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
-S00PCHB4	S00PCH	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00PDFB4	S00PDF	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
-S00PEDB4	S00PED	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00PK1B1	S00PK1	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00PQQB4	S00PQQ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S00PVGB5	S00PVG	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00PWEB4	S00PWE	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S00PYAB3	S00PYA	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00Q00B4	S00Q00	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	75 - 80
-S00Q4TB6	S00Q4T	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S00Q5RB4	S00Q5R	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00Q6PB4	S00Q6P	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00QE9B7	S00QE9	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
-S00QPOB3	S00QPO	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00QQMB5	S00QQM	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00QRKB4	S00QRK	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00QTGB5	S00QTG	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S00QUEB4	S00QUE	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00R0XB4	S00R0X	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00R1VB4	S00R1V	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00R9FB4	S00R9F	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00RADB2	S00RAD	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00RBBB5	S00RBB	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00RC9B5	S00RC9	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
-S00RD7B4	S00RD7	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00RMQB3	S00RMQ	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00S2PB7	S00S2P	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00S4LB5	S00S4L	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S00S6HB5	S00S6H	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00S7FB5	S00S7F	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00SE1B4	S00SE1	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00SHWB4	S00SHW	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00SJSB3	S00SJS	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00SMMB4	S00SMM	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00SPGB6	S00SPG	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S00SV4B5	S00SV4	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00SX0B4	S00SX0	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00SYZB5	S00SYZ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00T4HB4	S00T4H	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00T5FB4	S00T5F	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00T6DB4	S00T6D	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00TT4B5	S00TT4	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
-S00U1JB5	S00U1J	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00U3FB4	S00U3F	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00U5BB4	S00U5B	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00U77B4	S00U77	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00U93B4	S00U93	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S00UKIB4	S00UKI	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00UMEB4	S00UME	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S00V57B4	S00V57	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00V65B5	S00V65	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00VGMB4	S00VGM	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00VVTB4	S00VVT	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00W29B3	S00W29	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S00W45B3	S00W45	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00WKAB4	S00WKA	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00WP0B4	S00WP0	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00WQZB4	S00WQZ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00WRXB4	S00WRX	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S00WTTB4	S00WTT	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00XGEB4	S00XGE	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00XK6B4	S00XK6	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00XRTB4	S00XRT	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	75 - 80
-S00YBKB4	S00YBK	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00YCIB4	S00YCI	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00YEEB4	S00YEE	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S00YH8B4	S00YH8	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S00YK2B4	S00YK2	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S00YRPB4	S00YRP	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	75 - 80
-S00YVHB4	S00YVH	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S0100MB5	S0100M	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S010B0B3	S010B0	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S010MFB5	S010MF	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S010P9B4	S010P9	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
-S010VYB4	S010VY	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S011AZB5	S011AZ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
-S011DTB7	S011DT	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	25 - 30
-S011ERB4	S011ER	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S011HLB4	S011HL	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S011JHB2	S011JH	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S011UWB4	S011UW	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S01238B4	S01238	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S01246B4	S01246	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
-S0130AB2	S0130A	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S01342B4	S01342	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
-S0137XB5	S0137X	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S013CNB4	S013CN	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
-S013DLB4	S013DL	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
-S013HDB1	S013HD	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S013K7B4	S013K7	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S000GZB1	S000GZ	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S000X1B1	S000X1	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S0010QB3	S0010Q	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S0012MB6	S0012M	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	35 - 40
-S001C2B2	S001C2	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S001GVB4	S001GV	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S001KNB3	S001KN	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	40 - 45
-S001NHB3	S001NH	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S001T5B5	S001T5	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S001YWB4	S001YW	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S0020MB1	S0020M	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S0021KB3	S0021K	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	35 - 40
-S0026AB1	S0026A	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00278B2	S00278	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S00294B4	S00294	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S002EVB2	S002EV	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S002FTB3	S002FT	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S002KJB4	S002KJ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S002MFB2	S002MF	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S002WWB1	S002WW	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S002XUB3	S002XU	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S0031GB2	S0031G	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S0032EB4	S0032E	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00382B3	S00382	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S003AZB5	S003AZ	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S003JHB4	S003JH	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S003KFB5	S003KF	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S003MBB5	S003MB	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S003P5B3	S003P5	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S003Q3B3	S003Q3	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S003R1B1	S003R1	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S0041CB3	S0041C	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00446B3	S00446	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S004M7B4	S004M7	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S004N5B2	S004N5	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S005N1B3	S005N1	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S005VMB2	S005VM	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S005WKB2	S005WK	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00630B6	S00630	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	40 - 45
-S0064ZB1	S0064Z	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S006UKB4	S006UK	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S006XEB2	S006XE	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S007CFBA	S007CF	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S007DDBA	S007DD	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S007F9B2	S007F9	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S007G7B2	S007G7	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S007PQB1	S007PQ	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S007VEB2	S007VE	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	30 - 35
-S007WCB2	S007WC	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00D9YB2	S00D9Y	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00DKCB1	S00DKC	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00DP2B2	S00DP2	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00F9QB6	S00F9Q	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00FK4B1	S00FK4	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00FPVB3	S00FPV	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00FULB1	S00FUL	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	35 - 40
-S00FVJB1	S00FVJ	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S00G5UB1	S00G5U	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00G7QB2	S00G7Q	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00G9MB1	S00G9M	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	40 - 45
-S00GBIB1	S00GBI	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	40 - 45
-S00GECB1	S00GEC	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00GSLB1	S00GSL	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	30 - 35
-S00GWDB2	S00GWD	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	35 - 40
-S00H5QB1	S00H5Q	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00HE8B1	S00HE8	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S00HVBB1	S00HVB	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00J5IB2	S00J5I	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S00J9AB1	S00J9A	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	25 - 30
-S00JA8B1	S00JA8	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	20 - 25
-S00JD2B1	S00JD2	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S00JT7B2	S00JT7	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00JU5B2	S00JU5	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S00JV3B2	S00JV3	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	20 - 25
-S00JYYB3	S00JYY	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00K0OB2	S00K0O	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S00K4GB3	S00K4G	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	40 - 45
-S00KEXB4	S00KEX	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00KFVB4	S00KFV	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00KHRB2	S00KHR	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00KKLB2	S00KKL	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00M0GB2	S00M0G	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00M1EB2	S00M1E	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S00M2CB2	S00M2C	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00M48B2	S00M48	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00M80B2	S00M80	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00MBVB1	S00MBV	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S00N52B1	S00N52	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00N7ZB1	S00N7Z	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00NBRB2	S00NBR	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00NHFB1	S00NHF	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	30 - 35
-S00NQYB4	S00NQY	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00NRWB1	S00NRW	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00NUQB2	S00NUQ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00NVOB1	S00NVO	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00NWMB1	S00NWM	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00NXKB1	S00NXK	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00P04B1	S00P04	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	30 - 35
-S00P20B2	S00P20	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00P4XB2	S00P4X	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00P8PB4	S00P8P	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00PBJB2	S00PBJ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	40 - 45
-S00PCHB1	S00PCH	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00PDFB2	S00PDF	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	30 - 35
-S00PEDB2	S00PED	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00PK1B2	S00PK1	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00PQQB1	S00PQQ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S00PVGB2	S00PVG	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00PWEB1	S00PWE	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S00PYAB4	S00PYA	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00Q00B1	S00Q00	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	75 - 80
-S00Q4TB2	S00Q4T	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S00Q5RB1	S00Q5R	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00Q6PB2	S00Q6P	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00QE9B1	S00QE9	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	35 - 40
-S00QPOB1	S00QPO	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00QQMB1	S00QQM	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00QRKB2	S00QRK	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00QTGB2	S00QTG	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S00QUEB1	S00QUE	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00QWAB1	S00QWA	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00R0XB1	S00R0X	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00R1VB1	S00R1V	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00R9FB1	S00R9F	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00RADB5	S00RAD	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00RBBB1	S00RBB	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00RC9B2	S00RC9	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	30 - 35
-S00RD7B2	S00RD7	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00RMQB5	S00RMQ	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00S2PB1	S00S2P	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00S4LB2	S00S4L	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S00S6HB2	S00S6H	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00S7FB2	S00S7F	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00SE1B1	S00SE1	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00SHWB1	S00SHW	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00SJSB5	S00SJS	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00SMMB1	S00SMM	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00SPGB1	S00SPG	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S00SV4B1	S00SV4	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00SX0B1	S00SX0	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00SYZB1	S00SYZ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00T4HB1	S00T4H	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00T5FB1	S00T5F	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00T6DB1	S00T6D	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00TA5B2	S00TA5	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00TT4B1	S00TT4	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	70 - 75
-S00U1JB1	S00U1J	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00U3FB1	S00U3F	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00U5BB1	S00U5B	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00U77B1	S00U77	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00U93B1	S00U93	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S00UKIB1	S00UKI	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00UMEB1	S00UME	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S00V57B1	S00V57	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00V65B1	S00V65	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00VGMB1	S00VGM	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00VVTB2	S00VVT	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00W29B1	S00W29	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S00W45B1	S00W45	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00WKAB1	S00WKA	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00WP0B1	S00WP0	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00WQZB1	S00WQZ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00WRXB1	S00WRX	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S00WTTB1	S00WTT	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00XGEB1	S00XGE	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00XHCB1	S00XHC	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00XK6B3	S00XK6	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00XRTB1	S00XRT	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	75 - 80
-S00YBKB1	S00YBK	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00YCIB1	S00YCI	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00YEEB1	S00YEE	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S00YH8B1	S00YH8	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S00YK2B1	S00YK2	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S00YRPB1	S00YRP	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	75 - 80
-S00YVHB1	S00YVH	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S0100MB1	S0100M	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S010B0B1	S010B0	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S010MFB1	S010MF	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S010P9B1	S010P9	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	35 - 40
-S010VYB1	S010VY	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S011AZB2	S011AZ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S011DTB2	S011DT	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	25 - 30
-S011ERB1	S011ER	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S011HLB1	S011HL	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S011JHB4	S011JH	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S011UWB1	S011UW	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S01238B2	S01238	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S01246B1	S01246	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	30 - 35
-S0130AB5	S0130A	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S01342B1	S01342	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	40 - 45
-S0137XB1	S0137X	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	45 - 50
-S013CNB1	S013CN	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	55 - 60
-S013DLB1	S013DL	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	50 - 55
-S013HDB3	S013HD	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S013J9B2	S013J9	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	60 - 65
-S013K7B2	S013K7	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	BLUEPRINT	mature neutrophil	65 - 70
-S00JV3B7	S00JV3	male	monocyte	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	20 - 25
-S00JYYB5	S00JYY	female	monocyte	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
-S00K0OB7	S00K0O	male	monocyte	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
-S001C2B4	S001C2	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	mature neutrophil	65 - 70
-S001T511	S001T5	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	mature neutrophil	50 - 55
-S001YW11	S001YW	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	mature neutrophil	55 - 60
-S0020M11	S0020M	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	mature neutrophil	60 - 65
-S003JHB5	S003JH	female	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	mature neutrophil	65 - 70
-S006UKB2	S006UK	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	mature neutrophil	50 - 55
-S00DKCB3	S00DKC	female	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	mature neutrophil	60 - 65
-S00JV3B4	S00JV3	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	mature neutrophil	20 - 25
-S00JYYB2	S00JYY	female	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	BLUEPRINT	mature neutrophil	65 - 70
-S000GZB3_mRNA	S000GZ	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S000GZB3_RNA	S000GZ	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S000X1_mRNA	S000X1	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S000X1_RNA	S000X1	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S0010Q_mRNA	S0010Q	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S0010Q_RNA	S0010Q	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S0012MB1_mRNA	S0012M	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
-S0012MB1_RNA	S0012M	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
-S001C2B5_mRNA	S001C2	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S001C2B5_RNA	S001C2	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S001GV_mRNA	S001GV	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S001GV_RNA	S001GV	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S001KN_mRNA	S001KN	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
-S001KN_RNA	S001KN	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
-S001NH_mRNA	S001NH	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S001NH_RNA	S001NH	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S001T5_mRNA	S001T5	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S001T5_RNA	S001T5	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S0021KB5_mRNA	S0021K	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
-S0021KB5_RNA	S0021K	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
-S0026AB3_mRNA	S0026A	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S0026AB3_RNA	S0026A	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00294B5_mRNA	S00294	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S00294B5_RNA	S00294	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S002EV_mRNA	S002EV	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S002EV_RNA	S002EV	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S002FTB4_mRNA	S002FT	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S002FTB4_RNA	S002FT	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S002MFB3_mRNA	S002MF	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S002MFB3_RNA	S002MF	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S002WW_mRNA	S002WW	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S002WW_RNA	S002WW	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S002XU_mRNA	S002XU	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S002XU_RNA	S002XU	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S0031GB6_mRNA	S0031G	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S0031GB6_RNA	S0031G	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S0032EB5_mRNA	S0032E	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S0032EB5_RNA	S0032E	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00382B4_mRNA	S00382	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00382B4_RNA	S00382	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S003AZ_mRNA	S003AZ	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S003AZ_RNA	S003AZ	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S003JHB1_mRNA	S003JH	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S003JHB1_RNA	S003JH	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S003P5B1_mRNA	S003P5	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S003P5B1_RNA	S003P5	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S003Q3B1_mRNA	S003Q3	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S003Q3B1_RNA	S003Q3	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S003R1B4_mRNA	S003R1	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S003R1B4_RNA	S003R1	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S0041C_mRNA	S0041C	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S0041C_RNA	S0041C	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S004M7_mRNA	S004M7	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S004M7_RNA	S004M7	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S004N5B1_mRNA	S004N5	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S004N5B1_RNA	S004N5	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S005N1B4_mRNA	S005N1	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S005N1B4_RNA	S005N1	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S005VMB7_mRNA	S005VM	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S005VMB7_RNA	S005VM	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S005WK_mRNA	S005WK	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S005WK_RNA	S005WK	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00630B7_mRNA	S00630	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
-S00630B7_RNA	S00630	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
-S0064Z_mRNA	S0064Z	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S0064Z_RNA	S0064Z	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S006XE_mRNA	S006XE	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S006XE_RNA	S006XE	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S007CF_mRNA	S007CF	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S007CF_RNA	S007CF	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S007DD_mRNA	S007DD	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S007DD_RNA	S007DD	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S007F9_mRNA	S007F9	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S007F9_RNA	S007F9	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S007G7_mRNA	S007G7	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S007G7_RNA	S007G7	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S007PQB3_mRNA	S007PQ	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S007PQB3_RNA	S007PQ	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S007VEB1_mRNA	S007VE	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
-S007VEB1_RNA	S007VE	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
-S00D9YB1	S00D9Y	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00DKCB7	S00DKC	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00DP2B3	S00DP2	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00E9UB3	S00E9U	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00F9QB1	S00F9Q	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
-S00FK4B3	S00FK4	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00FPVB1	S00FPV	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00FULB6	S00FUL	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
-S00FVJB3	S00FVJ	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S00G5UB3	S00G5U	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00G7QB3	S00G7Q	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00G9MB3	S00G9M	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
-S00GBIB3	S00GBI	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
-S00GECB3	S00GEC	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00GSLB3	S00GSL	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
-S00GWDB3	S00GWD	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
-S00H5QB5	S00H5Q	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00HE8B3	S00HE8	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S00HVBB3	S00HVB	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00J5IB3	S00J5I	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S00J9AB3	S00J9A	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	25 - 30
-S00JA8B3	S00JA8	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	20 - 25
-S00JD2B3	S00JD2	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S00JT7B1	S00JT7	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
-S00JU5B1	S00JU5	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S00JV3B1	S00JV3	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	20 - 25
-S00JYYB4	S00JYY	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00K0OB4	S00K0O	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S00KEXB5	S00KEX	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00KKLB4	S00KKL	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
-S00M1EB3	S00M1E	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S00M2CB3	S00M2C	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00M48B3	S00M48	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
-S00M80B3	S00M80	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
-S00MBVB3	S00MBV	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S00N52B3	S00N52	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00N7ZB3	S00N7Z	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00NHFB4	S00NHF	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
-S00NQYB3	S00NQY	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00NUQB3	S00NUQ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00NVOB3	S00NVO	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00NWMB3	S00NWM	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
-S00NXKB4	S00NXK	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00P04B3	S00P04	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
-S00P20B4	S00P20	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00P4XB3	S00P4X	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00P8PB1	S00P8P	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00PBJB3	S00PBJ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
-S00PCHB3	S00PCH	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00PDFB3	S00PDF	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
-S00PEDB3	S00PED	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00PK1B4	S00PK1	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00PQQB3	S00PQQ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S00PVGB3	S00PVG	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00PWEB3	S00PWE	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S00PYAB1	S00PYA	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00Q00B3	S00Q00	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	75 - 80
-S00Q4TB5	S00Q4T	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S00Q5RB3	S00Q5R	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
-S00Q6PB3	S00Q6P	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00QE9B6	S00QE9	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
-S00QPOB5	S00QPO	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00QQMB6	S00QQM	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00QRKB5	S00QRK	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00QTGB3	S00QTG	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S00QWAB3	S00QWA	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00R0XB3	S00R0X	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00R1VB3	S00R1V	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00R9FB3	S00R9F	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00RADB1	S00RAD	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00RBBB3	S00RBB	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00RC9B3	S00RC9	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
-S00RD7B1	S00RD7	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00RMQB1	S00RMQ	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00S2PB3	S00S2P	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00S4LB3	S00S4L	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S00S7FB4	S00S7F	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00SE1B3	S00SE1	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00SHWB3	S00SHW	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00SMMB3	S00SMM	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
-S00SPGB3	S00SPG	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S00SV4B3	S00SV4	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00SYZB4	S00SYZ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
-S00T4HB3	S00T4H	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00T6DB3	S00T6D	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00TA5B3	S00TA5	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00U1JB3	S00U1J	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00U5BB3	S00U5B	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00U93B3	S00U93	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S00UKIB3	S00UKI	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00UMEB3	S00UME	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S00V57B3	S00V57	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00V65B4	S00V65	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00W29B5	S00W29	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S00W45B5	S00W45	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00WKAB3	S00WKA	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00WP0B3	S00WP0	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00WQZB3	S00WQZ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00WRXB3	S00WRX	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S00WTTB3	S00WTT	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00XGEB3	S00XGE	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00XHCB3	S00XHC	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00XK6B1	S00XK6	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00XRTB3	S00XRT	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	75 - 80
-S00YBKB3	S00YBK	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00YCIB3	S00YCI	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S00YEEB3	S00YEE	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S00YH8B3	S00YH8	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S00YK2B3	S00YK2	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S00YRPB3	S00YRP	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	75 - 80
-S00YVHB3	S00YVH	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S0100MB3	S0100M	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S010B0B5	S010B0	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S010MFB4	S010MF	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S010P9B3	S010P9	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
-S010VYB3	S010VY	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S011AZB3	S011AZ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
-S011DTB4	S011DT	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	25 - 30
-S011ERB3	S011ER	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S011HLB3	S011HL	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
-S011JHB1	S011JH	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S011UWB3	S011UW	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S01238B3	S01238	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
-S01246B3	S01246	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
-S0130AB1	S0130A	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S01342B3	S01342	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
-S0137XB3	S0137X	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
-S013CNB3	S013CN	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
-S013DLB3	S013DL	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+sample_id	genotype_id	sex	cell_type	condition	timepoint	read_length	stranded	paired	protocol	rna_qc_passed	genotype_qc_passed	study	original_cell_type	donor_age
+S000GZB5	S000GZ	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S000X1B6	S000X1	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S0010QB8	S0010Q	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S0012MB2	S0012M	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
+S001C2B8	S001C2	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S001GVB7	S001GV	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S001KNB9	S001KN	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
+S001NHB7	S001NH	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S001T5B3	S001T5	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S001YWB6	S001YW	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S0020MBC	S0020M	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S0021KB8	S0021K	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
+S0026AB7	S0026A	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00278B4	S00278	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S00294B8	S00294	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S002EVB7	S002EV	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S002FTB7	S002FT	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S002KJB6	S002KJ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S002MFB7	S002MF	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S002WWB5	S002WW	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S002XUB5	S002XU	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S0031GB7	S0031G	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S0032EB6	S0032E	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00382B6	S00382	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S003AZB3	S003AZ	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S003JHB9	S003JH	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S003KFB3	S003KF	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S003MBB2	S003MB	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S003P5B4	S003P5	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S003Q3B5	S003Q3	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S003R1B5	S003R1	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S0041CB7	S0041C	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00446B5	S00446	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S004M7B6	S004M7	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S004N5B7	S004N5	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S005N1B6	S005N1	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S005VMB6	S005VM	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S005WKB4	S005WK	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00630B1	S00630	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
+S0064ZB9	S0064Z	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S006UKB7	S006UK	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S006XEB5	S006XE	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S007CFB8	S007CF	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S007DDB5	S007DD	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S007F9B6	S007F9	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S007G7B6	S007G7	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S007PQB5	S007PQ	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S007WCB7	S007WC	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00D9YB6	S00D9Y	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00DKCB4	S00DKC	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00DP2B4	S00DP2	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00E9UB4	S00E9U	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00F9QB3	S00F9Q	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00FK4B5	S00FK4	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00FPVB5	S00FPV	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00FULB4	S00FUL	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
+S00FVJB5	S00FVJ	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S00G5UB6	S00G5U	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00G7QB6	S00G7Q	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00G9MB6	S00G9M	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
+S00GBIB9	S00GBI	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
+S00GECB4	S00GEC	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00GSLB4	S00GSL	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
+S00GWDB5	S00GWD	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
+S00H5QB8	S00H5Q	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00HE8B6	S00HE8	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S00HVBB4	S00HVB	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00J5IB5	S00J5I	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S00J9AB4	S00J9A	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	25 - 30
+S00JA8B4	S00JA8	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	20 - 25
+S00JD2B6	S00JD2	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S00JT7B6	S00JT7	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00JU5B4	S00JU5	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S00JV3B5	S00JV3	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	20 - 25
+S00JYYB6	S00JYY	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00K0OB6	S00K0O	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S00K4GB1	S00K4G	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
+S00KEXB1	S00KEX	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00KFVB1	S00KFV	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00KHRB5	S00KHR	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00KKLB5	S00KKL	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00M0GB5	S00M0G	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00M1EB4	S00M1E	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S00M2CB4	S00M2C	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00M48B5	S00M48	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00M80B5	S00M80	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00MBVB5	S00MBV	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S00N52B4	S00N52	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00N7ZB5	S00N7Z	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00NBRB4	S00NBR	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00NHFB5	S00NHF	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
+S00NQYB1	S00NQY	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00NRWB4	S00NRW	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00NUQB5	S00NUQ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00NWMB4	S00NWM	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00NXKB5	S00NXK	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00P04B4	S00P04	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
+S00P20B6	S00P20	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00P4XB4	S00P4X	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00P8PB5	S00P8P	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00PBJB4	S00PBJ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
+S00PCHB4	S00PCH	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00PDFB4	S00PDF	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
+S00PEDB4	S00PED	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00PK1B1	S00PK1	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00PQQB4	S00PQQ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S00PVGB5	S00PVG	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00PWEB4	S00PWE	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S00PYAB3	S00PYA	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00Q00B4	S00Q00	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	75 - 80
+S00Q4TB6	S00Q4T	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S00Q5RB4	S00Q5R	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00Q6PB4	S00Q6P	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00QE9B7	S00QE9	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
+S00QPOB3	S00QPO	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00QQMB5	S00QQM	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00QRKB4	S00QRK	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00QTGB5	S00QTG	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S00QUEB4	S00QUE	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00R0XB4	S00R0X	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00R1VB4	S00R1V	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00R9FB4	S00R9F	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00RADB2	S00RAD	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00RBBB5	S00RBB	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00RC9B5	S00RC9	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
+S00RD7B4	S00RD7	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00RMQB3	S00RMQ	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00S2PB7	S00S2P	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00S4LB5	S00S4L	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S00S6HB5	S00S6H	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00S7FB5	S00S7F	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00SE1B4	S00SE1	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00SHWB4	S00SHW	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00SJSB3	S00SJS	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00SMMB4	S00SMM	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00SPGB6	S00SPG	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S00SV4B5	S00SV4	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00SX0B4	S00SX0	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00SYZB5	S00SYZ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00T4HB4	S00T4H	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00T5FB4	S00T5F	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00T6DB4	S00T6D	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00TT4B5	S00TT4	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	70 - 75
+S00U1JB5	S00U1J	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00U3FB4	S00U3F	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00U5BB4	S00U5B	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00U77B4	S00U77	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00U93B4	S00U93	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S00UKIB4	S00UKI	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00UMEB4	S00UME	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S00V57B4	S00V57	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00V65B5	S00V65	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00VGMB4	S00VGM	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00VVTB4	S00VVT	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00W29B3	S00W29	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S00W45B3	S00W45	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00WKAB4	S00WKA	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00WP0B4	S00WP0	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00WQZB4	S00WQZ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00WRXB4	S00WRX	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S00WTTB4	S00WTT	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00XGEB4	S00XGE	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00XK6B4	S00XK6	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00XRTB4	S00XRT	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	75 - 80
+S00YBKB4	S00YBK	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00YCIB4	S00YCI	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00YEEB4	S00YEE	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S00YH8B4	S00YH8	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S00YK2B4	S00YK2	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S00YRPB4	S00YRP	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	75 - 80
+S00YVHB4	S00YVH	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S0100MB5	S0100M	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S010B0B3	S010B0	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S010MFB5	S010MF	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S010P9B4	S010P9	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	35 - 40
+S010VYB4	S010VY	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S011AZB5	S011AZ	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	60 - 65
+S011DTB7	S011DT	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	25 - 30
+S011ERB4	S011ER	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S011HLB4	S011HL	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S011JHB2	S011JH	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S011UWB4	S011UW	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S01238B4	S01238	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S01246B4	S01246	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	30 - 35
+S0130AB2	S0130A	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S01342B4	S01342	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	40 - 45
+S0137XB5	S0137X	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S013CNB4	S013CN	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	55 - 60
+S013DLB4	S013DL	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	50 - 55
+S013HDB1	S013HD	female	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S013K7B4	S013K7	male	monocyte	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S000GZB1	S000GZ	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S000X1B1	S000X1	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S0010QB3	S0010Q	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S0012MB6	S0012M	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	35 - 40
+S001C2B2	S001C2	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S001GVB4	S001GV	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S001KNB3	S001KN	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	40 - 45
+S001NHB3	S001NH	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S001T5B5	S001T5	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S001YWB4	S001YW	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S0020MB1	S0020M	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S0021KB3	S0021K	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	35 - 40
+S0026AB1	S0026A	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00278B2	S00278	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00294B4	S00294	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S002EVB2	S002EV	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S002FTB3	S002FT	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S002KJB4	S002KJ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S002MFB2	S002MF	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S002WWB1	S002WW	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S002XUB3	S002XU	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S0031GB2	S0031G	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S0032EB4	S0032E	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00382B3	S00382	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S003AZB5	S003AZ	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S003JHB4	S003JH	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S003KFB5	S003KF	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S003MBB5	S003MB	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S003P5B3	S003P5	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S003Q3B3	S003Q3	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S003R1B1	S003R1	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S0041CB3	S0041C	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00446B3	S00446	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S004M7B4	S004M7	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S004N5B2	S004N5	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S005N1B3	S005N1	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S005VMB2	S005VM	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S005WKB2	S005WK	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00630B6	S00630	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	40 - 45
+S0064ZB1	S0064Z	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S006UKB4	S006UK	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S006XEB2	S006XE	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S007CFBA	S007CF	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S007DDBA	S007DD	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S007F9B2	S007F9	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S007G7B2	S007G7	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S007PQB1	S007PQ	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S007VEB2	S007VE	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	30 - 35
+S007WCB2	S007WC	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00D9YB2	S00D9Y	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00DKCB1	S00DKC	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00DP2B2	S00DP2	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00F9QB6	S00F9Q	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00FK4B1	S00FK4	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00FPVB3	S00FPV	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00FULB1	S00FUL	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	35 - 40
+S00FVJB1	S00FVJ	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S00G5UB1	S00G5U	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00G7QB2	S00G7Q	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00G9MB1	S00G9M	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	40 - 45
+S00GBIB1	S00GBI	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	40 - 45
+S00GECB1	S00GEC	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00GSLB1	S00GSL	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	30 - 35
+S00GWDB2	S00GWD	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	35 - 40
+S00H5QB1	S00H5Q	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00HE8B1	S00HE8	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00HVBB1	S00HVB	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00J5IB2	S00J5I	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S00J9AB1	S00J9A	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	25 - 30
+S00JA8B1	S00JA8	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	20 - 25
+S00JD2B1	S00JD2	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S00JT7B2	S00JT7	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00JU5B2	S00JU5	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00JV3B2	S00JV3	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	20 - 25
+S00JYYB3	S00JYY	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00K0OB2	S00K0O	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S00K4GB3	S00K4G	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	40 - 45
+S00KEXB4	S00KEX	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00KFVB4	S00KFV	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00KHRB2	S00KHR	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00KKLB2	S00KKL	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00M0GB2	S00M0G	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00M1EB2	S00M1E	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00M2CB2	S00M2C	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00M48B2	S00M48	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00M80B2	S00M80	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00MBVB1	S00MBV	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00N52B1	S00N52	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00N7ZB1	S00N7Z	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00NBRB2	S00NBR	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00NHFB1	S00NHF	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	30 - 35
+S00NQYB4	S00NQY	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00NRWB1	S00NRW	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00NUQB2	S00NUQ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00NVOB1	S00NVO	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00NWMB1	S00NWM	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00NXKB1	S00NXK	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00P04B1	S00P04	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	30 - 35
+S00P20B2	S00P20	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00P4XB2	S00P4X	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00P8PB4	S00P8P	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00PBJB2	S00PBJ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	40 - 45
+S00PCHB1	S00PCH	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00PDFB2	S00PDF	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	30 - 35
+S00PEDB2	S00PED	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00PK1B2	S00PK1	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00PQQB1	S00PQQ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00PVGB2	S00PVG	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00PWEB1	S00PWE	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00PYAB4	S00PYA	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00Q00B1	S00Q00	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	75 - 80
+S00Q4TB2	S00Q4T	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00Q5RB1	S00Q5R	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00Q6PB2	S00Q6P	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00QE9B1	S00QE9	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	35 - 40
+S00QPOB1	S00QPO	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00QQMB1	S00QQM	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00QRKB2	S00QRK	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00QTGB2	S00QTG	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S00QUEB1	S00QUE	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00QWAB1	S00QWA	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00R0XB1	S00R0X	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00R1VB1	S00R1V	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00R9FB1	S00R9F	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00RADB5	S00RAD	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00RBBB1	S00RBB	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00RC9B2	S00RC9	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	30 - 35
+S00RD7B2	S00RD7	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00RMQB5	S00RMQ	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00S2PB1	S00S2P	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00S4LB2	S00S4L	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S00S6HB2	S00S6H	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00S7FB2	S00S7F	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00SE1B1	S00SE1	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00SHWB1	S00SHW	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00SJSB5	S00SJS	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00SMMB1	S00SMM	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00SPGB1	S00SPG	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00SV4B1	S00SV4	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00SX0B1	S00SX0	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00SYZB1	S00SYZ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00T4HB1	S00T4H	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00T5FB1	S00T5F	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00T6DB1	S00T6D	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00TA5B2	S00TA5	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00TT4B1	S00TT4	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	70 - 75
+S00U1JB1	S00U1J	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00U3FB1	S00U3F	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00U5BB1	S00U5B	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00U77B1	S00U77	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00U93B1	S00U93	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S00UKIB1	S00UKI	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00UMEB1	S00UME	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S00V57B1	S00V57	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00V65B1	S00V65	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00VGMB1	S00VGM	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00VVTB2	S00VVT	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00W29B1	S00W29	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00W45B1	S00W45	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00WKAB1	S00WKA	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00WP0B1	S00WP0	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00WQZB1	S00WQZ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00WRXB1	S00WRX	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00WTTB1	S00WTT	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00XGEB1	S00XGE	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00XHCB1	S00XHC	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00XK6B3	S00XK6	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00XRTB1	S00XRT	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	75 - 80
+S00YBKB1	S00YBK	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00YCIB1	S00YCI	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00YEEB1	S00YEE	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S00YH8B1	S00YH8	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00YK2B1	S00YK2	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S00YRPB1	S00YRP	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	75 - 80
+S00YVHB1	S00YVH	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S0100MB1	S0100M	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S010B0B1	S010B0	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S010MFB1	S010MF	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S010P9B1	S010P9	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	35 - 40
+S010VYB1	S010VY	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S011AZB2	S011AZ	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S011DTB2	S011DT	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	25 - 30
+S011ERB1	S011ER	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S011HLB1	S011HL	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S011JHB4	S011JH	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S011UWB1	S011UW	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S01238B2	S01238	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S01246B1	S01246	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	30 - 35
+S0130AB5	S0130A	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S01342B1	S01342	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	40 - 45
+S0137XB1	S0137X	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	45 - 50
+S013CNB1	S013CN	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S013DLB1	S013DL	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S013HDB3	S013HD	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S013J9B2	S013J9	female	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S013K7B2	S013K7	male	neutrophil	naive	0	100bp	TRUE	FALSE	total	TRUE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S00JV3B7	S00JV3	male	monocyte	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	20 - 25
+S00JYYB5	S00JYY	female	monocyte	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	65 - 70
+S00K0OB7	S00K0O	male	monocyte	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	CD14-positive, CD16-negative classical monocyte	45 - 50
+S001C2B4	S001C2	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S001T511	S001T5	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S001YW11	S001YW	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	mature neutrophil	55 - 60
+S0020M11	S0020M	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S003JHB5	S003JH	female	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S006UKB2	S006UK	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	mature neutrophil	50 - 55
+S00DKCB3	S00DKC	female	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	mature neutrophil	60 - 65
+S00JV3B4	S00JV3	male	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	mature neutrophil	20 - 25
+S00JYYB2	S00JYY	female	neutrophil	naive	0	100bp	TRUE	TRUE	total	FALSE	TRUE	BLUEPRINT	mature neutrophil	65 - 70
+S000GZB3_mRNA	S000GZ	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S000GZB3_RNA	S000GZ	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S000X1_mRNA	S000X1	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S000X1_RNA	S000X1	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S0010Q_mRNA	S0010Q	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S0010Q_RNA	S0010Q	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S0012MB1_mRNA	S0012M	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
+S0012MB1_RNA	S0012M	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
+S001C2B5_mRNA	S001C2	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S001C2B5_RNA	S001C2	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S001GV_mRNA	S001GV	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S001GV_RNA	S001GV	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S001KN_mRNA	S001KN	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
+S001KN_RNA	S001KN	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
+S001NH_mRNA	S001NH	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S001NH_RNA	S001NH	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S001T5_mRNA	S001T5	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S001T5_RNA	S001T5	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S0021KB5_mRNA	S0021K	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
+S0021KB5_RNA	S0021K	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
+S0026AB3_mRNA	S0026A	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S0026AB3_RNA	S0026A	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00294B5_mRNA	S00294	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S00294B5_RNA	S00294	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S002EV_mRNA	S002EV	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S002EV_RNA	S002EV	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S002FTB4_mRNA	S002FT	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S002FTB4_RNA	S002FT	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S002MFB3_mRNA	S002MF	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S002MFB3_RNA	S002MF	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S002WW_mRNA	S002WW	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S002WW_RNA	S002WW	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S002XU_mRNA	S002XU	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S002XU_RNA	S002XU	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S0031GB6_mRNA	S0031G	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S0031GB6_RNA	S0031G	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S0032EB5_mRNA	S0032E	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S0032EB5_RNA	S0032E	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00382B4_mRNA	S00382	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00382B4_RNA	S00382	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S003AZ_mRNA	S003AZ	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S003AZ_RNA	S003AZ	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S003JHB1_mRNA	S003JH	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S003JHB1_RNA	S003JH	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S003P5B1_mRNA	S003P5	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S003P5B1_RNA	S003P5	male	T-cell	naive	0	100bp	TRUE	TRUE	total	FALSE	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S003Q3B1_mRNA	S003Q3	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S003Q3B1_RNA	S003Q3	female	T-cell	naive	0	100bp	TRUE	TRUE	total	FALSE	FALSE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S003R1B4_mRNA	S003R1	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S003R1B4_RNA	S003R1	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S0041C_mRNA	S0041C	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S0041C_RNA	S0041C	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S004M7_mRNA	S004M7	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S004M7_RNA	S004M7	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S004N5B1_mRNA	S004N5	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S004N5B1_RNA	S004N5	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S005N1B4_mRNA	S005N1	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S005N1B4_RNA	S005N1	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S005VMB7_mRNA	S005VM	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S005VMB7_RNA	S005VM	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S005WK_mRNA	S005WK	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S005WK_RNA	S005WK	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00630B7_mRNA	S00630	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
+S00630B7_RNA	S00630	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
+S0064Z_mRNA	S0064Z	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S0064Z_RNA	S0064Z	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S006XE_mRNA	S006XE	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S006XE_RNA	S006XE	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S007CF_mRNA	S007CF	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S007CF_RNA	S007CF	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S007DD_mRNA	S007DD	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S007DD_RNA	S007DD	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S007F9_mRNA	S007F9	female	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S007F9_RNA	S007F9	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S007G7_mRNA	S007G7	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S007G7_RNA	S007G7	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S007PQB3_mRNA	S007PQ	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S007PQB3_RNA	S007PQ	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S007VEB1_mRNA	S007VE	male	T-cell	naive	0	100bp	TRUE	TRUE	poly(A)	FALSE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
+S007VEB1_RNA	S007VE	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
+S00D9YB1	S00D9Y	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00DKCB7	S00DKC	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00DP2B3	S00DP2	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00E9UB3	S00E9U	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00F9QB1	S00F9Q	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
+S00FK4B3	S00FK4	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00FPVB1	S00FPV	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00FULB6	S00FUL	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
+S00FVJB3	S00FVJ	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S00G5UB3	S00G5U	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00G7QB3	S00G7Q	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00G9MB3	S00G9M	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
+S00GBIB3	S00GBI	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
+S00GECB3	S00GEC	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00GSLB3	S00GSL	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
+S00GWDB3	S00GWD	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
+S00H5QB5	S00H5Q	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00HE8B3	S00HE8	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S00HVBB3	S00HVB	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00J5IB3	S00J5I	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S00J9AB3	S00J9A	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	25 - 30
+S00JA8B3	S00JA8	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	20 - 25
+S00JD2B3	S00JD2	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S00JT7B1	S00JT7	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
+S00JU5B1	S00JU5	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S00JV3B1	S00JV3	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	20 - 25
+S00JYYB4	S00JYY	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00K0OB4	S00K0O	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S00KEXB5	S00KEX	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00KKLB4	S00KKL	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
+S00M1EB3	S00M1E	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S00M2CB3	S00M2C	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00M48B3	S00M48	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
+S00M80B3	S00M80	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
+S00MBVB3	S00MBV	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S00N52B3	S00N52	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00N7ZB3	S00N7Z	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00NHFB4	S00NHF	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
+S00NQYB3	S00NQY	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00NUQB3	S00NUQ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00NVOB3	S00NVO	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00NWMB3	S00NWM	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
+S00NXKB4	S00NXK	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00P04B3	S00P04	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
+S00P20B4	S00P20	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00P4XB3	S00P4X	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00P8PB1	S00P8P	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00PBJB3	S00PBJ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
+S00PCHB3	S00PCH	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00PDFB3	S00PDF	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
+S00PEDB3	S00PED	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00PK1B4	S00PK1	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00PQQB3	S00PQQ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S00PVGB3	S00PVG	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00PWEB3	S00PWE	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S00PYAB1	S00PYA	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00Q00B3	S00Q00	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	75 - 80
+S00Q4TB5	S00Q4T	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S00Q5RB3	S00Q5R	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
+S00Q6PB3	S00Q6P	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00QE9B6	S00QE9	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
+S00QPOB5	S00QPO	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00QQMB6	S00QQM	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00QRKB5	S00QRK	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00QTGB3	S00QTG	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S00QWAB3	S00QWA	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00R0XB3	S00R0X	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00R1VB3	S00R1V	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00R9FB3	S00R9F	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00RADB1	S00RAD	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00RBBB3	S00RBB	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00RC9B3	S00RC9	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
+S00RD7B1	S00RD7	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00RMQB1	S00RMQ	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00S2PB3	S00S2P	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00S4LB3	S00S4L	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S00S7FB4	S00S7F	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00SE1B3	S00SE1	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00SHWB3	S00SHW	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00SMMB3	S00SMM	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
+S00SPGB3	S00SPG	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S00SV4B3	S00SV4	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00SYZB4	S00SYZ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	70 - 75
+S00T4HB3	S00T4H	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00T6DB3	S00T6D	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00TA5B3	S00TA5	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00U1JB3	S00U1J	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00U5BB3	S00U5B	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00U93B3	S00U93	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S00UKIB3	S00UKI	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00UMEB3	S00UME	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S00V57B3	S00V57	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00V65B4	S00V65	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00W29B5	S00W29	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S00W45B5	S00W45	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00WKAB3	S00WKA	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00WP0B3	S00WP0	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00WQZB3	S00WQZ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00WRXB3	S00WRX	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S00WTTB3	S00WTT	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00XGEB3	S00XGE	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00XHCB3	S00XHC	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00XK6B1	S00XK6	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00XRTB3	S00XRT	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	75 - 80
+S00YBKB3	S00YBK	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00YCIB3	S00YCI	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S00YEEB3	S00YEE	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S00YH8B3	S00YH8	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S00YK2B3	S00YK2	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S00YRPB3	S00YRP	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	75 - 80
+S00YVHB3	S00YVH	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S0100MB3	S0100M	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S010B0B5	S010B0	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S010MFB4	S010MF	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S010P9B3	S010P9	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	35 - 40
+S010VYB3	S010VY	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S011AZB3	S011AZ	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	60 - 65
+S011DTB4	S011DT	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	25 - 30
+S011ERB3	S011ER	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S011HLB3	S011HL	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	65 - 70
+S011JHB1	S011JH	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S011UWB3	S011UW	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S01238B3	S01238	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55
+S01246B3	S01246	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	30 - 35
+S0130AB1	S0130A	male	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S01342B3	S01342	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	40 - 45
+S0137XB3	S0137X	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	45 - 50
+S013CNB3	S013CN	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	55 - 60
+S013DLB3	S013DL	female	T-cell	naive	0	100bp	TRUE	TRUE	total	TRUE	TRUE	BLUEPRINT	CD4-positive, alpha-beta T cell	50 - 55

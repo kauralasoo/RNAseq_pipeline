@@ -47,9 +47,11 @@ ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = superpopulation_code)) 
 
 
 # BLUEPRINT ---------------------------------------------------------------
-read_counts = readr::read_tsv("processed/BLUEPRINT/gene_expression_featureCounts.txt.gz") %>%
+read_counts = readr::read_tsv("processed/BLUEPRINT/matrices/gene_expression_featureCounts.txt.gz") %>%
   dplyr::filter(!(gene_id %like% "PAR_Y")) %>%
   removeGeneVersion()
+mbv_matches = readr::read_tsv("metadata/BLUEPRINT/BLUEPRINT_mbv_best_match.txt") %>%
+  dplyr::select(sample_id, mbv_genotype_id)
 sample_metadata = readr::read_csv("metadata/BLUEPRINT/BLUEPRINT_extracted_metadata.csv") %>%
   dplyr::transmute(sample_id = X1, original_cell_type = CELL_TYPE, donor_age = DONOR_AGE, sex = gender, protocol = MOLECULE, genotype_id = donor_id) %>%
   dplyr::mutate(cell_type = case_when(
@@ -64,12 +66,22 @@ is_paired = readr::read_delim("metadata/BLUEPRINT/PE_snakemake_string.txt", deli
   dplyr::mutate(paired = TRUE)
 sample_metadata_final = dplyr::left_join(sample_metadata, is_paired, by = "sample_id") %>% 
   dplyr::mutate(paired = ifelse(is.na(paired), FALSE, paired)) %>%
-  dplyr::mutate(qtl_mapping = ifelse(protocol == "poly(A)", FALSE, TRUE)) %>%
-  dplyr::mutate(qtl_mapping = ifelse(cell_type %in% c("neutrophil","monocyte") & paired, FALSE, qtl_mapping)) %>%
+  dplyr::mutate(rna_qc_passed = ifelse(protocol == "poly(A)", FALSE, TRUE)) %>%
+  dplyr::mutate(rna_qc_passed = ifelse(cell_type %in% c("neutrophil","monocyte") & paired, FALSE, rna_qc_passed)) %>%
+  dplyr::left_join(mbv_matches, by = "sample_id") %>%
+  dplyr::mutate(genotype_qc_passed = ifelse(is.na(mbv_genotype_id), FALSE, TRUE)) %>%
+  dplyr::mutate(rna_qc_passed = rna_qc_passed & genotype_qc_passed) %>%
+  dplyr::select(-mbv_genotype_id) %>%
+  dplyr::mutate(sex = ifelse(genotype_id == "S00PWE", "female", sex)) %>%
+  dplyr::mutate(sex = ifelse(genotype_id == "S00PVG", "male", sex)) %>%
   dplyr::select(mandatory_cols, everything())
 
+#Fix sex
+sex_qc = readr::read_tsv("metadata/BLUEPRINT/BLUEPRINT_Sex_QC_table.tsv") %>%
+  dplyr::mutate(new_sex = ifelse(log(Y_chrom_mean+1,2) < 1, "female", "male"))
+
 #Make SE
-featureCounts_se = makeSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata_final)
+featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata_final)
 
 #Export data
 write.table(sample_metadata_final, "metadata/cleaned/BLUEPRINT.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
