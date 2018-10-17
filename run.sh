@@ -18,6 +18,8 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 #CrossMap genotypes
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes_no_R2.snakefile -np processed/TwinsUK/genotypes/GRCh38/TwinsUK_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 22 --rerun-incomplete
 
+#Map QTLs
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/TwinsUK/out.txt --configfile configs/TwinsUK_config.yaml --rerun-incomplete --jobs 100
 
 
 #### Nedelec 2016 dataset ####
@@ -102,3 +104,8 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s samtools_index.snakefi
 
 #Run Samtools MBV analysis on HPC
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s mbv_analysis.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_all_config.yaml --rerun-incomplete
+
+
+#### van_de_Bunt_2015 ####
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -p processed/van_de_Bunt_2015/genotypes/GRCh38/van_de_Bunt_2015_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 22 --rerun-incomplete
+

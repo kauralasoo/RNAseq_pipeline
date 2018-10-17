@@ -211,7 +211,7 @@ sample_metadata = readr::read_delim("metadata/TwinsUK/TwinsUK_sample_metadata.tx
   dplyr::select(-id_match, -mbv_genotype_id, -qtl_mapping) %>%
   dplyr::select(mandatory_cols, everything())
 
-featureCounts_se = makeSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
+featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
 
 write.table(sample_metadata, "metadata/cleaned/TwinsUK.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 saveRDS(featureCounts_se, "results/SummarizedExperiments/TwinsUK.rds")

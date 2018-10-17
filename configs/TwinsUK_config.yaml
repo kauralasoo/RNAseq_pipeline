@@ -15,6 +15,15 @@ hisat2_flags: ""
 #Splicing
 leafcutter_root: "/gpfs/hpchome/a72094/software/leafcutter-0.2.7"
 
+#QTL mapping
+conditions: ["fat_naive","LCL_naive","skin_naive","blood_naive"]
+is_imputed: False
+#quant_methods: ["txrevise", "featureCounts"]
+quant_methods: ["featureCounts"]
+n_batches: 400
+cis_window: 1000000
+nominal_cis_window: 1000000
+
 #Dictionary of sample names
 samples:
   TWPID10860: [processed/TwinsUK/fastq/TWPID10860_1.fastq.gz, processed/TwinsUK/fastq/TWPID10860_2.fastq.gz]
