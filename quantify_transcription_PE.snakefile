@@ -189,7 +189,7 @@ rule make_all:
 		#"processed/{study}/matrices/gene_expression_featureCounts.txt",
 		# expand("processed/{{study}}/leafcutter/junc/{sample}.junc", sample=config["samples"]),
 		#expand("processed/{study}/salmon/{annotation}/{sample}/quant.sf", study = config["study"], annotation=config["annotations"], sample=config["samples"]),
-		#expand("processed/{study}/featureCounts/{sample}.featureCounts.txt", study = config["study"], sample=config["samples"]),
+		expand("processed/{{study}}/featureCounts/{sample}.featureCounts.txt", sample=config["samples"]),
 		#expand("processed/{study}/ASEcounts/{sample}.ASEcounts", study = config["study"], sample=config["samples"]),
 		# expand("processed/{{study}}/matrices/{annotation}.salmon_txrevise.rds", annotation=config["annotations"]),
 		#"processed/{study}/leafcutter/leafcutter_perind.counts.gz"
