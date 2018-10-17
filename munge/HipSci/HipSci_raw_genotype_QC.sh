@@ -108,3 +108,66 @@ bcftools index controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.d
 #Fix ref and alt alleles
 bcftools +fixref controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.dbSNP.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.dbSNP.fixref.vcf.gz -- -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa -i ~/rocket/datasets/dbSNP/dbSNP_b151_GRCh37p13.vcf.gz
 bcftools +fixref controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.dbSNP.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.dbSNP.fixref.vcf.gz -- -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa -i ~/rocket/datasets/dbSNP/dbSNP_b151_GRCh37p13.vcf.gz
+
+#Sort
+bcftools sort controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.dbSNP.fixref.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.dbSNP.fixref.sorted.vcf.gz
+bcftools sort controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.dbSNP.fixref.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.dbSNP.fixref.sorted.vcf.gz
+
+#Index
+bcftools index controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.dbSNP.fixref.sorted.vcf.gz
+bcftools index controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.dbSNP.fixref.sorted.vcf.gz
+
+#Remove remaining non-ref alleles
+bcftools norm -cx -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa controlled/processed/HipSci_GRCh37_v1-0.imiss.tags.filtered.chr.dbSNP.fixref.sorted.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-0_genotyped.vcf.gz
+bcftools norm -cx -f ~/rocket/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa controlled/processed/HipSci_GRCh37_v1-1.imiss.tags.filtered.chr.dbSNP.fixref.sorted.vcf.gz -Oz -o controlled/processed/HipSci_GRCh37_v1-1_genotyped.vcf.gz
+
+HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz
+
+#Extract chromosomes
+bcftools view -r 1 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr1.vcf.gz
+bcftools view -r 2 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr2.vcf.gz
+bcftools view -r 3 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr3.vcf.gz
+bcftools view -r 4 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr4.vcf.gz
+bcftools view -r 5 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr5.vcf.gz
+bcftools view -r 6 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr6.vcf.gz
+bcftools view -r 7 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr7.vcf.gz
+bcftools view -r 8 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr8.vcf.gz
+bcftools view -r 9 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr9.vcf.gz
+bcftools view -r 10 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr10.vcf.gz
+bcftools view -r 11 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr11.vcf.gz
+bcftools view -r 12 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr12.vcf.gz
+bcftools view -r 13 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr13.vcf.gz
+bcftools view -r 14 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr14.vcf.gz
+bcftools view -r 15 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr15.vcf.gz
+bcftools view -r 16 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr16.vcf.gz
+bcftools view -r 17 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr17.vcf.gz
+bcftools view -r 18 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr18.vcf.gz
+bcftools view -r 19 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr19.vcf.gz
+bcftools view -r 20 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr20.vcf.gz
+bcftools view -r 21 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr21.vcf.gz
+bcftools view -r 22 HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chr22.vcf.gz
+bcftools view -r X HipSci_GRCh37_v1-1/HipSci_GRCh37_v1-1_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-1/by_chr/HipSci_GRCh37_v1-1_chrX.vcf.gz
+
+bcftools view -r 1 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr1.vcf.gz
+bcftools view -r 2 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr2.vcf.gz
+bcftools view -r 3 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr3.vcf.gz
+bcftools view -r 4 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr4.vcf.gz
+bcftools view -r 5 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr5.vcf.gz
+bcftools view -r 6 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr6.vcf.gz
+bcftools view -r 7 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr7.vcf.gz
+bcftools view -r 8 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr8.vcf.gz
+bcftools view -r 9 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr9.vcf.gz
+bcftools view -r 10 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr10.vcf.gz
+bcftools view -r 11 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr11.vcf.gz
+bcftools view -r 12 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr12.vcf.gz
+bcftools view -r 13 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr13.vcf.gz
+bcftools view -r 14 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr14.vcf.gz
+bcftools view -r 15 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr15.vcf.gz
+bcftools view -r 16 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr16.vcf.gz
+bcftools view -r 17 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr17.vcf.gz
+bcftools view -r 18 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr18.vcf.gz
+bcftools view -r 19 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr19.vcf.gz
+bcftools view -r 20 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr20.vcf.gz
+bcftools view -r 21 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr21.vcf.gz
+bcftools view -r 22 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr22.vcf.gz
+bcftools view -r X HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chrX.vcf.gz

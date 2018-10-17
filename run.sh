@@ -13,7 +13,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile pro
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s bam_to_fastq_PE.snakefile processed/TwinsUK/out.txt --jobs 1 --configfile configs/TwinsUK_config.yaml --rerun-incomplete
 
 #Run the alignment pipeline
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/TwinsUK/out.txt --jobs 20 --configfile configs/TwinsUK_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/TwinsUK/out.txt --jobs 40 --configfile configs/TwinsUK_config.yaml --rerun-incomplete
 
 #CrossMap genotypes
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes_no_R2.snakefile -np processed/TwinsUK/genotypes/GRCh38/TwinsUK_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 22 --rerun-incomplete
@@ -39,7 +39,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -p processed/Monocytes_Quach_2016/genotypes/GRCh38/Monocytes_Quach_2016_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 10 --rerun-incomplete
 
 #Map QTLs
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/Monocytes_Quach_2016/out.txt --configfile configs/Quach_2016_config.yaml --rerun-incomplete --jobs 100
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/Monocytes_Quach_2016/out.txt --configfile configs/Quach_2016_config.yaml --rerun-incomplete --jobs 200
 
 
 #### BLUEPRINT dataset ####

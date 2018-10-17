@@ -72,3 +72,7 @@ bcftools view -r X Bunt_2015_GRCh37_genotyped_sorted.vcf.gz -Oz -o by_chr/Bunt_2
 7za x chr_20.zip -p'yB4aqtxFTJVE7J'
 7za x chr_21.zip -p'yB4aqtxFTJVE7J'
 7za x chr_22.zip -p'yB4aqtxFTJVE7J'
+
+#Filter final vcf file and add unique variant ids
+bcftools filter -i 'MAF[0] > 0.01' van_de_Bunt_2015_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o van_de_Bunt_2015_GRCh38.filtered.vcf.gz
+bcftools index van_de_Bunt_2015_GRCh38.filtered.vcf.gz
