@@ -3,7 +3,7 @@
 strandedness: Unstranded
 
 #General
-vcf_file: /gpfs/hpchome/a72094/rocket/datasets/open_access/GEUVADIS/genotypes/GEUVADIS_GRCh38_filtered.vcf.gz
+vcf_file: /gpfs/hpchome/a72094/hpc/datasets/open_access/GEUVADIS/genotypes/GEUVADIS_GRCh38_filtered.vcf.gz
 
 #Reference annotations
 ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
@@ -21,7 +21,7 @@ annotations: ["txrevise.grp_1.contained", "txrevise.grp_1.downstream","txrevise.
 libType: IU
 
 #QTL mapping
-conditions: ["naive"]
+conditions: ["LCL_naive"]
 is_imputed: False
 #quant_methods: ["txrevise", "featureCounts"]
 quant_methods: ["featureCounts"]
