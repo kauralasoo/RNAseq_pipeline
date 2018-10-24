@@ -112,3 +112,8 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s mbv_analysis.snakefile
 #### van_de_Bunt_2015 ####
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -p processed/van_de_Bunt_2015/genotypes/GRCh38/van_de_Bunt_2015_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 22 --rerun-incomplete
 
+# Convert Bams to fastq
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s bam_to_fastq_PE_filename.snakefile processed/Bunt_2015/out.txt --jobs 30 --configfile configs/Bunt_2015_config_bam_to_fastq.yaml --rerun-incomplete
+
+# Run the alignment pipeline
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/Bunt_2015/out.txt --jobs 30 --configfile configs/Bunt_2015_config_align.yaml --rerun-incomplete
