@@ -1,4 +1,5 @@
 library("dplyr")
+library("stringr")
 
 #Import GENCORD metadata
 GENCORD_meta = read.table("metadata/cleaned/GENCORD.tsv", header = TRUE, stringsAsFactors = FALSE) %>%
