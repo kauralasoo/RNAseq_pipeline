@@ -91,7 +91,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s cram_to_fastq_PE.snakefile processed/HipSci/out.txt --jobs 30 --configfile configs/HipSci_config_cram_to_fastq.yaml --rerun-incomplete
 
 #CrossMap genotypes
-snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/HipSci/genotypes/GRCh38/HipSci_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs  --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/HipSci/genotypes/GRCh38/HipSci_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs --rerun-incomplete
 
 
 

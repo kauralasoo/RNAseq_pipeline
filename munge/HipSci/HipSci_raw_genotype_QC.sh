@@ -171,3 +171,54 @@ bcftools view -r 20 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -
 bcftools view -r 21 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr21.vcf.gz
 bcftools view -r 22 HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chr22.vcf.gz
 bcftools view -r X HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o HipSci_GRCh37_v1-0/by_chr/HipSci_GRCh37_v1-0_chrX.vcf.gz
+
+#Unzip
+7za x chr_1.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_2.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_3.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_4.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_5.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_6.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_7.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_8.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_9.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_10.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_11.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_12.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_13.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_14.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_15.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_16.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_17.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_18.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_19.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_20.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_21.zip -p'Ay(;sn2BAmgMU4'
+7za x chr_22.zip -p'Ay(;sn2BAmgMU4'
+
+7za x chr_1.zip -p'2RgCcPHx9sOu8)'
+7za x chr_2.zip -p'2RgCcPHx9sOu8)'
+7za x chr_3.zip -p'2RgCcPHx9sOu8)'
+7za x chr_4.zip -p'2RgCcPHx9sOu8)'
+7za x chr_5.zip -p'2RgCcPHx9sOu8)'
+7za x chr_6.zip -p'2RgCcPHx9sOu8)'
+7za x chr_7.zip -p'2RgCcPHx9sOu8)'
+7za x chr_8.zip -p'2RgCcPHx9sOu8)'
+7za x chr_9.zip -p'2RgCcPHx9sOu8)'
+7za x chr_10.zip -p'2RgCcPHx9sOu8)'
+7za x chr_11.zip -p'2RgCcPHx9sOu8)'
+7za x chr_12.zip -p'2RgCcPHx9sOu8)'
+7za x chr_13.zip -p'2RgCcPHx9sOu8)'
+7za x chr_14.zip -p'2RgCcPHx9sOu8)'
+7za x chr_15.zip -p'2RgCcPHx9sOu8)'
+7za x chr_16.zip -p'2RgCcPHx9sOu8)'
+7za x chr_17.zip -p'2RgCcPHx9sOu8)'
+7za x chr_18.zip -p'2RgCcPHx9sOu8)'
+7za x chr_19.zip -p'2RgCcPHx9sOu8)'
+7za x chr_20.zip -p'2RgCcPHx9sOu8)'
+7za x chr_21.zip -p'2RgCcPHx9sOu8)'
+7za x chr_22.zip -p'2RgCcPHx9sOu8)'
+
+#Filter final vcf file and add unique variant ids
+bcftools filter -i 'MAF[0] > 0.01' HipSci_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o HipSci_GRCh38.filtered.vcf.gz
+bcftools index HipSci_GRCh38.filtered.vcf.gz
