@@ -14,7 +14,7 @@ rule make_all:
 rule extract_genotypes:
     input:
         vcf = "/gpfs/hpchome/a72094/rocket/datasets/1000G/GRCh38/ALL.chr{chromosome}_GRCh38.genotypes.20170504.vcf.gz",
-        samples = "~/hpc/projects/RNAseq_pipeline/metadata/Garieri_2017/Garieri_genotype_names.txt"
+        samples = "/gpfs/hpchome/a72094/hpc/projects/RNAseq_pipeline/metadata/Garieri_2017/Garieri_genotype_names.txt"
     output:
         vcf = "/gpfs/hpchome/a72094/hpc/datasets/controlled_access/Garieri_2017/1000G/Garieri_1000G.chr{chromosome}.vcf.gz"
     threads: 1
