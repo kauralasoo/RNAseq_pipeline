@@ -60,7 +60,7 @@ best_matches = purrr::map_df(mbv_results, mbvFindBestMatch, .id = "sample_id") %
 write.table(best_matches, "metadata/BLUEPRINT/BLUEPRINT_mbv_best_match.txt", sep = "\t", quote = F, row.names = F)
 
 
-a = mbv_results$S003P5B1_RNA
+a = mbv_results$S003Q3B1_RNA
 res = dplyr::transmute(a, mbv_genotype_id = SampleID, 
                        het_consistent_frac = n_het_consistent/n_het_covered, 
                        hom_consistent_frac = n_hom_consistent/n_hom_covered)
@@ -105,7 +105,7 @@ best_matches = purrr::map_df(mbv_results, mbvFindBestMatch, .id = "sample_id") %
 write.table(best_matches, "metadata/Nedelec_2016/Nedelec_2016_mbv_best_match.txt", sep = "\t", quote = F, row.names = F)
 
 
-a = mbv_results$AF193_L2
+a = mbv_results$EU290_L2
 res = dplyr::transmute(a, mbv_genotype_id = SampleID, 
                        het_consistent_frac = n_het_consistent/n_het_covered, 
                        hom_consistent_frac = n_hom_consistent/n_hom_covered)
