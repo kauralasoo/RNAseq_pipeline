@@ -4,3 +4,12 @@ bcftools index Garieri_1000G.vcf.gz
 
 #Split multi-allelic variants
 bcftools norm -m-any Garieri_1000G.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o Garieri_1000G_renamed.vcf.gz
+
+#Remove all INFO tags
+bcftools annotate -x INFO Garieri_1000G_renamed.vcf.gz -Oz -o Garieri_1000G_renamed_no_tags.vcf.gz
+
+#Merge the two files
+bcftools merge 1000G/Garieri_1000G_renamed_no_tags.vcf.gz GENCORD_subset.vcf.gz -Oz -o Garieri_merged.vcf.gz
+
+#Keep genotypes that are not missing
+bcftools filter -i 'F_MISSING < 0.05 & MAF[0] > 0.01' Garieri_merged.vcf.gz | bcftools annotate -x FORMAT/GP | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o Garieri_filtered.vcf.gz
