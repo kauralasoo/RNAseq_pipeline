@@ -117,3 +117,9 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s bam_to_fastq_PE_filena
 
 # Run the alignment pipeline
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/Bunt_2015/out.txt --jobs 30 --configfile configs/Bunt_2015_config_align.yaml --rerun-incomplete
+
+
+
+#### Garieri 2017 ####
+#Extract samples from 1KG VCFs
+snakemake -p --snakefile extract_genotypes.snakefile --cluster ../../scripts/snakemake_submit_UT.py --jobs 10
