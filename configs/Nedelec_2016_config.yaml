@@ -3,7 +3,7 @@
 strandedness: Unstranded
 
 #General
-vcf_file: /gpfs/hpchome/a72094/rocket/datasets/controlled_access/Nedelec_2016_Macrophages/genotypes/Michigan_GRCh37_130618/GRCh38/Nedelec_2016_GRCh38.filtered.vcf.gz
+vcf_file: /gpfs/hpchome/a72094/hpc/datasets/controlled_access/Nedelec_2016/genotypes/Michigan_GRCh37_130618/GRCh38/Nedelec_2016_GRCh38.filtered.vcf.gz
 chromosome_lengths: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/chromosome_lengths.txt
 
 #Reference annotations
