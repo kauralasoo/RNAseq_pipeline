@@ -24,13 +24,16 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile pro
 
 #### Nedelec 2016 dataset ####
 #Convert .sra files to fastq
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s sra_to_fastq.snakefile processed/Macrophages_Nedelec_2016/out.txt --jobs 1 --configfile configs/Nedelec_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s sra_to_fastq.snakefile processed/Nedelec_2016/out.txt --jobs 1 --configfile configs/Nedelec_2016_config.yaml --rerun-incomplete
 
 #Quantify transcription
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Macrophages_Nedelec_2016/out.txt --jobs 1 --configfile configs/Nedelec_config.yaml --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_SE.snakefile processed/Nedelec_2016/out.txt --jobs 1 --configfile configs/Nedelec_2016_config.yaml --rerun-incomplete
 
 #CrossMap genotypes
-snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -p processed/Macrophages_Nedelec_2016/genotypes/GRCh38/Macrophages_Nedelec_2016_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 10 --rerun-incomplete
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -p processed/Nedelec_2016/genotypes/GRCh38/Macrophages_Nedelec_2016_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 10 --rerun-incomplete
+
+#Map QTLs
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/Nedelec_2016/out.txt --configfile configs/Nedelec_2016_config.yaml --rerun-incomplete --jobs 100
 
 
 #### Quach 2016 dataset ####
@@ -117,3 +120,9 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s bam_to_fastq_PE_filena
 
 # Run the alignment pipeline
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/Bunt_2015/out.txt --jobs 30 --configfile configs/Bunt_2015_config_align.yaml --rerun-incomplete
+
+
+
+#### Garieri 2017 ####
+#Extract samples from 1KG VCFs
+snakemake -p --snakefile extract_genotypes.snakefile --cluster ../../scripts/snakemake_submit_UT.py --jobs 10

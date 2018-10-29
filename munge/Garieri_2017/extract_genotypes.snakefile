@@ -9,7 +9,7 @@ rule make_all:
     resources:
         mem = 1000
     shell:
-        "echo 'Done! > {output}'" 
+        "echo 'Done!' > {output}" 
         
 rule extract_genotypes:
     input:
@@ -25,3 +25,4 @@ rule extract_genotypes:
         module load bcftools-1.9
         bcftools view -S {input.samples} --force-samples {input.vcf} -Oz -o {output.vcf}
         """
+
