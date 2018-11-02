@@ -359,7 +359,7 @@ samples:
   SAMEA2397860: [processed/HipSci/fastq/SAMEA2397860/SAMEA2397860_1.fastq.gz, processed/HipSci/fastq/SAMEA2397860/SAMEA2397860_2.fastq.gz]
   SAMEA2397877: [processed/HipSci/fastq/SAMEA2397877/SAMEA2397877_1.fastq.gz, processed/HipSci/fastq/SAMEA2397877/SAMEA2397877_2.fastq.gz]
   SAMEA2397889: [processed/HipSci/fastq/SAMEA2397889/SAMEA2397889_1.fastq.gz, processed/HipSci/fastq/SAMEA2397889/SAMEA2397889_2.fastq.gz]
-  SAMEA2397905: [processed/HipSci/fastq/SAMEA2397905/SAMEA2397905_1.fastq.gz, processed/HipSci/fastq/SAMEA2397905/SAMEA2397905_2.fastq.gz]
+  # SAMEA2397905: [processed/HipSci/fastq/SAMEA2397905/SAMEA2397905_1.fastq.gz, processed/HipSci/fastq/SAMEA2397905/SAMEA2397905_2.fastq.gz] original cell type
   SAMEA2397911: [processed/HipSci/fastq/SAMEA2397911/SAMEA2397911_1.fastq.gz, processed/HipSci/fastq/SAMEA2397911/SAMEA2397911_2.fastq.gz]
   SAMEA2397914: [processed/HipSci/fastq/SAMEA2397914/SAMEA2397914_1.fastq.gz, processed/HipSci/fastq/SAMEA2397914/SAMEA2397914_2.fastq.gz]
   SAMEA2397920: [processed/HipSci/fastq/SAMEA2397920/SAMEA2397920_1.fastq.gz, processed/HipSci/fastq/SAMEA2397920/SAMEA2397920_2.fastq.gz]
@@ -372,11 +372,11 @@ samples:
   SAMEA2397959: [processed/HipSci/fastq/SAMEA2397959/SAMEA2397959_1.fastq.gz, processed/HipSci/fastq/SAMEA2397959/SAMEA2397959_2.fastq.gz]
   SAMEA2397967: [processed/HipSci/fastq/SAMEA2397967/SAMEA2397967_1.fastq.gz, processed/HipSci/fastq/SAMEA2397967/SAMEA2397967_2.fastq.gz]
   SAMEA2397979: [processed/HipSci/fastq/SAMEA2397979/SAMEA2397979_1.fastq.gz, processed/HipSci/fastq/SAMEA2397979/SAMEA2397979_2.fastq.gz]
-  SAMEA2397988: [processed/HipSci/fastq/SAMEA2397988/SAMEA2397988_1.fastq.gz, processed/HipSci/fastq/SAMEA2397988/SAMEA2397988_2.fastq.gz]
+  # SAMEA2397988: [processed/HipSci/fastq/SAMEA2397988/SAMEA2397988_1.fastq.gz, processed/HipSci/fastq/SAMEA2397988/SAMEA2397988_2.fastq.gz] original cell type
   SAMEA2397999: [processed/HipSci/fastq/SAMEA2397999/SAMEA2397999_1.fastq.gz, processed/HipSci/fastq/SAMEA2397999/SAMEA2397999_2.fastq.gz]
   SAMEA2398005: [processed/HipSci/fastq/SAMEA2398005/SAMEA2398005_1.fastq.gz, processed/HipSci/fastq/SAMEA2398005/SAMEA2398005_2.fastq.gz]
   SAMEA2398007: [processed/HipSci/fastq/SAMEA2398007/SAMEA2398007_1.fastq.gz, processed/HipSci/fastq/SAMEA2398007/SAMEA2398007_2.fastq.gz]
-  SAMEA2398021: [processed/HipSci/fastq/SAMEA2398021/SAMEA2398021_1.fastq.gz, processed/HipSci/fastq/SAMEA2398021/SAMEA2398021_2.fastq.gz]
+  # SAMEA2398021: [processed/HipSci/fastq/SAMEA2398021/SAMEA2398021_1.fastq.gz, processed/HipSci/fastq/SAMEA2398021/SAMEA2398021_2.fastq.gz] original cell type
   SAMEA2398024: [processed/HipSci/fastq/SAMEA2398024/SAMEA2398024_1.fastq.gz, processed/HipSci/fastq/SAMEA2398024/SAMEA2398024_2.fastq.gz]
   SAMEA2398043: [processed/HipSci/fastq/SAMEA2398043/SAMEA2398043_1.fastq.gz, processed/HipSci/fastq/SAMEA2398043/SAMEA2398043_2.fastq.gz]
   SAMEA2398046: [processed/HipSci/fastq/SAMEA2398046/SAMEA2398046_1.fastq.gz, processed/HipSci/fastq/SAMEA2398046/SAMEA2398046_2.fastq.gz]
@@ -384,7 +384,7 @@ samples:
   SAMEA2398071: [processed/HipSci/fastq/SAMEA2398071/SAMEA2398071_1.fastq.gz, processed/HipSci/fastq/SAMEA2398071/SAMEA2398071_2.fastq.gz]
   SAMEA2398073: [processed/HipSci/fastq/SAMEA2398073/SAMEA2398073_1.fastq.gz, processed/HipSci/fastq/SAMEA2398073/SAMEA2398073_2.fastq.gz]
   SAMEA2398098: [processed/HipSci/fastq/SAMEA2398098/SAMEA2398098_1.fastq.gz, processed/HipSci/fastq/SAMEA2398098/SAMEA2398098_2.fastq.gz]
-  SAMEA2398121: [processed/HipSci/fastq/SAMEA2398121/SAMEA2398121_1.fastq.gz, processed/HipSci/fastq/SAMEA2398121/SAMEA2398121_2.fastq.gz]
+  # SAMEA2398121: [processed/HipSci/fastq/SAMEA2398121/SAMEA2398121_1.fastq.gz, processed/HipSci/fastq/SAMEA2398121/SAMEA2398121_2.fastq.gz] original cell type
   SAMEA2398123: [processed/HipSci/fastq/SAMEA2398123/SAMEA2398123_1.fastq.gz, processed/HipSci/fastq/SAMEA2398123/SAMEA2398123_2.fastq.gz]
   SAMEA2398124: [processed/HipSci/fastq/SAMEA2398124/SAMEA2398124_1.fastq.gz, processed/HipSci/fastq/SAMEA2398124/SAMEA2398124_2.fastq.gz]
   SAMEA2398125: [processed/HipSci/fastq/SAMEA2398125/SAMEA2398125_1.fastq.gz, processed/HipSci/fastq/SAMEA2398125/SAMEA2398125_2.fastq.gz]
@@ -393,7 +393,7 @@ samples:
   SAMEA2398134: [processed/HipSci/fastq/SAMEA2398134/SAMEA2398134_1.fastq.gz, processed/HipSci/fastq/SAMEA2398134/SAMEA2398134_2.fastq.gz]
   SAMEA2398137: [processed/HipSci/fastq/SAMEA2398137/SAMEA2398137_1.fastq.gz, processed/HipSci/fastq/SAMEA2398137/SAMEA2398137_2.fastq.gz]
   SAMEA2398167: [processed/HipSci/fastq/SAMEA2398167/SAMEA2398167_1.fastq.gz, processed/HipSci/fastq/SAMEA2398167/SAMEA2398167_2.fastq.gz]
-  SAMEA2398200: [processed/HipSci/fastq/SAMEA2398200/SAMEA2398200_1.fastq.gz, processed/HipSci/fastq/SAMEA2398200/SAMEA2398200_2.fastq.gz]
+  # SAMEA2398200: [processed/HipSci/fastq/SAMEA2398200/SAMEA2398200_1.fastq.gz, processed/HipSci/fastq/SAMEA2398200/SAMEA2398200_2.fastq.gz] original cell type
   SAMEA2398219: [processed/HipSci/fastq/SAMEA2398219/SAMEA2398219_1.fastq.gz, processed/HipSci/fastq/SAMEA2398219/SAMEA2398219_2.fastq.gz]
   SAMEA2398224: [processed/HipSci/fastq/SAMEA2398224/SAMEA2398224_1.fastq.gz, processed/HipSci/fastq/SAMEA2398224/SAMEA2398224_2.fastq.gz]
   SAMEA2398231: [processed/HipSci/fastq/SAMEA2398231/SAMEA2398231_1.fastq.gz, processed/HipSci/fastq/SAMEA2398231/SAMEA2398231_2.fastq.gz]
@@ -402,7 +402,7 @@ samples:
   SAMEA2398251: [processed/HipSci/fastq/SAMEA2398251/SAMEA2398251_1.fastq.gz, processed/HipSci/fastq/SAMEA2398251/SAMEA2398251_2.fastq.gz]
   SAMEA2398252: [processed/HipSci/fastq/SAMEA2398252/SAMEA2398252_1.fastq.gz, processed/HipSci/fastq/SAMEA2398252/SAMEA2398252_2.fastq.gz]
   SAMEA2398257: [processed/HipSci/fastq/SAMEA2398257/SAMEA2398257_1.fastq.gz, processed/HipSci/fastq/SAMEA2398257/SAMEA2398257_2.fastq.gz]
-  SAMEA2398265: [processed/HipSci/fastq/SAMEA2398265/SAMEA2398265_1.fastq.gz, processed/HipSci/fastq/SAMEA2398265/SAMEA2398265_2.fastq.gz]
+  # SAMEA2398265: [processed/HipSci/fastq/SAMEA2398265/SAMEA2398265_1.fastq.gz, processed/HipSci/fastq/SAMEA2398265/SAMEA2398265_2.fastq.gz] original cell type
   SAMEA2398291: [processed/HipSci/fastq/SAMEA2398291/SAMEA2398291_1.fastq.gz, processed/HipSci/fastq/SAMEA2398291/SAMEA2398291_2.fastq.gz]
   SAMEA2398294: [processed/HipSci/fastq/SAMEA2398294/SAMEA2398294_1.fastq.gz, processed/HipSci/fastq/SAMEA2398294/SAMEA2398294_2.fastq.gz]
   SAMEA2398295: [processed/HipSci/fastq/SAMEA2398295/SAMEA2398295_1.fastq.gz, processed/HipSci/fastq/SAMEA2398295/SAMEA2398295_2.fastq.gz]
@@ -441,7 +441,7 @@ samples:
   SAMEA2398560: [processed/HipSci/fastq/SAMEA2398560/SAMEA2398560_1.fastq.gz, processed/HipSci/fastq/SAMEA2398560/SAMEA2398560_2.fastq.gz]
   SAMEA2398586: [processed/HipSci/fastq/SAMEA2398586/SAMEA2398586_1.fastq.gz, processed/HipSci/fastq/SAMEA2398586/SAMEA2398586_2.fastq.gz]
   SAMEA2398593: [processed/HipSci/fastq/SAMEA2398593/SAMEA2398593_1.fastq.gz, processed/HipSci/fastq/SAMEA2398593/SAMEA2398593_2.fastq.gz]
-  SAMEA2398618: [processed/HipSci/fastq/SAMEA2398618/SAMEA2398618_1.fastq.gz, processed/HipSci/fastq/SAMEA2398618/SAMEA2398618_2.fastq.gz]
+  # SAMEA2398618: [processed/HipSci/fastq/SAMEA2398618/SAMEA2398618_1.fastq.gz, processed/HipSci/fastq/SAMEA2398618/SAMEA2398618_2.fastq.gz] original cell type
   SAMEA2398634: [processed/HipSci/fastq/SAMEA2398634/SAMEA2398634_1.fastq.gz, processed/HipSci/fastq/SAMEA2398634/SAMEA2398634_2.fastq.gz]
   SAMEA2398643: [processed/HipSci/fastq/SAMEA2398643/SAMEA2398643_1.fastq.gz, processed/HipSci/fastq/SAMEA2398643/SAMEA2398643_2.fastq.gz]
   SAMEA2398656: [processed/HipSci/fastq/SAMEA2398656/SAMEA2398656_1.fastq.gz, processed/HipSci/fastq/SAMEA2398656/SAMEA2398656_2.fastq.gz]
@@ -461,7 +461,7 @@ samples:
   SAMEA2398841: [processed/HipSci/fastq/SAMEA2398841/SAMEA2398841_1.fastq.gz, processed/HipSci/fastq/SAMEA2398841/SAMEA2398841_2.fastq.gz]
   SAMEA2398851: [processed/HipSci/fastq/SAMEA2398851/SAMEA2398851_1.fastq.gz, processed/HipSci/fastq/SAMEA2398851/SAMEA2398851_2.fastq.gz]
   SAMEA2398858: [processed/HipSci/fastq/SAMEA2398858/SAMEA2398858_1.fastq.gz, processed/HipSci/fastq/SAMEA2398858/SAMEA2398858_2.fastq.gz]
-  SAMEA2398862: [processed/HipSci/fastq/SAMEA2398862/SAMEA2398862_1.fastq.gz, processed/HipSci/fastq/SAMEA2398862/SAMEA2398862_2.fastq.gz]
+  # SAMEA2398862: [processed/HipSci/fastq/SAMEA2398862/SAMEA2398862_1.fastq.gz, processed/HipSci/fastq/SAMEA2398862/SAMEA2398862_2.fastq.gz] original cell type
   SAMEA2398865: [processed/HipSci/fastq/SAMEA2398865/SAMEA2398865_1.fastq.gz, processed/HipSci/fastq/SAMEA2398865/SAMEA2398865_2.fastq.gz]
   SAMEA2398866: [processed/HipSci/fastq/SAMEA2398866/SAMEA2398866_1.fastq.gz, processed/HipSci/fastq/SAMEA2398866/SAMEA2398866_2.fastq.gz]
   SAMEA2398868: [processed/HipSci/fastq/SAMEA2398868/SAMEA2398868_1.fastq.gz, processed/HipSci/fastq/SAMEA2398868/SAMEA2398868_2.fastq.gz]
@@ -491,11 +491,11 @@ samples:
   SAMEA2399149: [processed/HipSci/fastq/SAMEA2399149/SAMEA2399149_1.fastq.gz, processed/HipSci/fastq/SAMEA2399149/SAMEA2399149_2.fastq.gz]
   SAMEA2399150: [processed/HipSci/fastq/SAMEA2399150/SAMEA2399150_1.fastq.gz, processed/HipSci/fastq/SAMEA2399150/SAMEA2399150_2.fastq.gz]
   SAMEA2399151: [processed/HipSci/fastq/SAMEA2399151/SAMEA2399151_1.fastq.gz, processed/HipSci/fastq/SAMEA2399151/SAMEA2399151_2.fastq.gz]
-  #SAMEA2399161: [processed/HipSci/fastq/SAMEA2399161/SAMEA2399161_1.fastq.gz, processed/HipSci/fastq/SAMEA2399161/SAMEA2399161_2.fastq.gz]
+  # SAMEA2399161: [processed/HipSci/fastq/SAMEA2399161/SAMEA2399161_1.fastq.gz, processed/HipSci/fastq/SAMEA2399161/SAMEA2399161_2.fastq.gz] corrupted file, can't process
   SAMEA2399165: [processed/HipSci/fastq/SAMEA2399165/SAMEA2399165_1.fastq.gz, processed/HipSci/fastq/SAMEA2399165/SAMEA2399165_2.fastq.gz]
   SAMEA2399172: [processed/HipSci/fastq/SAMEA2399172/SAMEA2399172_1.fastq.gz, processed/HipSci/fastq/SAMEA2399172/SAMEA2399172_2.fastq.gz]
   SAMEA2399182: [processed/HipSci/fastq/SAMEA2399182/SAMEA2399182_1.fastq.gz, processed/HipSci/fastq/SAMEA2399182/SAMEA2399182_2.fastq.gz]
-  SAMEA2399188: [processed/HipSci/fastq/SAMEA2399188/SAMEA2399188_1.fastq.gz, processed/HipSci/fastq/SAMEA2399188/SAMEA2399188_2.fastq.gz]
+  # SAMEA2399188: [processed/HipSci/fastq/SAMEA2399188/SAMEA2399188_1.fastq.gz, processed/HipSci/fastq/SAMEA2399188/SAMEA2399188_2.fastq.gz] original cell type
   SAMEA2399194: [processed/HipSci/fastq/SAMEA2399194/SAMEA2399194_1.fastq.gz, processed/HipSci/fastq/SAMEA2399194/SAMEA2399194_2.fastq.gz]
   SAMEA2399199: [processed/HipSci/fastq/SAMEA2399199/SAMEA2399199_1.fastq.gz, processed/HipSci/fastq/SAMEA2399199/SAMEA2399199_2.fastq.gz]
   SAMEA2399200: [processed/HipSci/fastq/SAMEA2399200/SAMEA2399200_1.fastq.gz, processed/HipSci/fastq/SAMEA2399200/SAMEA2399200_2.fastq.gz]
@@ -535,627 +535,4 @@ samples:
   SAMEA4449169: [processed/HipSci/fastq/SAMEA4449169/SAMEA4449169_1.fastq.gz, processed/HipSci/fastq/SAMEA4449169/SAMEA4449169_2.fastq.gz]
   SAMEA4449172: [processed/HipSci/fastq/SAMEA4449172/SAMEA4449172_1.fastq.gz, processed/HipSci/fastq/SAMEA4449172/SAMEA4449172_2.fastq.gz]
   SAMEA4451488: [processed/HipSci/fastq/SAMEA4451488/SAMEA4451488_1.fastq.gz, processed/HipSci/fastq/SAMEA4451488/SAMEA4451488_2.fastq.gz]
-  SAMEA4451496  : [processed/HipSci/fastq/SAMEA4451496/SAMEA4451496_1.fastq.gz, processed/HipSci/fastq/SAMEA4451496/SAMEA4451496_2.fastq.gz]
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  SAMEA4451496: [processed/HipSci/fastq/SAMEA4451496/SAMEA4451496_1.fastq.gz, processed/HipSci/fastq/SAMEA4451496/SAMEA4451496_2.fastq.gz]
