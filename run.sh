@@ -96,8 +96,6 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s cram_to_fastq_PE.snake
 #Run the alignment pipeline
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/HipSci/out.txt --jobs 30 --configfile configs/HipSci_config_align.yaml --rerun-incomplete
 
-
-
 #CrossMap genotypes
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/HipSci/genotypes/GRCh38/HipSci_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs --rerun-incomplete
 
@@ -107,6 +105,10 @@ snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefi
 #CrossMap genotypes
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/CEDAR/out.txt --configfile configs/CrossMap_config.yaml --jobs 1 --rerun-incomplete
 
+
+##### Fairfax_2014 ####
+#CrossMap genotypes
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/Fairfax_2014/genotypes/GRCh38/Fairfax_2014_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 1 --rerun-incomplete
 
 
 
