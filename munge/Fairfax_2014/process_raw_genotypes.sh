@@ -141,6 +141,9 @@ bcftools view -r 22 Fairfax_2014_GRCh37_final.vcf.gz -Oz -o by_chr/Fairfax_2014_
 7za x chr_21.zip -p'9OLQcyXuk8GXgv'
 7za x chr_22.zip -p'9OLQcyXuk8GXgv'
 
+#Filter final vcf file and add unique variant ids
+bcftools filter -i 'MAF[0] > 0.01' Fairfax_2014_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o Fairfax_2014_GRCh38.filtered.vcf.gz
+bcftools index Fairfax_2014_GRCh38.filtered.vcf.gz
 
-#Rename chromosomes
+#Rename samples to avoid integer names
 bcftools reheader -s ~/hpc/projects/RNAseq_pipeline/metadata/Fairfax_2014/genotype_name_map.txt Fairfax_2014_GRCh38.filtered.vcf.gz > Fairfax_2014_GRCh38.filtered.renamed.vcf.gz
