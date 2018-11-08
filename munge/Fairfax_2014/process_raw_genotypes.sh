@@ -142,3 +142,5 @@ bcftools view -r 22 Fairfax_2014_GRCh37_final.vcf.gz -Oz -o by_chr/Fairfax_2014_
 7za x chr_22.zip -p'9OLQcyXuk8GXgv'
 
 
+#Rename chromosomes
+bcftools reheader -s ~/hpc/projects/RNAseq_pipeline/metadata/Fairfax_2014/genotype_name_map.txt Fairfax_2014_GRCh38.filtered.vcf.gz > Fairfax_2014_GRCh38.filtered.renamed.vcf.gz
