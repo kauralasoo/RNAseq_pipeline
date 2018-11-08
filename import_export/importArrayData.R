@@ -8,6 +8,7 @@ library("ggplot2")
 library("data.table")
 library("devtools")
 library("stringr")
+library("data.table")
 load_all("../eQTLUtils/")
 
 #Specify mandatory metadata columns
@@ -70,14 +71,37 @@ sample_metadata = colData(fairfax_2012) %>% as.data.frame() %>% as_tibble() %>%
   dplyr::select(mandatory_cols, everything())
 write.table(sample_metadata, "metadata/cleaned/Fairfax_2012.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 
-  
-
-
-
-
+#### Naranbhai_2012 ####
+naranbhai_2015 = readRDS("results/SummarizedExperiments/microarray/Naranbhai_2015.rds")
 
 #### CEDAR ####
-#Import SE
 cedar_se = readRDS("results/SummarizedExperiments/microarray/CEDAR.rds")
 
+sample_metadata = colData(cedar_se) %>% as.data.frame() %>% as_tibble() %>%
+  dplyr::mutate(marker = ifelse(marker %like% "CD", marker, "none")) %>%
+  dplyr::mutate(cell_type = case_when(
+    cell_type == "monocytes" ~ "monocyte",
+    cell_type == "neutrophils" ~ "neutrophil",
+    cell_type == "transverse colon" ~ "transverse_colon",
+    TRUE ~ cell_type
+  )) %>%
+  dplyr::mutate(qtl_group = ifelse(marker == "none", cell_type, paste(cell_type, marker, sep = "_"))) %>%
+  dplyr::mutate(protocol = "HumanHT-12_V4") %>%
+  dplyr::rename(genotype_qc_passed = genotype_QC_passed) %>%
+  dplyr::rename(rna_qc_passed = RNA_QC_passed) %>%
+  dplyr::select(mandatory_cols, everything())
+write.table(sample_metadata, "metadata/cleaned/CEDAR.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+
+#### Kasela_2017 ####
+kasela_se = readRDS("results/SummarizedExperiments/microarray/Kasela_2017.rds")
+
+sample_metadata = colData(kasela_se) %>% as.data.frame() %>% as_tibble() %>%
+  dplyr::rename(genotype_qc_passed = genotype_QC_passed) %>%
+  dplyr::rename(rna_qc_passed = RNA_QC_passed) %>%
+  dplyr::mutate(qtl_group = paste(cell_type, marker, sep = "_")) %>%
+  dplyr::mutate(protocol = "HumanHT-12_V4") %>%
+  dplyr::select(mandatory_cols, everything())
+write.table(sample_metadata, "metadata/cleaned/Kasela_2017.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+
+  
 
