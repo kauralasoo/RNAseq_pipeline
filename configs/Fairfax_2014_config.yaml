@@ -1,0 +1,14 @@
+#General
+vcf_file: /gpfs/hpchome/a72094/hpc/datasets/controlled_access/Fairfax_2014/genotypes/Michigan_GRCh37_1KGPhase3_061118/GRCh38/Fairfax_2014_GRCh38.filtered.renamed.vcf.gz
+
+#Reference annotations
+ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
+reference_genome: /gpfs/rocket/home/a72094/annotations/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa
+
+#QTL mapping
+conditions: ["monocyte_IFN24","monocyte_LPS2","monocyte_LPS24","monocyte_naive"]
+is_imputed: True
+quant_methods: ["array"]
+n_batches: 400
+cis_window: 1000000
+nominal_cis_window: 1000000
