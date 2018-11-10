@@ -110,6 +110,9 @@ snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefi
 #CrossMap genotypes
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/Fairfax_2014/genotypes/GRCh38/Fairfax_2014_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 1 --rerun-incomplete
 
+#Map QTLs
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/Fairfax_2014/out.txt --configfile configs/Fairfax_2014_config.yaml --rerun-incomplete --jobs 100
+
 
 
 #Run Samtools indexing on HPC
