@@ -56,11 +56,10 @@ rule extract_variant_information:
 	resources:
 		mem = 100
 	run:
-		shell("module load bcftools-1.8")
 		if(config["is_imputed"] == False):
-			shell("set +o pipefail; bcftools +fill-tags {input.vcf} | bcftools query -f '%CHROM\\t%POS\\t%ID\\t%REF\\t%ALT\\t%TYPE\\t%AC\\t%AN\\t%MAF\\tNA\\n' | gzip > {output.var_info}")
+			shell("module load bcftools-1.8; set +o pipefail; bcftools +fill-tags {input.vcf} | bcftools query -f '%CHROM\\t%POS\\t%ID\\t%REF\\t%ALT\\t%TYPE\\t%AC\\t%AN\\t%MAF\\tNA\\n' | gzip > {output.var_info}")
 		else:
-			shell("set +o pipefail; bcftools +fill-tags {input.vcf} | bcftools query -f '%CHROM\\t%POS\\t%ID\\t%REF\\t%ALT\\t%TYPE\\t%AC\\t%AN\\t%MAF\\t%R2\\n' | gzip > {output.var_info}")
+			shell("module load bcftools-1.8; set +o pipefail; bcftools +fill-tags {input.vcf} | bcftools query -f '%CHROM\\t%POS\\t%ID\\t%REF\\t%ALT\\t%TYPE\\t%AC\\t%AN\\t%MAF\\t%R2\\n' | gzip > {output.var_info}")
 
 #Perform PCA on the genotype and phenotype data
 rule perform_pca:
@@ -82,7 +81,7 @@ rule perform_pca:
 		QTLtools pca --bed {input.bed} --center --scale --out {params.pheno_pca}
 		QTLtools pca --vcf {input.vcf} --maf 0.05 --center --scale --distance 50000 --out {params.geno_pca}
 		head -n 7 {params.pheno_pca}.pca > {output.covariates}
-		set +o pipefail; tail -n+2 {params.geno_pca}.pca | head -n 6 >> {output.covariates}
+		set +o pipefail; tail -n+2 {params.geno_pca}.pca | head -n 3 >> {output.covariates}
 		"""
 
 

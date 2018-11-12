@@ -14,7 +14,8 @@ meta = read.table("metadata/Garieri_2017/PRJEB21597.txt", stringsAsFactors = FAL
   dplyr::left_join(GENCORD_meta, by = "genotype_id") %>%
   dplyr::mutate(new_gt = ifelse(is.na(new_gt), genotype_id, new_gt)) %>%
   dplyr::mutate(genotype_id = new_gt) %>%
-  dplyr::select(-new_gt)
+  dplyr::select(-new_gt) %>%
+  dplyr::mutate(genotype_id = str_replace(genotype_id, "GM", "NA"))
 
 write.table(meta, "metadata/Garieri_2017/Garieri_sample_metadata.txt", sep = "\t", quote = FALSE, row.names = F)
 write.table(meta$genotype_id, "metadata/Garieri_2017/Garieri_genotype_names.txt", sep = "\t", quote = FALSE, row.names = F, col.names = F)

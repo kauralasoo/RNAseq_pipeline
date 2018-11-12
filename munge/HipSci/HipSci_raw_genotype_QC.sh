@@ -222,3 +222,4 @@ bcftools view -r X HipSci_GRCh37_v1-0/HipSci_GRCh37_v1-0_genotyped.vcf.gz -Oz -o
 #Filter final vcf file and add unique variant ids
 bcftools filter -i 'MAF[0] > 0.01' HipSci_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o HipSci_GRCh38.filtered.vcf.gz
 bcftools index HipSci_GRCh38.filtered.vcf.gz
+

@@ -93,3 +93,9 @@ bcftools view -r X CEDAR_GRCh37_genotyped.vcf.gz -Oz -o by_chr/CEDAR_GRCh37_chrX
 7za x chr_20.zip -p'syh0evL7VUeUAP'
 7za x chr_21.zip -p'syh0evL7VUeUAP'
 7za x chr_22.zip -p'syh0evL7VUeUAP'
+
+#Filter final vcf file and add unique variant ids
+bcftools filter -i 'MAF[0] > 0.01' CEDAR_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o CEDAR_GRCh38.filtered.vcf.gz
+bcftools index CEDAR_GRCh38.filtered.vcf.gz
+
+

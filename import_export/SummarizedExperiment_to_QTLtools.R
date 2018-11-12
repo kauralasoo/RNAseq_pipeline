@@ -246,11 +246,11 @@ condition_se_list = purrr::map(condition_list, ~subsetSEByColumnValue(cqn_se, "q
 
 #Convert SE onbjects to QTLtools
 qtltools_list = purrr::map(condition_se_list, ~convertSEtoQTLtools(., assay_name = "cqn"))
-saveQTLToolsMatrices(qtltools_list, output_dir = "processed/TwinsUK/qtltools/input/featureCounts/", file_suffix = "bed")
+saveQTLToolsMatrices(qtltools_list, output_dir = "processed/Nedelec_2016/qtltools/input/featureCounts/", file_suffix = "bed")
 
 #Extract sample names
 sample_names = purrr::map(qtltools_list, ~colnames(.)[-(1:6)])
-saveQTLToolsMatrices(sample_names, output_dir = "processed/TwinsUK/qtltools/input/featureCounts/", file_suffix = "sample_names.txt", col_names = FALSE)
+saveQTLToolsMatrices(sample_names, output_dir = "processed/Nedelec_2016/qtltools/input/featureCounts/", file_suffix = "sample_names.txt", col_names = FALSE)
 
 
 
