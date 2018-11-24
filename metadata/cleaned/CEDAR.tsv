@@ -122,7 +122,7 @@ CD4IPC147	IPC147	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE
 CD4IPC207	IPC207	female	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD4	microarray	1	5434289099_R01C01	57	non-smoker	TRUE
 CD4IPC184bis	IPC184	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	CD4	microarray	1	5434289104_R05C01	34	non-smoker	TRUE
 CD4IPC209	IPC209	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD4	microarray	1	5434289099_R02C01	49	non-smoker	TRUE
-CD4IPC184sex	IPC184	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD4	microarray	1	5434289104_R05C01	34	non-smoker	TRUE
+CD4IPC184sex	IPC184	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	CD4	microarray	1	5434289104_R05C01	34	non-smoker	TRUE
 CD4IPC210	IPC210	female	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD4	microarray	1	5434289099_R03C01	41	non-smoker	TRUE
 CD4IPC023bis	IPC023	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	CD4	microarray	1	5434289003_R06C01	80	non-smoker	TRUE
 CD4IPC210bis	IPC210	female	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	CD4	microarray	1	5434289099_R03C01	41	non-smoker	TRUE
@@ -235,7 +235,7 @@ CD4IPC162	IPC162	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE
 CD4IPC170	IPC170	female	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	FALSE	CEDAR	CD4	microarray	1	5434289105_R04C01	62	non-smoker	FALSE
 CD4IPC163	IPC163	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD4	microarray	1	5434289075_R04C02	78	non-smoker	TRUE
 CD4IPC172	IPC172	female	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD4	microarray	1	5434289105_R06C01	56	non-smoker	TRUE
-CD4IPC184quin	IPC184	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD4	microarray	1	5434289104_R05C01	34	non-smoker	TRUE
+CD4IPC184quin	IPC184	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	CD4	microarray	1	5434289104_R05C01	34	non-smoker	TRUE
 CD4IPC174	IPC174	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD4	microarray	1	5434289105_R02C02	41	non-smoker	TRUE
 CD4IPC165	IPC165	female	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD4	microarray	1	5434289075_R05C02	54	non-smoker	TRUE
 CD4IPC176	IPC176	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD4	microarray	1	5434289105_R04C02	54	smoker	TRUE
@@ -1509,9 +1509,9 @@ PLAIPC153	IPC153	female	platelet	naive	platelet	0	NA	NA	NA	HumanHT-12_V4	TRUE	TR
 PLAIPC146	IPC146	male	platelet	naive	platelet	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	none	microarray	1	5434289051_R01C02	67	non-smoker	TRUE
 PLAIPC149	IPC149	female	platelet	naive	platelet	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	none	microarray	1	5434289051_R04C02	70	non-smoker	TRUE
 PLAIPC144	IPC144	female	platelet	naive	platelet	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	none	microarray	1	5434289051_R05C01	62	smoker	TRUE
-CD8IPC184quat	IPC184	male	T-cell	naive	T-cell_CD8	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD8	microarray	1	5434289104_R05C01	34	non-smoker	TRUE
+CD8IPC184quat	IPC184	male	T-cell	naive	T-cell_CD8	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	CD8	microarray	1	5434289104_R05C01	34	non-smoker	TRUE
 CD14IPC067	IPC067	male	monocyte	naive	monocyte_CD14	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD14	microarray	1	5443804115_R04C02	55	non-smoker	TRUE
-CD8IPC185quat	IPC185	female	T-cell	naive	T-cell_CD8	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD8	microarray	1	5434289104_R06C01	60	non-smoker	TRUE
+CD8IPC185quat	IPC185	female	T-cell	naive	T-cell_CD8	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	CD8	microarray	1	5434289104_R06C01	60	non-smoker	TRUE
 CD14IPC082	IPC082	female	monocyte	naive	monocyte_CD14	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD14	microarray	1	5443804068_R03C02	73	non-smoker	TRUE
 CD8IPC220	IPC220	male	T-cell	naive	T-cell_CD8	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD8	microarray	1	8546260098_R04C01	73	non-smoker	TRUE
 CD14IPC189	IPC189	female	monocyte	naive	monocyte_CD14	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD14	microarray	1	5434289104_R03C02	48	non-smoker	TRUE
@@ -1844,11 +1844,11 @@ REIPC061bis	IPC061	male	rectum	naive	rectum	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	
 TRIPC017bis	IPC017	female	transverse_colon	naive	transverse_colon	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	none	microarray	1	5434289001_R06C02	43	non-smoker	TRUE
 TRIPC064bis	IPC064	female	transverse_colon	naive	transverse_colon	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	none	microarray	1	5443804115_R01C02	39	non-smoker	TRUE
 TRIPC018bis	IPC018	female	transverse_colon	naive	transverse_colon	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	none	microarray	1	5434289003_R01C01	65	smoker	TRUE
-CD4IPC054quat	IPC054	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	FALSE	CEDAR	CD4	microarray	1	5434289003_R03C01	76	non-smoker	FALSE
+CD4IPC054quat	IPC054	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	FALSE	FALSE	CEDAR	CD4	microarray	1	5434289003_R03C01	76	non-smoker	FALSE
 TRIPC051bis	IPC051	female	transverse_colon	naive	transverse_colon	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	none	microarray	1	5434289071_R03C02	53	smoker	TRUE
 CD4IPC109ter	IPC109	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	CD4	microarray	1	5443804116_R04C02	68	smoker	TRUE
 TRIPC054bis	IPC054	male	transverse_colon	naive	transverse_colon	0	NA	NA	NA	HumanHT-12_V4	FALSE	FALSE	CEDAR	none	microarray	1	5434289003_R03C01	76	non-smoker	FALSE
-CD4IPC184quat	IPC184	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	TRUE	TRUE	CEDAR	CD4	microarray	1	5434289104_R05C01	34	non-smoker	TRUE
+CD4IPC184quat	IPC184	male	T-cell	naive	T-cell_CD4	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	CD4	microarray	1	5434289104_R05C01	34	non-smoker	TRUE
 TRIPC060bis	IPC060	female	transverse_colon	naive	transverse_colon	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	none	microarray	1	5443804115_R03C01	35	non-smoker	TRUE
 CD8IPC006ter	IPC006	female	T-cell	naive	T-cell_CD8	0	NA	NA	NA	HumanHT-12_V4	FALSE	FALSE	CEDAR	CD8	microarray	1	5434289001_R04C01	49	non-smoker	FALSE
 TRIPC063bis	IPC063	female	transverse_colon	naive	transverse_colon	0	NA	NA	NA	HumanHT-12_V4	FALSE	TRUE	CEDAR	none	microarray	1	5443804115_R06C01	32	non-smoker	TRUE

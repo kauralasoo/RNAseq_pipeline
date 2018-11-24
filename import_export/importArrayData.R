@@ -163,6 +163,9 @@ sample_metadata = colData(cedar_se) %>% as.data.frame() %>% as_tibble() %>%
   dplyr::mutate(rna_qc_passed = ifelse(cell_type %in% c("ileum","rectum", "transverse_colon"), TRUE, rna_qc_passed)) %>%
   dplyr::mutate(rna_qc_passed = ifelse(sample_id %in% outlier_samples, FALSE, rna_qc_passed)) %>%
   dplyr::mutate(rna_qc_passed = ifelse(sample_id %like% "bis", FALSE, rna_qc_passed)) %>%
+  dplyr::mutate(rna_qc_passed = ifelse(sample_id %like% "quat", FALSE, rna_qc_passed)) %>%
+  dplyr::mutate(rna_qc_passed = ifelse(sample_id %like% "sex", FALSE, rna_qc_passed)) %>%
+  dplyr::mutate(rna_qc_passed = ifelse(sample_id %like% "quin", FALSE, rna_qc_passed)) %>%
   dplyr::mutate(included = ifelse(is.na(included), FALSE, included)) %>%
   dplyr::mutate(genotype_qc_passed = ifelse(included, TRUE, FALSE)) %>%
   dplyr::select(mandatory_cols, everything())

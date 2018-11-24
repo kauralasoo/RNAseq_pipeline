@@ -1,0 +1,14 @@
+#General
+vcf_file: /gpfs/hpchome/a72094/hpc/datasets/open_access/CEDAR/genotypes/Michigan_GRCh37_1KGPhase3_220918/GRCh38/CEDAR_GRCh38.filtered.renamed.vcf.gz
+
+#Reference annotations
+ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
+reference_genome: /gpfs/rocket/home/a72094/annotations/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa
+
+#QTL mapping
+conditions: ["T-cell_CD8","T-cell_CD4","transverse_colon","monocyte_CD14","neutrophil_CD15","platelet","rectum","B-cell_CD19","ileum"]
+is_imputed: True
+quant_methods: ["array"]
+n_batches: 400
+cis_window: 1000000
+nominal_cis_window: 1000000

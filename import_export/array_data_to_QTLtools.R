@@ -65,4 +65,17 @@ cedar_se = makeSummarizedExperiment(expression_matrix, gene_meta, sample_metadat
 #Filter SE to keep correct chromosomes and QC-passed samples
 se_filtered = filterSummarizedExperiment(cedar_se, valid_chromosomes = valid_chromosomes, filter_rna_qc = TRUE, filter_genotype_qc = TRUE)
 
+#Normalize and regress out batch effects
+se_norm = array_normaliseSE(se_filtered, norm_method = "quantile", assay_name = "exprs", log_transform = TRUE, adjust_batch = TRUE, filter_quality = TRUE)
+
+#Count the number of variants proximal to each gene and remove genes without variants
+var_info = importVariantInformation("results/var_info/CEDAR_GRCh38.variant_information.txt.gz")
+se_norm_filtered = checkCisVariants(se_norm, var_info)
+
+#Export expression data to disk
+studySEtoQTLTools(se_norm_filtered, assay_name = "norm_exprs", "processed/CEDAR/qtltools/input/array/")
+
+#Perform PCA
+pca = eQTLUtils::transformSE_PCA(se_norm, assay_name = "norm_exprs")
+ggplot(pca$pca_matrix, aes(x = PC3, y = PC4, color = cell_type)) + geom_point()
 
