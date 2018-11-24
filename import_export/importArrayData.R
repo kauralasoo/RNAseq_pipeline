@@ -29,7 +29,7 @@ plink_sex = dplyr::bind_rows(set1, set2) %>%
   dplyr::mutate(sex = ifelse(plink_sex == 2, "female", sex)) %>%
   dplyr::select(genotype_id, sex)
 
-#Reformat 
+#Reformat sample metadata
 sample_metadata = colData(fairfax_2014) %>% as.data.frame() %>% as_tibble() %>%
   dplyr::select(-sex) %>%
   dplyr::left_join(plink_sex, by = "genotype_id") %>%
@@ -43,6 +43,20 @@ sample_metadata = colData(fairfax_2014) %>% as.data.frame() %>% as_tibble() %>%
   dplyr::mutate(protocol = "HumanHT-12_V4") %>%
   dplyr::select(mandatory_cols, everything())
 write.table(sample_metadata, "metadata/cleaned/Fairfax_2014.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+
+#Extract gene metadata
+gene_metadata = rowData(fairfax_2014) %>% as.data.frame() %>%
+  dplyr::mutate(quant_id = gene_id, group_id = gene_id)
+gz1 = gzfile("metadata/gene_metadata/HumanHT-12_V4_gene_metadata.txt.gz","w") 
+write.table(gene_metadata, gz1, sep = "\t", quote = F, row.names = F)
+close(gz1)
+
+#Save expression matrix
+mat = assays(fairfax_2014)$exprs
+gz2 = gzfile("results/expression_matrices/HumanHT-12_V4/Fairfax_2014.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz1)
+
 
 #### Fairfax_2012 ####
 #Import SE
@@ -70,6 +84,14 @@ sample_metadata = colData(fairfax_2012) %>% as.data.frame() %>% as_tibble() %>%
   dplyr::mutate(protocol = "HumanHT-12_V4") %>%
   dplyr::select(mandatory_cols, everything())
 write.table(sample_metadata, "metadata/cleaned/Fairfax_2012.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+
+#Save expression matrix
+mat = assays(fairfax_2012)$exprs
+gz2 = gzfile("results/expression_matrices/HumanHT-12_V4/Fairfax_2012.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
+
+
 
 #### Naranbhai_2012 ####
 naranbhai_2015 = readRDS("results/SummarizedExperiments/microarray/Naranbhai_2015.rds")

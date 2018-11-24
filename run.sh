@@ -114,6 +114,11 @@ snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefi
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/Fairfax_2014/out.txt --configfile configs/Fairfax_2014_config.yaml --rerun-incomplete --jobs 100
 
 
+##### Fairfax_2012 ####
+#Map QTLs
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/Fairfax_2012/out.txt --configfile configs/Fairfax_2012_config.yaml --rerun-incomplete --jobs 100
+
+
 
 #Run Samtools indexing on HPC
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s samtools_index.snakefile processed/BLUEPRINT/out.txt --jobs 20 --configfile configs/BLUEPRINT_all_config.yaml --rerun-incomplete
