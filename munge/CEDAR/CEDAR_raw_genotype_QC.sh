@@ -98,4 +98,6 @@ bcftools view -r X CEDAR_GRCh37_genotyped.vcf.gz -Oz -o by_chr/CEDAR_GRCh37_chrX
 bcftools filter -i 'MAF[0] > 0.01' CEDAR_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o CEDAR_GRCh38.filtered.vcf.gz
 bcftools index CEDAR_GRCh38.filtered.vcf.gz
 
-
+#Extract variant information
+module load bcftools-1.8
+bcftools +fill-tags CEDAR_GRCh38.filtered.vcf.gz | bcftools query -f '%CHROM\\t%POS\\t%ID\\t%REF\\t%ALT\\t%TYPE\\t%AC\\t%AN\\t%MAF\\t%R2\\n' | gzip > CEDAR_GRCh38.variant_information.txt.gz

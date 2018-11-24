@@ -32,7 +32,7 @@ pca = eQTLUtils::transformSE_PCA(fairfax_norm, assay_name = "norm_exprs")
 ggplot(pca$pca_matrix, aes(x = PC1, y = PC2, color = condition)) + geom_point()
 
 
-#Fairfax 2012
+#### Fairfax 2012 ####
 gene_meta = readr::read_tsv("metadata/gene_metadata/HumanHT-12_V4_gene_metadata.txt.gz")
 sample_metadata = readr::read_tsv("metadata/cleaned/Fairfax_2012.tsv")
 expression_matrix = read.table("results/expression_matrices/HumanHT-12_V4/Fairfax_2012.tsv.gz", sep = "\t")
@@ -54,4 +54,15 @@ studySEtoQTLTools(fairfax_norm_filtered, assay_name = "norm_exprs", "processed/F
 #Perform PCA
 pca = eQTLUtils::transformSE_PCA(fairfax_norm, assay_name = "norm_exprs")
 ggplot(pca$pca_matrix, aes(x = PC1, y = PC2, color = condition)) + geom_point()
+
+
+#### CEDAR ####
+gene_meta = readr::read_tsv("metadata/gene_metadata/HumanHT-12_V4_gene_metadata.txt.gz")
+sample_metadata = readr::read_tsv("metadata/cleaned/CEDAR.tsv")
+expression_matrix = read.table("results/expression_matrices/HumanHT-12_V4/CEDAR.tsv.gz", sep = "\t", check.names = FALSE)
+cedar_se = makeSummarizedExperiment(expression_matrix, gene_meta, sample_metadata, assay_name = "exprs")
+
+#Filter SE to keep correct chromosomes and QC-passed samples
+se_filtered = filterSummarizedExperiment(cedar_se, valid_chromosomes = valid_chromosomes, filter_rna_qc = TRUE, filter_genotype_qc = TRUE)
+
 
