@@ -96,7 +96,38 @@ close(gz2)
 #### Naranbhai_2012 ####
 naranbhai_2015 = readRDS("results/SummarizedExperiments/microarray/Naranbhai_2015.rds")
 
+#Import Plink sex estimates
+set1 = readr::read_delim("metadata/Fairfax_2014/Fairfax_2014_set1.fam", delim = " ", col_names = c("family_id", "genotype_id", "father", "mother", "plink_sex", "phenotype"))
+set2 = readr::read_delim("metadata/Fairfax_2014/Fairfax_2014_set2.fam", delim = " ", col_names = c("family_id", "genotype_id", "father", "mother", "plink_sex", "phenotype"))
+plink_sex = dplyr::bind_rows(set1, set2) %>% 
+  dplyr::select(genotype_id, plink_sex) %>% 
+  dplyr::mutate(sex = "NA") %>% 
+  dplyr::mutate(sex = ifelse(plink_sex == 1, "male", sex)) %>%
+  dplyr::mutate(sex = ifelse(plink_sex == 2, "female", sex)) %>%
+  dplyr::select(genotype_id, sex)
 
+#Reformat metadata
+sample_metadata = colData(naranbhai_2015) %>% as.data.frame() %>% as_tibble() %>%
+  dplyr::mutate(sample_id = stringr::str_replace(sample_id, "Sample ", "CD16_")) %>%
+  dplyr::select(-sex) %>% 
+  dplyr::mutate(cell_type = "neutrophil") %>%
+  dplyr::mutate(genotype_id = as.integer(genotype_id)) %>%
+  dplyr::left_join(plink_sex, by = "genotype_id") %>%
+  dplyr::mutate(genotype_id = paste0("FF14_", genotype_id)) %>%
+  dplyr::mutate(qtl_group = paste(cell_type, marker, sep = "_")) %>%
+  dplyr::rename(genotype_qc_passed = genotype_QC_passed) %>%
+  dplyr::rename(rna_qc_passed = RNA_QC_passed) %>%
+  dplyr::mutate(protocol = "HumanHT-12_V4") %>%
+  dplyr::select(mandatory_cols, everything())
+  
+write.table(sample_metadata, "metadata/cleaned/Naranbhai_2015.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+
+#Save expression matrix
+mat = assays(naranbhai_2015)$exprs
+colnames(mat) = sample_metadata$sample_id
+gz2 = gzfile("results/expression_matrices/HumanHT-12_V4/Naranbhai_2012.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
 
 
 #### CEDAR ####
