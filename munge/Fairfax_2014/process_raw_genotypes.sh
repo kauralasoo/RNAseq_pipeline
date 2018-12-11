@@ -147,3 +147,7 @@ bcftools index Fairfax_2014_GRCh38.filtered.vcf.gz
 
 #Rename samples to avoid integer names
 bcftools reheader -s ~/hpc/projects/RNAseq_pipeline/metadata/Fairfax_2014/genotype_name_map.txt Fairfax_2014_GRCh38.filtered.vcf.gz > Fairfax_2014_GRCh38.filtered.renamed.vcf.gz
+
+#Extract variant information
+module load bcftools-1.8
+bcftools +fill-tags Fairfax_2014_GRCh38.filtered.renamed.vcf.gz | bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%TYPE\t%AC\t%AN\t%MAF\t%R2\n' | gzip > Fairfax_2014_GRCh38.variant_information.txt.gz

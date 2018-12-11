@@ -106,7 +106,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefi
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/CEDAR/out.txt --configfile configs/CrossMap_config.yaml --jobs 1 --rerun-incomplete
 
 #Map QTLs
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/CEDAR/out.txt --configfile configs/Fairfax_2012_config.yaml --rerun-incomplete --jobs 100
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s map_QTLs.snakefile processed/CEDAR/out.txt --configfile configs/CEDAR_config.yaml --rerun-incomplete --jobs 100
 
 ##### Fairfax_2014 ####
 #CrossMap genotypes
