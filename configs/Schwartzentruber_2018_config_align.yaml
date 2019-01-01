@@ -2,13 +2,13 @@
 strandedness: Stranded 
 
 #featureCounts
-ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
+ensembl_gtf: /gpfs/hpc/home/a72094/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
 
 
 vcf_file: /gpfs/hpc/home/a72094/datasets/controlled_access/Schwartzentruber_2018_Neurons/HipSci_GRCh38.filtered.needed.samples.vcf.gz
 
 #HISAT2 config
-hisat2_index: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/hisat2_index_v90/Homo_sapiens.GRCh38.dna.primary_assembly
+hisat2_index: /gpfs/hpc/home/a72094/annotations/GRCh38/hisat2_index_v90/Homo_sapiens.GRCh38.dna.primary_assembly
 hisat2_flags: ""
 
 #Splicing

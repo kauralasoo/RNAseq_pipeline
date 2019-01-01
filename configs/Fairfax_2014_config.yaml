@@ -1,6 +1,6 @@
 #General
 vcf_file: /gpfs/hpchome/a72094/hpc/datasets/controlled_access/Fairfax_2014/genotypes/Michigan_GRCh37_1KGPhase3_061118/GRCh38/Fairfax_2014_GRCh38.filtered.renamed.vcf.gz
-variant_info: /gpfs/hpchome/a72094/hpc/datasets/controlled_access/Fairfax_2014/genotypes/Michigan_GRCh37_1KGPhase3_061118/GRCh38/airfax_2014_GRCh38.variant_information.txt.gz
+variant_info: /gpfs/hpchome/a72094/hpc/datasets/controlled_access/Fairfax_2014/genotypes/Michigan_GRCh37_1KGPhase3_061118/GRCh38/Fairfax_2014_GRCh38.variant_information.txt.gz
 
 #Reference annotations
 ensembl_gtf: /gpfs/hpchome/a72094/rocket/annotations/GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
