@@ -35,11 +35,11 @@ opt <- parse_args(OptionParser(option_list=option_list))
 if (FALSE) {
   opt = list(c=1000000, m=6)
   opt$g="../metadata/gene_metadata/HumanHT-12_V4_gene_metadata.txt.gz"
-  opt$s="../metadata/cleaned/Fairfax_2014.tsv"
-  opt$e="../results/expression_matrices/HumanHT-12_V4/Fairfax_2014.tsv.gz"
-  opt$v="../../temp/Fairfax_2014_GRCh38.variant_information.txt.gz"
+  opt$s="../metadata/cleaned/CEDAR.tsv"
+  opt$e="../results/expression_matrices/HumanHT-12_V4/CEDAR.tsv.gz"
+  opt$v="../../temp/CEDAR_GRCh38.variant_information.txt.gz"
   opt$qtlutils="../../eQTLUtils/"
-  opt$o="../processed/Fairfax_2014/qtltools/input/array/" #-c 1000001 -m 6
+  opt$o="../processed/CEDAR/qtltools/input/array/" #-c 1000001 -m 6
 }
 
 gene_meta_path = opt$g
@@ -75,7 +75,7 @@ message(" ## Reading sample metadata file")
 sample_metadata = readr::read_tsv(sample_meta_path)
 
 message(" ## Reading expression matrix")
-expression_matrix = read.table(expression_matrix_path, sep = "\t")
+expression_matrix = read.table(expression_matrix_path, sep = "\t", check.names = FALSE)
 
 message(" ## Generating Summarized Experiment object of the study")
 fairfax_2014_se = eQTLUtils::makeSummarizedExperiment(expression_matrix, gene_meta, sample_metadata, assay_name = "exprs")

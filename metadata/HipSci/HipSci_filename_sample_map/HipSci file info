@@ -1,0 +1,15 @@
+HipSci
+--------------------
+
+ManagedAccess
+Raw RNAseq files: 389 cram files (downloaded from EGA, converted to fastq pairs with RNAseq_pipeline/cram_to_fastq_PE.snakefile)
+Merged samples: 191 fastq pairs (out of 523) - merged with gpfs/hpchome/a72094/rocket/datasets/controlled_access/HipSci/fastq_raw_files/managed_access/fastq/concat_managed_access_fastq_files.sh
+
+OpenAccess
+Metadata from: http://www.hipsci.org/lines/#/donors
+Raw RNAseq files: 764 fastq pairs (downloaded from https://www.ebi.ac.uk/ena/data/view/PRJEB7388)
+Merged samples: 332 fastq pairs (out of 523) merged with - merged with gpfs/hpc/home/a72094/datasets/controlled_access/HipSci/fastq_raw_files/PRJEB7388_open_access/concat_err_ro_same.sh
+
+out of 523 samples:
+1 is corrupted and excluded (commented) from HipSci_config_align.yaml
+9 are actually original skin cells which iPS Cells generated from (these are also excluded/commented from HipSci_config_align.yaml)
