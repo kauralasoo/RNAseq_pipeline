@@ -189,3 +189,4 @@ HipSci	SAMEA2474454	HPSI1013i-pamv_3	excluded to avoid cell_line from same donor
 HipSci	SAMEA2533339	HPSI1113i-podx_1	excluded to avoid cell_line from same donor
 HipSci	SAMEA2536416	HPSI0114i-lexy_1	excluded to avoid cell_line from same donor
 HipSci	SAMEA2518325	HPSI0114i-bezi_1	excluded to avoid cell_line from same donor
+van_de_Bunt_2015	SAMEA3402296	EGAN00001277858	MBV QC analysis failed (possible contamination EGAN00001277865/SAMEA3402302)
