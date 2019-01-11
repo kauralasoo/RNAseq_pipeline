@@ -1,0 +1,4 @@
+Study	BioSampleID	GenotypeID	RNA_QC_Comment	
+HipSci	SAMEA2398792	HPSI0513i-sucd_3	PCA outlier
+HipSci	SAMEA4339705	HPSI0614i-wihj_1	MDS outlier
+HipSci	SAMEA2397802	HPSI0813i-civh_1	PCA outlier

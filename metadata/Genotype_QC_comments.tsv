@@ -3,7 +3,7 @@ HipSci	SAMEA4449169	HPSI0813i-mioj_1	Missing VCF
 HipSci	SAMEA4449172	HPSI0813i-mioj_4	Missing VCF
 HipSci	SAMEA4451488	HPSI0613i-oesx_3	Missing VCF
 HipSci	SAMEA4451496	HPSI0813i-peoj_1	Missing VCF
-HipSci	SAMEA2595426	HPSI0114i-vabj_3	MBV QC analysis failed (possible contamination)
+HipSci	SAMEA2595426	HPSI0114i-vabj_3	MBV QC analysis failed (possible contamination HPSI0513i-xegx_1/SAMEA2398343)
 HipSci	SAMEA4339705	HPSI0614i-wihj_1	MBV QC analysis failed (did not match with any VCF, also failed RNA QC)
 HipSci	SAMEA2397802	HPSI0813i-civh_1	excluded to avoid cell_line from same donor
 HipSci	SAMEA2398294	HPSI1113i-nibo_3	excluded to avoid cell_line from same donor
