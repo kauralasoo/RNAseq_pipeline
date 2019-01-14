@@ -14,7 +14,7 @@ filtered_se = se_object[,se_object$genotype_qc_passed &
                           se_object$rna_qc_passed & 
                           se_object$superpopulation_code == "EUR"]
 
-#Normalize gene expression
+#Identify expressed genes (At least 1 count in 10% of the samples)
 expressed_counts = rowSums(assays(filtered_se)$counts >= 1)
 thresh_count = ceiling(0.1*(dim(filtered_se)[2]))
 expressed_genes = names(which(expressed_counts > thresh_count))
