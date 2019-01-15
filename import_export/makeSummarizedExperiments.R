@@ -34,6 +34,12 @@ featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript
 #Export data
 saveRDS(featureCounts_se, "results/SummarizedExperiments/GEUVADIS.rds")
 
+#Export featureCounts gene metadata
+gene_meta = rowData(featureCounts_se)
+gz1 = gzfile("metadata/gene_metadata/featureCounts_Ensembl_92_gene_metadata.txt.gz","w") 
+write.table(gene_meta, gz1, sep = "\t", quote = F, row.names = F)
+close(gz1)
+
 #Export gene metadata
 meta = extractPhenotypeData(featureCounts_se)
 write.table(meta, "results/phenotype_metadata/featureCounts_phenotype_metadata.txt", row.names = FALSE, quote = FALSE, sep = "\t")
