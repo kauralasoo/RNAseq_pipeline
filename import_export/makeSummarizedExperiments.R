@@ -10,7 +10,7 @@ library("devtools")
 load_all("../eQTLUtils/")
 
 #Specify mandatory metadata columns
-mandatory_cols = c("sample_id", "genotype_id", "sex", "cell_type", "condition", "timepoint", "read_length", "stranded", "paired", "protocol", "rna_qc_passed", "genotype_qc_passed","study")
+mandatory_cols = c("sample_id", "genotype_id", "sex", "cell_type", "condition", "qtl_group", "timepoint", "read_length", "stranded", "paired", "protocol", "rna_qc_passed", "genotype_qc_passed","study")
 transcript_meta = importBiomartMetadata("annotations/Ensembl92_biomart_download.txt.gz")
 
 #GEUVADIS
@@ -80,6 +80,7 @@ sample_metadata_final = dplyr::left_join(sample_metadata, is_paired, by = "sampl
   dplyr::select(-mbv_genotype_id) %>%
   dplyr::mutate(sex = ifelse(genotype_id == "S00PWE", "female", sex)) %>%
   dplyr::mutate(sex = ifelse(genotype_id == "S00PVG", "male", sex)) %>%
+  dplyr::mutate(qtl_group = cell_type) %>%
   dplyr::select(mandatory_cols, everything())
 
 #Fix sex
@@ -92,6 +93,12 @@ featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript
 #Export data
 write.table(sample_metadata_final, "metadata/cleaned/BLUEPRINT.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 saveRDS(featureCounts_se, "results/SummarizedExperiments/BLUEPRINT.rds")
+
+#Save expression matrix
+mat = assays(featureCounts_se)$counts
+gz2 = gzfile("results/expression_matrices/featureCounts/BLUEPRINT.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
 
 #Perform some QC
 processed_se = filterSE_gene_types(featureCounts_se, valid_gene_types = "protein_coding") %>% normaliseSE_tpm()
