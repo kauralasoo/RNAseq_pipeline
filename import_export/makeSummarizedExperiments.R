@@ -22,10 +22,11 @@ mbv_matches = readr::read_tsv("metadata/GEUVADIS/GEUVADIS_mbv_best_match.txt") %
 sample_metadata = readr::read_delim("metadata/GEUVADIS/GEUVADIS_compiled_metadata.txt", delim = "\t") %>%
   dplyr::mutate(cell_type = "LCL", condition = "naive", read_length = "75bp", stranded = FALSE, paired = TRUE, protocol = "poly(A)", timepoint = 0, rna_qc_passed = TRUE, genotype_qc_passed = TRUE, study = "GEUVADIS") %>%
   dplyr::select(-fq1, -fq2) %>%
-  dplyr::select(mandatory_cols, everything()) %>%
   dplyr::left_join(mbv_matches, by = "sample_id") %>%
   dplyr::mutate(genotype_qc_passed = ifelse(is.na(mbv_genotype_id), FALSE, TRUE)) %>%
-  dplyr::select(-mbv_genotype_id)
+  dplyr::select(-mbv_genotype_id) %>%
+  dplyr::mutate(qtl_group = cell_type) %>%
+  dplyr::select(mandatory_cols, everything())
 write.table(sample_metadata, "metadata/cleaned/GEUVADIS.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 
 #Make GEUVADIS SE object
@@ -34,17 +35,20 @@ featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript
 #Export data
 saveRDS(featureCounts_se, "results/SummarizedExperiments/GEUVADIS.rds")
 
+#Save expression matrix
+mat = assays(featureCounts_se)$counts
+gz2 = gzfile("results/expression_matrices/featureCounts/GEUVADIS.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
+
+
 #Export featureCounts gene metadata
 gene_meta = rowData(featureCounts_se)
 gz1 = gzfile("metadata/gene_metadata/featureCounts_Ensembl_92_gene_metadata.txt.gz","w") 
 write.table(gene_meta, gz1, sep = "\t", quote = F, row.names = F)
 close(gz1)
 
-#Export gene metadata
-meta = extractPhenotypeData(featureCounts_se)
-write.table(meta, "results/phenotype_metadata/featureCounts_phenotype_metadata.txt", row.names = FALSE, quote = FALSE, sep = "\t")
-
-
+#Perform PCA
 processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
 processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
 pca_res = transformSE_PCA(processed_se, assay_name = "tpms", n_pcs = 10, log_transform = TRUE, center = TRUE, scale. = TRUE)
