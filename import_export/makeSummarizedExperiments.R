@@ -10,7 +10,7 @@ library("devtools")
 load_all("../eQTLUtils/")
 
 #Specify mandatory metadata columns
-mandatory_cols = c("sample_id", "genotype_id", "sex", "cell_type", "condition", "timepoint", "read_length", "stranded", "paired", "protocol", "rna_qc_passed", "genotype_qc_passed","study")
+mandatory_cols = c("sample_id", "genotype_id", "sex", "cell_type", "condition", "qtl_group", "timepoint", "read_length", "stranded", "paired", "protocol", "rna_qc_passed", "genotype_qc_passed","study")
 transcript_meta = importBiomartMetadata("annotations/Ensembl92_biomart_download.txt.gz")
 
 #GEUVADIS
@@ -22,10 +22,11 @@ mbv_matches = readr::read_tsv("metadata/GEUVADIS/GEUVADIS_mbv_best_match.txt") %
 sample_metadata = readr::read_delim("metadata/GEUVADIS/GEUVADIS_compiled_metadata.txt", delim = "\t") %>%
   dplyr::mutate(cell_type = "LCL", condition = "naive", read_length = "75bp", stranded = FALSE, paired = TRUE, protocol = "poly(A)", timepoint = 0, rna_qc_passed = TRUE, genotype_qc_passed = TRUE, study = "GEUVADIS") %>%
   dplyr::select(-fq1, -fq2) %>%
-  dplyr::select(mandatory_cols, everything()) %>%
   dplyr::left_join(mbv_matches, by = "sample_id") %>%
   dplyr::mutate(genotype_qc_passed = ifelse(is.na(mbv_genotype_id), FALSE, TRUE)) %>%
-  dplyr::select(-mbv_genotype_id)
+  dplyr::select(-mbv_genotype_id) %>%
+  dplyr::mutate(qtl_group = cell_type) %>%
+  dplyr::select(mandatory_cols, everything())
 write.table(sample_metadata, "metadata/cleaned/GEUVADIS.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 
 #Make GEUVADIS SE object
@@ -34,17 +35,20 @@ featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript
 #Export data
 saveRDS(featureCounts_se, "results/SummarizedExperiments/GEUVADIS.rds")
 
+#Save expression matrix
+mat = assays(featureCounts_se)$counts
+gz2 = gzfile("results/expression_matrices/featureCounts/GEUVADIS.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
+
+
 #Export featureCounts gene metadata
 gene_meta = rowData(featureCounts_se)
 gz1 = gzfile("metadata/gene_metadata/featureCounts_Ensembl_92_gene_metadata.txt.gz","w") 
 write.table(gene_meta, gz1, sep = "\t", quote = F, row.names = F)
 close(gz1)
 
-#Export gene metadata
-meta = extractPhenotypeData(featureCounts_se)
-write.table(meta, "results/phenotype_metadata/featureCounts_phenotype_metadata.txt", row.names = FALSE, quote = FALSE, sep = "\t")
-
-
+#Perform PCA
 processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
 processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
 pca_res = transformSE_PCA(processed_se, assay_name = "tpms", n_pcs = 10, log_transform = TRUE, center = TRUE, scale. = TRUE)
@@ -80,6 +84,7 @@ sample_metadata_final = dplyr::left_join(sample_metadata, is_paired, by = "sampl
   dplyr::select(-mbv_genotype_id) %>%
   dplyr::mutate(sex = ifelse(genotype_id == "S00PWE", "female", sex)) %>%
   dplyr::mutate(sex = ifelse(genotype_id == "S00PVG", "male", sex)) %>%
+  dplyr::mutate(qtl_group = cell_type) %>%
   dplyr::select(mandatory_cols, everything())
 
 #Fix sex
@@ -93,6 +98,12 @@ featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript
 write.table(sample_metadata_final, "metadata/cleaned/BLUEPRINT.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 saveRDS(featureCounts_se, "results/SummarizedExperiments/BLUEPRINT.rds")
 
+#Save expression matrix
+mat = assays(featureCounts_se)$counts
+gz2 = gzfile("results/expression_matrices/featureCounts/BLUEPRINT.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
+
 #Perform some QC
 processed_se = filterSE_gene_types(featureCounts_se, valid_gene_types = "protein_coding") %>% normaliseSE_tpm()
 processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
@@ -101,7 +112,7 @@ ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = protocol)) + geom_point
 
 
 
-# Nedelec_2016_Macrophages ------------------------------------------------
+# Nedelec_2016 ------------------------------------------------
 read_counts = readr::read_tsv("processed/Nedelec_2016/matrices/gene_expression_featureCounts.txt") %>%
   dplyr::filter(!(gene_id %like% "PAR_Y")) %>%
   removeGeneVersion()
@@ -117,6 +128,7 @@ sample_metadata = readr::read_tsv("metadata/Nedelec_2016/Nedelec_2016_compiled_m
   dplyr::left_join(mbv_matches, by = "sample_id") %>%
   dplyr::mutate(genotype_qc_passed = ifelse(is.na(mbv_genotype_id), FALSE, TRUE)) %>%
   dplyr::select(-mbv_genotype_id) %>%
+  dplyr::mutate(qtl_group = paste(cell_type, condition, sep = "_")) %>%
   dplyr::select(mandatory_cols, everything())
 
 #Make SE
@@ -126,6 +138,11 @@ featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript
 write.table(sample_metadata, "metadata/cleaned/Nedelec_2016.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 saveRDS(featureCounts_se, "results/SummarizedExperiments/Nedelec_2016.rds")
 
+#Save expression matrix
+mat = assays(featureCounts_se)$counts
+gz2 = gzfile("results/expression_matrices/featureCounts/Nedelec_2016.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
 
 #QC
 processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
@@ -149,6 +166,7 @@ sample_metadata = readr::read_tsv("metadata/Quach_2016/Quach_2016_compiled_metad
   dplyr::left_join(mbv_matches, by = "sample_id") %>%
   dplyr::mutate(genotype_id = mbv_genotype_id) %>%
   dplyr::select(-mbv_genotype_id) %>%
+  dplyr::mutate(qtl_group = paste(cell_type, condition, sep = "_")) %>%
   dplyr::select(mandatory_cols, everything())
 featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
 
@@ -156,6 +174,11 @@ featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript
 write.table(sample_metadata, "metadata/cleaned/Quach_2016.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 saveRDS(featureCounts_se, "results/SummarizedExperiments/Quach_2016.rds")
 
+#Save expression matrix
+mat = assays(featureCounts_se)$counts
+gz2 = gzfile("results/expression_matrices/featureCounts/Quach_2016.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
 
 processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
 processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
@@ -180,11 +203,19 @@ sample_metadata = readr::read_tsv("metadata/Alasoo_2018/RNA_sample_metadata.txt"
     condition_name == "IFNg" ~ 18,
     condition_name == "SL1344" ~ 5,
     condition_name == "IFNg_SL1344" ~ 5), read_length = "75bp", stranded = TRUE, paired = TRUE, protocol = "poly(A)", qtl_mapping = TRUE, study = "Alasoo_2018") %>%
+  dplyr::mutate(qtl_group = paste(cell_type, condition, sep = "_")) %>%
+  dplyr::mutate(rna_qc_passed = TRUE, genotype_qc_passed = TRUE) %>%
   dplyr::select(mandatory_cols, everything())
-featureCounts_se = makeSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
+featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
 
-write.table(sample_metadata, "metadata/cleaned/Alasoo_2018_Macrophages.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
-saveRDS(featureCounts_se, "results/SummarizedExperiments/Alasoo_2018_Macrophages.rds")
+write.table(sample_metadata, "metadata/cleaned/Alasoo_2018.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+saveRDS(featureCounts_se, "results/SummarizedExperiments/Alasoo_2018.rds")
+
+#Save expression matrix
+mat = assays(featureCounts_se)$counts
+gz2 = gzfile("results/expression_matrices/featureCounts/Alasoo_2018.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
 
 
 processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
@@ -215,6 +246,7 @@ sample_metadata = readr::read_delim("metadata/TwinsUK/TwinsUK_sample_metadata.tx
   dplyr::ungroup() %>%
   dplyr::mutate(genotype_id = mbv_genotype_id) %>%
   dplyr::select(-id_match, -mbv_genotype_id, -qtl_mapping) %>%
+  dplyr::mutate(qtl_group = cell_type) %>%
   dplyr::select(mandatory_cols, everything())
 
 featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
@@ -222,6 +254,11 @@ featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript
 write.table(sample_metadata, "metadata/cleaned/TwinsUK.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 saveRDS(featureCounts_se, "results/SummarizedExperiments/TwinsUK.rds")
 
+#Save expression matrix
+mat = assays(featureCounts_se)$counts
+gz2 = gzfile("results/expression_matrices/featureCounts/TwinsUK.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
 
 processed_se = filterSE_gene_types(featureCounts_se) %>% normaliseSE_tpm()
 processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
@@ -269,6 +306,7 @@ sample_metadata = readr::read_delim("metadata/GENCORD/GENCORD_metadata_final.tsv
   dplyr::left_join(mbv_matches, by = "sample_id") %>%
   dplyr::mutate(genotype_qc_passed = ifelse(is.na(mbv_genotype_id), FALSE, TRUE)) %>%
   dplyr::select(-mbv_genotype_id, -qtl_mapping) %>%
+  dplyr::mutate(qtl_group = cell_type) %>%
   dplyr::select(mandatory_cols, everything())
 write.table(sample_metadata, "metadata/cleaned/GENCORD.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 
@@ -277,6 +315,12 @@ featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript
 
 #Export data
 saveRDS(featureCounts_se, "results/SummarizedExperiments/GENCORD.rds")
+
+#Save expression matrix
+mat = assays(featureCounts_se)$counts
+gz2 = gzfile("results/expression_matrices/featureCounts/GENCORD.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
 
 #Make PCA
 filtered_se = featureCounts_se[,featureCounts_se$rna_qc_passed & featureCounts_se$genotype_qc_passed]

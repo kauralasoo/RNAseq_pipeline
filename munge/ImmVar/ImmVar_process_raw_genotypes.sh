@@ -64,3 +64,27 @@ bcftools view -r 20 ImmVar_GRCh37_genotyped.vcf.gz -Oz -o by_chr/ImmVar_GRCh37_c
 bcftools view -r 21 ImmVar_GRCh37_genotyped.vcf.gz -Oz -o by_chr/ImmVar_GRCh37_chr21.vcf.gz
 bcftools view -r 22 ImmVar_GRCh37_genotyped.vcf.gz -Oz -o by_chr/ImmVar_GRCh37_chr22.vcf.gz
 bcftools view -r X ImmVar_GRCh37_genotyped.vcf.gz -Oz -o by_chr/ImmVar_GRCh37_chrX.vcf.gz
+
+#Extraxt all inputed files
+7za x chr_1.zip -p'password'
+7za x chr_2.zip -p'password'
+7za x chr_3.zip -p'password'
+7za x chr_4.zip -p'password'
+7za x chr_5.zip -p'password'
+7za x chr_6.zip -p'password'
+7za x chr_7.zip -p'password'
+7za x chr_8.zip -p'password'
+7za x chr_9.zip -p'password'
+7za x chr_10.zip -p'password'
+7za x chr_11.zip -p'password'
+7za x chr_12.zip -p'password'
+7za x chr_13.zip -p'password'
+7za x chr_14.zip -p'password'
+7za x chr_15.zip -p'password'
+7za x chr_16.zip -p'password'
+7za x chr_17.zip -p'password'
+7za x chr_18.zip -p'password'
+7za x chr_19.zip -p'password'
+7za x chr_20.zip -p'password'
+7za x chr_21.zip -p'password'
+7za x chr_22.zip -p'password'
