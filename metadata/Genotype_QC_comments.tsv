@@ -190,3 +190,7 @@ HipSci	SAMEA2533339	HPSI1113i-podx_1	excluded to avoid cell_line from same donor
 HipSci	SAMEA2536416	HPSI0114i-lexy_1	excluded to avoid cell_line from same donor
 HipSci	SAMEA2518325	HPSI0114i-bezi_1	excluded to avoid cell_line from same donor
 van_de_Bunt_2015	SAMEA3402296	EGAN00001277858	MBV QC analysis failed (possible contamination EGAN00001277865/SAMEA3402302)
+Schwartzentruber_2018	SAMEA3476959	HPSI1013i-mijn_2	Missing VCF
+Schwartzentruber_2018	SAMEA3864997	HPSI0613i-qony_1	Possible contamination with HPSI0214i-pelm_3
+Schwartzentruber_2018	SAMEA3234610	HPSI0913i-ffdl_1	Cross contamination with HPSI1213i-foqj_2
+Schwartzentruber_2018	SAMEA3718669	HPSI1213i-foqj_2	Cross contamination with HPSI0913i-ffdl_1
