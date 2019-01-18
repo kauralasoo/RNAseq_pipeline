@@ -59,29 +59,33 @@ bcftools view -r 21 Quach_2016_GRCh37_genotyped.vcf.gz -Oz -o by_chr/Quach_2016_
 bcftools view -r 22 Quach_2016_GRCh37_genotyped.vcf.gz -Oz -o by_chr/Quach_2016_GRCh37_chr22.vcf.gz
 
 #Decompress all inputed files
-7za x chr_1.zip -p'OcBXHL05bRnvs'
-7za x chr_2.zip -p'OcBXHL05bRnvs'
-7za x chr_3.zip -p'OcBXHL05bRnvs'
-7za x chr_4.zip -p'OcBXHL05bRnvs'
-7za x chr_5.zip -p'OcBXHL05bRnvs'
-7za x chr_6.zip -p'OcBXHL05bRnvs'
-7za x chr_7.zip -p'OcBXHL05bRnvs'
-7za x chr_8.zip -p'OcBXHL05bRnvs'
-7za x chr_9.zip -p'OcBXHL05bRnvs'
-7za x chr_10.zip -p'OcBXHL05bRnvs'
-7za x chr_11.zip -p'OcBXHL05bRnvs'
-7za x chr_12.zip -p'OcBXHL05bRnvs'
-7za x chr_13.zip -p'OcBXHL05bRnvs'
-7za x chr_14.zip -p'OcBXHL05bRnvs'
-7za x chr_15.zip -p'OcBXHL05bRnvs'
-7za x chr_16.zip -p'OcBXHL05bRnvs'
-7za x chr_17.zip -p'OcBXHL05bRnvs'
-7za x chr_18.zip -p'OcBXHL05bRnvs'
-7za x chr_19.zip -p'OcBXHL05bRnvs'
-7za x chr_20.zip -p'OcBXHL05bRnvs'
-7za x chr_21.zip -p'OcBXHL05bRnvs'
-7za x chr_22.zip -p'OcBXHL05bRnvs'
+7za x chr_1.zip -p'password'
+7za x chr_2.zip -p'password'
+7za x chr_3.zip -p'password'
+7za x chr_4.zip -p'password'
+7za x chr_5.zip -p'password'
+7za x chr_6.zip -p'password'
+7za x chr_7.zip -p'password'
+7za x chr_8.zip -p'password'
+7za x chr_9.zip -p'password'
+7za x chr_10.zip -p'password'
+7za x chr_11.zip -p'password'
+7za x chr_12.zip -p'password'
+7za x chr_13.zip -p'password'
+7za x chr_14.zip -p'password'
+7za x chr_15.zip -p'password'
+7za x chr_16.zip -p'password'
+7za x chr_17.zip -p'password'
+7za x chr_18.zip -p'password'
+7za x chr_19.zip -p'password'
+7za x chr_20.zip -p'password'
+7za x chr_21.zip -p'password'
+7za x chr_22.zip -p'password'
 
 #Filter final vcf file and add unique variant ids
 bcftools filter -i 'MAF[0] > 0.01' Monocytes_Quach_2016_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o Quach_2016_GRCh38.filtered.vcf.gz
 bcftools index Quach_2016_GRCh38.filtered.vcf.gz
+
+#Extract variant information
+module load bcftools-1.8
+bcftools +fill-tags Quach_2016_GRCh38.filtered.vcf.gz | bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%TYPE\t%AC\t%AN\t%MAF\t%R2\n' | gzip > Quach_2016_GRCh38.variant_information.txt.gz
