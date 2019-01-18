@@ -192,5 +192,33 @@ HipSci	SAMEA2518325	HPSI0114i-bezi_1	excluded to avoid cell_line from same donor
 van_de_Bunt_2015	SAMEA3402296	EGAN00001277858	MBV QC analysis failed (possible contamination EGAN00001277865/SAMEA3402302)
 Schwartzentruber_2018	SAMEA3476959	HPSI1013i-mijn_2	Missing VCF
 Schwartzentruber_2018	SAMEA3864997	HPSI0613i-qony_1	Possible contamination with HPSI0214i-pelm_3
-Schwartzentruber_2018	SAMEA3234610	HPSI0913i-ffdl_1	Cross contamination with HPSI1213i-foqj_2
-Schwartzentruber_2018	SAMEA3718669	HPSI1213i-foqj_2	Cross contamination with HPSI0913i-ffdl_1
+Schwartzentruber_2018	SAMEA3234610	HPSI0913i-ffdl_1	Possible same donor with HPSI1213i-foqj_2
+Schwartzentruber_2018	SAMEA3234540	HPSI0413i-coxy_3	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234564	HPSI0613i-eojr_3	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3476947	HPSI0613i-eojr_3	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3718669	HPSI1213i-foqj_2	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234585	HPSI0613i-funp_3	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3718663	HPSI0813i-guss_1	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3718671	HPSI0813i-guss_1	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3718656	HPSI1213i-hehd_2	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3718665	HPSI1213i-hehd_2	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234570	HPSI0513i-huls_2	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234568	HPSI0613i-iurx_3	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3718667	HPSI0613i-nukw_1	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3718670	HPSI0613i-nukw_1	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234534	HPSI0513i-oarz_2	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234577	HPSI0613i-oomz_2	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3864993	HPSI0214i-pelm_3	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3864987	HPSI0214i-pelm_3	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234566	HPSI0813i-piun_3	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234614	HPSI0813i-piun_3	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3864995	HPSI1113i-podx_1	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3864988	HPSI1113i-podx_1	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3718666	HPSI0314i-qaqx_1	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3718672	HPSI0314i-qaqx_1	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234544	HPSI0413i-sukz_3	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234625	HPSI0613i-vorx_1	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234532	HPSI0613i-xavk_3	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234562	HPSI0413i-yuze_1	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234587	HPSI0413i-yuze_1	excluded to avoid cell_line from same donor
+Schwartzentruber_2018	SAMEA3234589	HPSI0413i-yuze_1	excluded to avoid cell_line from same donor
