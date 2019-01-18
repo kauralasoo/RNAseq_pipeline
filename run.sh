@@ -143,3 +143,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 #### Garieri 2017 ####
 #Extract samples from 1KG VCFs
 snakemake -p --snakefile extract_genotypes.snakefile --cluster ../../scripts/snakemake_submit_UT.py --jobs 10
+
+#### Ye_2018 dataset ####
+#Convert .sra files to fastq
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s sra_to_fastq.snakefile processed/Ye_2018/out.txt --jobs 1 --configfile configs/Ye_2018_config.yaml --rerun-incomplete
