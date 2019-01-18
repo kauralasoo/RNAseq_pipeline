@@ -3,3 +3,7 @@ bcftools concat GEUVADIS_445_samples.chr1.vcf.gz GEUVADIS_445_samples.chr2.vcf.g
 
 #Split multi-allelic variants
 bcftools norm -m-any GEUVADIS_445_samples.merged.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o GEUVADIS_GRCh38_filtered.vcf.gz
+
+#Extract variant information
+module load bcftools-1.8
+bcftools +fill-tags GEUVADIS_GRCh38_filtered.vcf.gz | bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%TYPE\t%AC\t%AN\t%MAF\t%R2\n' | gzip > GEUVADIS_GRCh38.variant_information.txt.gz
