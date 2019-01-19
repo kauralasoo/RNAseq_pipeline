@@ -146,4 +146,4 @@ snakemake -p --snakefile extract_genotypes.snakefile --cluster ../../scripts/sna
 
 #### Ye_2018 dataset ####
 #Convert .sra files to fastq
-snakemake --cluster scripts/snakemake_submit_UT.py -np -s sra_to_fastq.snakefile processed/Ye_2018/out.txt --jobs 1 --configfile configs/Ye_2018_config.yaml --rerun-incomplete
+snakemake --cluster ~/hpc/projects/RNAseq_pipeline/scripts/snakemake_submit_UT.py -p -s dbGaP_sra_to_fastq.snakefile out.txt --jobs 50 --configfile ~/hpc/projects/RNAseq_pipeline/configs/Ye_2018_config.yaml --rerun-incomplete
