@@ -208,21 +208,12 @@ gz2 = gzfile("results/expression_matrices/HumanHT-12_V4/CEDAR.tsv.gz", "w")
 write.table(mat, gz2, sep = "\t", quote = FALSE)
 close(gz2)
 
-
-
-
-
-
 #### Kasela_2017 ####
 kasela_se = readRDS("results/SummarizedExperiments/microarray/Kasela_2017.rds")
 
-sample_metadata = colData(kasela_se) %>% as.data.frame() %>% as_tibble() %>%
-  dplyr::rename(genotype_qc_passed = genotype_QC_passed) %>%
-  dplyr::rename(rna_qc_passed = RNA_QC_passed) %>%
-  dplyr::mutate(qtl_group = paste(cell_type, marker, sep = "_")) %>%
-  dplyr::mutate(protocol = "HumanHT-12_V4") %>%
-  dplyr::select(mandatory_cols, everything())
-write.table(sample_metadata, "metadata/cleaned/Kasela_2017.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
-
-  
+#Save expression matrix
+mat = round(assays(kasela_se)$exprs, 1)
+gz2 = gzfile("results/expression_matrices/HumanHT-12_V4/Kasela_2017.tsv.gz", "w")
+write.table(mat, gz2, sep = "\t", quote = FALSE)
+close(gz2)
 
