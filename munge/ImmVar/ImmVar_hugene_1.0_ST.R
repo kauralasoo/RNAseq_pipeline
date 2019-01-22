@@ -36,47 +36,6 @@ close(gz1)
 #rownames(exp_matrix) = paste0("AFFY_", rownames(exp_matrix))
 #exp_matrix = exp_matrix[probe_metadata$phenotype_id,]
 
-#Import sample metadata
-cd4 = readr::read_tsv("metadata/Raj_2014/ImmVar_CD4_sample_metadata.txt")
-cd14 = readr::read_tsv("metadata/Raj_2014/ImmVar_CD14_sample_metadata.txt")
-all_meta = dplyr::bind_rows(cd4, cd14)
-
-mandatory_cols = c("sample_id", "genotype_id", "sex", "cell_type", "condition", "qtl_group", "timepoint", "read_length", "stranded", "paired", "protocol", "rna_qc_passed", "genotype_qc_passed","study")
-
-useful_columns = c("!Sample_title","!Sample_geo_accession","!Sample_characteristics_ch1","!Sample_characteristics_ch1_1",
-                   "!Sample_characteristics_ch1_2", "!Sample_characteristics_ch1_3", "!Sample_characteristics_ch1_4", 
-                   "!Sample_characteristics_ch1_5")
-selected_columns = all_meta[,useful_columns]
-colnames(selected_columns) = c("study_sample_id", "sample_id", "age", "sex", "cell_type", "batch", "inclusion_markers", "exclusion_markers")
-
-#Clean up the metdata
-clean_meta = dplyr::mutate(selected_columns, age = stringr::str_replace(age,coll("age (yrs): "),"")) %>%
-  dplyr::mutate(age = stringr::str_replace(age,coll("age: "),"")) %>%
-  dplyr::mutate(age = as.integer(age)) %>%
-  dplyr::mutate(sex = case_when(
-    sex == "Sex: Female" ~ "female",
-    sex == "gender: female" ~ "female",
-    sex == "Sex: Male" ~ "male",
-    sex == "gender: male" ~ "male",
-  )) %>%
-  dplyr::mutate(cell_type = case_when(
-    cell_type == "cell type: monocytes from peripheral blood mononuclear cells (PBMCs)" ~ "monocyte",
-    cell_type == "cell type: T4 Naive cells from human peripheral blood mononuclear cells (PBMCs)" ~ "T-cell"
-   )) %>%
-  dplyr::mutate(batch = stringr::str_replace(batch, fixed("batch: "), "batch_")) %>%
-  dplyr::mutate(inclusion_markers = stringr::str_replace(inclusion_markers, fixed("inclusion markers: "), "")) %>%
-  dplyr::mutate(exclusion_markers = stringr::str_replace(exclusion_markers, fixed("exclusion markers: "), "")) %>%
-  dplyr::mutate(marker = case_when(
-    cell_type == "T-cell" ~ "CD4",
-    cell_type == "monocyte" ~ "CD14"
-    )) %>%
-  dplyr::mutate(qtl_group = paste(cell_type, marker, sep = "_")) %>%
-  tidyr::separate(study_sample_id, c("genotype_id", "replicate"), "\\.", remove = FALSE) %>%
-  dplyr::mutate(condition = "naive", timepoint = 0, read_length = NA, stranded = NA, paired = NA, 
-                protocol = "hugene_10_ST", rna_qc_passed = TRUE, genotype_qc_passed = TRUE, 
-                study = "Raj_2014") %>%
-  dplyr::select(mandatory_cols, everything())
-write.table(clean_meta, "metadata/cleaned/Raj_2014.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
 
 #Import expression datq
 eset = readRDS("results/ImmVar/ImmVar_hugene_eset.rds")
