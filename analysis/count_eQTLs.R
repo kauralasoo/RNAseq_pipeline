@@ -26,7 +26,7 @@ meta_list = list(BLUEPRINT = "metadata/cleaned/BLUEPRINT.tsv",
                  Fairfax_2014 = "metadata/cleaned/Fairfax_2014.tsv",
                  GENCORD = "metadata/cleaned/GENCORD.tsv",
                  GEUVADIS = "metadata/cleaned/GEUVADIS.tsv",
-                 TwinsUK = "metadata/cleaned/TwinsUK.tsv",
+                 TwinsUK = "../SampleArcheology/studies/cleaned/TwinsUK.tsv",
                  Alasoo_2018 = "metadata/cleaned/Alasoo_2018.tsv",
                  Nedelec_2016 = "metadata/cleaned/Nedelec_2016.tsv",
                  Quach_2016 = "metadata/cleaned/Quach_2016.tsv",
@@ -34,7 +34,8 @@ meta_list = list(BLUEPRINT = "metadata/cleaned/BLUEPRINT.tsv",
                  Schwartzentruber_2018 = "metadata/cleaned/Schwartzentruber_2018.tsv",
                  van_de_Bunt_2015 = "metadata/cleaned/van_de_Bunt_2015.tsv",
                  HipSci = "metadata/cleaned/HipSci.tsv",
-                 Naranbhai_2015 = "metadata/cleaned/Naranbhai_2015.tsv")
+                 Naranbhai_2015 = "metadata/cleaned/Naranbhai_2015.tsv",
+                 Kasela_1017 = "../SampleArcheology/studies/cleaned/Kasela_2017.tsv")
 meta_imported = purrr::map(meta_list, ~read.table(., sep = "\t", stringsAsFactors = F, header =T) %>% dplyr::as_tibble())
 samples = purrr::map_df(meta_imported, ~dplyr::select(.,cell_type, condition, qtl_group, rna_qc_passed, genotype_qc_passed, study))
 cell_types = dplyr::select(samples, cell_type, condition, qtl_group, study) %>% dplyr::distinct()
@@ -45,7 +46,9 @@ sample_sizes = dplyr::filter(samples, rna_qc_passed, genotype_qc_passed) %>%
 
 #Merge counts
 merged_counts = dplyr::left_join(qtl_counts, sample_sizes, by = c("study", "qtl_group")) %>% 
-  dplyr::left_join(cell_types, by = c("qtl_group", "study"))
+  dplyr::left_join(cell_types, by = c("qtl_group", "study")) %>%
+  dplyr::select(study, cell_type, condition, qtl_group, quant_method, everything())
+write.table(merged_counts, "results/tables/eQTL_counts_per_dataset.tsv", sep = "\t", quote = FALSE, row.names = F)
 eGene_scatter = ggplot(merged_counts, aes(x = sample_size, y = eQTL_count, color = study, label = cell_type)) + 
   geom_point() +
   scale_y_continuous(limits = c(0, 7500)) +
