@@ -147,3 +147,10 @@ snakemake -p --snakefile extract_genotypes.snakefile --cluster ../../scripts/sna
 #### Ye_2018 dataset ####
 #Convert .sra files to fastq
 snakemake --cluster ~/hpc/projects/RNAseq_pipeline/scripts/snakemake_submit_UT.py -p -s dbGaP_sra_to_fastq.snakefile out.txt --jobs 50 --configfile ~/hpc/projects/RNAseq_pipeline/configs/Ye_2018_config.yaml --rerun-incomplete
+
+#### Kasela_2017 dataset ####
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/Kasela_2017/genotypes/GRCh38/Kasela_2017_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 22 --rerun-incomplete
+
+
+#### Lepik_2017 dataset ####
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/Lepik_2017/out.txt --jobs 30 --configfile configs/Lepik_2017_config.yaml --rerun-incomplete
