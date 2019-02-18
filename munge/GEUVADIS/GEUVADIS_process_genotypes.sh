@@ -6,4 +6,4 @@ bcftools norm -m-any GEUVADIS_445_samples.merged.vcf.gz | bcftools annotate --se
 
 #Extract variant information
 module load bcftools-1.8
-bcftools +fill-tags GEUVADIS_GRCh38_filtered.vcf.gz | bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%TYPE\t%AC\t%AN\t%MAF\t%R2\n' | gzip > GEUVADIS_GRCh38.variant_information.txt.gz
+bcftools +fill-tags GEUVADIS_GRCh38_filtered.vcf.gz | bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%TYPE\t%AC\t%AN\t%MAF\tNA\n' | gzip > GEUVADIS_GRCh38.variant_information.txt.gz

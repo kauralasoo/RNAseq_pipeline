@@ -13,3 +13,7 @@ plink --bfile Nedelec_2016_RefAlt --recode vcf-iid --out Nedelec_2016_RefAlt
 #Filter final vcf file and add unique variant ids
 bcftools filter -i 'MAF[0] > 0.01' Macrophages_Nedelec_2016_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o Nedelec_2016_GRCh38.filtered.vcf.gz
 bcftools index Nedelec_2016_GRCh38.filtered.vcf.gz
+
+#Extract variant information
+module load bcftools-1.8
+bcftools +fill-tags Nedelec_2016_GRCh38.filtered.vcf.gz | bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%TYPE\t%AC\t%AN\t%MAF\t%R2\n' | gzip > Nedelec_2016_GRCh38.variant_information.txt.gz
