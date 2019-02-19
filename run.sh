@@ -1,7 +1,5 @@
 #### GEUVADIS dataset ####
 #Run the quantification pipeline
-snakemake --cluster scripts/snakemake_submit_UT.py -p -s quantify_transcription.snakefile processed/GEUVADIS/out.txt --jobs 100 --configfile configs/GEUVADIS_config.yaml --rerun-incomplete
-
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/GEUVADIS/out.txt --jobs 20 --configfile configs/GEUVADIS_config.yaml --rerun-incomplete
 
 #Map QTLs
