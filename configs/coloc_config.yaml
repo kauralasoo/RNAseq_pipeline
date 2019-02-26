@@ -1,0 +1,5 @@
+qtl_sets: ["Fairfax_2014/array/monocyte_LPS2"]
+gwas_traits: ["RA"]
+gwas_list: "metadata/gwas_metadata/GWAS_summary_stat_list.labeled.txt"
+coloc_window: 2e5
+gwas_dir: "~/hpc/datasets/summary_stats/Inflammatory_GWAS/GRCh38/"
