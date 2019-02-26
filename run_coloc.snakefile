@@ -18,7 +18,7 @@ rule run_coloc:
 	output:
 		"results/coloc/{qtl_set}.{gwas_trait}.txt"
 	resources:
-		mem = 12000
+		mem = 6000
 	threads: 1
 	shell:
 		"""
