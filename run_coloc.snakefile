@@ -14,7 +14,7 @@ rule run_coloc:
 	input:
 		lead_vars = "results/qtl_summary_stats/{qtl_set}.permuted.txt.gz",
 		summary_stats = "results/qtl_summary_stats/{qtl_set}.nominal.sorted.txt.gz",
-		summary_index = "results/qtl_summary_stats/Fairfax_2014/array/monocyte_LPS2.nominal.sorted.txt.gz.tbi"
+		summary_index = "results/qtl_summary_stats/Fairfax_2014/array/monocyte_LPS2.nominal.sorted.txt.gz.tbi",
 		var_info = "results/qtl_summary_stats/{qtl_set}.variant_information.txt.gz",
 	output:
 		"results/coloc/{qtl_set}.{gwas_trait}.txt"
