@@ -23,5 +23,5 @@ rule run_coloc:
 	shell:
 		"""
 		module load R/3.5.1
-		Rscript ../colocWrapper/examples/qtlmap_run_coloc.R	-l {input.lead_vars} -w {config[coloc_window]} --gwas {wildcards.gwas_trait} -d {config[gwas_dir]} -o {output} --qtl {input.summary_stats} --qtlvarinfo {input.var_info} --gwaslist {config[gwas_list]}
+		Rscript ../colocWrapper/examples/qtlmap_run_coloc.R -l {input.lead_vars} -w {config[coloc_window]} --gwas {wildcards.gwas_trait} -d {config[gwas_dir]} -o {output} --qtl {input.summary_stats} --qtlvarinfo {input.var_info} --gwaslist {config[gwas_list]}
 		"""
