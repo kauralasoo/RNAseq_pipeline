@@ -31,4 +31,10 @@ gz1 = gzfile("results/expression_matrices/LeafCutter/GEUVADIS.tsv.gz","w")
 write.table(geuvadis_lc, gz1, sep = "\t", quote = F)
 close(gz1)
 
+#Convert to QTLtools
+geuvadis_qtl = convertSEtoQTLtools(geuvadis_norm, assay_name = "qnorm")
+
+#Save to disk
+saveQTLToolsMatrices(list(LCL = geuvadis_qtl), output_dir = "test_out")
+
   
