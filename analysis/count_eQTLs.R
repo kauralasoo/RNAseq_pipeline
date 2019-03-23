@@ -2,11 +2,13 @@ library("dplyr")
 library("devtools")
 library("SummarizedExperiment")
 library("ggplot2")
+library("data.table")
 load_all("../eQTLUtils/")
 load_all("../seqUtils/")
 
 #Import all lead variants
-lead_vars = idVectorToList(list.files("results/summary_stats/", recursive = T, full.names = T))
+file_list = list.files("results/qtl_summary_stats/", recursive = T, full.names = T)
+lead_vars = idVectorToList(file_list[file_list %like% "permuted.txt.gz"])
 lead_var_list = purrr::map(lead_vars, ~eQTLUtils::importQTLtoolsTable(.))
 
 #Count QTLs
@@ -36,7 +38,8 @@ meta_list = list(BLUEPRINT = "metadata/cleaned/BLUEPRINT.tsv",
                  HipSci = "metadata/cleaned/HipSci.tsv",
                  Naranbhai_2015 = "metadata/cleaned/Naranbhai_2015.tsv",
                  Kasela_1017 = "../SampleArcheology/studies/cleaned/Kasela_2017.tsv")
-meta_imported = purrr::map(meta_list, ~read.table(., sep = "\t", stringsAsFactors = F, header =T) %>% dplyr::as_tibble())
+meta_imported = purrr::map(meta_list, ~read.table(., sep = "\t", stringsAsFactors = F, header =T) %>% 
+                             dplyr::as_tibble())
 samples = purrr::map_df(meta_imported, ~dplyr::select(.,cell_type, condition, qtl_group, rna_qc_passed, genotype_qc_passed, study))
 cell_types = dplyr::select(samples, cell_type, condition, qtl_group, study) %>% dplyr::distinct()
 sample_sizes = dplyr::filter(samples, rna_qc_passed, genotype_qc_passed) %>% 
