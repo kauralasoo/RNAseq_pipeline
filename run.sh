@@ -152,3 +152,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefi
 
 #### Lepik_2017 dataset ####
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription_PE.snakefile processed/Lepik_2017/out.txt --jobs 30 --configfile configs/Lepik_2017_config.yaml --rerun-incomplete
+
+
+### Run coloc all QTLs agains all GWAS traits
+snakemake --cluster scripts/snakemake_submit_UT.py -np -s run_coloc.snakefile results/coloc/coloc_out.txt --jobs 300 --configfile configs/coloc_config.yaml --rerun-incomplete
