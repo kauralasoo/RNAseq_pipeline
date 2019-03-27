@@ -156,3 +156,6 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s quantify_transcription
 
 ### Run coloc all QTLs agains all GWAS traits
 snakemake --cluster scripts/snakemake_submit_UT.py -np -s run_coloc.snakefile results/coloc/coloc_out.txt --jobs 300 --configfile configs/coloc_config.yaml --rerun-incomplete
+
+### Extract variant effects
+Rscript scripts/extract_variants_from_summaries.R -p results/extracted_variants/lead_vars.txt -q results/extracted_variants/qtl_groups.txt -o results/extracted_variants/results.txt
