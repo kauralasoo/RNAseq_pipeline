@@ -49,6 +49,13 @@ ggplot(gene, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+s
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + 
   coord_flip()
 
+gene = dplyr::filter(hits, gene_name == "TERT")
+ggplot(gene, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+se, ymin = beta-se)) + 
+  geom_point(position=position_dodge(width=0.9)) + 
+  geom_errorbar() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) + 
+  coord_flip()
+
 #CARD9
 #Colocalises in monocytes and LCLs, effect in the opposite direction. What is going on?
 gene = dplyr::filter(hits, gene_name == "CARD9", snp_id == "chr9_136377295_G_A")
