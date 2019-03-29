@@ -23,11 +23,15 @@ importSummaries <- function(summary_file, gene_names){
 slfn5_summaries = importSummaries("results/extracted_variants/results.txt", gene_name_map)
 slfn5 = dplyr::filter(extracted_results, phenotype_id == "ENSG00000166750")
 
-ggplot(slfn5, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+se, ymin = beta-se)) + 
+plot = ggplot(slfn5, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+se, ymin = beta-se)) + 
   geom_point(position=position_dodge(width=0.9)) + 
   geom_errorbar() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + 
+  xlab("Context and study") +
   coord_flip()
+ggsave("results/figures/forest_plots/SLFN5_rnaseq.pdf", plot = plot, width = 5, height = 6)
+
+
 
 
 #featureCounts colocs
@@ -35,19 +39,25 @@ hits = importSummaries("results/extracted_variants/featureCounts_results.txt", g
 
 #STARD10
 gene = dplyr::filter(hits, gene_name == "STARD10", snp_id == "chr11_72759870_GGTTT_G")
-ggplot(gene, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+se, ymin = beta-se)) + 
+plot = ggplot(gene, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+se, ymin = beta-se)) + 
   geom_point(position=position_dodge(width=0.9)) + 
   geom_errorbar() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + 
+  xlab("Context and study") +
   coord_flip()
+ggsave("results/figures/forest_plots/STARD10.pdf", plot = plot, width = 5, height = 6)
 
 #TRAF1
 gene = dplyr::filter(hits, gene_name == "TRAF1")
-ggplot(gene, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+se, ymin = beta-se)) + 
+plot = ggplot(gene, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+se, ymin = beta-se)) + 
   geom_point(position=position_dodge(width=0.9)) + 
   geom_errorbar() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + 
+  xlab("Context and study") +
   coord_flip()
+ggsave("results/figures/forest_plots/TRAF1_rnaseq.pdf", plot = plot, width = 5, height = 6)
+
+
 
 gene = dplyr::filter(hits, gene_name == "TERT")
 ggplot(gene, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+se, ymin = beta-se)) + 
@@ -95,11 +105,13 @@ ggplot(gene, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+s
 
 #TRAF1
 gene = dplyr::filter(hits_array, gene_name == "TRAF1")
-ggplot(gene, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+se, ymin = beta-se)) + 
+plot = ggplot(gene, aes(x = paste(qtl_group, study, sep = "-"), y = beta, ymax = beta+se, ymin = beta-se)) + 
   geom_point(position=position_dodge(width=0.9)) + 
   geom_errorbar() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + 
+  xlab("Context and study") +
   coord_flip()
+ggsave("results/figures/forest_plots/TRAF1_array.pdf", plot = plot, width = 5, height = 6)
 
 
 
