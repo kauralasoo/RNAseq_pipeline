@@ -15,11 +15,6 @@ filtered_se = eQTLUtils::filterSummarizedExperiment(featureCounts_se, filter_rna
 filtered_meta = SummarizedExperiment::colData(filtered_se) %>% as.data.frame() %>% dplyr::as_tibble()
 
 
-#### Calculate median tpm per qtl_group ####
-median_tpm_df = eQTLUtils::estimateMedianTPM(filtered_se, subset_by = "qtl_group", assay_name = "counts")
-gzfile = gzfile("results/QC_report/GENCORD/median_tpm_by_qtl_group.txt.gz", "w")
-write.table(median_tpm_df, gzfile, sep = "\t", row.names = F, quote = F)
-close(gzfile)
 
 
 ## QC steps ###
@@ -48,5 +43,10 @@ if(nrow(mismatched_ids) > 0){
 #### 5. Check the exporession of XIST vs Y-genes and plot those against annotated sex ####
 #TODO: Can we automatically flag outliers here?
 
+#### Calculate median tpm per qtl_group ####
+median_tpm_df = eQTLUtils::estimateMedianTPM(filtered_se, subset_by = "qtl_group", assay_name = "counts")
+gzfile = gzfile("results/QC_report/GENCORD/median_tpm_by_qtl_group.txt.gz", "w")
+write.table(median_tpm_df, gzfile, sep = "\t", row.names = F, quote = F)
+close(gzfile)
 
 

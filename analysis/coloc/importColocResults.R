@@ -33,6 +33,10 @@ probe_gene_map = dplyr::select(array_gene_meta, phenotype_id, gene_name)
 featureCounts_gene_meta = read.table("metadata/gene_metadata/featureCounts_Ensembl_92_gene_metadata.txt.gz", header = TRUE, stringsAsFactors = FALSE, sep = "\t") %>%
   dplyr::as_tibble()
 gene_name_map = dplyr::select(featureCounts_gene_meta, phenotype_id, gene_name)
+leafcutter_gene_meta = read.table("metadata/gene_metadata/GEUVADIS_leafcutter_cluster_metadata.txt.gz", header = TRUE, stringsAsFactors = FALSE, sep = "\t") %>%
+  dplyr::as_tibble()
+leafcutter_name_map = dplyr::select(leafcutter_gene_meta, phenotype_id, gene_name)
+
 
 #Import array QTL results
 array_studies = c("Fairfax_2012", "Fairfax_2014", "Kasela_2017","CEDAR","Naranbhai_2015")
@@ -55,7 +59,18 @@ rnaseq_colocs = purrr::map_df(rnaseq_list, ~importColocTable("results/coloc/", .
 #Find hits
 rnaseq_coloc_hits = dplyr::filter(rnaseq_colocs, PP_power > 0.8, PP_coloc > 0.9)
 
+
+#Leafcutter coloc hits
+leafcutter_studies = c("GEUVADIS_EUR_100kb_coloc")
+lc_list = setNames(leafcutter_studies, leafcutter_studies)
+
+leafcutter_colocs = purrr::map_df(lc_list, ~importColocTable("results/coloc/", ., "leafcutter")) %>%
+  dplyr::left_join(leafcutter_name_map, by = "phenotype_id")
+
+#Find hits
+leafcutter_coloc_hits = dplyr::filter(leafcutter_colocs, PP_power > 0.8, PP_coloc > 0.9)
+
 #Merge all coloc together
-joint_colocs = dplyr::bind_rows(array_colocs, rnaseq_colocs)
+joint_colocs = dplyr::bind_rows(array_colocs, rnaseq_colocs, leafcutter_colocs)
 write.table(joint_colocs, "results/coloc/eQTLCatalogue_coloc_results.txt", sep = "\t", quote = F, row.names = F)
 
