@@ -160,3 +160,6 @@ snakemake --cluster scripts/snakemake_submit_UT.py -np -s run_coloc.snakefile re
 ### Extract variant effects
 Rscript scripts/extract_variants_from_summaries.R -p results/extracted_variants/lead_vars.txt -q results/extracted_variants/qtl_groups.txt -o results/extracted_variants/results.txt
 Rscript scripts/extract_variants_from_summaries.R -p metadata/coloc/featureCounts_coloc_examples.txt -q results/extracted_variants/qtl_groups.txt -o results/extracted_variants/featureCounts_results.txt
+
+#### ImmVar dataset ####
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -np processed/ImmVar/genotypes/GRCh38/ImmVar_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 22 --rerun-incomplete

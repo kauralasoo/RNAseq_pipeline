@@ -88,3 +88,8 @@ bcftools view -r X ImmVar_GRCh37_genotyped.vcf.gz -Oz -o by_chr/ImmVar_GRCh37_ch
 7za x chr_20.zip -p'password'
 7za x chr_21.zip -p'password'
 7za x chr_22.zip -p'password'
+
+#Filter final vcf file and add unique variant ids
+module load bcftools-1.8
+bcftools filter -i 'MAF[0] > 0.01' ImmVar_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o ImmVar_GRCh38.filtered.vcf.gz
+bcftools index ImmVar_GRCh38.filtered.vcf.gz
