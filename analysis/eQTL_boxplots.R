@@ -193,7 +193,7 @@ naive_geno_std = t(naive_geno_std)
 naive_values = as.vector(naive_mat[,1])
 naive_values = (naive_values-mean(naive_values))/sd(naive_values)
 
-naive_fitted <- susie(naive_geno_std, naive_values,
+naive_fitted <- susieR::susie(naive_geno_std, naive_values,
                 L = 10,
                 estimate_residual_variance = TRUE, 
                 estimate_prior_variance = FALSE,
@@ -202,7 +202,7 @@ naive_fitted <- susie(naive_geno_std, naive_values,
 print(naive_fitted$sets)
 naive_cs = naive_fitted$sets$cs$L1
 naive_cs_names = colnames(naive_geno_std[,naive_cs])
-susie_plot(naive_fitted, y="PIP")
+susieR::susie_plot(naive_fitted, y="PIP")
 
 #LPS24
 lps24_geno_std = lps24_geno - apply(lps24_geno, 1, mean)
