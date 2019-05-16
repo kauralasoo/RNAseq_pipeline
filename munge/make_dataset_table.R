@@ -38,7 +38,7 @@ string2string <- function(acc_string){
 }
 
 #Import data
-table = read.table("../metadata/website_table/List of datasets - Sheet1.csv", sep = ",", header = TRUE, stringsAsFactors = F) %>% 
+table = read.table("metadata/website_table/List of datasets - Sheet1.csv", sep = ",", header = TRUE, stringsAsFactors = F) %>% 
   dplyr::as_tibble() %>% 
   dplyr::filter(status == "processed") %>%
   dplyr::filter(!(study_name %in% c("Raj_2014", "Ye_2018")))
@@ -52,7 +52,13 @@ final_result = dplyr::mutate(table, study_text = paste0("[",study_name,"](",publ
   dplyr::mutate(rna_text = string2string(rna_accession), genotype_text = string2string(genotype_accession)) %>%
   dplyr::ungroup() %>%
   dplyr::select(study_text, tissue, stimulation, n_samples, n_donors, gxa_link, rna_text, genotype_text, experiment_type)
-write.table(final_result, "metadata/website_table/markdown_table.md", sep = " | ", row.names = F, col.names = F, quote = F)                        
+
+
+microarray_results = dplyr::filter(final_result, experiment_type == "microarray") %>% dplyr::select(-experiment_type)
+write.table(microarray_results, "metadata/website_table/array_markdown_table.md", sep = " | ", row.names = F, col.names = F, quote = F)   
+
+rnaseq_results = dplyr::filter(final_result, experiment_type == "RNA-seq") %>% dplyr::select(-experiment_type)
+write.table(rnaseq_results, "metadata/website_table/rnaseq_markdown_table.md", sep = " | ", row.names = F, col.names = F, quote = F)   
 
 
 
