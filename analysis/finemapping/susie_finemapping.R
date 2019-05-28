@@ -60,6 +60,10 @@ newdf <- rbind(mono_lead_vars, b_lead_vars, t_lead_vars)
 newdf = dplyr::arrange(newdf, FDR)
 df = newdf[!duplicated(newdf$V6), ]
 finemapping_probes = df$V6
+
+#Sample 500 genes
+set.seed(42)
+finemapping_probes = sample(finemapping_probes,500)
 fm_probes_list = setNames(as.list(finemapping_probes), finemapping_probes)
 
 runFineMapping <- function(probe_id, HumanHT_12_V4_gene_metadata, CEDAR, CEDAR_normalized,
