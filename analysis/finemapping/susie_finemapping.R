@@ -32,17 +32,16 @@ extractGenotypeMatrixFromGDS <- function(chr, start, end, variant_information, g
   return(genotype)
 }
 
-HumanHT_12_V4_gene_metadata = read.table("results/genotypes/CEDAR/HumanHT-12_V4_gene_metadata.txt.gz", sep = "\t", stringsAsFactors = FALSE, header = TRUE, fill = TRUE)
-CEDAR = read.table("results/genotypes/CEDAR/CEDAR.tsv", stringsAsFactors = FALSE, header = TRUE, fill = TRUE)
-CEDAR_normalized = read.table("results/expression_matrices/HumanHT-12_V4/CEDAR.normalized.tsv.gz", sep = "\t", header = TRUE)
-#SNPRelate::snpgdsVCF2GDS("~/BioInformatics/CEDAR_GRCh38.filtered.renamed.vcf.gz", "CEDAR_GRCh38.filtered.renamed.gds", method="biallelic.only")
-gdsfile = "results/genotypes/CEDAR/CEDAR_GRCh38.filtered.renamed.gds"
+HumanHT_12_V4_gene_metadata = read.table("~/hpc/teaching/MTAT.03.239_Bioinformatics/projects/finemapping/HumanHT-12_V4_gene_metadata.txt.gz", sep = "\t", stringsAsFactors = FALSE, header = TRUE, fill = TRUE)
+CEDAR = read.table("~/hpc/teaching/MTAT.03.239_Bioinformatics/projects/finemapping/CEDAR.tsv", stringsAsFactors = FALSE, header = TRUE, fill = TRUE)
+CEDAR_normalized = read.table("~/hpc/teaching/MTAT.03.239_Bioinformatics/projects/finemapping/CEDAR.normalized.tsv.gz", sep = "\t", header = TRUE)
+gdsfile = "~/hpc/teaching/MTAT.03.239_Bioinformatics/projects/finemapping/CEDAR_GRCh38.filtered.renamed.gds"
 variant_info = importVariantInformationFromGDS(gdsfile)
 
 #Import lead variants
-monocytes = read.table("results/genotypes/CEDAR/eQTL_leads/monocyte_CD14.permuted.txt.gz", stringsAsFactors = FALSE, header = FALSE)
-bcells = read.table("results/genotypes/CEDAR/eQTL_leads/B-cell_CD19.permuted.txt.gz", stringsAsFactors = FALSE, header = FALSE)
-tcells8 = read.table("results/genotypes/CEDAR/eQTL_leads/T-cell_CD8.permuted.txt.gz", stringsAsFactors = FALSE, header = FALSE)
+monocytes = read.table("~/hpc/teaching/MTAT.03.239_Bioinformatics/projects/finemapping/eQTL_leads/monocyte_CD14.permuted.txt.gz", stringsAsFactors = FALSE, header = FALSE)
+bcells = read.table("~/hpc/teaching/MTAT.03.239_Bioinformatics/projects/finemapping/eQTL_leads/B-cell_CD19.permuted.txt.gz", stringsAsFactors = FALSE, header = FALSE)
+tcells8 = read.table("~/hpc/teaching/MTAT.03.239_Bioinformatics/projects/finemapping/eQTL_leads/T-cell_CD8.permuted.txt.gz", stringsAsFactors = FALSE, header = FALSE)
 
 #Identify lead variants in each condition
 mono_fdr = p.adjust(monocytes$V21, method = "fdr")
