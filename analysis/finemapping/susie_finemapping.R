@@ -110,13 +110,13 @@ runFineMapping <- function(probe_id, HumanHT_12_V4_gene_metadata, CEDAR, CEDAR_n
 safeFineMapping = purrr::safely(runFineMapping)
 
 #Finemap in three cell types
-monocyte_results = purrr::map(finemapping_probes[1:2], ~safeFineMapping(.,HumanHT_12_V4_gene_metadata, 
+monocyte_results = purrr::map(fm_probes_list, ~safeFineMapping(.,HumanHT_12_V4_gene_metadata, 
                                                       CEDAR, CEDAR_normalized, gdsfile, variant_info, "monocyte_CD14"))
 saveRDS(monocyte_results, "monocytes_cs.rds")
-bcell_results = purrr::map(finemapping_probes[1:2], ~safeFineMapping(.,HumanHT_12_V4_gene_metadata, 
+bcell_results = purrr::map(fm_probes_list, ~safeFineMapping(.,HumanHT_12_V4_gene_metadata, 
                                                      CEDAR, CEDAR_normalized, gdsfile, variant_info, "B-cell_CD19"))
 saveRDS(bcell_results, "bcell_cs.rds")
-tcell_results = purrr::map(finemapping_probes[1:2], ~safeFineMapping(.,HumanHT_12_V4_gene_metadata, 
+tcell_results = purrr::map(fm_probes_list, ~safeFineMapping(.,HumanHT_12_V4_gene_metadata, 
                                              CEDAR, CEDAR_normalized, gdsfile, variant_info, "T-cell_CD8"))
 saveRDS(tcell_results, "tcell_cs.rds")
 
