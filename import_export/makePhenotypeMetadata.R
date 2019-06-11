@@ -2,7 +2,6 @@ library("data.table")
 library("devtools")
 load_all("../eQTLUtils/")
 
-
 #### Gene counts (featureCounts) ####
 #Specify required phenotype metadata columns
 required_phenotype_meta_columns = c("phenotype_id","quant_id","group_id","gene_id","chromosome","gene_start",
@@ -10,7 +9,6 @@ required_phenotype_meta_columns = c("phenotype_id","quant_id","group_id","gene_i
 required_gene_meta_columns = c(required_phenotype_meta_columns, "phenotype_gc_content", "phenotype_length")
 
 #Import gene metadata
-transcript_meta = readr::read_tsv("annotations/eQTLCatalogue/v0.1/Homo_sapiens.GRCh38.96_biomart_download.txt.gz", col_types = "ccccccciciiciiiiccccccccidccccii")
 transcript_meta = eQTLUtils::importBiomartMetadata("annotations/eQTLCatalogue/v0.1/Homo_sapiens.GRCh38.96_biomart_download.txt.gz")
 gene_metadata = extractGeneMetadataFromBiomartFile(transcript_meta)
 
@@ -33,5 +31,38 @@ write.table(final_gene_metadata, gz2, sep = "\t", quote = FALSE, row.names = F)
 close(gz2)
 
 #### Exon counts ####
+exon_nuc_content = readr::read_tsv("annotations/eQTLCatalogue/v0.1/DEXSeq/gencode.v30.annotation.no_chr.patched_contigs.DEXSeq.nuc_content.txt",
+                                   col_types = "ccciiccccddiiiiiii")
+nuc_content = exon_nuc_content[,c(1,4,5,11)]
+colnames(nuc_content) = c("seqnames", "start", "end", "phenotype_gc_content")
+nuc_content = dplyr::distinct(nuc_content)
+
+#Subset of gene metadata
+gene_metadata_subset = dplyr::select(gene_metadata, gene_id, chromosome, gene_start, gene_end, 
+                                     strand, gene_name, gene_type, gene_version)
+  
+#Make exon metadata
+exon_metadata = rtracklayer::import.gff("annotations/eQTLCatalogue/v0.1/DEXSeq/gencode.v30.annotation.no_chr.patched_contigs.DEXSeq.gff") %>%
+  as.data.frame() %>% dplyr::as_tibble() %>%
+  dplyr::filter(type != "aggregate_gene") %>%
+  dplyr::mutate(phenotype_id = paste(gene_id, seqnames, start, end, sep = "_")) %>%
+  dplyr::mutate(phenotype_pos = floor((start + end)/2)) %>%
+  dplyr::transmute(phenotype_id, gene_id, seqnames, start, end, phenotype_length = width, phenotype_pos) %>%
+  dplyr::mutate(seqnames = as.character(seqnames)) %>%
+  dplyr::left_join(nuc_content, by = c("seqnames", "start", "end")) %>%
+  dplyr::filter(!grepl("+", gene_id, fixed = TRUE)) %>%
+  removeGeneVersion() %>%
+  dplyr::mutate(quant_id = gene_id, group_id = gene_id) %>%
+  dplyr::left_join(gene_metadata_subset, by = "gene_id") %>%
+  dplyr::select(-seqnames, -start, -end) %>%
+  dplyr::select(required_gene_meta_columns, dplyr::everything())
+
+#Save expression matrix
+gz2 = gzfile("metadata/phenotype_metadata/exon_counts_Ensembl_96_phenotype_metadata.tsv.gz", "w")
+write.table(exon_metadata, gz2, sep = "\t", quote = FALSE, row.names = F)
+close(gz2)
+
+
+
 
 
