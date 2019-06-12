@@ -98,5 +98,29 @@ gz2 = gzfile("metadata/phenotype_metadata/txrevise_Ensembl_96_phenotype_metadata
 write.table(txrevise_meta, gz2, sep = "\t", quote = FALSE, row.names = F)
 close(gz2)
 
+#### Human HT-12 V4 metadata ####
+human_ht12 = readr::read_tsv("metadata/gene_metadata/HumanHT-12_V4_gene_metadata.txt.gz") %>%
+  dplyr::select(phenotype_id, gene_id) %>%
+  dplyr::left_join(dplyr::select(gene_metadata, -phenotype_id, -gene_gc_content), by = "gene_id") %>%
+  dplyr::select(required_phenotype_meta_columns, dplyr::everything()) %>%
+  dplyr::filter(!is.na(gene_name))
+
+#Save metadata file
+gz2 = gzfile("metadata/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz", "w")
+write.table(human_ht12, gz2, sep = "\t", quote = FALSE, row.names = F)
+close(gz2)
+
+#### Human HT-12 V4 metadata ####
+affy = readr::read_tsv("metadata/gene_metadata/Affy_Human_Gene_1_0_ST_gene_metadata.txt.gz", col_types = "ccccciiiccddi") %>%
+  dplyr::select(phenotype_id, gene_id) %>%
+  dplyr::left_join(dplyr::select(gene_metadata, -phenotype_id, -gene_gc_content), by = "gene_id") %>%
+  dplyr::select(required_phenotype_meta_columns, dplyr::everything()) %>%
+  dplyr::filter(!is.na(gene_name))
+
+#Save metadata file
+gz2 = gzfile("metadata/phenotype_metadata/Affy_Human_Gene_1_0_ST_Ensembl_96_phenotype_metadata.tsv.gz", "w")
+write.table(affy, gz2, sep = "\t", quote = FALSE, row.names = F)
+close(gz2)
+
 
 
