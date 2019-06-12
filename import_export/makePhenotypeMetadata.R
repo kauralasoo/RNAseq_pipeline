@@ -68,12 +68,35 @@ tx_gene_map = dplyr::transmute(transcript_meta, phenotype_id = transcript_id, ge
 tx_estimates = readr::read_tsv("annotations/helper_files/gencode.v30.transcripts_TPM_merged.txt") %>% reformatPhenotypeId()
 gencode_transcripts_meta = dplyr::select(tx_estimates, phenotype_id) %>% 
   dplyr::left_join(tx_gene_map) %>%
-  dplyr::left_join(dplyr::select(gene_metadata, -phenotype_id, -gene_gc_content), by = "gene_id")%>%
+  dplyr::left_join(dplyr::select(gene_metadata, -phenotype_id, -gene_gc_content), by = "gene_id") %>%
   dplyr::select(required_phenotype_meta_columns, dplyr::everything())
 
 #Save expression matrix
 gz2 = gzfile("metadata/phenotype_metadata/transcript_usage_Ensembl_96_phenotype_metadata.tsv.gz", "w")
 write.table(gencode_transcripts_meta, gz2, sep = "\t", quote = FALSE, row.names = F)
 close(gz2)
+
+### txrevise events ####
+list = as.list(c("annotations/helper_files/merged_counts/txrevise.grp_1.contained/txrevise.grp_1.contained_TPM_merged.txt", 
+                 "annotations/helper_files/merged_counts/txrevise.grp_2.contained/txrevise.grp_2.contained_TPM_merged.txt",
+                 "annotations/helper_files/merged_counts/txrevise.grp_1.upstream/txrevise.grp_1.upstream_TPM_merged.txt",
+                 "annotations/helper_files/merged_counts/txrevise.grp_2.upstream/txrevise.grp_2.upstream_TPM_merged.txt",
+                 "annotations/helper_files/merged_counts/txrevise.grp_1.downstream/txrevise.grp_1.downstream_TPM_merged.txt",
+                 "annotations/helper_files/merged_counts/txrevise.grp_2.downstream/txrevise.grp_2.downstream_TPM_merged.txt"))
+event_quants = purrr::map_df(list, ~readr::read_tsv(.))
+
+#Extract relevant infromation from the txrevise events
+txrevise_meta = dplyr::select(event_quants, phenotype_id) %>% 
+  tidyr::separate(phenotype_id, c("gene_id", "grp", "pos", "transcript"), sep = "\\.", remove = F) %>%
+  dplyr::mutate(quant_id = paste(gene_id, grp, pos, sep = "."), group_id = paste(gene_id, pos, sep = ".")) %>% 
+  dplyr::select(phenotype_id, quant_id, group_id, gene_id) %>%
+  dplyr::left_join(dplyr::select(gene_metadata, -phenotype_id, -gene_gc_content, -group_id, -quant_id), by = "gene_id") %>%
+  dplyr::select(required_phenotype_meta_columns, dplyr::everything())
+
+#Save expression matrix
+gz2 = gzfile("metadata/phenotype_metadata/txrevise_Ensembl_96_phenotype_metadata.tsv.gz", "w")
+write.table(txrevise_meta, gz2, sep = "\t", quote = FALSE, row.names = F)
+close(gz2)
+
 
 
