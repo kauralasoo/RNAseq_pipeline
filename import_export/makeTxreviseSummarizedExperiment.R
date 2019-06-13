@@ -5,7 +5,7 @@ library("tidyr")
 load_all("../eQTLUtils/")
 
 #### txrevise ####
-sample_metadata = read.table("../RNAseq_pipeline/metadata/cleaned/GEUVADIS.tsv", header = TRUE, stringsAsFactors = F)
+sample_metadata = read.table("../SampleArcheology/studies/cleaned/GEUVADIS.tsv", header = TRUE, stringsAsFactors = F)
 
 #Import txrevise quant results
 annotations = c("txrevise.grp_1.upstream","txrevise.grp_2.upstream",
@@ -28,6 +28,10 @@ txrevise_se = makeSummarizedExperiment(quant_matrix, row_data, sample_metadata, 
 txrevise_usage = normaliseSE_ratios(txrevise_se, assay_name = "tpms")
 saveRDS(txrevise_usage, "results/SummarizedExperiments/GEUVADIS_txrevise.rds")
 txrevise_usage = readRDS("results/SummarizedExperiments/GEUVADIS_txrevise.rds")
+
+#Filter and normalize for QTL mapping
+se_norm = qtltoolsPrepareSE(txrevise_se[1:1000,], "txrevise")
+
 
 
 

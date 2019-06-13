@@ -328,3 +328,28 @@ processed_se = filterSE_gene_types(filtered_se) %>% normaliseSE_tpm()
 processed_se = processed_se[apply(assays(processed_se)$tpms, 1, median) > 1,]
 pca_res = transformSE_PCA(processed_se, assay_name = "tpms", n_pcs = 10, log_transform = TRUE, center = TRUE, scale. = TRUE)
 ggplot(pca_res$pca_matrix, aes(x = PC1, y = PC2, color = cell_type)) + geom_point()
+
+
+#HipSci
+#Specify mandatory metadata columns
+mandatory_cols = c("sample_id", "genotype_id", "sex", "cell_type", "condition", "qtl_group", "timepoint", "read_length", "stranded", "paired", "protocol", "rna_qc_passed", "genotype_qc_passed","study")
+transcript_meta = importBiomartMetadata("annotations/Ensembl92_biomart_download.txt.gz")
+
+#GEUVADIS
+read_counts = readr::read_tsv("processed/HipSci/matrices/gene_expression_featureCounts.txt") %>%
+  dplyr::filter(!(gene_id %like% "PAR_Y")) %>%
+  removeGeneVersion()
+
+sample_metadata = readr::read_delim("../SampleArcheology/studies/cleaned/HipSci.tsv", delim = "\t")
+
+#Make SE object
+featureCounts_se = makeFeatureCountsSummarizedExperiemnt(read_counts, transcript_meta, sample_metadata)
+
+#Filter and normalize for QTL mapping
+normalised_se = qtltoolsPrepareSE(featureCounts_se, quant_method = "featureCounts", filter_genotype_qc = FALSE)
+cqn_matrix = assays(normalised_se)$cqn
+cqn_matrix = round(cqn_matrix, 3)
+cqn_df = dplyr::as_tibble(cqn_matrix) %>%
+  dplyr::mutate(phenotype_id = rownames(cqn_matrix)) %>%
+  dplyr::select(phenotype_id, everything())
+write.table(cqn_df, "results/expression_matrices/featureCounts/HipSci.cqn_normalized.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
