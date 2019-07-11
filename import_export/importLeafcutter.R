@@ -5,36 +5,29 @@ library("data.table")
 load_all("../eQTLUtils/")
 
 #Import biomart data
-transcript_meta = importBiomartMetadata("annotations/Ensembl94_biomart_download.txt.gz")
+transcript_meta = importBiomartMetadata("annotations/eQTLCatalogue/v0.1/Homo_sapiens.GRCh38.96_biomart_download.txt.gz")
 
 #Import Leafcutter count matrix
-geuvadis_lc = read.table("processed/GEUVADIS/leafcutter/leafcutter_perind_numers.counts.gz", sep = " ")
-leafcutter_meta = leafcutterAnnotateIntrons(rownames(geuvadis_lc), 
-        intron_annotation_path = "annotations/gencode_v29_leafcutter_annot_all_introns.no_chr.bed.gz",
+lc_matrix = utils::read.csv("results/Schwartzentruber_2018/leafcutter_perind_numers.counts.formatted.gz", sep = "", stringsAsFactors = FALSE)
+leafcutter_meta = leafcutterAnnotateIntrons(lc_matrix$phenotype_id, 
+        intron_annotation_path = "annotations/eQTLCatalogue/v0.1/leafcutter_annotations/gencode_v30_all_introns.bed.gz",
         transcript_meta)
 
+#Export Leafcutter gene metadata file
+write.table(leafcutter_meta, "results/Schwartzentruber_2018/leafcutter_cluster_metadata.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+
 #Import sample metadata
-geuvadis_meta = read.table("../SampleArcheology/studies/cleaned/GEUVADIS_EUR.tsv", stringsAsFactors = F, header = T) %>% 
-  dplyr::as_tibble()
+sample_meta = read.table("../SampleArcheology/studies/cleaned/Schwartzentruber_2018.tsv", stringsAsFactors = F, header = T, sep = "\t") %>% 
+  dplyr::as_tibble() %>% dplyr::filter(rna_qc_passed, genotype_qc_passed)
 
 #Make Summarized experiment
-geuvadis_lc_se = makeSummarizedExperiment(geuvadis_lc, leafcutter_meta, geuvadis_meta, assay_name = "counts")
+lc_se = makeSummarizedExperimentFromCountMatrix(lc_matrix, leafcutter_meta, sample_meta, assay_name = "counts", quant_method = "leafcutter")
 
 #Normalise
-geuvadis_norm = qtltoolsPrepareSE(geuvadis_lc_se[,1:10], quant_method = "LeafCutter")
-
-#Export Leafcutter gene metadata file
-write.table(leafcutter_meta, "metadata/gene_metadata/GEUVADIS_leafcutter_cluster_metadata.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+lc_norm = qtltoolsPrepareSE(lc_se[,1:10], quant_method = "leafcutter")
 
 #Write count matrix as tab-separated file
-gz1 = gzfile("results/expression_matrices/LeafCutter/GEUVADIS.tsv.gz","w") 
-write.table(geuvadis_lc, gz1, sep = "\t", quote = F)
+gz1 = gzfile("results/Schwartzentruber_2018/lc_norm.tsv.gz","w") 
+write.table(assays(lc_norm)$qnorm, gz1, sep = "\t", quote = F)
 close(gz1)
 
-#Convert to QTLtools
-geuvadis_qtl = convertSEtoQTLtools(geuvadis_norm, assay_name = "qnorm")
-
-#Save to disk
-saveQTLToolsMatrices(list(LCL = geuvadis_qtl), output_dir = "test_out")
-
-  
