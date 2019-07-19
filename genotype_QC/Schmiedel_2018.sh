@@ -11,8 +11,8 @@ plink --bfile DICE_imputed --merge-x --make-bed --out DICE_imputed_merged
 cut -f 2 DICE_imputed_merged.bim | sort | uniq -d > 1.dups
 plink --bfile DICE_imputed_merged --exclude 1.dups --make-bed --out DICE_imputed_merged_nodups
 
-#Udate bul
-update_build.sh DICE_imputed_merged_nodups Multi-EthnicGlobal_A1-b37.strand DICE_build
+#Udate build
+update_build.sh DICE_imputed_merged_nodups Multi-EthnicGlobal_D1-b37.strand DICE_build
 
 #Convert to VCF
 plink --bfile DICE_build --recode vcf-iid --output-chr M --out DICE_GRCh37

@@ -41,3 +41,7 @@ snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefi
 #### Quach 2016 dataset ####
 #CrossMap genotypes
 snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes.snakefile -p processed/Monocytes_Quach_2016/genotypes/GRCh38/Monocytes_Quach_2016_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 10 --rerun-incomplete
+
+##### Lepik_2017 #####
+#CrossMap genotypes
+snakemake --cluster scripts/snakemake_submit_UT.py -s CrossMap_genotypes_no_R2.snakefile -np processed/Lepik_2017/genotypes/GRCh38/Lepik_2017_GRCh38.vcf.gz --configfile configs/CrossMap_config.yaml --jobs 22 --rerun-incomplete
