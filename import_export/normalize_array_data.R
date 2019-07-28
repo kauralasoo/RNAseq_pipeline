@@ -46,3 +46,17 @@ saveRDS(cedar_norm, "results/SummarizedExperiments/array_norm/CEDAR.rds")
 norm_mat = round(assays(cedar_norm)$norm_exprs,3)
 write.table(norm_mat, "results/expression_matrices/HumanHT-12_V4/CEDAR.normalized.tsv", sep = "\t", quote = F)
 
+#Naranbhai_2015
+expression_matrix = utils::read.csv("results/Naranbhai_2015.tsv.gz", sep = "\t", stringsAsFactors = FALSE)
+gene_meta = readr::read_tsv("../../annotations/eQTLCatalogue/v0.1/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz")
+
+sample_meta = read.table("../SampleArcheology/studies/cleaned/Naranbhai_2015.tsv", stringsAsFactors = F, header = T, sep = "\t") %>% 
+  dplyr::as_tibble()
+
+#Make Summarized experiment
+array_se = makeSummarizedExperimentFromCountMatrix(expression_matrix, gene_meta, sample_meta, assay_name = "exprs", quant_method = "HumanHT-12_V4")
+
+#Normalise
+array_norm = qtltoolsPrepareSE(array_se, quant_method = "HumanHT-12_V4")
+
+

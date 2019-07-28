@@ -1,0 +1,44 @@
+ ##### Naranbhai_2015 ####
+nextflow run main.nf -profile eqtl_catalogue\
+ --expression_matrix /gpfs/hpchome/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/Naranbhai_2015.HumanHT-12_V4_norm_exprs.tsv\
+ --phenotype_metadata /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz\
+ --sample_metadata /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/Naranbhai_2015.tsv\
+ --genotype_vcf /gpfs/hpchome/a72094/datasets/controlled_access/Fairfax_2014/genotypes/Michigan_GRCh37_1KGPhase3_061118/GRCh38/Fairfax_2014_GRCh38.filtered.renamed.vcf.gz\
+ --is_imputed true\
+ -resume
+
+  ##### Fairfax_2014 ####
+nextflow run main.nf -profile eqtl_catalogue\
+ --expression_matrix /gpfs/hpchome/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/Fairfax_2014.HumanHT-12_V4_norm_exprs.tsv\
+ --phenotype_metadata /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz\
+ --sample_metadata /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/Fairfax_2014.tsv\
+ --genotype_vcf /gpfs/hpchome/a72094/datasets/controlled_access/Fairfax_2014/genotypes/Michigan_GRCh37_1KGPhase3_061118/GRCh38/Fairfax_2014_GRCh38.filtered.renamed.vcf.gz\
+ --is_imputed true\
+ -resume
+
+##### Fairfax_2012 ####
+nextflow run main.nf -profile eqtl_catalogue\
+ --expression_matrix /gpfs/hpchome/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/Fairfax_2012.HumanHT-12_V4_norm_exprs.tsv\
+ --phenotype_metadata /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz\
+ --sample_metadata /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/Fairfax_2012.tsv\
+ --genotype_vcf /gpfs/hpchome/a72094/datasets/controlled_access/Fairfax_2014/genotypes/Michigan_GRCh37_1KGPhase3_061118/GRCh38/Fairfax_2014_GRCh38.filtered.renamed.vcf.gz\
+ --is_imputed true\
+ -resume
+
+##### CEDAR ####
+nextflow run main.nf -profile eqtl_catalogue\
+ --expression_matrix /gpfs/hpchome/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/CEDAR.HumanHT-12_V4_norm_exprs.tsv\
+ --phenotype_metadata /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz\
+ --sample_metadata /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/CEDAR.tsv\
+ --genotype_vcf /gpfs/hpchome/a72094/datasets/open_access/CEDAR/genotypes/Michigan_GRCh37_1KGPhase3_220918/GRCh38/CEDAR_GRCh38.filtered.renamed.vcf.gz\
+ --is_imputed true\
+ -resume
+
+##### Kasela_2017 ####
+nextflow run main.nf -profile eqtl_catalogue\
+ --expression_matrix /gpfs/hpchome/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/Kasela_2017.HumanHT-12_V4_norm_exprs.tsv\
+ --phenotype_metadata /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz\
+ --sample_metadata /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/Kasela_2017.tsv\
+ --genotype_vcf /gpfs/hpc/home/a72094/datasets/controlled_access/Kasela_2017/genotypes/Michigan_GRCh37_1KGPhase3_220119/GRCh38/Kasela_2017_GRCh38.filtered.vcf.gz\
+ --is_imputed true\
+ -resume
