@@ -1,9 +1,20 @@
 ##### GENCORD ####
+#gene_counts
 singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
  -c /gpfs/hpchome/a72094/datasets/processed/GENCORD/featureCounts/merged_gene_counts.txt\
  -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/GENCORD.tsv\
  -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/gene_counts_Ensembl_96_phenotype_metadata.tsv.gz\
  -o /gpfs/hpchome/a72094/datasets/processed/expression_matrices/\
+ --eqtlutils ../eQTLUtils/\
+ --filter_qc TRUE
+
+ #transcript_usage
+singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
+ -c /gpfs/hpchome/a72094/datasets/processed/GENCORD/Salmon/merged_counts/gencode.v30.transcripts/gencode.v30.transcripts.TPM.merged.txt\
+ -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/GENCORD.tsv\
+ -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/transcript_usage_Ensembl_96_phenotype_metadata.tsv.gz\
+ -o /gpfs/hpchome/a72094/datasets/processed/transcript_usage/\
+ -q transcript_usage\
  --eqtlutils ../eQTLUtils/\
  --filter_qc TRUE
 
@@ -17,13 +28,23 @@ singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
  --eqtlutils ../eQTLUtils/\
  --filter_qc TRUE
 
- #transcript_usage
+#transcript_usage
 singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
  -c /gpfs/hpchome/a72094/datasets/processed/Lepik_2017/Salmon/merged_counts/gencode.v30.transcripts/gencode.v30.transcripts.TPM.merged.txt\
  -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/Lepik_2017.tsv\
  -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/transcript_usage_Ensembl_96_phenotype_metadata.tsv.gz\
  -o /gpfs/hpchome/a72094/datasets/processed/expression_matrices/transcript_usage/\
  -q transcript_usage\
+ --eqtlutils ../eQTLUtils/\
+ --filter_qc TRUE
+
+#exon_counts
+singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
+ -c /gpfs/hpchome/a72094/datasets/processed/Lepik_2017/dexseq_exon_counts/merged_exon_counts.tsv\
+ -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/Lepik_2017.tsv\
+ -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/exon_counts_Ensembl_96_phenotype_metadata.tsv.gz\
+ -o /gpfs/hpchome/a72094/datasets/processed/expression_matrices/exon_counts/\
+ -q exon_counts\
  --eqtlutils ../eQTLUtils/\
  --filter_qc TRUE
 
@@ -68,8 +89,8 @@ singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
  --eqtlutils ../eQTLUtils/\
  --filter_qc TRUE
 
- ##### CEDAR ####
- singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
+##### CEDAR ####
+singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
  -c /gpfs/hpchome/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/raw/CEDAR.tsv.gz\
  -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/CEDAR.tsv\
  -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz\
