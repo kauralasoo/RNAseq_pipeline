@@ -53,3 +53,6 @@ nextflow run main.nf -profile eqtl_catalogue\
  --genotype_vcf /gpfs/hpc/home/a72094/datasets/controlled_access/GENCORD2/genotypes/Michigan_GRCh37_1KGPhase3_220918/GRCh38/GENCORD_GRCh38.filtered.vcf.gz\
  --is_imputed true\
  -resume
+
+ #Run multi_study version
+nextflow run main.nf -profile eqtl_catalogue --readPathsFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/qtlmap_paths.tsv --outdir summary_statistics --n_batches 800

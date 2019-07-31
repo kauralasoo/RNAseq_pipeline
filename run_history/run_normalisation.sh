@@ -4,7 +4,7 @@ singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
  -c /gpfs/hpchome/a72094/datasets/processed/GENCORD/featureCounts/merged_gene_counts.txt\
  -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/GENCORD.tsv\
  -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/gene_counts_Ensembl_96_phenotype_metadata.tsv.gz\
- -o /gpfs/hpchome/a72094/datasets/processed/expression_matrices/\
+ -o /gpfs/hpchome/a72094/datasets/processed/expression_matrices/gene_counts\
  --eqtlutils ../eQTLUtils/\
  --filter_qc TRUE
 
@@ -13,7 +13,7 @@ singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
  -c /gpfs/hpchome/a72094/datasets/processed/GENCORD/Salmon/merged_counts/gencode.v30.transcripts/gencode.v30.transcripts.TPM.merged.txt\
  -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/GENCORD.tsv\
  -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/transcript_usage_Ensembl_96_phenotype_metadata.tsv.gz\
- -o /gpfs/hpchome/a72094/datasets/processed/transcript_usage/\
+ -o /gpfs/hpchome/a72094/datasets/processed/expression_matrices/transcript_usage/\
  -q transcript_usage\
  --eqtlutils ../eQTLUtils/\
  --filter_qc TRUE
