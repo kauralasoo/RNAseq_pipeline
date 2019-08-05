@@ -18,6 +18,36 @@ singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
  --eqtlutils ../eQTLUtils/\
  --filter_qc TRUE
 
+#txrevise
+singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
+ -c /gpfs/hpchome/a72094/datasets/processed/GENCORD/Salmon/merged_counts/\
+ -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/GENCORD.tsv\
+ -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/transcript_usage_Ensembl_96_phenotype_metadata.tsv.gz\
+ -o /gpfs/hpchome/a72094/datasets/processed/expression_matrices/txrevise/\
+ -q transcript_usage\
+ --eqtlutils ../eQTLUtils/\
+ --filter_qc TRUE
+
+
+ ##### GEUVADIS ####
+ singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
+ -c /gpfs/hpchome/a72094/datasets/processed/GEUVADIS/featureCounts/merged_gene_counts.txt\
+ -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/GEUVADIS.tsv\
+ -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/gene_counts_Ensembl_96_phenotype_metadata.tsv.gz\
+ -o /gpfs/hpchome/a72094/datasets/processed/expression_matrices/gene_counts\
+ --eqtlutils ../eQTLUtils/\
+ --filter_qc TRUE
+
+
+ ##### TwinsUK ####
+ singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
+ -c /gpfs/hpchome/a72094/datasets/processed/TwinsUK/featureCounts/merged_gene_counts.txt\
+ -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/TwinsUK.tsv\
+ -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/gene_counts_Ensembl_96_phenotype_metadata.tsv.gz\
+ -o /gpfs/hpchome/a72094/datasets/processed/expression_matrices/gene_counts/\
+ --eqtlutils ../eQTLUtils/\
+ --filter_qc TRUE
+
  ##### Lepik_2017 ####
  #gene_counts
 singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
@@ -49,6 +79,22 @@ singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
  --filter_qc TRUE
 
 
+ #### Schwartzentruber_2018 ###
+ singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
+ -c /gpfs/hpchome/a72094/datasets/processed/Schwartzentruber_2018/Salmon/merged_counts/TPM/\
+ -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/Schwartzentruber_2018.tsv\
+ -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/txrevise_Ensembl_96_phenotype_metadata.tsv.gz\
+ -o /gpfs/hpchome/a72094/datasets/processed/expression_matrices/txrevise/\
+ -q txrevise\
+ --eqtlutils ../eQTLUtils/\
+ --filter_qc TRUE
+
+
+
+
+
+
+#### Microarray datasets ####
  ##### Naranbhai_2015 ####
  singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
  -c /gpfs/hpchome/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/raw/Naranbhai_2015.tsv.gz\
