@@ -8,4 +8,10 @@ nextflow run pre-imputation_qc.nf -profile eqtl_catalogue -resume\
 nextflow run pre-imputation_qc.nf -profile eqtl_catalogue -resume\
  --bfile /gpfs/hpc/home/a72094/datasets/controlled_access/ROSMAP/genotypes/plink_raw/ROSMAP_raw_GRCh37_bed\
  --output_name ROSMAP_affy_GRCh37_genotyped\
- --outdir ROSMAP_illumina
+ --outdir ROSMAP_affy
+
+# Schmiedel_2018
+nextflow run pre-imputation_qc.nf -profile eqtl_catalogue -resume\
+ --bfile /gpfs/hpc/home/a72094/datasets/controlled_access/Schmiedel_2018/genotypes/matrix/IC_DNA\
+ --output_name Schmiedel_2018_GRCh37_genotyped\
+ --outdir Schmiedel_2018
