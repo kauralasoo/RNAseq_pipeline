@@ -22,17 +22,14 @@ bcftools index ROSMAP.vcf.gz
 bcftools index ROSMAP.vcf.gz
 bcftools +fixref ROSMAP.vcf.gz -Oz -o ROSMAP.fixref.vcf.gz -- -f ~/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa -i ~/datasets/dbSNP/dbSNP_b151_GRCh37p13.vcf.gz
 
-#Sort the fixref versions
-bcftools sort ROSMAP_GRCh37_sorted.dbSNP.fixref.vcf.gz -Oz -o ROSMAP_GRCh37_sorted.dbSNP.fixref.sorted.vcf.gz
-
 #Remove variants with missing alt alleles
-bcftools filter -e "ALT='.'" ROSMAP_GRCh37_sorted.dbSNP.fixref.sorted.vcf.gz -Oz -o ROSMAP_GRCh37_sorted.dbSNP.fixref.sorted.noALT.vcf.gz
+#bcftools filter -e "ALT='.'" ROSMAP.fixref.vcf.gz -Oz -o ROSMAP_GRCh37_sorted.dbSNP.fixref.sorted.noALT.vcf.gz
 
 #Add tags
-bcftools +fill-tags ROSMAP_GRCh37_sorted.dbSNP.fixref.sorted.noALT.vcf.gz -Oz -o ROSMAP_tags.vcf.gz
+bcftools +fill-tags ROSMAP.fixref.vcf.gz -Oz -o ROSMAP.fixref.tags.vcf.gz
 
 #Filter rare and non-HWE varaints and those with abnormal reference alleles
-bcftools filter -i 'INFO/HWE > 1e-6 & F_MISSING < 0.05 & MAF[0] > 0.01' ROSMAP_tags.vcf.gz -Ou | bcftools filter -e 'REF="N" | REF="I" | REF="D"' -Oz -o ROSMAP_tags.filtered.vcf.gz
+bcftools filter -i 'INFO/HWE > 1e-6 & F_MISSING < 0.05 & MAF[0] > 0.01' ROSMAP.fixref.tags.vcf.gz -Ou | bcftools filter -e 'REF="N" | REF="I" | REF="D"' -Oz -o ROSMAP.fixref.tags.filtered.vcf.gz
 
 #Remove duplicates and multi-allelics
 bcftools norm -d all ROSMAP_tags.filtered.vcf.gz | bcftools norm -m+any | bcftools view -m2 -M2 -Oz -o ROSMAP_tags.filtered.no_dup.vcf.gz
