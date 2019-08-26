@@ -7,6 +7,10 @@ liftOverPlink.py -m ROSMAP_raw.map -p ROSMAP_raw.ped -o ROSMAP_raw_GRCh37 -c NCB
 #Convert back to bed/bim/fam
 plink --file ROSMAP_raw_GRCh37 --make-bed --out ROSMAP_raw_GRCh37_bed
 
+#Remove individuals with high levels of missingness
+grep -f ~/datasets/controlled_access/SampleArcheology/studies/ROSMAP/ROSMAP_affy_missing_individuals.txt ROSMAP_raw_GRCh37_bed.fam | cut -f1,2 -d " " > remove_list.txt
+plink -bfile ROSMAP_raw_GRCh37_bed --remove remove_list.txt --make-bed -out ROSMAP_raw_GRCh37_bed_filtered
+
 #Decompress all inputed files
 7za x chr_1.zip -p'password'
 7za x chr_2.zip -p'password'
@@ -30,11 +34,3 @@ plink --file ROSMAP_raw_GRCh37 --make-bed --out ROSMAP_raw_GRCh37_bed
 7za x chr_20.zip -p'password'
 7za x chr_21.zip -p'password'
 7za x chr_22.zip -p'password'
-
-#Filter final vcf file and add unique variant ids
-bcftools filter -i 'MAF[0] > 0.01' Monocytes_Quach_2016_GRCh38.vcf.gz | bcftools annotate --set-id 'chr%CHROM\_%POS\_%REF\_%FIRST_ALT' -Oz -o Quach_2016_GRCh38.filtered.vcf.gz
-bcftools index Quach_2016_GRCh38.filtered.vcf.gz
-
-#Extract variant information
-module load bcftools-1.8
-bcftools +fill-tags Quach_2016_GRCh38.filtered.vcf.gz | bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%TYPE\t%AC\t%AN\t%MAF\t%R2\n' | gzip > Quach_2016_GRCh38.variant_information.txt.gz

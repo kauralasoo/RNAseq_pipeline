@@ -55,7 +55,19 @@ nextflow run main.nf -profile eqtl_catalogue\
  -resume
 
  #Run multi_study version
-nextflow run main_multi_study.nf -profile eqtl_catalogue --readPathsFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_run_Hipsci.tsv --outdir summary_statistics --n_batches 400 --run_permutation false -resume
+nextflow run main_multi_study.nf -profile eqtl_catalogue\
+ --readPathsFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_run_Hipsci.tsv\
+  --outdir summary_statistics\
+  --n_batches 400\
+  --run_permutation false\
+  -resume
+
+nextflow run main_multi_study.nf -profile eqtl_catalogue\
+ --readPathsFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_run_Ye_2018.tsv\
+ --outdir summary_statistics\
+ --n_batches 400\
+ --run_permutation false\
+ -resume
 
 
 nextflow run main_multi_study.nf -profile eqtl_catalogue --readPathsFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_run_Hipsci.tsv --outdir summary_statistics --n_batches 400 --run_permutation true --run_nominal false -resume
