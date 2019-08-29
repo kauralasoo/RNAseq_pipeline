@@ -4,7 +4,6 @@ library("SummarizedExperiment")
 library("ggplot2")
 library("data.table")
 load_all("../eQTLUtils/")
-load_all("../seqUtils/")
 
 #Import metadata files
 meta_list = list(BLUEPRINT = "../SampleArcheology/studies/cleaned/BLUEPRINT.tsv",
@@ -23,11 +22,12 @@ meta_list = list(BLUEPRINT = "../SampleArcheology/studies/cleaned/BLUEPRINT.tsv"
                  Naranbhai_2015 = "../SampleArcheology/studies/cleaned/Naranbhai_2015.tsv",
                  Kasela_2017 = "../SampleArcheology/studies/cleaned/Kasela_2017.tsv",
                  Ye_2018 = "../SampleArcheology/studies/cleaned/Ye_2018.tsv",
-                 Raj_2014 = "../SampleArcheology/studies/cleaned/Raj_2014.tsv")
+                 Raj_2014 = "../SampleArcheology/studies/cleaned/Raj_2014.tsv",
+                 Schmiedel_2018 = "../SampleArcheology/studies/cleaned/Schmiedel_2018.tsv")
 meta_imported = purrr::map_df(meta_list, ~read.table(., sep = "\t", stringsAsFactors = F, header =T) %>% 
-                             dplyr::as_tibble())
-samples = purrr::map_df(meta_imported, ~dplyr::select(.,sample_id, genotype_id, cell_type, condition, qtl_group, rna_qc_passed, genotype_qc_passed, study, protocol, sex)) %>%
-  dplyr::filter(rna_qc_passed, genotype_qc_passed) %>%
+                             dplyr::as_tibble() %>%
+                             dplyr::select(sample_id, genotype_id, cell_type, condition, qtl_group, rna_qc_passed, genotype_qc_passed, study, protocol, sex))
+samples = dplyr::filter(meta_imported, rna_qc_passed, genotype_qc_passed) %>%
   dplyr::mutate(type = ifelse(protocol %in% c("total", "poly(A)"), "RNA-seq", "microarray")) %>%
   dplyr::mutate(is_female = ifelse(sex == "female", 1, 0))
 
