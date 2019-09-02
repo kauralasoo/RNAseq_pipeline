@@ -1,3 +1,4 @@
+#### Pre-imputation ####
 #ROSMAP illumina
 nextflow run pre-imputation_qc.nf -profile eqtl_catalogue -resume\
  --bfile /gpfs/hpc/home/a72094/datasets/controlled_access/ROSMAP/genotypes/illumina_raw/chop.rosmap.euam.vFinal.382only\
@@ -41,14 +42,26 @@ nextflow run crossmap_genotypes.nf -profile crossmap -resume\
  --vcf_files "/gpfs/hpc/home/a72094/datasets/controlled_access/ROSMAP/genotypes/Michigan_GRCh37_Phase3_200819/illumina/GRCh37/chr*.dose.vcf.gz"\
  --output_name ROSMAP_illumina 
 
+# ROSMAP_affy
+ nextflow run crossmap_genotypes.nf -profile crossmap -resume\
+ --vcf_files "/gpfs/hpc/home/a72094/datasets/controlled_access/ROSMAP/genotypes/Michigan_GRCh37_Phase3_200819/affy/GRCh37/chr*.dose.vcf.gz"\
+ --output_name ROSMAP_affy\
+ --outdir ROSMAP_affy
+
 # BrainSeq 1M
 nextflow run crossmap_genotypes.nf -profile crossmap -resume\
  --vcf_files "/gpfs/hpc/home/a72094/datasets/controlled_access/BrainSeq/genotypes/Michigan_GRCh37_Phase3_250819/1M/GRCh37/chr*.dose.vcf.gz"\
  --output_name BrainSeq_1M\
  --outdir BrainSeq_1M
 
-# ROSMAP_affy
- nextflow run crossmap_genotypes.nf -profile crossmap -resume\
- --vcf_files "/gpfs/hpc/home/a72094/datasets/controlled_access/ROSMAP/genotypes/Michigan_GRCh37_Phase3_200819/affy/GRCh37/chr*.dose.vcf.gz"\
- --output_name ROSMAP_affy\
- --outdir ROSMAP_affy
+# BrainSeq 650
+nextflow run crossmap_genotypes.nf -profile crossmap -resume\
+ --vcf_files "/gpfs/hpc/home/a72094/datasets/controlled_access/BrainSeq/genotypes/Michigan_GRCh37_Phase3_250819/h650/GRCh37/chr*.dose.vcf.gz"\
+ --output_name BrainSeq_h650\
+ --outdir BrainSeq_h650
+
+
+##### PopAssign ####
+nextflow run pop_assign.nf -profile pop_assign\
+ --vcf "~/datasets/controlled_access/BrainSeq/genotypes/Michigan_GRCh37_Phase3_250819/merged/BrainSeq_GRCh38_filtered.vcf.gz"\
+ --data_name BrainSeq -resume
