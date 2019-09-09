@@ -153,7 +153,7 @@ singularity exec qtl_norm_qc.img Rscript feature_counts_qc.R\
   --build_html TRUE\
   --make_mbv_plots TRUE
 
-  #Fairfax_2018
+#Fairfax_2018
 singularity exec qtl_norm_qc.img Rscript feature_counts_qc.R\
   -c /gpfs/hpc/home/a72094/datasets/processed/Fairfax_2018/featureCounts/merged_gene_counts.txt\
   -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/Fairfax_2018.tsv\
@@ -163,4 +163,28 @@ singularity exec qtl_norm_qc.img Rscript feature_counts_qc.R\
   --filter_qc TRUE\
   --eqtlutils ../eQTLUtils\
   -o /gpfs/hpchome/a72094/datasets/processed/QC_reports/Fairfax_2018/\
+  --build_html TRUE
+
+#ROSMAP
+singularity exec qtl_norm_qc.img Rscript feature_counts_qc.R\
+  -c /gpfs/hpc/home/a72094/datasets/processed/ROSMAP/featureCounts/merged_gene_counts.txt\
+  -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/ROSMAP.tsv\
+  -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/gene_counts_Ensembl_96_phenotype_metadata.tsv.gz\
+  -q ge\
+  --mbvdir /gpfs/hpc/home/a72094/datasets/processed/ROSMAP/MBV/\
+  --filter_qc TRUE\
+  --eqtlutils ../eQTLUtils\
+  -o /gpfs/hpchome/a72094/datasets/processed/QC_reports/ROSMAP_2/\
+  --build_html TRUE
+
+#BrainSeq
+singularity exec qtl_norm_qc.img Rscript feature_counts_qc.R\
+  -c /gpfs/hpc/home/a72094/datasets/processed/BrainSeq/featureCounts/merged_gene_counts.txt\
+  -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/BrainSeq.tsv\
+  -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/gene_counts_Ensembl_96_phenotype_metadata.tsv.gz\
+  -q ge\
+  --mbvdir /gpfs/hpc/home/a72094/datasets/processed/BrainSeq/MBV/\
+  --filter_qc TRUE\
+  --eqtlutils ../eQTLUtils\
+  -o /gpfs/hpchome/a72094/datasets/processed/QC_reports/BrainSeq_2/\
   --build_html TRUE

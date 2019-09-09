@@ -1,24 +1,26 @@
-study_name,n_donors,n_samples,experiment_type,tissue,stimulation,female_fraction,status,publication_doi,rna_accession,genotype_accession,gxa_accession,DAC,n_contexts
-CEDAR,322,2388,microarray,"CD4 and CD8 T-cells, monocytes, neutrophils, platelet, B-cells, ileum, rectum, transverse colon",,0.56,processed,http://dx.doi.org/10.1038/s41467-018-04365-8,E-MTAB-6667,E-MTAB-6666,,Open access,8
-Fairfax_2012,282,282,microarray,B-cells,,0.56,processed,http://dx.doi.org/10.1038/ng.2205,E-MTAB-945,EGAD00010000144; EGAD00010000520,,EGA,1
-Fairfax_2014,424,1372,microarray,monocytes,"IFN24, LPS2, LPS24",0.53,processed,http://dx.doi.org/10.1126/science.1246949,E-MTAB-2232,EGAD00010000144; EGAD00010000520,,EGA,4
-Kasela_2017,297,553,microarray,CD4 and CD8 T-cells,,0.50,processed,http://dx.doi.org/10.1371/journal.pgen.1006643,GSE78840,Not deposited,,Estonian Genome Center (releases@ut.ee),1
-Naranbhai_2015,93,93,microarray,neutrophils,,0.52,processed,http://dx.doi.org/10.1038/ncomms8545,E-MTAB-3536,EGAD00010000144; EGAD00010000520,,EGA,1
-Raj_2014,515,984,microarray,"T-cells, monocytes",,0.58,processed,http://dx.doi.org/10.1126/science.1249547,GSE56035,phs000815.v1.p1,,dbGaP,2
-Alasoo_2018,84,336,RNA-seq,macrophages,"IFNg, Salmonella, IFNg + Salmonella",0.52,processed,http://dx.doi.org/10.1038/s41588-018-0046-7,EGAD00001003204; PRJEB18997,EGAD00010001147; PRJEB11752,,EGA,4
-BLUEPRINT,197,554,RNA-seq,"monocytes, neutrophils, T-cells",,0.55,processed,https://doi.org/10.1016/j.cell.2016.10.026,EGAD00001002671; EGAD00001002674; EGAD00001002675,EGAD00001002663,,EGA,3
-GENCORD,195,560,RNA-seq,"LCLs, fibroblasts, T-cells",,0.47,processed,https://doi.org/10.7554/eLife.00523,EGAD00001000425,EGAD00001000428,,EGA,3
-GEUVADIS,445,445,RNA-seq,LCLs,,0.53,processed,https://doi.org/10.1038/nature12531,E-GEUV-1,1000 Genomes,,Open access (http://www.internationalgenome.org/data),1
-HipSci,322,322,RNA-seq,iPSCs,,0.58,processed,https://doi.org/10.1038/nature22403,EGAD00001003529; PRJEB7388,EGAD00010001147; PRJEB11752,E-MTAB-4748,EGA,1
-Nedelec_2016,168,493,RNA-seq,macrophages,"Listeria, Salmonella",0.00,processed,http://dx.doi.org/10.1016/j.cell.2016.09.025,GSE81046,Not deposited,,Contact authors,3
-Quach_2016,200,969,RNA-seq,monocytes,"LPS, Pam3CSK4, R848, IAV",0.00,processed,http://dx.doi.org/10.1016/j.cell.2016.09.024,EGAD00001002714,EGAD00010001131,,EGA,5
-Schwartzentruber_2018,98,98,RNA-seq,sensory neurons,,0.60,processed,http://dx.doi.org/10.1038/s41588-017-0005-8,EGAD00001003145; PRJEB18630,EGAD00010001147; PRJEB11752,,EGA,1
-TwinsUK,433,1364,RNA-seq,"fat, LCLs, skin, blood",,1.00,processed,http://dx.doi.org/10.1038/ng.3162,EGAD00001001086; EGAD00001001087; EGAD00001001088; EGAD00001001089,Not deposited,,http://twinsuk.ac.uk/resources-for-researchers/access-our-data/,4
-van_de_Bunt_2015,117,117,RNA-seq,pancreatic islets,,0.56,processed,https://doi.org/10.1371/journal.pgen.1005694,EGAD00001001601,EGAD00001001601,,EGA,1
-Ye_2018,261,573,RNA-seq,dendritic cells,"IFN, FLU",0.55,processed,http://dx.doi.org/10.1101/gr.240390.118,phs000815.v1.p1,phs000815.v1.p1,,dbGaP,3
-Lepik_2017,491,491,RNA-seq,blood,,,queued,https://doi.org/10.1371/journal.pcbi.1005766,Not deposited,Not deposited,,Estonian Genome Center (releases@ut.ee),1
-Liu_2018,62,62,RNA-seq,smooth muscle cells,,,queued,https://doi.org/10.1016/j.ajhg.2018.08.001,GSE113348,Not deposited,,Open access,1
-Schmiedel_2018,91,1544,RNA-seq,15 immune cell types,αCD3+αCD28 (4h),,queued,https://doi.org/10.1016/j.cell.2018.10.022,phs001703.v1.p1,phs001703.v1.p1,,dbGaP,15
-GTEx_v7,620,10294,RNA-seq,48 tissues,,0.34,queued,https://doi.org/10.1038/nature24277,phs000424.v7.p2.c1,phs000424.v7.p2.c1,,dbGaP,48
-Gate_Cheng_2018,96,96,RNA-seq,T-cells,αCD3+αCD28 (48h),,queued,http://dx.doi.org/10.1038/s41588-018-0156-2,phs000815.v1.p1,phs000815.v1.p1,,dbGaP,1
-Total,5813,23990,,,,,,,,,,,
+study_name,n_donors,n_samples,experiment_type,tissue,stimulation,female_fraction,status,publication_doi,rna_accession,genotype_accession,gxa_accession,DAC,n_contexts,X_chromosome
+CEDAR,322,2388,microarray,"CD4 and CD8 T-cells, monocytes, neutrophils, platelet, B-cells, ileum, rectum, transverse colon",,0.56,processed,http://dx.doi.org/10.1038/s41467-018-04365-8,E-MTAB-6667,E-MTAB-6666,,Open access,8,
+Fairfax_2012,282,282,microarray,B-cells,,0.56,processed,http://dx.doi.org/10.1038/ng.2205,E-MTAB-945,EGAD00010000144; EGAD00010000520,,EGA,1,
+Fairfax_2014,424,1372,microarray,monocytes,"IFN24, LPS2, LPS24",0.53,processed,http://dx.doi.org/10.1126/science.1246949,E-MTAB-2232,EGAD00010000144; EGAD00010000520,,EGA,4,
+Kasela_2017,297,553,microarray,CD4 and CD8 T-cells,,0.50,processed,http://dx.doi.org/10.1371/journal.pgen.1006643,GSE78840,Not deposited,,Estonian Genome Center (releases@ut.ee),1,
+Naranbhai_2015,93,93,microarray,neutrophils,,0.52,processed,http://dx.doi.org/10.1038/ncomms8545,E-MTAB-3536,EGAD00010000144; EGAD00010000520,,EGA,1,
+Raj_2014,515,984,microarray,"T-cells, monocytes",,0.58,processed,http://dx.doi.org/10.1126/science.1249547,GSE56035,phs000815.v1.p1,,dbGaP,2,
+Alasoo_2018,84,336,RNA-seq,macrophages,"IFNg, Salmonella, IFNg + Salmonella",0.52,processed,http://dx.doi.org/10.1038/s41588-018-0046-7,EGAD00001003204; PRJEB18997,EGAD00010001147; PRJEB11752,,EGA,4,
+BLUEPRINT,197,554,RNA-seq,"monocytes, neutrophils, T-cells",,0.55,processed,https://doi.org/10.1016/j.cell.2016.10.026,EGAD00001002671; EGAD00001002674; EGAD00001002675,EGAD00001002663,,EGA,3,
+GENCORD,195,560,RNA-seq,"LCLs, fibroblasts, T-cells",,0.47,processed,https://doi.org/10.7554/eLife.00523,EGAD00001000425,EGAD00001000428,,EGA,3,
+GEUVADIS,445,445,RNA-seq,LCLs,,0.53,processed,https://doi.org/10.1038/nature12531,E-GEUV-1,1000 Genomes,,Open access (http://www.internationalgenome.org/data),1,
+HipSci,322,322,RNA-seq,iPSCs,,0.58,processed,https://doi.org/10.1038/nature22403,EGAD00001003529; PRJEB7388,EGAD00010001147; PRJEB11752,E-MTAB-4748,EGA,1,
+Nedelec_2016,168,493,RNA-seq,macrophages,"Listeria, Salmonella",0.00,processed,http://dx.doi.org/10.1016/j.cell.2016.09.025,GSE81046,Not deposited,,Contact authors,3,
+Quach_2016,200,969,RNA-seq,monocytes,"LPS, Pam3CSK4, R848, IAV",0.00,processed,http://dx.doi.org/10.1016/j.cell.2016.09.024,EGAD00001002714,EGAD00010001131,,EGA,5,
+Schwartzentruber_2018,98,98,RNA-seq,sensory neurons,,0.60,processed,http://dx.doi.org/10.1038/s41588-017-0005-8,EGAD00001003145; PRJEB18630,EGAD00010001147; PRJEB11752,,EGA,1,
+TwinsUK,433,1364,RNA-seq,"fat, LCLs, skin, blood",,1.00,processed,http://dx.doi.org/10.1038/ng.3162,EGAD00001001086; EGAD00001001087; EGAD00001001088; EGAD00001001089,Not deposited,,http://twinsuk.ac.uk/resources-for-researchers/access-our-data/,4,
+van_de_Bunt_2015,117,117,RNA-seq,pancreatic islets,,0.56,processed,https://doi.org/10.1371/journal.pgen.1005694,EGAD00001001601,EGAD00001001601,,EGA,1,
+Ye_2018,261,573,RNA-seq,dendritic cells,"IFN, FLU",0.55,processed,https://doi.org/10.1101/gr.240390.118,phs000815.v1.p1,phs000815.v1.p1,,dbGaP,3,
+Lepik_2017,491,491,RNA-seq,blood,,,processed,https://doi.org/10.1371/journal.pcbi.1005766,Not deposited,Not deposited,,Estonian Genome Center (releases@ut.ee),1,
+Liu_2018,62,62,RNA-seq,smooth muscle cells,,,queued,https://doi.org/10.1016/j.ajhg.2018.08.001,GSE113348,Not deposited,,Open access,1,
+Schmiedel_2018,91,1331,RNA-seq,15 immune cell types,αCD3+αCD28 (4h),,processed,https://doi.org/10.1016/j.cell.2018.10.022,phs001703.v1.p1,phs001703.v1.p1,,dbGaP,15,
+GTEx_v7,620,10294,RNA-seq,48 tissues,,0.34,queued,https://doi.org/10.1038/nature24277,phs000424.v7.p2.c1,phs000424.v7.p2.c1,,dbGaP,48,
+Gate_Cheng_2018,96,96,RNA-seq,T-cells,αCD3+αCD28 (48h),,queued,https://doi.org/10.1038/s41588-018-0156-2,phs000815.v1.p1,phs000815.v1.p1,,dbGaP,1,
+BrainSeq,484,484,RNA-seq,brain (DLPFC),,0.34,processed,https://doi.org/10.1038/s41593-018-0197-y,syn12299750,phs000979.v2.p2,,dbGaP,,
+ROSMAP,576,576,RNA-seq,brain (DLPFC),,0.63,processed,https://doi.org/10.1038/nn.4632,syn3219045,syn3219045,,Synapse,1,no
+Total,6873,24837,,,,,,,,,,,,

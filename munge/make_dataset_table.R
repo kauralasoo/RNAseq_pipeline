@@ -28,6 +28,10 @@ convertAccessionToLink <- function(accession){
     string = paste0("[",accession,"](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=",accession,")")
     return(string)
   }
+  if(accession %like% "^syn"){
+    string = paste0("[",accession,"](https://www.synapse.org/#!Synapse:",accession,")")
+    return(string)
+  }
   return(accession)
 }
 

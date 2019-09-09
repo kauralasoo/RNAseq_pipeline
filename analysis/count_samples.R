@@ -23,7 +23,9 @@ meta_list = list(BLUEPRINT = "../SampleArcheology/studies/cleaned/BLUEPRINT.tsv"
                  Kasela_2017 = "../SampleArcheology/studies/cleaned/Kasela_2017.tsv",
                  Ye_2018 = "../SampleArcheology/studies/cleaned/Ye_2018.tsv",
                  Raj_2014 = "../SampleArcheology/studies/cleaned/Raj_2014.tsv",
-                 Schmiedel_2018 = "../SampleArcheology/studies/cleaned/Schmiedel_2018.tsv")
+                 Schmiedel_2018 = "../SampleArcheology/studies/cleaned/Schmiedel_2018.tsv",
+                 ROSMAP = "../SampleArcheology/studies/cleaned/ROSMAP.tsv",
+                 BrainSeq = "../SampleArcheology/studies/cleaned/BrainSeq.tsv")
 meta_imported = purrr::map_df(meta_list, ~read.table(., sep = "\t", stringsAsFactors = F, header =T) %>% 
                              dplyr::as_tibble() %>%
                              dplyr::select(sample_id, genotype_id, cell_type, condition, qtl_group, rna_qc_passed, genotype_qc_passed, study, protocol, sex))
