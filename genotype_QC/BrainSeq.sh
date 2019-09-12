@@ -39,3 +39,6 @@ bcftools merge ../1M/GRCh38/BrainSeq_1M.vcf.gz ../h650/GRCh38/BrainSeq_h650.vcf.
 
 #Filter missing
 bcftools filter -i 'F_MISSING < 0.05 & MAF[0] > 0.01' BrainSeq_GRCh38_merged.vcf.gz -Oz -o BrainSeq_GRCh38_filtered.vcf.gz
+
+#Split multi-allelic variants and remove duplicates
+bcftools norm -m-any BrainSeq_GRCh38_filtered.vcf.gz | bcftools norm -d all -Oz -o BrainSeq_GRCh38_filtered.no_multi.vcf.gz

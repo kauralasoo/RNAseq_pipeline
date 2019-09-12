@@ -40,3 +40,6 @@ bcftools merge affy/GRCh38/ROSMAP_affy.vcf.gz illumina/GRCh38/ROSMAP_illumina.vc
 
 #Keep RNA-seq individuals
 bcftools view -S ~/datasets/controlled_access/SampleArcheology/studies/ROSMAP/ROSMAP_rna_genotype_ids.txt --force-samples ROSMAP_GRCh38_merged.vcf.gz | bcftools filter -i 'F_MISSING < 0.05 & MAF[0] > 0.01' -Oz -o merged/ROSMAP_GRCh38_filtered.vcf.gz 
+
+#Split multi-allelic variants and remove duplicates
+bcftools norm -m-any ROSMAP_GRCh38_filtered.vcf.gz | bcftools norm -d all -Oz -o ROSMAP_GRCh38_filtered.no_multi.vcf.gz
