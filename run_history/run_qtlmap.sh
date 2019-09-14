@@ -55,6 +55,7 @@ nextflow run main.nf -profile eqtl_catalogue\
  -resume
 
  #Run multi_study version
+ #HipSci
 nextflow run main_multi_study.nf -profile eqtl_catalogue\
  --readPathsFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_run_Hipsci.tsv\
   --outdir summary_statistics\
@@ -62,6 +63,7 @@ nextflow run main_multi_study.nf -profile eqtl_catalogue\
   --run_permutation false\
   -resume
 
+#Ye_2018
 nextflow run main_multi_study.nf -profile eqtl_catalogue\
  --readPathsFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_run_Ye_2018.tsv\
  --outdir summary_statistics\
@@ -71,3 +73,13 @@ nextflow run main_multi_study.nf -profile eqtl_catalogue\
 
 
 nextflow run main_multi_study.nf -profile eqtl_catalogue --readPathsFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_run_Hipsci.tsv --outdir summary_statistics --n_batches 400 --run_permutation true --run_nominal false -resume
+
+#Quach and Schmiedel permutation runs
+nextflow run main_multi_study.nf -profile eqtl_catalogue\
+ --studyFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_run_big.tsv\
+ --outdir summary_statistics\
+ --n_batches 400\
+ --is_imputed true\
+ --run_permutation true\
+ --run_nominal false\
+ -resume

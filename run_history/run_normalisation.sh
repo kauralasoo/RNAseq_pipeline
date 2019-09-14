@@ -144,3 +144,14 @@ singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
  -q HumanHT-12_V4\
  --eqtlutils ../eQTLUtils/\
  --filter_qc TRUE
+
+
+
+singularity exec qtl_norm_qc.img Rscript normaliseCountMatrix.R\
+ -c /gpfs/hpchome/a72094/datasets/processed/GENCORD/featureCounts/merged_gene_counts.txt\
+ -s /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/GENCORD.tsv\
+ -p /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/gene_counts_Ensembl_96_phenotype_metadata.tsv.gz\
+ -o test\
+ --eqtlutils ../eQTLUtils/\
+ --filter_qc TRUE
+
