@@ -34,9 +34,9 @@ meta_imported = purrr::map_df(meta_list, ~read.table(., sep = "\t", stringsAsFac
 array_study_list = dplyr::filter(meta_imported, study %in% c("CEDAR", "Fairfax_2014", "Fairfax_2012", "Kasela_2017", "Naranbhai_2015")) %>% 
   dplyr::transmute(study, qtl_group, quant_method = protocol) %>% 
   dplyr::distinct() %>%
-  dplyr::mutate(qtl_leads = file.path("/gpfs/hpc/home/a72094/datasets/summary_stats/eQTLCatalogue/v0.1/summary_stats/CEDAR/",paste0(qtl_group, ".permuted.txt.gz"))) %>%
-  dplyr::mutate(qtl_stats = file.path("/gpfs/hpc/home/a72094/datasets/summary_stats/eQTLCatalogue/v0.1/summary_stats/CEDAR/",paste0(qtl_group, ".nominal.sorted.txt.gz"))) %>%
-  dplyr::mutate(qtl_varinfo = file.path("/gpfs/hpc/home/a72094/datasets/summary_stats/eQTLCatalogue/v0.1/summary_stats/CEDAR/",paste0(qtl_group, ".variant_information.txt.gz")))
+  dplyr::mutate(qtl_leads = file.path("/gpfs/hpc/home/a72094/datasets/summary_stats/eQTLCatalogue/v0.1/summary_stats/",study,paste0(qtl_group, ".permuted.txt.gz"))) %>%
+  dplyr::mutate(qtl_stats = file.path("/gpfs/hpc/home/a72094/datasets/summary_stats/eQTLCatalogue/v0.1/summary_stats/",study,paste0(qtl_group, ".nominal.sorted.txt.gz"))) %>%
+  dplyr::mutate(qtl_varinfo = file.path("/gpfs/hpc/home/a72094/datasets/summary_stats/eQTLCatalogue/v0.1/summary_stats/",study,paste0(qtl_group, ".variant_information.txt.gz")))
 
 write.table(array_study_list, "../colocWrapper/testdata/study_file.tsv", sep = "\t", row.names = F, quote = F)
 
