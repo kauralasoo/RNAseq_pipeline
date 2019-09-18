@@ -83,3 +83,13 @@ nextflow run main_multi_study.nf -profile eqtl_catalogue\
  --run_permutation true\
  --run_nominal false\
  -resume
+
+#Raj_2014
+nextflow run main_multi_study.nf -profile eqtl_catalogue\
+ --studyFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_array.tsv\
+ --outdir summary_statistics\
+ --n_batches 400\
+ --is_imputed true\
+ --run_permutation true\
+ --run_nominal true\
+ -resume
