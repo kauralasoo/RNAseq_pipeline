@@ -75,5 +75,5 @@ qtl_groups_df = dplyr::filter(meta_imported, study %in%
   dplyr::left_join(vcf_paths, by = "study")
 
 susie_file = makeSusieInputTable(qtl_groups_df) %>% 
-  dplyr::filter(susie_file, quant_method != "exon_counts")
-write.table(susie_file, "../SampleArcheology/finemapping/Alasoo_2018.tsv", sep = "\t", quote = F, row.names = F)
+  dplyr::filter(quant_method != "exon_counts")
+write.table(susie_file, "../SampleArcheology/finemapping/immune_cells.tsv", sep = "\t", quote = F, row.names = F)
