@@ -34,11 +34,12 @@ folders = c("results/coloc_v2/CEDAR/", "results/coloc_v2/Fairfax_2014/", "result
             "results/coloc_v2/Naranbhai_2015/", "results/coloc_v2/Kasela_2017/")
 coloc_results = purrr::map_df(setNames(as.list(folders), folders), ~importColocTable(.)) %>% 
   dplyr::left_join(array_meta, by = "phenotype_id") %>%
-  tidyr::separate(gwas_trait, c("pubmed_id", "trait_id", "efo_id"), "-", keep = T) %>%
+  tidyr::separate(gwas_trait, c("pubmed_id", "trait_id", "efo_id"), "-", remove = FALSE) %>%
   dplyr::left_join(astle_gwas_names, by = "trait_id")
 
 hits = dplyr::filter(coloc_results, PP_power > 0.8, PP_coloc > 0.9) %>% 
-  dplyr::select(gene_name, PP_power, PP_coloc, trait_name, qtl_group)
+  dplyr::select(gene_name, PP_power, PP_coloc, trait_name, gwas_trait, qtl_group)
 write.table(hits, "results/coloc_v2/coloc_hits.txt", sep = "\t", quote = F, row.names = F)
 
+dplyr::filter(hits, gene_name == "ARHGEF3")
 
