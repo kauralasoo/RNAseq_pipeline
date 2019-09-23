@@ -66,7 +66,7 @@ meta_imported = purrr::map_df(meta_list, ~read.table(., sep = "\t", stringsAsFac
 vcf_paths = read.table("~/projects/SampleArcheology/studies/study_genotype_paths.tsv", stringsAsFactors = F, header = TRUE) %>%
   dplyr::as_tibble()
 
-#Extract studies and qtl groups
+#Extract studies and qtl groups (immune cells)
 qtl_groups_df = dplyr::filter(meta_imported, study %in% 
                                 c("BLUEPRINT_PE","BLUEPRINT_SE","Alasoo_2018", "Quach_2016", "Nedelec_2016", 
                                   "Schmiedel_2018","GEUVADIS", "GENCORD", "TwinsUK", "Lepik_2017")) %>% 
@@ -77,3 +77,18 @@ qtl_groups_df = dplyr::filter(meta_imported, study %in%
 susie_file = makeSusieInputTable(qtl_groups_df) %>% 
   dplyr::filter(quant_method != "exon_counts")
 write.table(susie_file, "../SampleArcheology/finemapping/immune_cells.tsv", sep = "\t", quote = F, row.names = F)
+
+
+
+#Extract studies and qtl groups (other studies)
+qtl_groups_df = dplyr::filter(meta_imported, study %in% 
+                                c("BrainSeq","ROSMAP","HipSci", "Schwartzentruber_2018", "van_de_Bunt_2015")) %>% 
+  dplyr::transmute(study, qtl_group) %>% 
+  dplyr::distinct() %>% 
+  dplyr::left_join(vcf_paths, by = "study")
+
+susie_file = makeSusieInputTable(qtl_groups_df) %>% 
+  dplyr::filter(quant_method != "exon_counts")
+write.table(susie_file, "../SampleArcheology/finemapping/other_cells.tsv", sep = "\t", quote = F, row.names = F)
+
+
