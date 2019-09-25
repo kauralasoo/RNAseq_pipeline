@@ -57,12 +57,12 @@ tissue_counts = dplyr::left_join(samples, mappings, by = c("study", "qtl_group",
   dplyr::left_join(friendly_names, by = c("ontology_term", "ontology_label")) %>%
   dplyr::filter(condition %in% c("memory","naive")) %>%
   dplyr::filter(!(qtl_group %in% c("Th1-17_memory"))) %>%
-  dplyr::select(ontology_tissue, type) %>%
-  dplyr::group_by(ontology_tissue, type) %>%
+  dplyr::select(ontology_tissue, study, type) %>%
+  dplyr::group_by(ontology_tissue, study, type) %>%
   dplyr::summarise(n = n())
 
 #RNA-seq datasets
-seq_plot = ggplot(tissue_counts, aes(x= ontology_tissue, y = n, fill = type)) + 
+seq_plot = ggplot(tissue_counts, aes(x= ontology_tissue, y = n, fill = study)) + 
   geom_bar(stat = "identity") +
   theme_light() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
