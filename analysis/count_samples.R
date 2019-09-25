@@ -68,7 +68,7 @@ seq_plot = ggplot(tissue_counts, aes(x= ontology_tissue, y = n, fill = study)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ylab("Sample size") + 
   xlab("Cell type or tissue")
-ggsave("results/figures/sample_stats/sample_counts.pdf", plot = seq_plot, width = 6, height = 3)
+ggsave("results/figures/sample_stats/sample_counts.pdf", plot = seq_plot, width = 10, height = 6)
 
 #Count conditions
 condition_mappings = read.table("../eQTL-Catalogue-resources/ontology_mappings/condition_ontology_mapping.tsv", header =T, sep = "\t", stringsAsFactors = F)
