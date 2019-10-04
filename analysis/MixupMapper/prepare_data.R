@@ -2,6 +2,26 @@ suppressPackageStartupMessages(library("devtools"))
 load_all("../eQTLUtils/")
 library("SummarizedExperiment")
 
+
+extractExpressionMatrix <- function(se, qtl_qroup){
+  selected_se = se[,se$qtl_group == qtl_qroup]
+  matrix = assays(selected_se)$counts
+  df = matrix %>% as.data.frame() %>%
+    dplyr::as_tibble() %>%
+    dplyr::mutate(phenotype_id = rownames(matrix)) %>%
+    dplyr::select(phenotype_id, everything()) 
+  return(df)
+}
+
+makeCouplings <- function(se, qtl_group){
+  selected_se = se[,se$qtl_group == qtl_group]
+  res = colData(selected_se) %>%
+    as.data.frame() %>%
+    as_tibble() %>%
+    dplyr::select(genotype_id, sample_id)
+  return(res)
+}
+
 opt = list(
   expression_matrix = "~/datasets/processed/HumanHT-12_V4/CEDAR.HumanHT-12_V4_norm_exprs.tsv.gz",
   sample_meta = "~/projects/SampleArcheology/studies/cleaned/CEDAR.tsv",
@@ -20,14 +40,19 @@ se = eQTLUtils::makeSummarizedExperimentFromCountMatrix(assay = expression_matri
                                                         quant_method = "gene_counts",
                                                         reformat = FALSE)
 
-#Extract monocyte data
-monocyte_se = se[,se$qtl_group == "monocyte_CD14"]
-matrix = assays(monocyte_se)$counts
-df = matrix %>% as.data.frame() %>%
-  dplyr::as_tibble() %>%
-  dplyr::mutate(phenotype_id = rownames(matrix)) %>%
-  dplyr::select(phenotype_id, everything())
-write.table(df, "results/mixupmapper/monocytes_experession.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+#Extraxt all qtl_groups
+qtl_groups = unique(se$qtl_group)
+group_list = setNames(as.list(qtl_groups), qtl_groups)
+
+#Extact matrices
+matrices = purrr::map(group_list, ~extractExpressionMatrix(se,.))
+path_list = setNames(as.list(file.path("results/mixupmapper", paste0(qtl_groups,".tsv"))), qtl_groups)
+purrr::map2(matrices, path_list, ~write.table(.x, .y, sep = "\t", quote = FALSE, row.names = FALSE))
+
+#Make genotype-phenotype couplings
+couplings = purrr::map(group_list, ~makeCouplings(se,.))
+path_list = setNames(as.list(file.path("results/mixupmapper", paste0(qtl_groups,".geno_pheno_coupling.tsv"))), qtl_groups)
+purrr::map2(couplings, path_list, ~write.table(.x, .y, sep = "\t", quote = FALSE, row.names = FALSE))
 
 #Make phenotype metada
 res = rowData(monocyte_se) %>%
@@ -38,19 +63,12 @@ res = rowData(monocyte_se) %>%
                    Seq = gene_id)
 write.table(res, "results/mixupmapper/phenotype_metadata.tsv", sep = "\t", quote = F, row.names = F)
 
-#Make genotype-phenotype coupling
-res = colData(monocyte_se) %>%
-  as.data.frame() %>%
-  as_tibble() %>%
-  dplyr::select(genotype_id, sample_id)
-write.table(res, "results/mixupmapper/geno_pheno_coupling.tsv", sep = "\t", quote = F, row.names = F, col.names = F)
-
 
 #Import Fairfax lead variants
-leads = eQTLUtils::importQTLtoolsNominalTable("results/lead_variants/Fairfax_2014/monocyte_naive.lead_variants.txt") %>%
-  dplyr::arrange(p_bonferroni) %>%
-  dplyr::filter(p_fdr < 0.01)
-write.table(leads$snp_id, "results/mixupmapper/snp_list.txt", sep = "\t", quote =F, row.names = F, col.names = F)
+#leads = eQTLUtils::importQTLtoolsNominalTable("results/lead_variants/Fairfax_2014/monocyte_naive.lead_variants.txt") %>%
+#  dplyr::arrange(p_bonferroni) %>%
+#  dplyr::filter(p_fdr < 0.01)
+#write.table(leads$snp_id, "results/mixupmapper/snp_list.txt", sep = "\t", quote =F, row.names = F, col.names = F)
 
 
 

@@ -6,9 +6,9 @@ java -Xmx10g -Xms10g -XX:StringTableSize=319973\
  -jar ~/software/eqtl-mapping-pipeline-1.4.7-SNAPSHOT/eqtl-mapping-pipeline.jar\
  --mode mixupmapper\
  --in CEDAR\
- --out mixup_out\
- --inexp monocytes_experession.tsv\
+ --out monocyte_CD14\
+ --inexp monocytes_CD14.tsv\
  --inexpplatform HT12v4\
  --inexpannot phenotype_metadata.tsv\
- --snps snp_list.txt\
- --gte geno_pheno_coupling.tsv
+ --gte monocytes_CD14.geno_pheno_coupling.tsv\
+ --testall
