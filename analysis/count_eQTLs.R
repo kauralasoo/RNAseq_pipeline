@@ -4,68 +4,94 @@ library("SummarizedExperiment")
 library("ggplot2")
 library("data.table")
 load_all("../eQTLUtils/")
-load_all("../seqUtils/")
-
-#Import all lead variants
-file_list = list.files("results/qtl_summary_stats/", recursive = T, full.names = T)
-lead_vars = idVectorToList(file_list[file_list %like% "permuted.txt.gz"])
-lead_var_list = purrr::map(lead_vars, ~eQTLUtils::importQTLtoolsTable(.))
-
-#Count QTLs
-qtl_count = purrr::map_df(lead_var_list, ~dplyr::filter(., p_fdr < 0.05) %>% dplyr::summarise(eQTL_count = length(phenotype_id)), .id = "path")
-feature_count = purrr::map_df(lead_var_list, ~dplyr::summarise(.,feature_count = length(phenotype_id)), .id = "path")
-snp_count = purrr::map_df(lead_var_list, ~dplyr::summarise(.,mean_snp_count = mean(n_cis_snps), sd_snp_count = sd(n_cis_snps), median_snp_count = median(n_cis_snps)), .id = "path")
-
-qtl_counts = dplyr::left_join(qtl_count, feature_count, by = "path") %>% 
-  dplyr::left_join(snp_count, by = "path") %>%
-  dplyr::mutate(path = stringr::str_replace(path,"results/summary_stats//", "")) %>%
-  dplyr::mutate(path = stringr::str_replace(path, ".permuted.txt.gz", "")) %>%
-  tidyr::separate(path, c("study", "quant_method", "qtl_group"), "\\/")
 
 #Import study metadata
-meta_list = list(BLUEPRINT = "metadata/cleaned/BLUEPRINT.tsv",
-                 CEDAR = "metadata/cleaned/CEDAR.tsv",
-                 Fairfax_2014 = "metadata/cleaned/Fairfax_2014.tsv",
-                 GENCORD = "metadata/cleaned/GENCORD.tsv",
-                 GEUVADIS = "metadata/cleaned/GEUVADIS.tsv",
+meta_list = list(BLUEPRINT_PE = "../SampleArcheology/studies/cleaned/BLUEPRINT_PE.tsv",
+                 BLUEPRINT_SE = "../SampleArcheology/studies/cleaned/BLUEPRINT_SE.tsv",
+                 CEDAR = "../SampleArcheology/studies/cleaned/CEDAR.tsv",
+                 Fairfax_2014 = "../SampleArcheology/studies/cleaned/Fairfax_2014.tsv",
+                 GENCORD = "../SampleArcheology/studies/cleaned/GENCORD.tsv",
+                 GEUVADIS = "../SampleArcheology/studies/cleaned/GEUVADIS.tsv",
                  TwinsUK = "../SampleArcheology/studies/cleaned/TwinsUK.tsv",
-                 Alasoo_2018 = "metadata/cleaned/Alasoo_2018.tsv",
-                 Nedelec_2016 = "metadata/cleaned/Nedelec_2016.tsv",
-                 Quach_2016 = "metadata/cleaned/Quach_2016.tsv",
-                 Fairfax_2012 = "metadata/cleaned/Fairfax_2012.tsv",
-                 Schwartzentruber_2018 = "metadata/cleaned/Schwartzentruber_2018.tsv",
-                 van_de_Bunt_2015 = "metadata/cleaned/van_de_Bunt_2015.tsv",
-                 HipSci = "metadata/cleaned/HipSci.tsv",
-                 Naranbhai_2015 = "metadata/cleaned/Naranbhai_2015.tsv",
-                 Kasela_1017 = "../SampleArcheology/studies/cleaned/Kasela_2017.tsv")
-meta_imported = purrr::map(meta_list, ~read.table(., sep = "\t", stringsAsFactors = F, header =T) %>% 
-                             dplyr::as_tibble())
-samples = purrr::map_df(meta_imported, ~dplyr::select(.,cell_type, condition, qtl_group, rna_qc_passed, genotype_qc_passed, study))
-cell_types = dplyr::select(samples, cell_type, condition, qtl_group, study) %>% dplyr::distinct()
-sample_sizes = dplyr::filter(samples, rna_qc_passed, genotype_qc_passed) %>% 
-  dplyr::group_by(study, qtl_group) %>% 
-  dplyr::summarise(sample_size = length(qtl_group)) %>% 
-  dplyr::ungroup()
+                 Alasoo_2018 = "../SampleArcheology/studies/cleaned/Alasoo_2018.tsv",
+                 Nedelec_2016 = "../SampleArcheology/studies/cleaned/Nedelec_2016.tsv",
+                 Quach_2016 = "../SampleArcheology/studies/cleaned/Quach_2016.tsv",
+                 Fairfax_2012 = "../SampleArcheology/studies/cleaned/Fairfax_2012.tsv",
+                 Schwartzentruber_2018 = "../SampleArcheology/studies/cleaned/Schwartzentruber_2018.tsv",
+                 van_de_Bunt_2015 = "../SampleArcheology/studies/cleaned/van_de_Bunt_2015.tsv",
+                 HipSci = "../SampleArcheology/studies/cleaned/HipSci.tsv",
+                 Naranbhai_2015 = "../SampleArcheology/studies/cleaned/Naranbhai_2015.tsv",
+                 Kasela_2017 = "../SampleArcheology/studies/cleaned/Kasela_2017.tsv",
+                 #Ye_2018 = "../SampleArcheology/studies/cleaned/Ye_2018.tsv",
+                 #Raj_2014 = "../SampleArcheology/studies/cleaned/Raj_2014.tsv",
+                 Schmiedel_2018 = "../SampleArcheology/studies/cleaned/Schmiedel_2018.tsv",
+                 ROSMAP = "../SampleArcheology/studies/cleaned/ROSMAP.tsv",
+                 BrainSeq = "../SampleArcheology/studies/cleaned/BrainSeq.tsv",
+                 Lepik_2017 = "../SampleArcheology/studies/cleaned/Lepik_2017.tsv")
+meta_imported = purrr::map_df(meta_list, ~read.table(., sep = "\t", stringsAsFactors = F, header =T) %>% 
+                                dplyr::as_tibble() %>%
+                                dplyr::transmute(sample_id, genotype_id, cell_type, condition, qtl_group, rna_qc_passed, genotype_qc_passed, study, protocol, sex, timepoint = as.character(timepoint)))
+samples = dplyr::filter(meta_imported, rna_qc_passed, genotype_qc_passed) %>%
+  dplyr::mutate(type = ifelse(protocol %in% c("total", "poly(A)"), "RNA-seq", "microarray"))
 
-#Merge counts
-merged_counts = dplyr::left_join(qtl_counts, sample_sizes, by = c("study", "qtl_group")) %>% 
-  dplyr::left_join(cell_types, by = c("qtl_group", "study")) %>%
-  dplyr::select(study, cell_type, condition, qtl_group, quant_method, everything())
-write.table(merged_counts, "results/tables/eQTL_counts_per_dataset.tsv", sep = "\t", quote = FALSE, row.names = F)
-eGene_scatter = ggplot(merged_counts, aes(x = sample_size, y = eQTL_count, color = study, label = cell_type)) + 
+sample_sizes = dplyr::group_by(samples, study, qtl_group, type) %>% 
+  dplyr::summarise(sample_size = n())
+
+#Import RNA-seq gene expression results
+gene_meta = read.table("~/annotations/eQTLCatalogue/v0.1/phenotype_metadata/gene_counts_Ensembl_96_phenotype_metadata.tsv.gz", stringsAsFactors = F, header = TRUE) %>%
+  dplyr::as_tibble() %>%
+  dplyr::select(phenotype_id, group_id, gene_id, gene_name)
+sizes = dplyr::filter(sample_sizes, type == "RNA-seq") %>% 
+  dplyr::mutate(file_path = file.path("results/lead_variants/", study, paste0(study, "_ge_", qtl_group, ".lead_variants.txt")))
+
+#Import QTL results
+file_list = setNames(as.list(sizes$file_path), sizes$file_path)
+qtl_results = purrr::map(file_list, ~eQTLUtils::importQTLtoolsNominalTable(.) %>% dplyr::left_join(gene_meta, by = "phenotype_id"))
+qtl_counts = purrr::map_df(qtl_results, ~dplyr::mutate(., n_genes = n()) %>% 
+                             dplyr::filter(p_fdr < 0.05) %>% 
+                             dplyr::mutate(n_qtls = n()) %>%
+                             dplyr::select(n_genes, n_qtls) %>%
+                             dplyr::distinct(), .id = "file_path")
+
+#Merge
+eqtl_results = dplyr::left_join(sizes, qtl_counts)
+
+
+#### Import array results ####
+gene_meta = read.table("~/annotations/eQTLCatalogue/v0.1/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz", stringsAsFactors = F, header = TRUE) %>%
+  dplyr::as_tibble() %>%
+  dplyr::select(phenotype_id, group_id, gene_id, gene_name)
+sizes = dplyr::filter(sample_sizes, type == "microarray") %>% 
+  dplyr::mutate(file_path = file.path("results/lead_variants/", study, paste0(qtl_group, ".lead_variants.txt"))) %>%
+  dplyr::filter(!(qtl_group %in% c("ileum", "transverse_colon", "rectum")))
+
+#Import QTL results
+file_list = setNames(as.list(sizes$file_path), sizes$file_path)
+qtl_results = purrr::map(file_list, ~eQTLUtils::importQTLtoolsNominalTable(.) %>% dplyr::left_join(gene_meta, by = "phenotype_id"))
+qtl_counts = purrr::map_df(qtl_results, ~dplyr::group_by(., gene_id) %>% 
+                             dplyr::arrange(gene_id, p_fdr) %>% 
+                             dplyr::filter(row_number() == 1) %>%
+                             dplyr::ungroup() %>%
+                             dplyr::mutate(n_genes = n()) %>%
+                             dplyr::filter(p_fdr < 0.05) %>% 
+                             dplyr::mutate(n_qtls = n()) %>%
+                             dplyr::select(n_genes, n_qtls) %>%
+                             dplyr::distinct(), .id = "file_path")
+
+#Merge
+array_results = dplyr::left_join(sizes, qtl_counts)
+full_results = dplyr::bind_rows(eqtl_results, array_results) %>%
+  dplyr::filter(!(qtl_group %in% c("CD8_T-cell_anti-CD3-CD28", "CD4_T-cell_anti-CD3-CD28")))
+
+eGene_scatter = ggplot(full_results, aes(x = sample_size, y = n_qtls, color = study, label = qtl_group)) + 
   geom_point() +
   scale_y_continuous(limits = c(0, 7500)) +
-  scale_x_continuous(limits = c(0, 460)) +
+  scale_x_continuous(limits = c(0, 600)) +
   ylab("Number of eGenes") +
-  xlab("Sample size")
-ggsave("results/figures/eGenes_samples_scatter.pdf", plot = eGene_scatter, width = 7, height = 5)
+  xlab("Sample size") +
+  theme_light() + 
+  theme(legend.position = "none")
+ggsave("results/figures/eGenes_samples_scatter.pdf", plot = eGene_scatter, width= 4, height = 4)
 
-#Visualise SNP counts per study
-snp_counts_df = dplyr::select(qtl_counts, study, mean_snp_count, sd_snp_count) %>% dplyr::distinct()
-snp_count = ggplot(snp_counts_df, aes(x = study, y = mean_snp_count, ymax = mean_snp_count+sd_snp_count, ymin = mean_snp_count-sd_snp_count, fill = study)) + 
-  geom_bar(stat = "identity") + 
-  geom_errorbar(width = 0.2) + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-ggsave("results/figures/snp_count_per_gene.pdf", plot = snp_count, width = 8, height = 5)
 
 
