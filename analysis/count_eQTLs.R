@@ -93,5 +93,3 @@ eGene_scatter = ggplot(full_results, aes(x = sample_size, y = n_qtls, color = st
   theme(legend.position = "none")
 ggsave("results/figures/eGenes_samples_scatter.pdf", plot = eGene_scatter, width= 4, height = 4)
 
-
-

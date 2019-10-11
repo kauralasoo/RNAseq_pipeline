@@ -95,8 +95,14 @@ qtl_groups = dplyr::select(samples, study, cell_type, qtl_group) %>% distinct()
 write.table(qtl_groups, "results/study_qtl_groups.tsv", sep = "\t", quote = F, row.names = F)
 
 #Identify cell types and tissues
-conditions = dplyr::select(samples, study, condition) %>% distinct()
+conditions = dplyr::select(samples, study, qtl_group, condition) %>% distinct()
 write.table(conditions, "results/study_conditions.tsv", sep = "\t", quote = F, row.names = F)
 
+#Create controlled vocabularly for conditions
+mappings = read.table("../eQTL-Catalogue-resources/ontology_mappings/tissue_onotology_mapping.tsv", header =T, sep = "\t", stringsAsFactors = F)
+conditions = dplyr::select(samples, study, qtl_group, condition) %>% 
+  distinct() %>%
+  dplyr::left_join(mappings, by = c("study", "qtl_group"))
+write.table(conditions, "../eQTL-Catalogue-resources/ontology_mappings/cell_type_conditions_mapping.tsv", sep = "\t", row.names = F, quote = F)
 
 

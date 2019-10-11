@@ -1,5 +1,13 @@
 #Convert genotypes to TRITYPER format
+
+#CEDAR
 java -jar ~/software/GenotypeHarmonizer-1.4.20-SNAPSHOT/GenotypeHarmonizer.jar -i CEDAR_GRCh38.filtered.renamed -I VCF -o CEDAR -O TRITYPER
+
+#Kasela_2017
+java -jar ~/software/GenotypeHarmonizer-1.4.20-SNAPSHOT/GenotypeHarmonizer.jar -i Kasela_2017_GRCh38.filtered.vcf.gz -I VCF -o Kasela_2017 -O TRITYPER
+
+#Fairfax_2014
+java -jar ~/software/GenotypeHarmonizer-1.4.20-SNAPSHOT/GenotypeHarmonizer.jar -i CEDAR_GRCh38.filtered.renamed -I VCF -o Fairfax_2014 -O TRITYPER
 
 #Run MixupMapper
 java -Xmx10g -Xms10g -XX:StringTableSize=319973\
@@ -169,5 +177,30 @@ java -Xmx10g -Xms10g -XX:StringTableSize=319973\
  --inexpplatform HT12v4\
  --inexpannot phenotype_metadata.tsv\
  --gte B-cell_CD19.geno_pheno_coupling.tsv\
+ --testall\
+ --snps snp_list.txt
+
+ #Kasela_2017
+  java -Xmx10g -Xms10g -XX:StringTableSize=319973\
+ -jar ~/software/eqtl-mapping-pipeline-1.4.7-SNAPSHOT/eqtl-mapping-pipeline.jar\
+ --mode mixupmapper\
+ --in Kasela_2017\
+ --out T-cell_CD8\
+ --inexp T-cell_CD8.tsv\
+ --inexpplatform HT12v4\
+ --inexpannot phenotype_metadata.tsv\
+ --gte T-cell_CD8.geno_pheno_coupling.tsv\
+ --testall\
+ --snps snp_list.txt
+
+   java -Xmx10g -Xms10g -XX:StringTableSize=319973\
+ -jar ~/software/eqtl-mapping-pipeline-1.4.7-SNAPSHOT/eqtl-mapping-pipeline.jar\
+ --mode mixupmapper\
+ --in Kasela_2017\
+ --out T-cell_CD4\
+ --inexp T-cell_CD4.tsv\
+ --inexpplatform HT12v4\
+ --inexpannot phenotype_metadata.tsv\
+ --gte T-cell_CD4.geno_pheno_coupling.tsv\
  --testall\
  --snps snp_list.txt
