@@ -96,8 +96,8 @@ nextflow run main_multi_study.nf -profile eqtl_catalogue\
 
 #CEDAR
  nextflow run main_multi_study.nf -profile eqtl_catalogue\
- --studyFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_HT12V4.tsv\
- --outdir summary_statistics\
+ --studyFile /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_Kolberg_2020.tsv\
+ --outdir Kolberg_2020\
  --n_batches 400\
  --is_imputed true\
  --run_permutation true\

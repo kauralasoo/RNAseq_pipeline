@@ -34,6 +34,34 @@ makeSusieInputTable <- function(qtl_groups_df){
   return(qtl_df)
 }
 
+makeSusieInputTableArray <- function(qtl_groups_df){
+  
+  #quant methods
+  quant_method = c("HumanHT12V4")
+  matrix_suffix = c("HumanHT-12_V4_norm_exprs.tsv.gz")
+  meta_file_name = c("HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz")
+  quant = dplyr::tibble(quant_method = quant_method, matrix_suffix = matrix_suffix, meta_file_name = meta_file_name, c = 1)
+  
+  #Input paths
+  sumstats_home = "/gpfs/hpc/home/a72094/datasets/summary_stats/private_eQTLs/"
+  matrix_home = "/gpfs/hpc/home/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/"
+  sample_meta_home = "/gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/"
+  phenotype_meta_home = "/gpfs/hpc/home/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/"
+  
+  #Add uqant method to df
+  qtl_df = dplyr::mutate(qtl_groups_df, c = 1) %>%
+    dplyr::left_join(quant, by = "c") %>%
+    dplyr::select(-c) %>%
+    dplyr::mutate(set = paste(study, qtl_group, sep = "_")) %>%
+    dplyr::mutate(covariates = file.path(sumstats_home, "pipeline_output", study, "PCA", set, paste0(set, ".covariates.txt"))) %>%
+    dplyr::mutate(phenotype_list = file.path(sumstats_home, "summary_stats", study,paste0(set,".permuted.txt.gz"))) %>%
+    dplyr::mutate(expression_matrix = file.path(matrix_home, paste0(study, ".", matrix_suffix))) %>%
+    dplyr::mutate(sample_meta = file.path(sample_meta_home, paste0(study, ".tsv"))) %>%
+    dplyr::mutate(phenotype_meta = file.path(phenotype_meta_home, meta_file_name)) %>%
+    dplyr::select(study, qtl_group, quant_method, expression_matrix, phenotype_meta, sample_meta, vcf, phenotype_list, covariates)
+  return(qtl_df)
+}
+
 #Import metadata files
 meta_list = list(BLUEPRINT_PE = "../SampleArcheology/studies/cleaned/BLUEPRINT_PE.tsv",
                  BLUEPRINT_SE = "../SampleArcheology/studies/cleaned/BLUEPRINT_SE.tsv",
@@ -56,7 +84,8 @@ meta_list = list(BLUEPRINT_PE = "../SampleArcheology/studies/cleaned/BLUEPRINT_P
                  Schmiedel_2018 = "../SampleArcheology/studies/cleaned/Schmiedel_2018.tsv",
                  Lepik_2017 = "../SampleArcheology/studies/cleaned/Lepik_2017.tsv",
                  ROSMAP = "../SampleArcheology/studies/cleaned/ROSMAP.tsv",
-                 BrainSeq = "../SampleArcheology/studies/cleaned/BrainSeq.tsv")
+                 BrainSeq = "../SampleArcheology/studies/cleaned/BrainSeq.tsv",
+                 Kolberg_2020 = "../SampleArcheology/studies/cleaned/Kolberg_2020.tsv")
 meta_imported = purrr::map_df(meta_list, ~read.table(., sep = "\t", stringsAsFactors = F, header =T) %>% 
                                 dplyr::filter(genotype_qc_passed, rna_qc_passed) %>%
                                 dplyr::as_tibble() %>%
@@ -91,4 +120,13 @@ susie_file = makeSusieInputTable(qtl_groups_df) %>%
   dplyr::filter(quant_method != "exon_counts")
 write.table(susie_file, "../SampleArcheology/finemapping/other_cells.tsv", sep = "\t", quote = F, row.names = F)
 
+
+#Kolberg_2020 dataset
+qtl_groups_df = dplyr::filter(meta_imported, study %in% 
+                                c("Kolberg_2020")) %>% 
+  dplyr::transmute(study, qtl_group) %>% 
+  dplyr::distinct() %>% 
+  dplyr::left_join(vcf_paths, by = "study")
+susie_file = makeSusieInputTableArray(qtl_groups_df)
+write.table(susie_file, "../SampleArcheology/finemapping/Kolberg_2020.tsv", sep = "\t", quote = F, row.names = F)
 
