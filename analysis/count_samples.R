@@ -47,6 +47,8 @@ write.table(study_summaries, "results/study_metadata_summary.tsv", sep = "\t", q
 #Import ontology mapping
 mappings = read.table("../eQTL-Catalogue-resources/ontology_mappings/tissue_onotology_mapping.tsv", header =T, sep = "\t", stringsAsFactors = F)
 friendly_names = read.table("../eQTL-Catalogue-resources/ontology_mappings/friendly_names.tsv", sep = "\t", header = TRUE, stringsAsFactors = F)
+friendly_conditions = read.table("../eQTL-Catalogue-resources/ontology_mappings/cell_type_condition_mapping.tsv", sep = "\t", header = TRUE, stringsAsFactors = F) %>%
+  dplyr::select(study, qtl_group, condition_label)
 levels = c("monocyte", "CD16+ monocyte", "macrophage", "dendritic cell", "neutrophil", "platelet","CD4+ T cell", "CD8+ T cell", 
            "T cell", "Tfh cell","Th17 cell","Th1 cell","Th2 cell","Treg naive","Treg memory","NK cell", "B cell", "LCL","blood","DLPFC",
            "fibroblast","adipose","skin","pancreatic islet", "iPSC","sensory neuron","transverse colon", "ileum", "rectum")
@@ -57,9 +59,11 @@ tissue_counts = dplyr::left_join(samples, mappings, by = c("study", "qtl_group",
   dplyr::left_join(friendly_names, by = c("ontology_term", "ontology_label")) %>%
   dplyr::filter(condition %in% c("memory","naive")) %>%
   dplyr::filter(!(qtl_group %in% c("Th1-17_memory"))) %>%
-  dplyr::select(ontology_tissue, study, type) %>%
-  dplyr::group_by(ontology_tissue, study, type) %>%
-  dplyr::summarise(n = n())
+  dplyr::select(ontology_tissue, ontology_term, study, type) %>%
+  dplyr::group_by(ontology_tissue, ontology_term, study, type) %>%
+  dplyr::summarise(n = n()) %>%
+  dplyr::ungroup()
+write.table(tissue_counts, "~/projects/eQTL-Catalogue-resources/data_tables/sample_counts_by_tissue.tsv", sep = "\t", quote = F, row.names = F)
 
 #RNA-seq datasets
 seq_plot = ggplot(tissue_counts, aes(x= ontology_tissue, y = n, fill = study)) + 
@@ -75,11 +79,13 @@ condition_mappings = read.table("../eQTL-Catalogue-resources/ontology_mappings/c
 condition_counts = dplyr::filter(samples, !(condition %in% c("memory","naive"))) %>%
   dplyr::left_join(mappings, by = c("study", "qtl_group","cell_type")) %>%
   dplyr::left_join(friendly_names, by = c("ontology_term", "ontology_label")) %>%
-  dplyr::select(study, condition, ontology_tissue, type) %>%
-  dplyr::filter(condition != "LPS24") %>%
-  dplyr::left_join(condition_mappings, by = c("study","condition")) %>%
-  dplyr::group_by(ontology_condition, ontology_tissue) %>%
-  dplyr::summarise(n = n())
+  dplyr::left_join(friendly_conditions, by = c("study", "qtl_group")) %>%
+  dplyr::select(study, ontology_term, ontology_tissue, condition_label, type) %>%
+  dplyr::group_by(ontology_tissue, study, ontology_term, condition_label, type) %>%
+  dplyr::summarise(n = n()) %>%
+  dplyr::ungroup()
+write.table(condition_counts, "~/projects/eQTL-Catalogue-resources/data_tables/sample_counts_by_condition.tsv", sep = "\t", quote = F, row.names = F)
+
 
 cond_plot = ggplot(condition_counts, aes(x= ontology_condition, y = n, fill = ontology_tissue)) + 
   geom_bar(stat = "identity") +
@@ -103,6 +109,12 @@ mappings = read.table("../eQTL-Catalogue-resources/ontology_mappings/tissue_onot
 conditions = dplyr::select(samples, study, qtl_group, condition) %>% 
   distinct() %>%
   dplyr::left_join(mappings, by = c("study", "qtl_group"))
-write.table(conditions, "../eQTL-Catalogue-resources/ontology_mappings/cell_type_conditions_mapping.tsv", sep = "\t", row.names = F, quote = F)
+write.table(conditions, "../eQTL-Catalogue-resources/ontology_mappings/cell_type_condition_mapping.tsv", sep = "\t", row.names = F, quote = F)
 
+
+#Identify unique array samples
+unique_array_samples = dplyr::filter(samples, study %in% c("Fairfax_2014", "Fairfax_2012", "Naranbhai_2015", "CEDAR", "Kasela_2017")) %>% 
+  dplyr::select(genotype_id) %>% 
+  dplyr::distinct()
+write.table(unique_array_samples, "~/projects/SampleArcheology/studies/unique_array_samples.txt", sep = "\t", quote = F, row.names = F, col.names = F)
 
