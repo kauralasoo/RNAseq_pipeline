@@ -26,11 +26,11 @@ nextflow run main.nf -profile eqtl_catalogue\
  -resume
 
 ##### CEDAR ####
-nextflow run main.nf -profile eqtl_catalogue\
- --expression_matrix /gpfs/hpchome/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/CEDAR.HumanHT-12_V4_norm_exprs.tsv\
- --phenotype_metadata /gpfs/hpchome/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz\
- --sample_metadata /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/CEDAR.tsv\
- --genotype_vcf /gpfs/hpchome/a72094/datasets/open_access/CEDAR/genotypes/Michigan_GRCh37_1KGPhase3_220918/GRCh38/CEDAR_GRCh38.filtered.renamed.vcf.gz\
+NXF_VER=18.10.1 nextflow run main.nf -profile eqtl_catalogue\
+ --expression_matrix /gpfs/hpc/home/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/CEDAR.HumanHT-12_V4_norm_exprs.tsv\
+ --phenotype_metadata /gpfs/hpc/home/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz\
+ --sample_metadata /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/studies/cleaned/CEDAR.tsv\
+ --genotype_vcf /gpfs/hpc/home/a72094/datasets/open_access/CEDAR/genotypes/Michigan_GRCh37_1KGPhase3_220918/GRCh38/CEDAR_GRCh38.filtered.renamed.vcf.gz\
  --is_imputed true\
  -resume
 
@@ -110,3 +110,11 @@ nextflow run main_multi_study.nf -profile eqtl_catalogue\
   --studyFile /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/qtlmap/GEUVADIS_limix.tsv\
   --vcf_genotype_field 'GT'\
   -process.clusterOptions "-x=bfr2"
+
+#HT12V4
+NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
+ --studyFile /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_HT12V4.tsv\
+ --outdir summary_statistics\
+ --n_batches 400\
+ --run_permutation false\
+ -resume
