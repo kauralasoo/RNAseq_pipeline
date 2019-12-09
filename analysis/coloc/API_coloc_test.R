@@ -29,8 +29,7 @@ gwas_dataset = list(beta = gwas_shared$log_OR, #If log_OR column is full of NAs 
                     varbeta = gwas_shared$se^2, 
                     type = "cc", 
                     snp = gwas_shared$variant_id,
-                    s = 0.5, #This is acutally not used, because we already specified varbeta above.
-                    MAF = eqtl_shared$maf)
+                    s = 0.5)
 
 coloc_res = coloc::coloc.abf(dataset1 = eQTL_dataset, dataset2 = gwas_dataset,p1 = 1e-4, p2 = 1e-4, p12 = 1e-5)
 coloc_res$summary
