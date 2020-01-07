@@ -6,7 +6,7 @@ nextflow run pre-imputation_qc.nf -profile eqtl_catalogue -resume\
  --outdir ROSMAP_illumina
 
 #ROSMAP affy
-nextflow run pre-imputation_qc.nf -profile eqtl_catalogue -resume\
+NXF_VER=18.10.1 nextflow run pre-imputation_qc.nf -profile eqtl_catalogue -resume\
  --bfile /gpfs/hpc/home/a72094/datasets/controlled_access/ROSMAP/genotypes/plink_raw/ROSMAP_raw_GRCh37_bed_filtered\
  --output_name ROSMAP_affy_GRCh37_genotyped\
  --outdir ROSMAP_affy
@@ -43,7 +43,7 @@ nextflow run crossmap_genotypes.nf -profile crossmap -resume\
  --output_name ROSMAP_illumina 
 
 # ROSMAP_affy
- nextflow run crossmap_genotypes.nf -profile crossmap -resume\
+ NXF_VER=18.10.1 nextflow run crossmap_genotypes.nf -profile crossmap -resume\
  --vcf_files "/gpfs/hpc/home/a72094/datasets/controlled_access/ROSMAP/genotypes/Michigan_GRCh37_Phase3_200819/affy/GRCh37/chr*.dose.vcf.gz"\
  --output_name ROSMAP_affy\
  --outdir ROSMAP_affy
