@@ -138,3 +138,13 @@ NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
  --run_permutation true\
  --run_nominal true\
  -resume
+
+#ROSMAP
+ NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
+ --studyFile /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_run_ROSMAP.tsv\
+ --outdir ROSMAP\
+ --n_batches 400\
+ --is_imputed true\
+ --run_permutation true\
+ --run_nominal true\
+ -resume
