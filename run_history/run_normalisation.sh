@@ -155,6 +155,15 @@ singularity exec qtl_norm_qc.img Rscript normalisation/normaliseCountMatrix.R\
  --eqtlutils ../eQTLUtils/\
  --filter_qc TRUE
 
+ ##### Kolberg_2020 vol2####
+singularity exec qtl_norm_qc.img Rscript normalisation/normaliseCountMatrix.R\
+ -c /gpfs/hpc/home/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/raw/Kolberg_2020.tsv.gz\
+ -s /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/studies/Kolberg_2020/Kolberg_2020_duplicate.tsv\
+ -p /gpfs/hpc/home/a72094/annotations/eQTLCatalogue/v0.1/phenotype_metadata/HumanHT-12_V4_Ensembl_96_phenotype_metadata.tsv.gz\
+ -o /gpfs/hpc/home/a72094/datasets/processed/expression_matrices/HumanHT-12_V4/vol2/\
+ -q HumanHT-12_V4\
+ --eqtlutils ../eQTLUtils/\
+ --filter_qc TRUE
 
 
 
