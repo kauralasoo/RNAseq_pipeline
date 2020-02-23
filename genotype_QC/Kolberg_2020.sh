@@ -21,7 +21,7 @@ nextflow run pre-imputation_qc.nf -profile eqtl_catalogue -resume\
 bcftools norm CEDAR_GRCh37_genotyped.vcf.gz --check-ref x -f ~/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa -Oz -o CEDAR_GRCh37_genotyped.filtered.vcf.gz
 
 #Change sample names
-bcftools reheader -s /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/studies/CEDAR/CEDAR_genotype_name_map.txt CEDAR_GRCh37_genotyped.filtered.vcf.gz > CEDAR_GRCh37_genotyped.renamed.vcf.gz
+bcftools reheader -s /gpfs/hpc/projects/eQTLCatalogue/SampleArcheology/studies/CEDAR/CEDAR_genotype_name_map.txt CEDAR_GRCh37_genotyped.filtered.vcf.gz > CEDAR_GRCh37_genotyped.renamed.vcf.gz
 
 ### Fairfax_2014
 #Update reference build
