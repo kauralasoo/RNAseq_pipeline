@@ -84,16 +84,6 @@ nextflow run main_multi_study.nf -profile eqtl_catalogue\
  --run_nominal false\
  -resume
 
-#Raj_2014
-nextflow run main_multi_study.nf -profile eqtl_catalogue\
- --studyFile /gpfs/hpchome/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_array.tsv\
- --outdir summary_statistics\
- --n_batches 400\
- --is_imputed true\
- --run_permutation true\
- --run_nominal true\
- -resume
-
 #CEDAR
  NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
  --studyFile /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_Kolberg_2020.tsv\
@@ -146,5 +136,15 @@ NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
  --n_batches 400\
  --is_imputed true\
  --run_permutation true\
+ --run_nominal true\
+ -resume
+
+ #Raj_2014
+NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
+ --studyFile /gpfs/hpc/projects/eQTLCatalogue/SampleArcheology/qtlmap/multi_study_Raj_2014.tsv\
+ --outdir Raj_2014\
+ --n_batches 400\
+ --is_imputed true\
+ --run_permutation false\
  --run_nominal true\
  -resume
