@@ -97,13 +97,13 @@ nextflow run main_multi_study.nf -profile eqtl_catalogue\
 
  #Run limix on GEUVADIS dataset
  nextflow run main.nf -profile eqtl_catalogue -resume \
-  --studyFile /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/qtlmap/GEUVADIS_limix.tsv\
+  --studyFile /gpfs/hpc/projects/eQTLCatalogue/SampleArcheology/qtlmap/GEUVADIS_limix.tsv\
   --vcf_genotype_field 'GT'\
   -process.clusterOptions "-x=bfr2"
 
 #HT12V4
 NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
- --studyFile /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_HT12V4.tsv\
+ --studyFile /gpfs/hpc/projects/eQTLCatalogue/SampleArcheology/qtlmap/multi_study_HT12V4.tsv\
  --outdir summary_statistics\
  --n_batches 100\
  --run_permutation false\
@@ -111,7 +111,7 @@ NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
 
 #BrainSeq vol 2
 NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
- --studyFile /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_run_BrainSeq.tsv\
+ --studyFile /gpfs/hpc/projects/eQTLCatalogue/SampleArcheology/qtlmap/multi_study_run_BrainSeq.tsv\
  --outdir summary_statistics\
  --n_batches 400\
  --run_permutation false\
@@ -120,18 +120,18 @@ NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
 
 
  #Kolberg vol 2
- NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
- --studyFile /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_Kolberg_2020.tsv\
+NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
+ --studyFile /gpfs/hpc/projects/eQTLCatalogue/SampleArcheology/qtlmap/Kolberg_2020.tsv\
  --outdir Kolberg_2020\
  --n_batches 400\
  --is_imputed true\
- --run_permutation true\
+ --run_permutation false\
  --run_nominal true\
  -resume
 
 #ROSMAP
  NXF_VER=18.10.1 nextflow run main_multi_study.nf -profile eqtl_catalogue\
- --studyFile /gpfs/hpc/home/a72094/datasets/controlled_access/SampleArcheology/qtlmap/multi_study_run_ROSMAP.tsv\
+ --studyFile /gpfs/hpc/projects/eQTLCatalogue/SampleArcheology/qtlmap/multi_study_run_ROSMAP.tsv\
  --outdir ROSMAP\
  --n_batches 400\
  --is_imputed true\
