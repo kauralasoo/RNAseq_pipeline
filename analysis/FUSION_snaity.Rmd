@@ -1,0 +1,67 @@
+---
+title: "FUSION sanity check"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r}
+library("devtools")
+library("ggplot2")
+library("dplyr")
+devtools::load_all("../../eQTLUtils/")
+```
+
+# Load permutation summary statistics from FUSION and TwinsUK datasets
+```{r}
+adipose = importQTLtoolsTable("../results/FUSION/FUSION.adipose_naive_ge_adipose_naive.permuted.txt.gz")
+muscle = importQTLtoolsTable("../results/FUSION/FUSION.muscle_naive_ge_muscle_naive.permuted.txt.gz")
+twinsuk_adipose = importQTLtoolsTable("../results/FUSION/TwinsUK_ge_fat.permuted.txt.gz")
+```
+
+# Count the number of unique genes
+```{r}
+nrow(adipose)
+nrow(muscle)
+nrow(twinsuk_adipose)
+```
+
+FUSION has many more expressed genes compared to TwinsUK. Are we completely sure that the new normalisation script uses exactly the same TPM and gene type filters (e.g. no pseudogenes)?
+
+# Count the number of eQTLs
+```{r}
+dplyr::filter(muscle, p_fdr < 0.05) %>% nrow()
+dplyr::filter(adipose, p_fdr < 0.05) %>% nrow()
+dplyr::filter(twinsuk_adipose, p_fdr < 0.05) %>% nrow()
+```
+Number of eQTLs seems roughly comparable, given the there are so many more genes in FUSION dataset.
+
+# Look at pvalue histograms
+## FUSION adipose
+```{r}
+hist(adipose$p_beta)
+```
+
+## TwinsUK adipose
+```{r}
+hist(twinsuk_adipose$p_beta)
+```
+
+Both of these look normal to me.
+
+# Make scatter plots of minimal eQTL pvalues
+## Muscle vs adipose
+```{r}
+a = dplyr::left_join(adipose, muscle, by = "group_id")
+ggplot(a, aes(x = -log(p_beta.x,10), y = -log(p_beta.y,10))) + geom_point()
+```
+
+## TwinsuK vs Fusion
+Both studies profiled adipose tissue
+```{r}
+a = dplyr::left_join(adipose, twinsuk_adipose, by = "group_id")
+ggplot(a, aes(x = -log(p_beta.x,10), y = -log(p_beta.y,10))) + geom_point()
+```
+
+
