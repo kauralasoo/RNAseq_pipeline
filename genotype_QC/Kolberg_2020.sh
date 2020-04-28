@@ -51,7 +51,7 @@ bcftools index Fairfax_2014_set1_GRCh37_genotyped.filtered.vcf.gz
 bcftools merge CEDAR_GRCh37_genotyped.renamed.vcf.gz Kasela_2017_GRCh37_genotyped.filtered.vcf.gz Fairfax_2014_set1_GRCh37_genotyped.filtered.vcf.gz Fairfax_2014_set2_GRCh37_genotyped.filtered.vcf.gz -Oz -o merged.vcf.gz
 
 #Keep QCd samples
-bcftools view merged.vcf.gz --samples-file ~/datasets/controlled_access/SampleArcheology/studies/unique_array_samples.txt -Oz -o filtered.vcf.gz
+bcftools view merged.vcf.gz --samples-file /gpfs/hpc/projects/eQTLCatalogue/SampleArcheology/studies/unique_array_samples.txt -Oz -o filtered.vcf.gz
 
 #Fill tags
 bcftools +fill-tags filtered.vcf.gz -Oz -o tagged.vcf.gz
