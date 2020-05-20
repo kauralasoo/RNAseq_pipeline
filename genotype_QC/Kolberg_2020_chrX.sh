@@ -58,12 +58,42 @@ bcftools annotate --rename-chrs 23_to_x.tsv CEDAR_harmonised.vcf -o CEDAR_harmon
 bcftools filter -e "ALT='.'" CEDAR_harmonised_chrX.vcf -Oz -o CEDAR_harmonised_chrX.noALT.vcf.gz
 
 #Fix the ref allele
-bcftools +fixref CEDAR_harmonised_chrX.noALT.vcf.gz -Oz -o CEDAR_harmonised_chrX.noALT.fixref.vcf.gz -- -f /gpfs/hpc/projects/genomic_references/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa -i /gpfs/hpc/projects/genomic_references/dbSNP/dbSNP_b151_GRCh37p13.vcf.gz
+bcftools +fixref CEDAR_harmonised_chrX.noALT.vcf.gz -Oz -o CEDAR_harmonised_chrX.noALT.fixref.vcf.gz -- -f /gpfs/hpc/projects/genomic_references/annotations/GRCh37/Homo_sapiens.GRCh37.dna.primary_assembly.fa -i /gpfs/hpc/projects/genomic_references/1000G/GRCh37/1000G_GRCh37_variant_information.vcf.gz
 
+#Remove missing
+bcftools filter -i 'F_MISSING < 0.05' CEDAR_harmonised_chrX.noALT.fixref.vcf.gz -Oz -o CEDAR_harmonised_chrX.noALT.fixref.no_missing.vcf.gz
 
+#Perform separate QC on females
+bcftools view -S CEDAR_females.txt CEDAR_harmonised_chrX.noALT.fixref.no_missing.vcf.gz -Oz -o CEDAR_F.vcf.gz
 
+#Filter variants
+bcftools +fill-tags CEDAR_F.vcf.gz -Oz -o CEDAR_F.tagged.vcf.gz
+bcftools filter -i 'INFO/HWE > 1e-6 & F_MISSING < 0.05 & MAF[0] > 0.01' CEDAR_F.tagged.vcf.gz |\
+     bcftools filter -e 'REF="N" | REF="I" | REF="D"' |\
+     bcftools filter -e "ALT='.'" |\
+     bcftools norm -d all |\
+     bcftools norm -m+any |\
+     bcftools view -m2 -M2 -Oz -o CEDAR_F.filtered.vcf.gz
 
+#Extract coordinates of QC-passed variants
+bcftools query -f "%CHROM\t%POS\n" CEDAR_F.filtered.vcf.gz > CEDAR_F_regions.txt
 
-plink --bfile cleaner_fileset --recode vcf-iid --out cleaner_fileset
+#Keep only QC-passed variants in the full file
+bcftools view -T CEDAR_F_regions.txt CEDAR_harmonised_chrX.noALT.fixref.no_missing.vcf.gz -Oz -o CEDAR_full_filtered.vcf.gz
 
-plink --bfile cleaner_fileset --make-bed --out test
+#Filter by MAF and R2
+bcftools filter -i 'INFO/R2 > 0.4 & MAF[0] > 0.01' chrX.dose.vcf.gz -Oz -o chrX.dose.filtered.vcf.gz
+
+#Extract variant information
+bcftools +fill-tags chrX.dose.filtered.vcf.gz | bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%TYPE\t%AC\t%AN\t%MAF\t%R2\n' | gzip > chrX.dose.filtered.variant_information.txt.gz
+
+#Work with 1000 genomes reference panel
+#Biallelic common variants
+bcftools filter -i 'MAF[0] > 0.01' ALL.chrX.phase3_shapeit2_mvncall_integrated_v1b.20130502.genotypes.vcf.gz -Ou | bcftools view -m2 -M2 -Oz -o chrX.vcf.gz
+
+#Keep EUR female samples only
+cut -f 1 /gpfs/hpc/projects/eQTLCatalogue/SampleArcheology/studies/GEUVADIS/1000_genomes_EUR_female.tsv > EUR_female_list.txt
+bcftools view -S EUR_female_list.txt --force-samples chrX.vcf.gz -Oz -o chrX.female.vcf.gz
+
+#Extract variant information
+bcftools +fill-tags chrX.female.vcf.gz | bcftools query -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%TYPE\t%AC\t%AN\t%MAF\tNA\n' | gzip > chrX.female.variant_information.txt.gz
