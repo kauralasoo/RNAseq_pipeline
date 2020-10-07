@@ -61,25 +61,28 @@ import_eQTLCatalogue <- function(ftp_path, region, selected_gene_id, column_name
 eqtl_data = readr::read_tsv("results/figure_data/BLUEPRINT_PE.T-cell_ge.nominal.sorted.tsv.gz") %>%
   dplyr::filter(molecular_trait_id == "ENSG00000153250") %>%
   dplyr::mutate(LP = -log(pvalue,10)) %>%
-  dplyr::select(position, LP)
+  dplyr::select(position, LP) %>%
+  dplyr::mutate(type = "RBMS1 eQTL")
 gwas_data = gwasvcf::query_gwas("results/figure_data/LC_GWAS_subset.GRCh38.sorted.vcf.gz", chrompos = "2:160100000-160700000") %>% 
   gwasvcf::vcf_to_granges() %>% 
   as.data.frame() %>%
   dplyr::as_tibble() %>%
-  dplyr::mutate(position = start)
+  dplyr::transmute(position = start, LP, type = "Lymphocyte count")
 gwas_data_selected = dplyr::semi_join(gwas_data, eqtl_data, by = "position")
+
+joint_data = dplyr::bind_rows(eqtl_data, gwas_data)
 
 #Import eQTL credible sets
 cs = readr::read_tsv("results/figure_data/BLUEPRINT_PE.T-cell_ge.purity_filtered.txt.gz") %>%
   dplyr::filter(phenotype_id == "ENSG00000153250")
 
 #Flag the credible set in GWAS results
-gwas_flagged = dplyr::mutate(gwas_data_selected, in_cs = ifelse(position %in% cs$pos, TRUE, FALSE))
+gwas_flagged = dplyr::mutate(joint_data, in_cs = ifelse(position %in% cs$pos, TRUE, FALSE))
 
 #Make manhattan plots
 ggplot(eqtl_data, aes(y = -log(pvalue), x = position)) + geom_point()
-ggplot(gwas_flagged, aes(y = LP, x = position, color = in_cs)) + geom_point()
-
+manhattan = ggplot(gwas_flagged, aes(y = LP, x = position, color = in_cs)) + geom_point() + facet_grid(type~.)
+ggsave("results/figures/RBMS1_manhattan.pdf", plot = manhattan, width = 5, height = 4)
 
 #Import all coloc results
 files_list = list.files("results/figure_data/LC-ebi-a-GCST004627_rnaseq/")
